@@ -4,10 +4,8 @@ pre-commit:
     - name: yamlfmt
       glob: "*.{yml,yaml}"
       run: yamlfmt .
-
     - name: actionlint
       glob: ".github/workflows/*.{yml,yaml}"
       run: actionlint
-
     - name: typos
       run: typos .
