@@ -1,0 +1,38 @@
+WordPressニコイチFargateの話
+[WordPressニコイチFargateの話 - TORANA TECH BLOG https://web.archive.org/web/20250120124354/https://tech.torana.co.jp/entry/2023/09/28/123000]
+2023-09-28
+
+SREのクラシマです。またWordPressの話です。
+
+[[https://tech.torana.co.jp/entry/2023/06/01/123000:title https://tech.torana.co.jp/entry/2023/06/01/123000:title]] 6月のblogでは、Fargate + WordPressの構築の話を書きましたが、今回はEC2で稼働していたWordPressをFargateに移行した話です。ようやく、EC2の利用がなくなり、全てFargateに移行できました。紆余曲折、寄り道の話もさせてください。
+
+[*** wordpress.comへの移行計画]
+
+EC2で稼働していたWordPressはそれほどアクセスが多くない2つのサービスをそれぞれ1台ずつのEC2でまかなっていました。EC2の運用は何かと面倒で、他のFargateを利用しているプロダクトとデプロイ手順も共通化できないために困っていました。
+ということで、以下のいずれかで解決を図ろうと計画しました。
+
+ 1. wordpress.com への移行
+ 2. Fargate化
+
+
+まずは、お金で解決できそうなwordpress.comへの移行を試してみました。オリジナルテーマを使用したいのでビジネスプランを選択、年払いすれば安いのですが、お試しのため月払いにします。[[https://wordpress.com/pricing/:title https://wordpress.com/pricing/:title]]
+
+既存のEC2からAll-in-One WP Migration プラグインを使ってエクスポートし、wordpress.comへ取り込みます。取り込みはうまくいったので、サイトを公開しようとしたところ、曖昧なメッセージのエラーが発生。[[https://wordpress.com/ja/forums/topic/%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%ab%8b%e3%81%a1%e4%b8%8a%e3%81%92%e3%81%8c%e3%81%a7%e3%81%8d%e3%81%aa%e3%81%84/:title https://wordpress.com/ja/forums/topic/%e3%82%b5%e3%82%a4%e3%83%88%e3%81%ae%e7%ab%8b%e3%81%a1%e4%b8%8a%e3%81%92%e3%81%8c%e3%81%a7%e3%81%8d%e3%81%aa%e3%81%84/:title]]
+フォーラムで似たような話をみつけて対応を依頼したものの、音沙汰なく2週間が過ぎ。スタッフの方の対応がないことを見かねたフォーラムの有志の方が、有償プランならメールサポートの方が反応が良い、と教えてくださったのでそちらへ。サポートに問い合わせたものの、ここでも1週間ほど音沙汰がなく...。
+
+残念ですが、諦めてFargate移行することにしました。WordPressのマルチサイト対応もできなそうだったので、WordPress 2サイトだと2契約になってしまう、というコスト面が決め手ではあります。
+
+[*** Fargate移行]
+
+さて、2サイトを1インスタンスに載せられないかな、と事例を探していたのですがググっても見つからず。サイドカーパターンの応用でどうにかならんかな、と↓のようなことを考えて試してみました。
+
+[https://gyazo.com/d082c71ea89ebc7146fbb09450bd1883]
+
+wp-config.phpで読み込むdatabase nameをtypoして、Fargateデプロイが失敗する、みたいなので半日溶かしたりしましたが無事に起動しました。
+
+[[https://developers.cyberagent.co.jp/blog/archives/24254/:title https://developers.cyberagent.co.jp/blog/archives/24254/:title]] CyberAgentさんのblogを参考に、管理画面へのアクセスはALB経由にして、Cognitoで認証を追加します。これで低コストでセキュアにできます。
+
+[*** まとめ]
+
+無事にEC2を削除し、ALBも別々に立てていたのを集約して更にコストを削減できました。2024年2月のPublic IPv4への課金を控え、できるだけALBの数も抑えたいところだったのでちょうどよかったです。
+#トラーナテックブログ

@@ -1,0 +1,46 @@
+2024-03-25 - 2024-04-01
+読んだ記事
+　[「会議で話されている内容と、ソースコードが全然違う」〜イオン発の“新ネットスーパー”リリース直前の1年間を語る｜イオンネクストCTOインタビュー ｜AEON TECH HUB https://engineer-recuruiting.aeon.info/aeon-tech-hub/cto-interview_taruishimasato]
+　	CTOによって組織が変わるのがすごい
+　	リアルなデータを使ってTDDを小売業のエンジニアが、っていいな
+　[ビジネスロジックを「型」で表現するOOPのための関数型DDD / Functional And Type-Safe DDD for OOP - Speaker Deck https://speakerdeck.com/yuitosato/functional-and-type-safe-ddd-for-oop]
+　	DDDと関数型が頭の中で結びつかない
+　[Workflow Automationを活用したデプロイタイミング表示 - 世界中の羊をかき集めて https://shepherdmaster.hateblo.jp/entry/2024/03/24/111025]
+　	バージョン情報は送ってるから、切り替わりのタイミングが見えると嬉しそう
+　[PATを使わずにGithub Appを使ってGithub ActionsでPrivate Repoを参照する話 - Google スライド https://docs.google.com/presentation/d/10-HgSST2xR5H3xCwGLKCk_PBwq4zHcxD2393ifwOsiM/edit]
+　	共有アカウント作らなくていいのはいいな
+　[Flakyとその判別方法の解説 #D3QA /FlakyTests - Speaker Deck https://speakerdeck.com/nihonbuson/flakytests]
+　	Flakyテスト対策、Googleでも地道な活動なんだな、という感想
+　[Go製モダンマイグレーションツールのAtlasを使用してみた https://zenn.dev/jy8752/articles/f9fda2379b57f5]
+　	宣言的マイグレーション、流行るかもしれない
+　		おっかないけど...
+　	PlanetScaleみたいなバージョン管理できるスキーマを持ってるDBなら、こっちの方がいい気はする
+　[中国、政府機関のIT機器からインテルおよびAMDプロセッサ排除へ。ArmとRISC-V、国産Linux主流の新ルール制定 | テクノエッジ TechnoEdge https://www.techno-edge.net/article/2024/03/25/3041.html]
+　	中国すげぇな、という感想ではある
+　		日本は同じことができなかったわけだし
+　[業務で使えるかもしれない…！？GitHub Actions の Tips 集 / CI/CD Test Night #7 - Speaker Deck https://speakerdeck.com/ponkio_o/ci-cd-test-night-number-7]
+　	読んだらやる気が出たのでblog書いた
+　[JSON をプレビューしながら jq のフィルタを書くことができる「jnv」を試してみる https://zenn.dev/kou_pg_0131/articles/jnv-introduction]
+　	よさそう
+　	aquaでもinstallできるけど、arm用バイナリがまだないみたい
+　		Issueはあるのでちょっと待ってみる
+　[クレディセゾンでDXを進めてきた5年間を振り返る｜小野 和俊 https://note.com/lalha/n/n939e576f5509]
+　[任天堂の人材に対する考え方｜採用情報｜任天堂 https://www.nintendo.co.jp/jobs/human-capital/index.html]
+　[なぜCDKを使う「べき」なのだろう? - Uzabase for Engineers https://tech.uzabase.com/entry/2024/03/29/112719]
+　	専任のインフラエンジニア/SRE/CCoEを置けない組織は多いと思うんよなー
+　	terraformは好きだし今後も触っていくと思うけど、小さいエンジニア組織でこれからIaC、って話ならCDKがいいかもしれない
+　[データベースの在庫の持ち方をビットで管理してる話 - 一休.com Developers Blog https://user-first.ikyu.co.jp/entry/2024/03/28/115631]
+　	区間を在庫として扱うときにビット列になってると嬉しいみたいな話と認識
+　	ホテルの部屋の在庫管理、ドメイン知識って感じだ
+　[「長宗我部盛親の末裔説」を本気で検証してみた https://news.denfaminicogamer.jp/kikakuthetower/240329h]
+　	おもしろかった
+　[LLMの現在 - Speaker Deck https://speakerdeck.com/pfn/llmnoxian-zai]
+
+読んだ本
+
+書いた記事
+ [脱get-diff-actionとecspresso diffをGitHub Actionsで実行する話 https://tech.torana.co.jp/entry/2024/03/29/123000]
+ 	ぐっさんが作ったecspresso-diff-actionの話
+ 	脱get-diff-actionは大変だった...
+
+#週報

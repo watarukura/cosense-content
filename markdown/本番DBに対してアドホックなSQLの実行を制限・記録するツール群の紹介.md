@@ -1,0 +1,75 @@
+# 本番DBに対してアドホックなSQLの実行を制限・記録するツール群の紹介
+[本番DBに対してアドホックなSQLの実行を制限・記録するツール群の紹介 - TORANA TECH BLOG](https://web.archive.org/web/20250120131115/https://tech.torana.co.jp/entry/2023/10/23/123000)
+2023-10-23
+
+SREのクラシマです。様々な事情で、本番DBに対してアドホックなSQLを実行する必要がありますが、できるだけ安全に実行したいものです。SREチームがGolangで書いたツールがちょこちょこあるのでご紹介。(クラシマはそんなに作ってないです)
+
+### IAMポリシー一時付与CLI: shinse
+
+```(shell)
+❯ aws-vault exec $AWS_PROFILE -- shinse request
+
+How long ...
+format is 1m or 1h or 2006-01-02T15:04:05
+
+Enter : 1h
+
+Would you like to request with ...
+
+Account: honban
+PermissionSet: DatabaseConnect
+End: 2023-10-20T16:06:07
+
+Enter y/n: y
+🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍
+complete🥱
+
+```
+本番環境アカウントでのAWSのアクセス権限は、ReadOnlyAccessにしています。shinseコマンドを使用してAdministratorAccessポリシーや、自作のDatabaseConnectポリシーを一時的にアタッチします。[99designs/aws-vault: A vault for securely storing and accessing AWS credentials in development environments](https://github.com/99designs/aws-vault) も併用していることが多いです。[AWS Systems Manager Change Manager - AWS Systems Manager](https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/change-manager.html) をSDKを使って呼び出しています。
+
+```(shell)
+❯ aws-vault exec $AWS_PROFILE -- shinse get-db-cred
+dbname: username password
+
+```
+DBへの接続ID・パスワードも、一定時間だけ利用できるものが発行されます。ParameterStoreにID・パスワードが格納されるので、取得するサブコマンドがあります。
+
+### ポートフォワードCLI: portforward
+
+```(shell)
+❯ aws-vault exec (awsp) -- portforward appname db
+2023/10/20 14:07:44 host: appname-prd.cluster-****.ap-northeast-1.rds.amazonaws.com
+port: 3306
+localPort: 3306
+accountID: 99999999999
+bastion: app-bastion-prd
+2023/10/20 14:07:44 desiredCount: 1
+2023/10/20 14:07:44 taskID: 834e889b47c54cafb4b6bb4274028a4a
+
+Starting session with SessionId: username@torana.co.jp-09db166e98fe02c3b
+Port 3306 opened for sessionId username@torana.co.jp-09db166e98fe02c3b.
+Waiting for connections...
+
+```
+DBのhostname、portとlocalPortをアプリケーションごとに設定したconfig.yamlを参照して、[fujiwara/ecsta: ECS Task Assistant tool.](https://github.com/fujiwara/ecsta) をライブラリとして呼び出し、portforwardしています。[https://tech.torana.co.jp/entry/2023/04/07/123000](https://tech.torana.co.jp/entry/2023/04/07/123000) で紹介した踏み台Fargateを使っています。
+踏み台Fargateが起動していない場合は起動する機能も含まれています。↑のblog時点ではシェルスクリプトで誤魔化していましたが、Golangに書き換えました。
+
+### アドホックな更新SQLを通知するCLI: tosugo
+
+DBで実行したSQLは、アプリケーションが発行したSQLと違い十分な検証が行われているとは言えません。また、GitHub Issueを作ってレビューを受けたものを実行するルールですが、レビュー外のSQLを実行することもできてしまいます。これに対応するため、誰が・いつ・どのようなSQLを実行したか検知するツールを作成しました。
+
+RDS Auroraの監査ログ機能を有効化し、CloudWatch Logsに実行したSQLをログ出力します。[Amazon Aurora MySQL DB クラスターでのアドバンストな監査の使用 - Amazon Aurora](https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Auditing.html)すべてのSQLログを出力するとCloudWatch Logsのコストがそれなりに掛かるため、アプリケーションから発行したSQLは除外しています。ここから、CloudWatch Logs Insights SDKを呼んで、1日分の更新クエリを抽出、日次でGitHub Issueを作成しています。
+shinseがDBのユーザまで作ってくれるので、誰が実行したかわかる、という仕組みです。
+
+(監査ログに限らず、24時間ログが作成されない場合またはストレージの15%が消費された場合に、ログの出力が止まってしまう、という難点もあるのですが...)
+
+[https://gyazo.com/7347b35bd9f79ea7c6bb2b92581ccfc7](https://gyazo.com/7347b35bd9f79ea7c6bb2b92581ccfc7)
+UUIDv4() は自作のストアドファンクションです。
+
+本当はtotsugoにするつもりがtypoしてtosugoになった、とツールの作者がREADMEに書いています。
+
+### まとめ
+
+あまり事例が見つけられずに困ってしまい、AWSさんに相談したりして構築しました。このあたり、皆様どうされてるんでしょうか...???
+聞くところによると、アドホックなSQL実行も全てRuby on RailsやLaravelにもあるmigrationに寄せてしまう、というやり方もあるそうです。トラーナでは本番DBへのmigrationは行っていないので、同じやり方にはできないのですが...。
+[#トラーナテックブログ](トラーナテックブログ)

@@ -1,0 +1,77 @@
+# WordPressをAWS上に移植する上でのアレコレ - TORANA TECH BLOG
+[WordPressをAWS上に移植する上でのアレコレ - TORANA TECH BLOG](https://web.archive.org/web/20250120133842/https://tech.torana.co.jp/entry/2023/06/01/123000)
+諸々の事情があってWordPressで構築済みのサイトをAWS上に移植することになり、WordPressサイトの知識ゼロからインフラ周りの面倒を見ることになった担当者の記録です。以上、前置きでした。SREチームのクラシマです。
+
+当初は、「WordPressの新サイトを作るのでインフラの面倒をみてくれ」という話で、手が回らなくて業務委託エンジニアのKさんが「やりますよ！」って言ってくれたのでペチッとVPCからEC2までterraformで作ってもらい、中身は私が移植した、という経緯でした。が、あれよあれよと、「某VPSで動いてるアレとコレも移植したい」という話になり、「こっちのサイトはあんまりアクセスないけど、そっちのサイトはまぁまぁアクセスあるから落ちると困るのよねー」「夜な夜なトップページを更新が発生したりして大変なんよー」などなどの要件が降りかかり...。
+
+まぁ、色々ありましたが元気に稼働しておりますので、どんなことをしたかまとめたいと思います。
+
+### docker compose on EC2
+
+とりあえず新サイトの立ち上げです。デザイン会社さんからの納品は、WordPressのバックアッププラグインを使って出力したものをzipで固めたものでした。
+
+Kさんと相談して、当初はFargateにしましょうかって話を一旦取り消してdocker compose on EC2にしました。
+あまりにもWordPress識者が不足しており、試行錯誤できる方が良いこと、何より納期が近かったためです。
+WordPressインストール済みAMIやLightsailも考えたのですが、あまりに他のアプリケーションと環境が遠いとデプロイ方法などを共通化できなくなり、それでなくても足りない手が不足することを懸念しました。
+MySQLが必要ということで、Auroraじゃなくてもいいかと思ったのですが、弊社の他のアプリケーションに合わせてAuroraにしました。他は質素ですが、ここだけは贅沢に。
+
+ローカル環境で、docker composeで起動できるようにしたWordPress環境を作り、EC2に移植します。初期構築時はプラグイン用のディレクトリやメディアファイルなどもまとめてGit管理しており、GitHubへのpushにエラい時間がかかる始末...。
+とりあえず動く、という状態からのスタートでした。
+
+### 旧VPSからの移行
+
+新サイトは立ち上がりましたが、既存サイトがある場合は移植しないといけません。弊社代表が作ったWordPressなのでヒアリングします。kusanagiが入っています。PHPじゃなくてHackで動いています。名前は聞いたことあるけど...えー。
+
+祈りながら新サイトと同じ環境を作って動かしましたが、PHPを8.0に上げると落ちます。渋々7.4で一旦移植しました。(別の機会にバージョンアップ済みです)
+
+### ダイエット
+
+ローカル環境でdocker compose upするとWordPressさんがファイルを作ったり更新したりするのですぐにGitの差分が出てしまいます。(当初はなぜ差分がでるのかもわかってなかったです...)また、WordPress管理画面からプラグインをバージョンアップしたり画像アップロードしたりしてもGitHubと同期しないので、何かの拍子にEC2が吹っ飛ぶと画像データやら何やらが死にます。
+GitHubへpushするファイルサイズも小さくしたいし...。
+
+と、WordPress公式dockerイメージを素で起動してみると、wp-content以外のディレクトリは大体用意されているので、わざわざGit管理する必要がないことがわかりました。wp-content/themes/my-theme と、wp-config.php以外はごっそり削除しましたがそれでも動きます。OK。
+
+更に、1リポジトリで複数サイト管理していたのですが、git pull するときに起動するサイト分以外のファイルもpullしてしまいます。これは無駄。git sparse checkoutを使用して、必要なディレクトリだけpullするようにしました。
+[https://gyazo.com/e6d41aa81a4e520bf481e360c95304a7](https://gyazo.com/e6d41aa81a4e520bf481e360c95304a7)
+
+
+
+### AutoScaling
+
+[https://docs.aws.amazon.com/whitepapers/latest/best-practices-wordpress/reference-architecture.html](https://docs.aws.amazon.com/whitepapers/latest/best-practices-wordpress/reference-architecture.html) を参考に、AutoScailng可能なWordPressの構築を検討します。WordPressさん、元々1台のサーバで動くように作られてるので、スケールアウト構成にするのはまぁまぁ大変です...。
+
+## プラグイン
+
+[https://inokara.hateblo.jp/entry/2022/01/16/194758](https://inokara.hateblo.jp/entry/2022/01/16/194758) を参考に、Wpackagistを使ってcomposer installできるようにしました。
+WordPressとPHPのバージョンはDockerfileで管理できるので、導入済みのrenovateと組み合わせるとプラグインのバージョンアップがGitHub上で行えるようになりました。(この時点では、deployはまだssm:StartSessionしてgit pullですが)
+
+プラグインの設定はwp-config.phpに書けます。
+プラグインを有効化したかどうかの情報はMySQLに書かれるので、ローカル開発用のMySQLを立てるのが面倒なのが悩みです...。
+
+# 画像アップロード
+
+[https://ja.wordpress.org/plugins/amazon-s3-and-cloudfront/](https://ja.wordpress.org/plugins/amazon-s3-and-cloudfront/) を使ってS3にアップロードします。配信にはCloudFrontを使いたいので導入します。これで、wp-content/uploadsディレクトリをGit管理外にできます。S3の利用はAWS公式プラグインを使うつもりだったのですが、いつの間にかcloseされていました...。[https://wordpress.org/plugins/amazon-polly/](https://wordpress.org/plugins/amazon-polly/)
+
+CloudFrontを前に置く場合、キャッシュのキーやオリジンリクエストについて検討しなくてはなりません。
+が、あんまり最近の記事ないんですよね...。探し方が悪いのかしらん...。[https://aws.amazon.com/jp/blogs/news/amazon-cloudfront-announces-cache-and-origin-request-policies/](https://aws.amazon.com/jp/blogs/news/amazon-cloudfront-announces-cache-and-origin-request-policies/) この公式blog、2020年7月のものなんですが、
+[https://docs.aws.amazon.com/whitepapers/latest/best-practices-wordpress/cloudfront-distribution-creation.html](https://docs.aws.amazon.com/whitepapers/latest/best-practices-wordpress/cloudfront-distribution-creation.html) を見てもレガシーキャッシュポリシー前提ぽい書き方で、読み替えが難しかったです。
+あと、wp-json/* もDynamicにしてあげないとNGで、WordPressのバージョンアップにも追随されてない感が...。↓こんな感じになりました。マネージドポリシーで動いたので万歳。画像ファイル群、まだレガシーキャッシュポリシーなのでいずれ直したい...。
+[https://gyazo.com/13614035b51857194857b580e775f654](https://gyazo.com/13614035b51857194857b580e775f654)
+
+
+# Fargate
+
+[https://tech.torana.co.jp/entry/2023/02/17/123000](https://tech.torana.co.jp/entry/2023/02/17/123000) でようやくFargate移行も終えたのにEC2を運用し続けるのは辛いです。ということでFargate移行に着手します。WordPressさん、管理画面からテーマ画面用のPHPファイルを直接メンテナンスできるので、EFSの導入をAWSでは推奨しています。が、弊社ではEFSは導入していません。運用ルールとして、テーマ画面の書き換え時はGitHubのコードを変更してdeployするルールとすることで対応しました。諦めも肝心です。
+[https://gyazo.com/ace5922cb0c8c2034e44f06ad949e7d3](https://gyazo.com/ace5922cb0c8c2034e44f06ad949e7d3)
+
+
+
+### まとめ
+
+これで、ようやくモダンなアプリケーションに多少は近づけられたかなと思います。
+
+[https://wordpress.org/plugins/sqlite-database-integration/](https://wordpress.org/plugins/sqlite-database-integration/) SQLite化して更にコスト削減したいので、こちらのプラグインが使えるようになってくれるのを待っています。ローカルで動くところまでは確認しているので、あとはLiteStreamでS3にsyncできれば軽くてまぁまぁ早くて安くて必要なときはスケールアウトできるWordPressサイトが作れないかな、と。
+
+[https://www.publickey1.jp/blog/23/wordpresswebassemblyin-browser_wordpresswordpressgoogle_chrome.html](https://www.publickey1.jp/blog/23/wordpresswebassemblyin-browser_wordpresswordpressgoogle_chrome.html) WASM WordPressの今後も楽しみです。こちらも、SQLiteをS3あたりにsyncできると、Bizメンバーでも無理なくローカル環境から更新できるようになって、管理画面をインターネット公開しなくて良い未来がくるんじゃないか、と期待しています。
+
+[#トラーナテックブログ](トラーナテックブログ)

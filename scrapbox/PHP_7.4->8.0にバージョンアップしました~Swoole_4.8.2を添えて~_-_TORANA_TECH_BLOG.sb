@@ -1,0 +1,95 @@
+PHP 7.4->8.0にバージョンアップしました~Swoole 4.8.2を添えて~ - TORANA TECH BLOG
+[https://web.archive.org/web/20241109041616/https://tech.torana.co.jp/entry/2021/11/26/082208 PHP 7.4->8.0にバージョンアップしました~Swoole 4.8.2を添えて~ - TORANA TECH BLOG]
+クラシマです。
+社内向け管理画面のMadrasのPHPバージョンを7.4から8.0へメジャーバージョンアップしました。
+苦労話を共有させてください。
+
+[*** PHP7.4->8.0移行計画]
+
+まず、ドキュメントを書きました。
+これにより、なんでこれをやってるんだっけ、ということを明確にします。
+[https://gyazo.com/a32e28d68a96ab83bee3e14f47a721e6]
+
+
+公式ドキュメントを熟読します。
+[下位互換性のない変更点 https://www.php.net/manual/ja/migration80.incompatible.php]
+
+↓こんな移行作戦を立てました。
+
+ 1. ローカル開発用のDocker環境がPHP8.0で動くようにする
+ 2. ローカルでのテストが全部通るようにする
+ 3. CI用のDockerイメージをPHP8.0でも作って、手動でCIを回してテストが全部通るようにする
+ 4. 通常のCIはPHP7.4で動作させておき、本番deploy後にPHP8.0イメージでCIを回す
+ 5. stg環境にPHP8.0を導入して動作検証する
+ 6. 本番移行手順を作る
+ 7. 本番移行する
+
+
+[*** ポイント]
+
+[** PHP7.4とPHP8.0でcomposer.jsonを共通化する]
+
+code: (json)
+   "require": {
+     "php": "^7.4||^8.0",
+
+毎回composer.jsonを修正して検証用ブランチにpushしてGitHub Actionsのworkflow_dispatchで手動実行していたのです。(修正しないとcomposer validateで落ちる)
+上記の修正後は検証用の専用ブランチではなくdefaultブランチで検証できるようになったので、本番へのdeploy後にGitHub Actionsのworkflow_run機能でPHP8.0用のCIを回すところが自動化できました。
+
+[** @ 演算子は、致命的なエラー を隠さなくなりました]
+
+急にテストでHTTPステータス400エラーを期待している箇所で500エラーが出るようになりました。
+ログを見ると、`array_keys(): Argument #1 ($array) must be of type array, null given` というエラーが出ています。
+
+code: (diff)
+ $hasX = @count(array_keys($hash['x'])) !== 1;
+
+なるほど。
+
+code: (diff)
+ - $hasX = @count(array_keys($hash['x'])) !== 1;
+ + $hasX = count(array_keys($hash['x'] ?? [])) !== 1;
+
+
+[** \Symfony\Component\Process\Processは生きてるのに\Swoole\Coroutineは死んでる]
+
+これが一番のハマりどころで、移行が1週間遅れました...。
+
+バッチ処理の高速化のために[\Symfony\Component\Process\Process https://symfony.com/doc/current/components/process.html]を使ってマルチプロセスで実行している箇所があるのですが、`$process->isRunning()`がtrueを返すのにSwooleのCoroutineが`WARNING swoole_signalfd_event_callback(): read from signalfd failed, Error: Resource temporarily unavailable[11]`って警告を吐いて死んでしまっていました。
+
+(余談ですが、signalfdってsignal用のファイルディスクリプタなんですね。初めて知りました [Man page of SIGNALFD https://linuxjm.osdn.jp/html/LDP_man-pages/man2/signalfd.2.html])
+
+原因として推測したのは、PHP8.0ではexit()は例外と同じ挙動になるようで、この辺りはSwooleでもIssueがいくつか上がっていました。
+移行を始めた時点はSwoole4.8.1を使用していたのですが、バグにハマっている間に4.8.2がでており、[ReleaseNote https://github.com/swoole/swoole-src/releases/tag/v4.8.2]をみると、`Fixed cannot exit directly when a fatal error occurs in PHP8 environment`との記述が！
+しめしめとバージョンアップしてみたものの、残念ながら同じ警告がでました...。
+
+SwooleのソースもPHPのソースも読んでも何もわからん(CとC++を読んで原因までたどり着ける力量がない)ので、ワークアラウンドとしてtimeoutを設定するようにしました。
+これで、異常時は検知できるので、拾ってリトライすれば良さそうです。
+
+code: (diff)
+   $process = new Process(['ls', '-lsa']);
+ + $process->setTimeout(3600);
+   $process->start();
+ 
+   while ($process->isRunning()) {
+       // waiting for process to finish
+ +    // check if the timeout is reached
+ +    $process->checkTimeout();
+ 
+       usleep(200000);
+   }
+ 
+   echo $process->getOutput();
+
+[*** まとめ]
+
+2021/10/01から開始したPHP8.0移行プロジェクトは、本日11/26の動作検証を以て完了となります。
+PHP8.0に起因していない障害(cronの記述ミス...)こそあったものの、日次のバッチ処理は正常に稼働しており、まずは成功と言えるのではないでしょうか。
+
+さて、昨日11/25に待望のPHP8.1が来ました！
+[Fibers https://wiki.php.net/rfc/fibers]により、いよいよPHPで非同期処理が公式サポートされるようになります。
+PHP8.0移行プロジェクトの終了と同時に、PHP8.1移行プロジェクトの幕開けとなりました。
+(その前にLaravel6->8移行プロジェクトもあるのですが...)
+では、次のプロジェクト完了報告でお会いしましょう...！
+
+#トラーナテックブログ

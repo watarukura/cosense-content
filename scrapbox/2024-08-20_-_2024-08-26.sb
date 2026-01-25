@@ -1,0 +1,45 @@
+2024-08-20 - 2024-08-26
+読んだ記事
+ [いい加減シェルスクリプトで [ $? -eq 0 ] や [ $? -ne 0 ] なんて エラー処理を書くのはやめよう！ #Linux - Qiita https://qiita.com/ko1nksm/items/09bd50e51cc8663a4f0e]
+ 	shellcheckによく怒られるやつ
+ [uvだけでPythonプロジェクトを管理する https://zenn.dev/turing_motors/articles/594fbef42a36ee]
+ 	ryeからuvを使ってたんだけど、uvだけでよくなった
+ [Go の iter パッケージを使ってみよう https://zenn.dev/mattn/articles/641f1d86fffdc9]
+ [Goのiterの知らなくても良いこと https://zenn.dev/koron/articles/0a89d036d946a8]
+ 	Goにもyieldあったのね...
+ [老化は４４歳と６０歳で急激に進行、疾病リスクも増大 - CNN.co.jp https://www.cnn.co.jp/fringe/35222981.html]
+ 	年は取りたくないものだが勝手に時間は流れるのだ
+ [Why Staging Doesn't Scale for Microservice Testing - The New Stack https://thenewstack.io/why-staging-doesnt-scale-for-microservice-testing/]
+ 	チームごとにマイクロサービスを管理しているとサービス間の依存関係が避けられない
+ 		フィーチャーフラグは十分じゃない
+ 	シャドーデプロイってアプローチはおもしろい
+ [AWS Athenaの安価な代替手段：Lambda x DuckDB #TypeScript - Qiita https://qiita.com/shinonome_taku/items/cb9bfd7419a77a80e235]
+ 	これは良さそう
+ 	redashから使えるとなお嬉しい
+ [Linuxサーバーの最適化: vmstatとiostatを活用した性能分析と対処法 #インフラ - Qiita https://qiita.com/legitwhiz/items/afa5a0c22b5098495de8]
+ 	vmstat、ほぼ使ったことないので知見
+ [６ ちゃんと筋トレできているか見分けるには。 | 「老い」と「筋肉」は、前向きに考えよう。 | 谷本道哉 | ほぼ日刊イトイ新聞 https://www.1101.com/n/s/oitoshi_muscle/2024-08-24.html]
+ 	谷本先生！
+ [AWSのブロックストレージがどのように進化してきたのかを中の人が語る - GIGAZINE https://gigazine.net/news/20240825-aws-block-storage-history/]
+ 	EC2を使うことは減ったけど、RDSやらOpensearchやらでEBSを触る機会は減らないので高速化は常にありがたい
+ [プログラミング言語AWKのここがLOVE https://zenn.dev/satoru_takeuchi/articles/f881927892c4ee]
+ 	ユニケージ開発したことがあるマンなのでAWKにも親しんでいる
+ 		凝った使い方はしないけど
+
+読んだ本
+ [『教養としての生成AI』清水亮 | 幻冬舎 https://www.gentosha.co.jp/book/detail/9784344986992/]
+ 	ChatGPTとの共作って書いてあった
+ 	確かに、一から書くより書き直す方がプログラムでも楽なので、AIに下書きしてもらうっていうライターさんは増えるかもしれない
+ [コピペで簡単実行！キテレツおもしろ自然言語処理 PythonとColaboratoryで身につく基礎の基礎 電子書籍｜翔泳社の本 https://www.shoeisha.co.jp/book/detail/9784798170619]
+ 	Google Colabで試せるのはいい感じ
+
+書いた
+ https://github.com/watarukura/goscal
+ 	takenocoへの切り替えができたのはいいけど、元のコードをまるっと書き換えてしまったので連続性がない
+ 	GoLandでのデバッグが便利
+
+その他
+　夏休み
+　	特にのんびりできたという感覚はないのだった
+
+#週報

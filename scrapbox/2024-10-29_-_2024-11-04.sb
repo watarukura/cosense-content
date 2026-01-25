@@ -1,0 +1,64 @@
+2024-10-29 - 2024-11-04
+読んだ記事
+ [Makefile から Taskfile へ移行するモチベーションの言語化 https://zenn.dev/hiroto_ohira/articles/8b4b8c8396fcd1]
+ 	Taskfile.ymlにすると嬉しいかなぁ...
+ 	lefthookをタスクランナーにする話、どっかにまとめるか
+ [社内の仕様質問を激減させた話｜takashi https://note.com/pakugoku/n/n2177d752d2d9]
+ 	おもしろ
+ 	Notion AI、Slack読んでくれるんだ
+ 		いいなぁ
+ [準備ができている人間にしか機会は来ない - だいくしー(@daiksy)のはてなブログ https://daiksy.hatenablog.jp/entry/2024/10/28/153606]
+ 	心の準備はできてないけどエイヤーで飛び込む、みたいなことはします
+ 		心以外は準備ができていると信じて
+ [無礼にならずに「なめる／なめられる」から降りるのは難しい - シロクマの屑籠 https://p-shirokuma.hatenadiary.com/entry/20241031/1730376000]
+ 	COTEN RADIOを聴いてると中国の官僚制・中央集権が古くからうまくいっていた話をよく聞く
+ 		教育でも、礼儀は重要だった
+ 		礼儀がなっていない人間は蛮族として差別されるが、存在は否定されないのがおもしろい
+ 		礼儀がなっていないとなめられる
+ 			中国語がめっちゃうまくて漢詩を暗唱とかできるとなめられない
+ [S3バケットから秒でAmplify WebHostingを使ったWebサイト公開が爆速簡単にできるようになりました https://zenn.dev/yumemi_inc/articles/f5445bda4e092c]
+ 	便利そう
+ 	割と面倒よねS3 + CloudFront
+ [役立つログに取り組もう - Speaker Deck https://speakerdeck.com/irof/yi-li-turokuniqu-rizu-mou]
+ 	役立つ
+　[本屋さんを開催する技術 https://zenn.dev/ko1/articles/bf47077f40d793]
+　	本屋さん、儲からない
+　	イベントに本屋さんを呼ぶこともできます
+　		本屋だった頃に、玄侑宗久の講演会にいって会場で売ったことがある
+　[[アップデート] セキュリティグループを別の VPC で使えるようになりました | DevelopersIO https://dev.classmethod.jp/articles/securitygroup-other-vpc-associate/]
+　	セキュリティグループ経由の場合だけ許可ってやりたいときにVPC別れてると面倒だったのがこれでイケるようになりそう
+　[Actions Performance Metrics in public preview - GitHub Changelog https://github.blog/changelog/2024-10-31-actions-performance-metrics-in-public-preview/]
+　	これはいいな
+　[ドメインモデリングで全システムの設計をゼロからやり直す。リアーキテクチャに挑む2年間の全貌【モノタロウCTO普川】 | レバテックラボ（レバテックLAB） https://levtech.jp/media/article/interview/detail_545/]
+　	2年でも終わらないことをやろう、っていうのはCTOじゃないとできない判断
+　[サイボウズは「100人100通りの働き方」をやめます。社員数1000人を超えても、成長と幸福を両立させるための挑戦 | サイボウズ式 https://cybozushiki.cybozu.co.jp/articles/m006216.html]
+		>パーパスやカルチャーが生まれていく過程を見ていた人と、それらがすでに額縁に掲げられた状態で見ている人の認識の差は大きいと思います。
+  > 額縁に飾られた言葉を見て、なんとなく受け入れている人が多い。これも普通の大企業っぽいなぁと感じます。
+  最近vim-jp Slackで似たような話を読んだ記憶...
+ [オードリー･タン氏実践｢睡眠記憶法｣の超合理性 睡眠の効能を最大限活用する徹底した工夫 | 健康 | 東洋経済オンライン https://toyokeizai.net/articles/-/834434?display=b]
+ 	批判せずに読む、って面白い
+ 		考えたことがなかった
+ 		寝る前に読む、っていうのも良い
+ 		スマホだと目が冴えてしまうので、技術書を寝る前に読むと良さそう
+
+読んだ本
+ [n月刊ラムダノート Vol.4, No.3(2024) – 技術書出版と販売のラムダノート https://www.lambdanote.com/products/n-vol-4-no-3-2024]
+		[Rustで作るプログラミング言語 ——コンパイラ／インタプリタの基礎からプログラミング言語の新潮流まで：書籍案内｜技術評論社 https://gihyo.jp/book/2024/978-4-297-14192-9] を半分くらい読んだら、特集1の「TypeScriptではじめる型システム」で使われてる語の意味がわかるようになった
+		特集2、3もおもしろかった
+
+書いた
+ 
+
+その他
+ M4 iMac / MacMini / MBPが出た
+ 	ほしい！ほしいよ！！
+ ミスターが出張で上京したので九州居酒屋で飲んだ
+ 	沖縄料理屋の予定だったんだけどなぜか閉まってた(閉店か？)
+ 	モツ鍋がうまかったし久々に焼酎ロックとか飲んで大変よかった
+ ブックサンタした
+ 	例年通りリブロで
+ 	寄付の一種だと思っているので、税制上優遇されてほしい
+ 		寄付全般でそう
+ 		税金の使い方に口を出せる、という点でふるさと納税にも意味がある派です
+
+#週報

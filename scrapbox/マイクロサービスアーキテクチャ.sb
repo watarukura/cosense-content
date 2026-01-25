@@ -1,0 +1,6 @@
+マイクロサービスアーキテクチャ
+おそらく初出は別だが、マーティン・ファウラーのblogと、その日本語訳
+https://martinfowler.com/articles/microservices.html
+http://kimitok.hateblo.jp/entry/2014/11/09/211820
+
+[SOA]と目的は同じだが、より簡素な実装にしたもの、と言えるかも[watarukura.icon]

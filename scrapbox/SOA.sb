@@ -1,0 +1,6 @@
+SOA
+Service Oriented Architecture
+https://ja.wikipedia.org/wiki/サービス指向アーキテクチャ
+>業務上の一処理に相当するソフトウェアの機能をサービスと見立て、そのサービスをネットワーク上で連携させてシステムの全体を構築していくことを指す言葉である。
+
+SOAP / BPMN など、技術基盤としてXMLを使用している。

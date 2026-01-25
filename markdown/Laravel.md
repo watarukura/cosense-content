@@ -1,0 +1,60 @@
+# Laravel
+
+- Illuminate
+- Artisan
+  - `php artisan`
+    - 実行可能なオプションをリストアップする
+  - `php artisan serve`
+    - 開発用にサーバを起動する
+      - 使ったことないな...
+  - `php artisan key:generate`
+    - Application Keyを生成する
+      - .envのAPP_KEY=に生成したキー情報を書き出す
+- Blade
+  - Twigみたいなもの
+  - 昨今、あまり使われてない気はする...(要出典)
+- `public/index.php`
+- `config/*.php`
+  - config/app.php: timezone, locale, ...
+  - config/cache.php: redis / memcached
+  - config/database.php: database connections
+  - config/session.php: session
+- Homestead
+- `.env`
+  - `.env.sample` を作っておいてcpする風習
+- Directry Structure
+  - app
+    - Broadcasting
+    - Console: CLI interfaces
+      - Commands
+        - php artisan で実行するコマンド群が置かれる
+        - Symfony Consoleをラップしてある
+    - Events(Option)
+      - `php artisan event:generate` `php artisan make:event`
+    - Exceptions
+    - Http: HTTP Interfaces, controllers, middleware, form requests
+      - kernel.php
+        - 読み込むMiddlewareの制御など
+      - Middleware
+        - リクエスト・レスポンスに対して共通かつビジネスロジック外のロジックを適用
+    - Jobs(Option): queueable jobs
+      - `php artisan make:job`
+    - Listeners(Option): listening Events
+      - `php artisan make:listener`
+    - Mail(Option)
+    - Notifications
+    - Policies
+    - Providers
+    - Rules
+  - bootstrap: `cache`の読み込みなど、パフォーマンス最適化
+  - database: migrations, model factory, seed, (optional: SQLite files)
+  - public: index.php as entry point. images, js / css assets
+  - resource: LESS / SASS before compile sources
+  - routes: route
+    - web.php: RouteServiceProvider as session state, anti CSRF, encrypto Cookie
+    - api.php: rate limit
+    - console.php: command
+    - channels.php: event broadcasting
+  - storage: compiled blade templates, session files, cache files, ... and logs
+  - tests: tests
+  - vendor: composer dependencies

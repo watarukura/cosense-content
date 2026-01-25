@@ -1,0 +1,34 @@
+# DynamoDBとRDSの同時利用によるCQRS実装アーキテクチャを考える
+watarukura.iconユニケージのレベルデータ概念を参考にRESTなAPIサーバの実装を考える
+
+Command
+
+- APIサーバへはJSONをPOSTする
+  - POSTされたJSONファイルはS3に保持する ← Level1データ
+    - クレジットカード情報などは非保持とする必要があるため除外するか、マスクする
+  - 保持されたJSONファイルからAPIサーバへのリクエストを再現できるように実装する
+- DynamoDBへput-itemする ← Level2データ
+  - この時点ではDynamoDBの利点を活かし、非正規化データで構わない
+  - 書き込み速度の早さ、テーブル単位でprovisioningできるDynamoDBの特性を活かす
+  - 24時間程度のTTLを設定し、データの肥大化を防ぐ
+- 同時にFIFO-SQSへenqueueする
+  - DynamoDB Streams＋Lambdaでも良いが、順序だっている方が後々楽だと想定
+
+Event-Sourcing
+
+- FIFO-SQSをポーリングして取得したキューの情報からRDSへデータを書き込む ←  Level2データ
+- 定期的にRDSのマテリアルビューを更新する ← Level3データ
+
+Query
+
+- DynamoDBとRDSからそれぞれデータを取得。原則RDSのマテビューから取得とし、マテビュー未反映のレコードはDynamoDBから取得する
+  - マテビュー未反映かの判定のため、DynamoDBのsort keyとしてtimestampを設定し、マテビュー側の更新時刻より新しいレコードがあればDynamoDB側を使用する
+
+懸念事項
+
+- トランザクション制御はどうする？
+  - 折よくDynamoDB Transactionsが来たので実装次第ではあるがなんとかなるか？ [新機能 – DynamoDB Transactions](https://aws.amazon.com/jp/blogs/news/new-amazon-dynamodb-transactions/)
+
+参考
+[CQRSとイベントソーシングの使用法、または「CRUDに何か問題でも？」](https://postd.cc/using-cqrs-with-event-sourcing/)
+[CQRSとDynamoDBのデータ構造設計](https://qiita.com/uchiko/items/60c97ff227c184258809)

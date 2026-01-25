@@ -1,0 +1,90 @@
+2025-11-25 - 2025-12-01
+読んだ記事
+ [ALBの新機能 Target Optimizer による同時接続数の制御を試してみた | DevelopersIO https://dev.classmethod.jp/articles/try-aws-alb-target-optimizer/]
+ 	ALBで同時接続数制御かー
+ 	オモシロ機能
+ [Amazon Linux 2023向け拡張リポジトリ「SPAL」が一般提供開始されました | DevelopersIO https://dev.classmethod.jp/articles/amazon-linux-2023-spal-repository/]
+ 	AL2023用のepelみたいな扱い？
+ 		そういえば、AL2023の次ってどうなるんだろう...
+ [ITベンダーの皆様、御社SaaSの導入を社内で止めていたのは、私です｜dx_note https://note.com/posi7293/n/n369d55fe370e?sub_rt=share_pw]
+ 	ITベンダーの営業さんが顔を見せに足繁く通ってた理由がわかるなぁ...
+ 	通る稟議を書くための支援ができる人って、貴重なのよね
+ [アップデート Amazon CloudWatchがコンソール上でのEC2インスタンスのCloudWatch Agent 管理を導入しました | DevelopersIO https://dev.classmethod.jp/articles/cloudwatch-in-console-agent-management-ec2/]
+ 	EC2のuserdataでssm-agentをinstallしてCodeDeployのhookでcw-agentをinstallして、みたいなことをしなくていいのか
+ [PHPコア開発者として歩む、OSSの世界へ踏み出すまでと、その先へ - Findy Media | IT/Webエンジニアの転職・求人サイトFindy – GitHubからスキル偏差値を算出 https://findy-code.io/media/articles/codesidechat-takamachi1saki]
+ 	OSSだとcommitの単位とかcommit messageが大事になるんだな
+ 		日頃、適当な単位でcommit切ってるのでちょっと反省した
+ [GitHubの依存アップデートPRをまとめて捌くCLI拡張「gh-dep」を作りました https://zenn.dev/jackchuka/articles/65592ccfb8c548]
+ 	良さげな拡張だったので使ってみたらrate limit出た...
+ 		Issueあげました https://github.com/jackchuka/gh-dep/issues/19
+　[高速な XBRL パーサーを Python で書く - kawasin73のブログ https://kawasin73.hatenablog.com/entry/2025/11/23/221951]
+　	RustじゃなくてPythonで書いて、比較対象のライブラリよりx20早いってすげぇな
+　		ライブラリが遅いから自分で書く、っていう判断もすごい
+　[Gemini と NotebookLM を組み合わせて  目標設定の負荷を軽減する方法 / Goal setting with gemini and notebooklm - Speaker Deck https://speakerdeck.com/tbpgr/goal-setting-with-gemini-and-notebooklm]
+　	弊社も欲しいです！って要望あげておいた
+　[AWS CodeCommit の今後について | Amazon Web Services ブログ https://aws.amazon.com/jp/blogs/news/aws-codecommit-returns-to-general-availability/]
+　	まさかの復活
+　	自分の開発では使いたくないけど、必要な場面はあるのよね
+　[【JavaScript】単位をJSで取り扱えるようにしようという提案 #日本語訳 - Qiita https://qiita.com/rana_kualu/items/2bf709aae35d194dff9e]
+ 	おもしろ
+ [iwashi氏が語る、AI時代も変わらない本質とは？dev、EM、PMの視点から考える“プロダクト開発のいまとこれから” | レバテックラボ（レバテックLAB） https://levtech.jp/media/article/column/detail_760/]
+ 	人が書いたコードには意図があるので、意図を想像して読むことができるけど、AIが書いたコードから意図を見出すことはできるのか、みたいなことを考えている...
+ 	小さなチーム + AIで大きな仕事、というのは理想だけど、人類はコンテキストスイッチに弱いのでなー
+ [オープンソース・プロジェクトのたたみ方 https://zenn.dev/dmikurube/articles/how-to-wind-down-an-opensource-project]
+ 	最近Embulk使ってるプロジェクト見たな...?
+ 	この記事が公開されることの意義は大きいと思います
+ [QAとSREが統合したQualityチームの挑戦 https://zenn.dev/luup_developers/articles/sre-gr1m0h-20251125]
+ 	この四象限、すげー
+ 	[https://gyazo.com/170800d83918ee61633ac6207097172c https://zenn.dev/luup_developers/articles/sre-gr1m0h-20251125#sre%E3%81%AE%E8%A6%96%E7%82%B9%E3%81%8B%E3%82%89%E8%A6%8B%E3%81%9Fqa%E3%81%A8sre%E3%81%AE%E7%B5%B1%E5%90%88]
+ [PostgreSQLフルテキスト検索の実装でメール検索を最大71%高速化した話 https://zenn.dev/91works/articles/8659a8cfb95b72]
+ 	PostgreSQL全文検索事例
+ 	貧者の全文検索(LIKE)から初めて、Elasticsearchに行く前にRDBの全文検索を使うのはいい手だなー
+ 		PostgreSQLならベクトルDB機能もあるし
+ [生成AIを使って割り込み業務を現場で勝手に改善したらちやほやされた話 - MonotaRO Tech Blog https://tech-blog.monotaro.com/entry/2025/11/27/090000]
+ 	「同じような質問」をベクトル検索する、みたいなのがカジュアルに使われててすげー
+ [コンポーネントの設計で最近気をつけていることまとめ（React / Next.js） #React - Qiita https://qiita.com/quniquni/items/1e6bafbc6bfce74afe5d]
+ 	触れる機会が増えてきたからか、何となく読めるようになってきた
+ [React Server Componentsの本番運用上の課題について | POSTD https://postd.cc/react-server-components-are-breaking-production-apps-and-nobodys-talking-about-it/]
+ 	RSC、ボロクソ
+ [「社員よりAIを守る国、アメリカ」Z世代のMLエンジニアonoderaが見た“AIの国”の働き方 - エンジニアtype | 転職type https://type.jp/et/feature/29732/]
+ 	「イーロンになりたい国、アメリカ」って、COTEN RADIOのリンカン回にも通じる話だなー
+ 		労働を通じてお金を稼ぐことに宗教的価値がある、という価値観
+ [AWS リソース間通信は本当にインターネットに出ないのかを Datadog Network Path で検証する https://zenn.dev/datadog/articles/f7ac35d6cac1bd]
+ 	おもしろ
+ 	経路図の自動生成みたいなの、きっと面白い
+ 		(使い物になるかはともかく)
+ [YAPC::Fukuoka 2025に参加して「Amazon ECS デプロイツール ecspresso の開発を支える「正しい抽象化」の探求」を発表しました - 酒日記 はてな支店 https://sfujiwara.hatenablog.com/entry/yapc-fukuoka-2025]
+ 	>「どこで切るか」が設計の本質
+　[コミットメッセージをClaudeに書かせるgit aicommit - Write and Run https://diary.hatenablog.jp/entry/2025/11/23/233725]
+　	cursor-agent用に書き換え
+　		ついでにcommitizen形式で、50文字以内制限もつけた
+code:.gitconfig
+ [alias]
+   aicommit = "!f() { COMMITMSG=$(cursor-agent -p 'Generate ONLY a one-line and 50 characters or less commitizen formatted Git commit message in English, using imperative mood, summarizing what was changed and why, based strictly on the contents of `git diff --cached`. Do not add explanation or a body. Output only the commit summary line.'); git commit -m \"$COMMITMSG\" -e; }; f"
+
+
+読んだ本
+ Newton 2026年1月号
+ 	錯視特集が楽しい
+
+書いた
+ [terraform / ecspresso / lambrollを使ってAWSリソースの引っ越しをする https://zenn.dev/watarukura/articles/20251129-eg9iksttdciehu5y06ppovaffusa]
+
+その他
+ re:invent落ちがいっぱいでてきて先週くらいからオモシロweek
+ 技術書典19
+ 	[DevContainer実践ガイド：74th https://techbookfest.org/product/gLkrC9Ezw50bJhuwYd9UzV?productVariantID=wQFB9V52qR69xepV6bxffs]
+ 	[熟練ログ技術：浜風もっこす https://techbookfest.org/product/3fB8KmFUJxACcBJyNuZDWg?productVariantID=hGvjYZqCcanTa6wkdqYTVp]
+ 	[爆速開発を支えるClaude Code上級者テクニック：ミライ・ハッキング・ラボ https://techbookfest.org/product/j46gBnBLZ3td2Z0gDXUD2u?productVariantID=wwtYQfB4DpFtdk1gFCnnvL]
+ 	[AWSの薄い本7　S3の深淵を知るためにAmazonの奥地に行った：ササキです https://techbookfest.org/product/tSRZ0iHKMHwY135dnFvKkE?productVariantID=973ryyLbcv7CTMfgg5S2RA]
+ 	[ヤバい住所 改訂版：武田システム https://techbookfest.org/product/20rSURdbccwgkGH3bEVe7Z?productVariantID=byA6Vmd1Yk0E1pwCEx3PQj]
+ [筋肥大に必要な期間｜増量・減量の基本を山本義徳が解説！ | プロテイン・サプリ（クレアチン、EAA）ならVALX（バルクス） https://column.valx.jp/10558/]
+ 	増量期・減量期みたいなのを考えたことがなかった
+ 		まぁ、おかげでずっと増量しているわけだけども...
+ 	2ヶ月増やして1ヶ月減らして、というサイクルがよいらしい
+ 		PFCバランスを取りつつ、カロリーを厳密に計算できる能力が必要
+ 		あすけん、再開するか？
+
+#週報
+<[2025-11-18 - 2025-11-24]
+[2025-12-02 - 2025-12-08]>

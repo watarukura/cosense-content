@@ -1,0 +1,29 @@
+responder
+[Flask]心配なのでこっちで作るか[watarukura.icon]
+
+[https://python-responder.org/en/latest/index.html 公式ドキュメント]
+[Github https://github.com/kennethreitz/responder]
+[https://blog.ikedaosushi.com/entry/2018/12/01/195512 人間のためのイケてるPython WebFramework「responder」、そして作者のKenneth Reitzについて]
+
+いきなりハマる
+ `pipenv install responder --pre` で `ModuleNotFoundError: No module named 'pkg_resources'` が出力される
+ 	https://rutei.hatenablog.com/entry/2018/12/02/020358
+code:Pipfile
+ [packages]
+ responder = "*"
+ starlette = "==0.8"
+
+入門した
+	https://github.com/watarukura/responder_study
+
+[SQLAlchemy]使うか[PyMySQL]使うか悩む
+ [Pythonで話題のWEBフレームワークresponderでサンプルのtodoリストを作成 https://note.mu/shimakaze_soft/n/ne47bc123dc83]
+ [PyMySQL]は社内で導入事例あるから[SQLAlchemy]の知見を貯めるか・・・という気持ち
+
+[Vue.js + Flask] で検討した構成も取れる
+	SPA対応もできる
+
+OpenAPI v3にも対応
+
+[https://gyazo.com/1bf123e329828c312c3b8561e227a126]
+#python

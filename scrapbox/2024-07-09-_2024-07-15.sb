@@ -1,0 +1,55 @@
+2024-07-09- 2024-07-15
+読んだ記事
+ [危険なCookieのキャッシュとRailsの脆弱性CVE-2024-26144 | セキュリティブログ | 脆弱性診断（セキュリティ診断）のGMOサイバーセキュリティ byイエラエ https://gmo-cybersecurity.com/blog/rails-vulnerability-cache-cookies/]
+ 	こえぇ
+ 	nginxでキャッシュしてるやつ、大丈夫だっけな...
+ [S3のフォルダ構造とプレフィックスの話 - NRIネットコムBlog https://tech.nri-net.com/entry/s3_folder_structure_and_prefix]
+ 	なんとなく知ってることだけど、改めて解説されると嬉しい
+ [PdM/EMが気づくべき「技術負債」の異変 - Masato Ishigaki - Medium https://medium.com/i35-267/%E6%B0%97%E3%81%A5%E3%81%8F%E3%81%B9%E3%81%8D-%E6%8A%80%E8%A1%93%E8%B2%A0%E5%82%B5-%E3%81%AE%E7%95%B0%E5%A4%89-pdm-em%E5%90%91%E3%81%91%E3%81%AE%E6%97%A9%E8%A6%8B%E8%A1%A8-3e726e9295fd]
+ 	技術負債がどこに現れるか、って話
+ [[”子育て”, “残業”, “推し活”]しながらどう学ぶか？（+おすすめ技術系Podcast9選） https://zenn.dev/mconfjp/articles/c6128c45fe4172]
+ 	リアル
+ [良いコードとは良い感じのコードである - ennui's blog https://ennui.hatenablog.com/entry/2024/07/10/013656]
+ 	一行ごとに説明できるように、って言われるとそこまではできないんだけど、気持ちとしてはわかる
+ 		言語化大事
+ [AWSにあるデータを暗号化する必要があるか？ - サーバーワークスエンジニアブログ https://blog.serverworks.co.jp/aws-data-encryption]
+ 	ランサムウェアとも関連してデータ暗号化重要ではあるけど、何かとめんどくさい...
+ 		オンプレでデータ暗号化ってよっぽどだよな...
+ [Oracle Cloud - クラウド戦国時代のゲームメーカー｜ミック https://note.com/mickmack/n/na6efa0a48caa]
+ 	OCI、使うことはないかな、と思ってたら副業先のDNSで使ってたりした
+ 		マルチクラウド + オンプレもあって大変
+ 	Azure + OCI、確かにWindowsServerでOracle DB動かしてたわそういえば
+ 		デカいRDBをぶん回す、みたいな思想のアーキテクチャならあり得る
+ [20240711_RAGを用いたシンプルな 社内情報検索システムを導入した話とつらみ - Speaker Deck https://speakerdeck.com/shunta27/20240711-ragwoyong-itasinhuruna-she-nei-qing-bao-jian-suo-sisutemuwodao-ru-sitahua-toturami]
+ 	kendra事例だ！貴重
+ [なぜゲーム業界はJenkinsを選ぶのか？その理由と利点 | DevelopersIO https://dev.classmethod.jp/articles/why-gaming-chooses-jenkins-reasons-benefits/]
+ 	Unityのビルドとかゲームのアセットってサイズが大きいのでGHA辛いねって話っぽいかなー
+ [開発者が安心して実行可能なSQL実行基盤の導入と運用 #ベッテク月間 - LayerX エンジニアブログ https://tech.layerx.co.jp/entry/2024/07/04/120631]
+ 	DBのデータメンテナンス、ホント表に出てくる事例がなくて困ってたのでこれは嬉しい
+ [How Big Tech Runs Tech Projects and the Curious Absence of Scrum https://newsletter.pragmaticengineer.com/p/project-management-in-tech]
+ 	ある程度デキる人を連れてこないとスクラムって回らないよね、って話を偶にするんだけど、トップクラスの人たちはスクラム要らないよねになるのか
+ [Why Are Queries with Many IN Values More Expensive After Upgrading to MySQL 8.x? https://www.percona.com/blog/why-are-queries-with-many-in-values-more-expensive-after-upgrading-to-mysql-8-x/]
+ 	INにいっぱい入るとき遅くなるやつ
+
+聴いた
+	[Rebuild：Apple Podcast内の387: Time To Sleep (N) https://podcasts.apple.com/jp/podcast/rebuild/id603013428?i=1000660992043]
+		トランプさん勝っちゃうな...
+	[Rebuild：Apple Podcast内の388: Don't Find Me On TikTok (higepon) https://podcasts.apple.com/jp/podcast/rebuild/id603013428?i=1000661732453]
+		自社でもTikTokはいいかも？
+		一定のバズを獲得できるまで粘らないと駄目なのは辛そうだけど
+	[Yokohama North AM：Apple Podcast内のep 104 @o0h_とPHPカンファレンスお疲れ様でした、最近読んだ本、技術負債について https://podcasts.apple.com/jp/podcast/yokohama-north-am/id1512608373?i=1000661884924]
+		hanhanさんも奥さんとのやり取りは苦労してるんだなぁ...
+	[fukabori.fm：Apple Podcast内の117. バーニングニーズの見つけ方、ソフトウェアテストの未来 w/ chikathreesix https://podcasts.apple.com/jp/podcast/fukabori-fm/id1388826609?i=1000661841682]
+		バーニングニーズが見つかるまで作らない、みたいなのは我慢が要りそう
+
+読んだ本
+ 
+
+書いた
+ 
+
+その他
+　Amazonプライムデーの開始前セールで大体欲しいものを買ってしまった
+　	今回は結構散財したなー
+
+#週報

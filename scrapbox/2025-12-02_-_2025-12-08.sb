@@ -1,0 +1,85 @@
+2025-12-02 - 2025-12-08
+読んだ記事
+ [tsgolintはいかにしてtypescript-goの非公開APIを呼び出しているのか - Speaker Deck https://speakerdeck.com/syumai/how-tsgolint-exposes-typescript-gos-private-apis]
+ 	gitsubmoduleなのか
+ 	おもしろ
+ [マネージャーは何が楽しくてやれる仕事なの？ - だいくしー(@daiksy)のはてなブログ https://daiksy.hatenablog.jp/entry/2025/12/05/081740]
+ 	マネージャー業とシステム運用って似てるよな、と思った
+ 	良い環境を作って、維持すること
+ [【AWS re:Invent 2025】AWSから外部サービスへ安全に連携するためのアクセストークンが払い出せる ようになりました - カミナシ エンジニアブログ https://kaminashi-developer.hatenablog.jp/entry/2025/12/05/aws-reinvent-outbound-identity-federation]
+ 	使いどころはわからないけど、いつかどこかで使いそう
+ [タイミーで蓄積された Aurora MySQL 運用ナレッジ─ 障害・チューニング・実践知を特別公開 - Timee Product Team Blog https://tech.timee.co.jp/entry/2025/12/03/104738]
+ 	>リードレプリカ上の SELECT クエリが、DDL 実行タイミングでエラーになる
+ 	>3. リードレプリカのクエリが Writer 側に影響することがある
+ 		両方とも、どこかで踏みそう
+ [アップデート CloudWatch でログの統合管理機能を利用できるようになりました #AWSreInvent | DevelopersIO https://dev.classmethod.jp/articles/cloudwatch-unified-log-management-analytics/]
+ 	Datadogにアレコレ(Log / APM / RUM)集約して統合管理、ってしてたんだけど、CloudWatchでできそう？
+ [AIはE2Eテスト撲滅の夢を見るか？ - カミナシ エンジニアブログ https://kaminashi-developer.hatenablog.jp/entry/ai-e2e]
+ 	Playwright MCPもまだ使えてない...
+ [突撃! 我が家のTerraform - CADDi Tech Blog https://caddi.tech/2025/12/03/113000]
+ 	人のうちのTerraform見るのは楽しいのよね
+ [goroutineを作ってみる。Rustで - エムスリーテックブログ https://www.m3tech.blog/entry/build-your-own-goroutine-in-rust]
+ 	すごー
+ [AWS IAM Identity Center で一時的な権限昇格フローを作る #Slack - Qiita https://qiita.com/koresou/items/3ba942afb4ac57506562]
+ 	Change Managerで作ってました...(同僚が)
+ 	脱Change Managerするか？
+ [Introducing Database Savings Plans for AWS Databases | AWS News Blog https://aws.amazon.com/jp/blogs/aws/introducing-database-savings-plans-for-aws-databases/]
+ 	EC2を使わなくなったからSP一本でよくなった
+ 	RDSを使わなくなることはないけど、Serverlessを選びやすくはなるなー
+ [COBOL to Java 言語仕様の違いに潜む闇 #メインフレーム - Qiita https://qiita.com/Eiji-Nabika/items/42d90d1a7f587f7f956d]
+ 	JABOLの話だったらわからなかったけど、COBOLの話はわかる...
+ 	考え方が違いすぎるからなぁ...
+ [Webhook を AWS Lambda で受け取り SQS へ流す 〜設計から監視まで〜 - BASEプロダクトチームブログ https://devblog.thebase.in/entry/2025/12/02/120147]
+ 	これ、Durable Functionにできないかなー
+ [Introducing AWS Lambda Managed Instances: Serverless simplicity with EC2 flexibility | AWS News Blog https://aws-amazon-com.translate.goog/blogs/aws/introducing-aws-lambda-managed-instances-serverless-simplicity-with-ec2-flexibility/?_x_tr_sl=en&_x_tr_tl=ja&_x_tr_hl=ja]
+ 	AWSマネージドなEC2上でLambdaが動かせるやつ
+ 	GPU使いたいけど、みたいなとき用？
+ [AWSがGoogle Cloudとの高速接続を発表、来年にはAzureとも接続。「AWS Interconnect」プレビュー開始 － Publickey https://www.publickey1.jp/blog/25/awsgoogle_cloudazureaws_interconnect.html]
+ 	弊社向け機能と言ってよい
+ [FarBrain：俺が考えた最強のブレストソフトを作った話｜tokoroten https://note.com/tokoroten_jp/n/n8c2b2e6fe35b?sub_rt=share_pb]
+ 	おもしろ
+ 	アイデア間の距離が遠いものを出すと高得点、っていうゲーミフィケーション要素ありブレスト、楽しそう
+ [普段使いできる保護レイヤー「restricted shell」の紹介 - mizdra's blog https://www.mizdra.net/entry/2025/12/01/121805]
+ 	普段遣いできる、に重きが置かれてるのがおもしろ
+ [客先のDBを間違えて削除した話 #ポエム - Qiita https://qiita.com/lif_yumumu/items/eec7a352f32cc59f39ac]
+ 	怖い！
+ [S&P500神話の終わる時　～インデックス投資バブルの形成過程と、AI投資がもたらす株式市場のレジームチェンジ～｜五月（片山晃） https://note.com/may5x/n/n814696d63dd3]
+ 	んー、10年20年の話ならどうせ30年寝かせる話だからどうでも良くて
+ 	100年に一度の話だって一生に一度は起きるわけだし
+ [Spring Bootのサンプルパッケージ構成の考古学 - （仮） https://rshindo.hatenablog.com/entry/2025/11/28/233308]
+ 	設計にも流行り廃りがあるよね
+ [GitHub のマージ方式を人間に毎回選ばせるのは、もうやめよう（やめた） - エムスリーテックブログ https://www.m3tech.blog/entry/github-auto-merge]
+ 	rulesetsでできるよ？って話ではなかった
+ [本番環境でしか起こらない Goroutines 急増問題と解決までの道のり | メルカリエンジニアリング https://engineering.mercari.com/blog/entry/20251207-61e24d343e/]
+ 	すげぇ...
+ 	2ヶ月同じ問題に取り組める根性が特にすげぇ
+ [awslabs/iam-policy-autopilot: IAM Policy Autopilot is an open source static code analysis tool that helps you quickly create baseline AWS IAM policies that you can refine as your application evolves. This tool is available as a command-line utility and MCP server for use within AI coding assistants for quickly building IAM policies. https://github.com/awslabs/iam-policy-autopilot]
+ 	「その屏風から最小権限のIAMポリシーを出してください」
+ 	ほれ、と出てくる
+ [CTO だった会社の破産を申し立てて今年決着が着いた #2025AC2025 - assertInstanceOf('Engineer', $a_suenami) https://a-suenami.hatenablog.com/entry/2025/12/03/145416]
+ 	うはー
+ 	人脈2ホップくらい先の人がすごい状況に置かれててすごい(語彙がない)
+
+読んだ本
+ 
+
+書いた
+ [新Macセットアップ202512]
+ 	社から貸与されたMBPが業務委託だった頃のものでディスクサイズが小さくて辛かったので上長に泣きついたら新しいMBPが貸与された
+ 	せっかくなのでNixしている
+ 	なぜかType-Cで外部ディスプレイ接続すると繋がらない疑惑がある...
+ 		社のJamf(？)で制限かかってたっぽい...
+ 		一回VPNつないだら大丈夫だった
+
+その他
+ iPhone 13mini → 17に移行した
+ 	バッテリーが全然持たなくなってしまったので買い替え
+ 	[Apple Rewards Store DMM通販 https://www.dmm.com/mono/kaden/apple/]
+ 		弊社のクレカで買うとポイント還元大きいので
+ 	もっとでかいのでも良かったんだけど、miniからの移行なのでとりあえず無印にした
+ 前職のテックブログを読んでくれてた方をXで発見した
+ 	ありがとうございます
+
+#週報
+<[2025-11-25 - 2025-12-01]
+[2025-12-09 - 2025-12-15]>

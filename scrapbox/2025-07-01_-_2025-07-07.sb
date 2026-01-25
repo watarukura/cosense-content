@@ -1,0 +1,57 @@
+2025-07-01 - 2025-07-07
+読んだ記事
+ [/jgeem/ケント・ベック氏講演録：『グッドハートの法則は楽観的すぎた〜開発生産性の罠と未来〜』]
+ 	>[* 原則：バリューチェーンのできるだけ「終端」で測定せよ。]
+ 	最も公平な指標は市場の評価だと思っている
+ 		どうにか市場の評価を人事評価に反映させたい
+ [Claude Code の Hooks で作業が終わった後にフォーマッターを実行する https://azukiazusa.dev/blog/claude-code-hooks-run-formatter/]
+ 	git hookでフォーマッターを動かしてるんだけど、Claude Code Hooksでできると嬉しいのかな
+ 	sayコマンドで呼んでもらう、みたいなのは良さそう
+ [Automatticのマット・マレンウェッグCEOがWordPressをめぐって争った理由を語るインタビュー - GIGAZINE https://gigazine.net/news/20250701-wordpress-matt-mullenweg-interview/]
+ 	まだ予断を許す状況にないけど、インタビューだけを読むと良い方向に転がりそう？
+ [Still X.S.S. - なぜいまだにXSSは生まれてしまうのか？ - GMO Flatt Security Blog https://blog.flatt.tech/entry/still_xss]
+ 	雑な社内用のWebサービス作ったら先輩にXSS仕込まれたのがトラウマ
+ [オープンソースプロジェクトはAI生成コードをどのように受け入れるべきか？ — QEMUの禁止ポリシーからの教訓 – Shuji Sado https://shujisado.com/2025/07/03/how-can-open-source-projects-accept-ai-generated-code/]
+ 	人間が書いたコードのことだけを考えればよかった時代の終わり
+ [データアナリストのためのLLM時代のSQL作成術｜Mercari Analytics Blog https://note.com/mercari_data/n/n315608f0b766]
+ 	SQLをソースコードのように管理できれば、LLMを使うのも容易になるはず
+ 		BIツールとの連携みたいなのを考えると良さそうか？
+ [一緒に仕事をして最高だったクラウドベンダーはMS、Google、Amazonのどれだったか？　HashiCorp創業者のミッチェル・ハシモト氏が打ち明ける - ITmedia NEWS https://www.itmedia.co.jp/news/articles/2507/03/news060.html]
+ 	イメージ通りではある
+ [第119回　MySQLでの非同期タスクのサポート、PostgreSQLエンタープライズ⁠⁠・コンソーシアムの成果報告、そして次回は10周年！ | gihyo.jp https://gihyo.jp/article/2025/07/ossdb-various-news0119]
+ 	非同期ストアドプロシージャ...
+ 		デバッグできる気がしないやつ
+ [Improving Amazon ECS deployment consistency with SOCI Index Manifest v2 | Containers https://aws.amazon.com/jp/blogs/containers/improving-amazon-ecs-deployment-consistency-with-soci-index-manifest-v2/]
+ 	finch、imageをビルドしたりECRへのpushに使用したりできるのか
+ 	SOCI manifest v1の導入が面倒で諦めたんだけど、v2はどうかな
+ [企画を通すなら「生成AIで作ったプロトタイプ」付きで――DeNAが一部部署で　“書類だけ”はNGに - ITmedia AI＋ https://www.itmedia.co.jp/aiplus/articles/2507/04/news070.html]
+ 	プロトタイプからMVPにするまでの苦労はあるにせよ、動くもので判断できるのは判断する側としたら嬉しいだろうなぁ
+ [BedrockのPDFサポートについて検証しましたが、、 #AWS - Qiita https://qiita.com/moritalous/items/54a3eb9a410a41d04b6c]
+ 	Cline + Bedrockでデカいファイル読ませるのがあんまりうまくいかないんだけど、PDFで食わせればいいのかなー
+ [macOSのApple Seatbelt (sandbox-exec) について調べた - 焼売飯店 https://blog.syum.ai/entry/2025/04/27/232946]
+ 	sandbox-exec、Deprecatedだけど使われてるっぽい
+ 	Mac App、わからねぇなー
+ [【資料公開】開発組織の進化・スケーリングと「開発生産性」 | Ryuzee.com https://www.ryuzee.com/contents/blog/14602]
+ 	チームごとに指標は異なるし、チームのフェーズによっても異なる
+ 	なんでも数字を取っておけばいいか、っていうとそう簡単な話でもない
+ 		全社一律の基準を定めたいならやればいいけど、それですべてのチームが最速・最善の開発活動が行えるわけではない...って話になるのかな
+ [アプリ開発のDockerの状態: 人工知能 | Docker https://www.docker.com/ja-jp/blog/docker-state-of-app-dev-ai/]
+ 	>経験豊富な開発者は、 ドキュメントやテストの作成にAIを利用しますが、AIは控えめに使用しています。
+ 	今のところは、コレが最善手なんだと思うけど
+ 	AI生成率90%な開発者が多数派になったとき、どこかで回帰不能点に達すると思っている
+
+読んだ本
+ [英語独習法／今井　むつみ｜岩波新書 - 岩波書店  https://www.iwanami.co.jp/book/b548866.html]
+ 	英語のスキーマを身につけるためにコーパスを使う
+ 	英語のスキーマを英語を読むだけで身につけるのは遠回りなんだな...
+
+書いた
+ 
+
+その他
+ 謎のAIハンズオン芸人業務が増えており、オレは何屋なんだ...
+ 	や、お役に立ててるなら全然やるんだけど
+
+#週報
+<[2025-06-24 - 2025-06-30]
+[2025-07-08 - 2025-07-14]>

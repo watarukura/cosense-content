@@ -1,0 +1,62 @@
+settings
+code:style.css
+ @import "https://scrapbox.io/api/code/blu3mo-public/関連ページ一覧を横に移動させる/style.css";
+
+code:style.css    
+  /* ＃で始まるタグをラベル風にする */
+  a[type="hashTag"]{
+ 		display: inline-block;
+     	padding: 2px 8px;
+      margin: 0 8px 10px 0;
+      background: #fff;
+      color: #f27e48;
+      font-size: 0.8em;
+      border: 1px solid #f27e48;
+      border-radius: 3px;
+      transition: .3s;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+  a[type="hashTag"]:hover{
+  	-webkit-transform: scale(1.1);
+   	transform: scale(1.1);
+  }
+
+code:style.css
+ /* External links */
+  .line a.link:not(.icon)::after {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f35d';
+    display: inline-block;
+    font-weight: 900;
+  }
+
+code:style.css
+ /* 二重括弧による強調をマーカーっぽくする */
+ .line strong:not([class]) { 
+   background: linear-gradient(transparent 45%, #ffff66 45%);
+ } 
+
+code:style.css
+  /* チェックボックスになるタグ v2 Font Awesome版 */
+  .line:not(.cursor-line) a[href$='/_']:not(.icon) span,
+  .line:not(.cursor-line) a[href$='/-']:not(.icon) span,
+  .line:not(.cursor-line) a[href$='/x']:not(.icon) span {
+    display: inline-block; width: 0; text-indent: -9999px }
+  .line:not(.cursor-line) a[href$='/_']:not(.icon)::after,
+  .line:not(.cursor-line) a[href$='/-']:not(.icon)::after,
+  .line:not(.cursor-line) a[href$='/x']:not(.icon)::after {
+    display: inline-block; min-width: 1.15em; padding-left: 1px;
+    font-family: 'Font Awesome 5 Free'; font-weight: 400;
+    font-size: 120%; text-align: center; vertical-align: middle }
+  .line:not(.cursor-line) a[href$='/_']:not(.icon)::after { content: '\f0c8'; color: #08BDBD; }
+  .line:not(.cursor-line) a[href$='/x']:not(.icon)::after { content: '\f14a'; color: #2489C5; }
+  .line:not(.cursor-line) a[href$='/-']:not(.icon)::after { content: '\f044'; color: #c56024; }
+
+code:style.css
+ /* テーブルのセルをわかりやすくする */
+ .table-block table { background-color: transparent; border-collapse: separate; border-spacing: 2px }
+ .table-block table tr td { padding: .1em; background-color: rgba(0,0,0,0.04) }
+ .table-block table tr:nth-child(even) td { background-color: rgba(0,0,0,0.06) }
+ .table-block table tr:first-child td { font-weight: bolder; text-align: center }
+ .table-block table tr td:first-child { padding: 0; background-color: transparent; border-width: 0 }

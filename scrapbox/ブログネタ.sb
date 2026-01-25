@@ -1,0 +1,29 @@
+ブログネタ
+　Ansibleの検証環境としてDockerを使う
+　ギリギリまで開発コストを削減する
+　踏み台サーバって何で必要なんだっけ？
+　sqlcommenter-php
+　テストがないLaravelプロジェクトに、とりあえずでスナップショットテストを追加していくノウハウアレコレ
+　Claude Code Actionを使ってAWSコスト健康診断する
+　Nix入門した
+　手順書を書くことで失敗しそうな箇所を洗い出す
+　Next.js + SSR構成のDockerイメージから静的ファイルだけ取り出してS3アップロードする
+　開発環境2026
+
+済み
+ amplifyのデプロイ結果をslack通知する
+  [Amplify Hostingのマルチアカウント移行 - TORANA TECH BLOG]
+　開発ドキュメントを減らすためのテンプレートリポジトリ構成
+　	[aquaとlefthookでREADME.mdを簡素に保つ]
+　GitHub Runnerの無償枠を使い切ったらBuildJet Runnerに切り替える
+　	[GitHub RunnerとBuildJet Runnerを切り替えながら使う]
+　隠れてsqliteを使ってた話
+　	[No RDB!の会社で隠れてSQLiteを使っていた話 https://zenn.dev/watarukura/articles/20250615-24krft611zu8hbxjvqsifb9c6rvp]
+	renovateを使わずに依存関係あれこれを1コマンドでバージョンアップする
+		[renovateのない環境で諸々まとめてupgradeする https://zenn.dev/watarukura/articles/20250628-rafnif9vncnt3us23jfffbm2mylzy]
+　tfdirをbashで再現する
+		[terraform local moduleの更新差分をterraform-config-inspectで抽出する https://zenn.dev/watarukura/articles/20250803-z6uk8sy6bkhz8abcdsh8yvqidj9oq3]
+　RSS -> DuckDB -> BigQuery
+　	[ニュース収集パイプラインをDuckDB + BigQueryで構築する https://zenn.dev/watarukura/articles/20250824-rb8j1afiwfbene8gkd3g9glvqfso]
+　Cursor / JetBrains AI Assistantから質問履歴を取得する
+ 　[日報をCursorに書いてもらうためにあれこれ収集する https://zenn.dev/watarukura/articles/20260104-rxrb8nh4ia68vlkc5om0sbvapd7dc]

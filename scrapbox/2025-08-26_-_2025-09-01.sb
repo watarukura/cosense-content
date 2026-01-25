@@ -1,0 +1,47 @@
+2025-08-26 - 2025-09-01
+読んだ記事
+ [「ghcr.io」を「ghrc.io」にタイプミスするとGitHubの資格情報が盗まれるとの指摘 - GIGAZINE https://gigazine.net/news/20250826-github-typo-squatting/]
+ 	大分ひどい
+ [pospomeがよくやる "組織の動かし方" - pospomeのプログラミング日記 https://www.pospome.work/entry/2025/08/25/134740]
+ 	Disagree & Commitなー
+ 		[Disagree and commit - Wikipedia https://en.wikipedia.org/wiki/Disagree_and_commit]
+ 		Amazonでも言われてるみたい
+ [MySQLのロック継承が引き起こしたsupremumロックによるDB障害事例 - freee Developers Hub https://developers.freee.co.jp/entry/db-failure-caused-by-supremum-lock]
+ 	>今回の障害の原因となった SAVEPOINT と ROLLBACK は、ActiveRecord などの ORM フレームワークで無意識的に利用してしまっています。
+ 	SAVEPOINT、利用してる認識ないもんなー
+ [Supply Chain Security Alert: Popular Nx Build System Package Compromised with Data-Stealing Malware - StepSecurity https://www.stepsecurity.io/blog/supply-chain-security-alert-popular-nx-build-system-package-compromised-with-data-stealing-malware]
+ 	Nx、どこに入ってるかわからんので調査が大変だった...
+ 	`npm i -g nx` してる場合とか、VS CodeのNxプラグイン使ってる場合とか
+ [Claude Code GitHub ActionsでAIレビューを試してみた話 https://zenn.dev/dely_jp/articles/aa9f6cd5e05a0d]
+ 	2approveを1approveにできるのはいいかも？
+ 		その分、当該コードを把握してる人の人数が減る、って話ではあるけど...
+ 		もともと1approveだけど、PRが読みやすくなる、とかはあるかも
+ [2025年のReactとコミュニティの現状 | POSTD https://postd.cc/react-community-2025/]
+ 	読み応えがあった
+ [Findyの爆速インフラ構築を支えるTerraform活用術 〜Terraform Test導入編〜 - Findy Tech Blog https://tech.findy.co.jp/entry/2025/08/29/070000]
+ 	terraform test事例
+ 	そう、applyしたときに初めて落ちるんよなー
+ 		terraform validateして、tflintが通って、planができてもapplyできないのはどうにかならんのか...
+ 	applyableなmoduleをtestしておいて、組み合わせて使えるならそれに越したことはないよなー
+ [GitHub Actions の依存関係を再帰的に出力する「ghatree」の紹介 https://zenn.dev/kou_pg_0131/articles/ghatree-introduction]
+ 	使ってみた
+ 	qodo-ai/pr-agentとかを使ってるとcommit hashでピン留めできなくてめんどいのよなー
+ [SQLGlotで軽やかに越える、SQL方言の壁。 https://zenn.dev/myshmeh/articles/3286e6f6c285c3]
+ 	SQL to SQLのトランスパイル、おもしろ
+ 	DWHのがSQL方言キツい気がするなー
+ 
+
+読んだ本
+ 
+
+書いた
+ [ニュース収集パイプラインをDuckDB + BigQueryで構築する https://zenn.dev/watarukura/articles/20250824-rb8j1afiwfbene8gkd3g9glvqfso]
+ 	どうしてもぼかして書かざるを得ないんだけど、まぁまぁアーキテクチャとしてはおもしろいものができたと思う
+
+その他
+ 茨城県知事選、つらい
+ 	仮にも県知事になろうって選挙に出る人間がアレなのしかいなくて、民主主義の難しさを感じている
+
+#週報
+<[2025-08-19 - 2025-08-25]
+[2025-09-02 - 2025-09-08]>

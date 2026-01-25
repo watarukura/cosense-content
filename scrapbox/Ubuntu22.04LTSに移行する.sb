@@ -1,0 +1,23 @@
+Ubuntu22.04LTSに移行する
+ついカッとなってデュアルブートもせずにUbuntuをinstallしてみた
+ 困ったこと
+ 	CPUの1コアが100％になってマシンがしばしばフリーズする
+ 		topコマンドで調べたところ、kworkerがCPUを100％使うタイミングがある様子だった
+ 	いくつかの原因が考えられたが、NVIDIAのドライバを公式のものに切り替えたら直った
+ 	　[ubuntuでkworkerのcpu使用率がやたら高い https://qiita.com/gooos/items/a97ae795f993c1adadb9]
+ 	　	違った
+ 	　https://forums.fedoraforum.org/showthread.php?319998-kworker-process-uses-a-lot-of-CPU
+ 	　	OSS版のNVIDIAドライバがデフォルトでは使われてる nouveu ってやつ
+ 	　	installすると画面の解像度が変更されるっぽい？
+ 	CAPSLOCKが有効化されてしまった
+ 		せっかくWindowsではCaps2Ctrlで変更したのに
+ 		https://zenn.dev/sprout2000/articles/8ea4a77d81583a
+
+インストール
+ fish
+ 	https://qiita.com/koji9412/items/7e2a15c330c387fc5b3b
+ PhpStorm
+ golang
+ fzf
+	git-cz
+		node.jsが先

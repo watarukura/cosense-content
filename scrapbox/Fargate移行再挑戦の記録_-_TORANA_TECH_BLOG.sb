@@ -1,0 +1,334 @@
+Fargate移行再挑戦の記録 - TORANA TECH BLOG
+[https://web.archive.org/web/20240919141034/https://tech.torana.co.jp/entry/2023/02/17/123000 Fargate移行再挑戦の記録 - TORANA TECH BLOG]
+SREチームのクラシマです。(2022年4月にSREチームが発足、バックエンドエンジニアからSREになりました)
+
+[[https://tech.torana.co.jp/entry/2021/09/29/141642:title https://tech.torana.co.jp/entry/2021/09/29/141642:title]] こちらで、Fargate移行にチャレンジして失敗、1年以上が過ぎました。
+
+その間にToysub!のマイページもリリースされ、こちらは稼働当初からECS on Fargateを選択、安定して動いています。
+
+1年の間にPHPもSwooleもバージョンがあがり、その度にPackerでEC2を作り直しになります。
+追随は大変だしEC2の運用ノウハウがWeb上から消えていく一方なので、Fargate移行に再チャレンジすることにしました。
+
+以下の3編構成となります。
+
+ 1. cronジョブ編
+ 2. キューワーカー編
+ 3. apiサーバ編
+
+
+[*** cronジョブ編]
+
+当初はECSスケジュールタスクに単純に移行、と考えていたのですが、EventBridge + StepFunctions + ECSタスクに移行しました。
+
+cronで実行するジョブ群は、以下の要件を満たすためにbashスクリプトからartisanコマンドを呼び出して実行していたためです。
+
+ リトライしたい
+ タイムアウトを指定したい
+ 同時に実行されるジョブは一つだけにしたい
+
+
+↓ざっくりこんな感じのスクリプトで包んでいました。
+
+code: (shell)
+ #/usr/bin/env bash
+ timeout=600
+ count=0
+ while true; do
+   if [[ "$count" -gt 3 ]]; then
+     break
+   else
+     timeout "$timeout" php aritsan hoge:fuga --no-interaction
+   fi
+   count=$(( count + 1 ))
+ done
+
+同時実行制御は、アプリケーションからredisにmutexを置き、存在チェックをしてから後続の処理を動かすようにしています。
+これは、EventBridgeは「最低1回の実行を保証」という動作のため、2回以上の呼び出しに耐える必要があるためです。
+
+code: (php)
+     public function exec(): int
+     {
+         try {
+             $this->acquireMutex(self::TTL);
+         } catch (AlreadyExecutedException) {
+             return 0;
+         }
+         // 後続の処理
+     }
+ 
+
+Bashスクリプトをこのままメンテナンスするのも辛いので、StepFunctionsにリトライとタイムアウトを任せることにしました。
+(同時実行制御は一旦このまま。いずれ折を見て...)
+
+[*** キューワーカー編]
+
+[[https://tech.torana.co.jp/entry/2021/12/06/110405:title https://tech.torana.co.jp/entry/2021/12/06/110405:title]]
+
+めもりーさんに爆速化してもらったキューワーカーですが、そのままECSサービスにしたらえらい目に合ったため、色々諦めました。
+
+c5.xlargeのバッチサーバ上で起動していましたが、同じサイズのFargateを用意するのもコスト的にもアレなのでインスタンスサイズを小さく、Application AutoScalingでメッセージの量に応じてスケールアウトするようにしました。
+
+staging環境でメッセージが処理されることを確認して本番環境に適用したところ、以下の問題が発生。
+
+ 同じ並列度で実行した場合に、スループットがEC2時の1/4以下に
+ RDSに負荷がかかり、apiサーバのレイテンシに大きな影響が出た
+
+
+ということで、一旦切り戻しを実施。
+
+↑のblogにある、stream_selectとproc_openによる多重化がFargate上だとうまく動かないようです。悲しい。
+
+sysctls周りだったら手に負えないな、とEC2でsysctlsをデフォルトに戻したりして検証したのですが原因は不明です。
+
+`php artisan queue:work` で地道に処理することにして、かつ、タスクをいっぱい起動することでお金で解決します。
+
+FARGATE_SPOTで費用削減しつつ、メッセージ数に応じてタスク数を増減させることで最適化を図ります。
+
+code: (hcl)
+ resource "aws_appautoscaling_policy" "madras_queue_worker_scale_up" {
+   name               = "madras-queue_worker-scale-up-${var.env}"
+   resource_id        = aws_appautoscaling_target.madras_queue_worker.resource_id
+   scalable_dimension = aws_appautoscaling_target.madras_queue_worker.scalable_dimension
+   service_namespace  = aws_appautoscaling_target.madras_queue_worker.service_namespace
+   policy_type        = "StepScaling"
+ 
+   step_scaling_policy_configuration {
+     adjustment_type         = "ExactCapacity"
+     metric_aggregation_type = "Average"
+ 
+     step_adjustment {
+       metric_interval_lower_bound = 0
+       metric_interval_upper_bound = 100
+       scaling_adjustment          = var.queue_worker_min_capacity
+     }
+     step_adjustment {
+       metric_interval_lower_bound = 100
+       metric_interval_upper_bound = 300
+       scaling_adjustment          = ceil(var.queue_worker_max_capacity / 2)
+     }
+     step_adjustment {
+       metric_interval_lower_bound = 300
+       scaling_adjustment          = var.queue_worker_max_capacity
+     }
+   }
+   depends_on = [
+     aws_appautoscaling_target.madras_queue_worker
+   ]
+ }
+ 
+ resource "aws_appautoscaling_policy" "madras_queue_worker_scale_down" {
+   name               = "madras-queue_worker-scale-down-${var.env}"
+   service_namespace  = aws_appautoscaling_target.madras_queue_worker.service_namespace
+   resource_id        = aws_appautoscaling_target.madras_queue_worker.resource_id
+   scalable_dimension = aws_appautoscaling_target.madras_queue_worker.scalable_dimension
+   policy_type        = "StepScaling"
+ 
+   step_scaling_policy_configuration {
+     adjustment_type         = "ExactCapacity"
+     metric_aggregation_type = "Average"
+ 
+     step_adjustment {
+       metric_interval_upper_bound = 0
+       scaling_adjustment          = 0
+     }
+   }
+ 
+   depends_on = [
+     aws_appautoscaling_target.madras_queue_worker
+   ]
+ }
+
+ちなみに、↑これを50刻みで5段階にしたところterraform applyでエラーになりました。
+↓terraform-aws-providerにIssue起票してお祈り中。
+
+[[https://github.com/hashicorp/terraform-provider-aws/issues/29413:title https://github.com/hashicorp/terraform-provider-aws/issues/29413:title]]
+
+
+[*** apiサーバ編]
+
+いよいよ本命のapiサーバです。
+
+ここまでSwooleと書いてきましたが、DatadogからSwooleの監視がしたい！という要件があってOpenSwooleに切り替えています。
+(laravel-swoole + OpenSwooleは大きな問題なく動きました。dd-agent用にopenmetrics.yamlを書いてOpenSwooleのworkerを監視する話はまたいずれ...)
+
+[** Dockerfileを書き直す]
+
+ローカル開発ではdockerを使っていましたが、本番アプリケーションでも使うとなると気になるのがセキュリティです。
+ということで、以下を実施。
+
+ インストールするライブラリ群もバージョン固定する
+ 非rootユーザで実行する
+
+
+ついでに、Multi stage buildしてイメージサイズの削減もします。[[https://www.zend.com/blog/php-docker-images-tips-tricks:title https://www.zend.com/blog/php-docker-images-tips-tricks:title]] こちらを参考にしました。
+(PHP + Multi stage build、あんまり事例が見つからず...。みなさんどうしてるんですかねー)
+
+[[https://tech.torana.co.jp/entry/2021/09/29/141642:title https://tech.torana.co.jp/entry/2021/09/29/141642:title]]
+ここで一つ告白しておきます。↑この対応のときは知らなかったのですが、aptやyumでのinstall時に細かくバージョン指定できるんですね。知らなかった...。
+まぁ、試行錯誤の経験とblogのネタになったのでヨシということで！
+
+↓以下、Dockerfileです。
+openapi-generator-cliをインストールするためにJREを入れて、npm installのhookでコード生成しています。
+
+code: (dockerfile)
+ # syntax=docker/dockerfile:1.4
+ FROM php:8.x.y-zts as builder
+ # renovate: datasource=repology depName=debian_stable/default-jre versioning=loose
+ ENV DEFAULT_JRE_VERSION="hoge"
+ # renovate: datasource=repology depName=debian_stable/curl versioning=loose
+ ENV CURL_VERSION="fuga"
+ # ...その他色々指定
+ # renovate: datasource=github-releases depName=openswoole/swoole-src
+ ENV SWOOLE_VERSION="piyo"
+ 
+ RUN apt-get -y update && \
+     apt-get install -y --no-install-recommends \
+         # hoge=$HOGE_VERSION のように書いていきます 
+         default-jre="$DEFAULT_JRE_VERSION" \
+         curl="$CURL_VERSION" && \
+     apt-get clean
+ 
+ RUN docker-php-ext-install -j"$(nproc)" pdo_mysql && \
+     # ...その他、peclで入れる系を書きます
+     pecl clear-cache
+ 
+ RUN curl -L -o "swoole-src-$SWOOLE_VERSION.tgz" "https://github.com/openswoole/swoole-src/archive/refs/tags/v${SWOOLE_VERSION}.tar.gz" && \
+     tar xzf "swoole-src-$SWOOLE_VERSION.tgz" && \
+     cd "swoole-src-$SWOOLE_VERSION" && \
+     phpize && \
+     ./configure --enable-sockets --enable-http2 --enable-openssl --enable-swoole-json --enable-swoole-curl && \
+     make -j"$(nproc)" && \
+     make install && \
+     make clean && \
+     docker-php-ext-enable openswoole && \
+     mv "$PHP_INI_DIR"/conf.d/docker-php-ext-openswoole.ini "$PHP_INI_DIR"/conf.d/z_docker-php-ext-openswoole.ini && \
+     echo "swoole.enable_preemptive_scheduler=On" >> "$PHP_INI_DIR"/conf.d/z_docker-php-ext-openswoole.ini
+ # --enable-socketsする場合は、docker-php-ext-sockets.iniをdocker-php-ext-openswoole.iniより先に読みこむ必要がある
+ 
+ WORKDIR /var/www/html
+ COPY --link apps/api/ /var/www/html/
+ 
+ ENV PATH=$PATH:/root/.volta/bin
+ ARG GIT_HASH=cannot_get_hash
+ RUN curl https://get.volta.sh | bash && \
+     /root/.volta/bin/volta install node npm && \
+     chmod 0600 /root/.ssh/id_rsa && \
+     npm install && \
+     ./composer.phar install --prefer-dist --no-progress --no-dev
+ 
+ FROM php:8.x.y-zts
+ 
+ ENV TZ=Asia/Tokyo
+ 
+ COPY --chown=www-data:www-data apps/api/docker/madras-platform-api/script.sh /var/www/script.sh
+ COPY --from=builder --chown=www-data:www-data /var/www/html/ /var/www/html
+ # docker-php-ext-*.ini
+ COPY --from=builder /usr/local/etc/php/conf.d/ /usr/local/etc/php/conf.d
+ # *.h
+ COPY --from=builder /usr/local/include/php/ /usr/local/include/php
+ # *.so php.iniのphp_extension_dir で変更可能
+ COPY --from=builder /usr/local/lib/php/extensions/fugofugo/ /usr/local/lib/php/extensions/fugofugo
+ 
+ WORKDIR /var/www/html
+ 
+ ARG MADRAS_ENV=stg
+ RUN cp /var/www/html/docker/madras-platform-api/php."${MADRAS_ENV%-?}".ini /usr/local/etc/php/conf.d/php.ini && \
+     cp /var/www/html/env/"${MADRAS_ENV%-?}.env" /var/www/html/.env
+ 
+ USER www-data
+ EXPOSE 8080
+ CMD ["/var/www/script.sh"]
+
+こちらもstaging環境で動作確認、軽くk6で負荷もかけてみたりしましたが概ね良さそう。
+
+[** 移行]
+
+ただ、本番では何が起こるかわからないので切り戻しを素早く実施したいです。ということで、以下のような手順で切り替えを実施。
+
+ 1. 既存環境はそのまま残して、別URLでALB＋Fargate環境を構築し、Route53で別のURLをALBに割り当てる
+ 2. 既存環境と新環境のURLを入れ替える
+ 3. 何か異常があったら再度入れ替えできるように準備しておく
+
+
+と、いうわけでURL入れ替え用のシェルスクリプトがこちら。
+SREチームはGoでツールを書くようにしているのですが、使い捨てなのでBashで...。
+(後日、個人的にGoで書き直しましたが、動作検証してないので移行時はBashの方を使いました)
+
+code: (shell)
+ #!/usr/bin/env bash
+ set -xveuo pipefail
+ 
+ blue=blue.example.com.
+ green=green.example.com.
+ zone_id=Z*******************
+ 
+ get_blue_record() {
+ 	aws route53 list-resource-record-sets \
+ 		--hosted-zone-id "$zone_id" \
+ 		--query "ResourceRecordSets[?Name=='""$blue""'] | [0]"
+ }
+ get_green_record() {
+ 	aws route53 list-resource-record-sets \
+ 		--hosted-zone-id "$zone_id" \
+ 		--query "ResourceRecordSets[?Name=='""$green""'] | [0]"
+ }
+ 
+ get_blue_record >blue_record.json
+ get_green_record >green_record.json
+ 
+ make_swap_json() {
+ 	blue_type=$(jq -r .Type "$1")
+ 	blue_alias_target=$(jq -r .AliasTarget "$1")
+ 	green_type=$(jq -r .Type "$2")
+ 	green_alias_target=$(jq -r .AliasTarget "$2")
+ 
+ 	cat <<EOJ
+ {
+   "Comment": "swap",
+   "Changes": [
+   {
+     "Action": "UPSERT",
+     "ResourceRecordSet": {
+       "Name": "$blue",
+       "Type": "$green_type",
+       "AliasTarget": $green_alias_target
+     }
+   },
+   {
+     "Action": "UPSERT",
+     "ResourceRecordSet": {
+       "Name": "$green",
+       "Type": "$blue_type",
+       "AliasTarget": $blue_alias_target
+     }
+   }]
+ }
+ EOJ
+ }
+ 
+ swap() {
+ 	aws route53 change-resource-record-sets \
+ 		--hosted-zone "$zone_id" \
+ 		--change-batch "file://$1"
+ }
+ 
+ make_swap_json blue_record.json green_record.json >swap.json
+ if [[ ${DRYRUN:-0} != "1" ]]; then
+   echo "run"
+   swap swap.json
+ fi
+ 
+ exit 0
+
+移行準備OK、terraform管理しているDatadog MonitorをFargate用にコピって作り、事前準備完了。
+apiサーバの切り替えを実施しました。ドキドキしながらDatadogを眺めていましたが、おかげさまで異常の報告はありませんでした。
+
+[*** 終わりに]
+
+これで、PHPもSwooleもプロダクトチームが好みのタイミングでバージョンアップできるようになり、SREチームの手を離れました。
+一つの長い戦いが終わり、また次の戦いがすでに始まっています。
+それでは、また。
+
+追記: [[https://tech.torana.co.jp/entry/2022/02/07/000000:title https://tech.torana.co.jp/entry/2022/02/07/000000:title]] そういえば、こちらのリベンジも完了しています。弊社で使ってるAuroraは現在は全部Gravitonです。
+
+#トラーナテックブログ

@@ -1,0 +1,55 @@
+2024-06-25- 2024-07-01
+読んだ記事
+ https://www.lifehacker.jp/article/2406send-documents-pdf-e-books-to-kindle-wirelessly/
+  PDFリーダーに悩んでいるので、いっそkindleで読むか？
+ [一休CTOが語るエンジニアの事業貢献とユーザーエクスペリエンスへのコミット 伊藤直也さんインタビュー - Findy Engineer Lab https://findy-code.io/engineer-lab/naoya_ito]
+ 	事業にコミット、できてないな...
+ [社内の基盤を活かして爆速開発を実現するために重視したマイクロサービステンプレートの5つの要点 - MonotaRO Tech Blog https://tech-blog.monotaro.com/entry/2024/06/25/090000]
+ 	テンプレートリポジトリの更新、いつも諦めちゃう
+ 	個人用ならともかく、企業で開発しててどうやって最新化するか教えてほしい
+ [ITシステムの可用性と損失を考える | 外道父の匠 https://blog.father.gedow.net/2024/06/27/system-availability-value/]
+  難しい
+  お金に換算できない、ブランドの毀損みたいな面も大きいからなー
+ [フロントエンドの Monorepo をやめてリポジトリ分割したワケ / Why did we stop using Monorepo on the frontend and split the repository? https://speakerdeck.com/kaminashi/why-did-we-stop-using-monorepo-on-the-frontend-and-split-the-repository]
+  モノレポ の分離、なるほどなー
+  それはたしかにそう、というはっきりした理由があって明快だった
+ https://speakerdeck.com/biwashi/cloudnative-days-summer-2024-declarative-aggregated-management-of-feature-flags-using-openfeature-and-auto-generation
+ 	フィーチャーフラグ、導入したいと思い続けて幾星霜
+ [マネジャーとは何をする人なのか 連載『ミンツバーグの組織論──7つの類型と力学、そしてその先へ』 第6回 | 組織文化/組織開発｜DIAMOND ハーバード・ビジネス・レビュー https://dhbr.diamond.jp/articles/-/10654]
+ 	マネージャー、めんどくせーなー！
+ [Why is observability so expensive? https://mattklein123.dev/2024/04/03/observability-cost-crisis/]
+  ログはs3に置けばいいけど、メトリクスもトレースも安くていいデータストアがないんだよな
+ [Finding GPT-4’s mistakes with GPT-4 https://openai.com/index/finding-gpt4s-mistakes-with-gpt-4/]
+  LLMの回答を批評するLLM
+  自律への一歩という感じ
+ [えにしテックさん１５周年に寄せて〜万葉と私ののこれまでの学び〜 https://speakerdeck.com/nay3/enisitetukusan15zhou-nian-niji-sete-mo-xie-tosi-nonokoremadenoxue-bi]
+  不確実性と戦うのは正社員の本業なのでなー
+   エンジニア固有ではないよね
+ [「開発生産性を上げる改善」って儲かるの？に答えられるようにする / Is development productivity profitable? https://speakerdeck.com/i35_267/is-development-productivity-profitable]
+  石垣さんなら答えてしまうのかもしれない。。。
+   世にどれだけ答えられる人がいるか、って上位一桁パーセントってレベルだと思うけど
+ [35年と3ヶ月間働いて、とうとう定年になりました。 区切りとして、定年エントリーを書きました。お楽しみください。 - Vengineerの妄想 https://vengineer.hatenablog.com/entry/2024/06/30/080000_1]
+ 	定年までエンジニア、やりたいなー
+ [Amazon SESで受信したメールをRedashで検索できるようにしてみた - Nealle Developer's Blog https://nealle-dev.hatenablog.com/entry/2024/07/03/123641]
+  本文含めて送信履歴、欲しいものなんだよなー
+
+聴いた
+	[Yokohama North AM：Apple Podcast内のep 102 @o0h_と明後日ペチコン福岡、設計ナイト、キーボードについて https://podcasts.apple.com/jp/podcast/yokohama-north-am/id1512608373?i=1000660414527]
+	[Yokohama North AM：Apple Podcast内のep 101 @o0h_とPHPカンファレンス福岡2024直前、自分たちに影響を与えた本、最近読んだ漫画について https://podcasts.apple.com/jp/podcast/yokohama-north-am/id1512608373?i=1000659618661]
+	[fukabori.fm：Apple Podcast内の116. エムスリーのエンジニアリング組織運営 w/ vaaaaanquish https://podcasts.apple.com/jp/podcast/fukabori-fm/id1388826609?i=1000660624680]
+	[ツナギメエフエム：Apple Podcast内のEp.94 びきニキ( @BkNkbot )さん、Yuta Matsumura( @tsubakimoto_s )さん、すてにゃん( @stefafafan )さん、mai( @maimyyym )さんと雑談 #ツナギメエフエム https://podcasts.apple.com/jp/podcast/%E3%83%84%E3%83%8A%E3%82%AE%E3%83%A1%E3%82%A8%E3%83%95%E3%82%A8%E3%83%A0/id1633556885?i=1000659405088]
+
+読んだ本
+ [測りすぎ | なぜパフォーマンス評価は失敗するのか？ | みすず書房 https://www.msz.co.jp/book/detail/08793/]
+  絶望的な気分になる
+  SREがエラーバジェットを使うのは障害を減らしつつ開発速度を上がるための工夫だけど、単純に数字を追うと失敗するのはどこも同じ
+  目標と達成度で給与を決めるのもやめてほしいが、さりとて代わりになる指標も簡単には見つからず
+
+書いた
+ 
+
+その他
+　コメントできないイベントが発生したとき、「にゃーん」例外が発生します
+　	割とよくある
+
+#週報

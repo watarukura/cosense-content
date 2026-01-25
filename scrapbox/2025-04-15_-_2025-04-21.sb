@@ -1,0 +1,49 @@
+2025-04-15 - 2025-04-21
+読んだ記事
+ [NEXCO中日本管内で発生したETCの広域システム障害についてまとめてみた - piyolog https://piyolog.hatenadiary.jp/entry/2025/04/12/164427]
+ 	デカい障害だったなー
+ 	切り戻し対象の選択に失敗してるのかな？
+ [スケールからの逆算 技術的負債返済を仕組み化した話｜migi https://note.com/mcmr/n/nd1807077572c]
+ 	リファクタリングスプリントを持ちます、って最初から決めて進められれば、それがリズムになりそう
+ [画面仕様書への静的検査器を実装したらたくさんの欠陥を発見できた話 - DeNA Testing Blog https://swet.dena.com/entry/2025/04/17/093000]
+ 	>非プログラマーによって機械可読な仕様書を保守する場合、機械可読に保つハードルが高いとわかりました。 
+ 		それはそう
+ 		ヒューマンリーダブルかつマシンリーダブルなドキュメント、人が書くのは辛いよなぁ
+ [Datadog MCP サーバで自然言語分析＆障害対応をやってみた | DevelopersIO https://dev.classmethod.jp/articles/datadog-mcp-server-guide/]
+ 	Datadog、早く公式MCPサーバだしてくれー
+ 	複数のDatadog org使ってる場合にどう切り替えるか、を悩んでいるところ
+ [【今週の話題】AIエディタ戦争 https://blog.lai.so/headlines-2025-04-18/]
+ 	Cursor / Windsurfやばい
+ 	ClineもCopilot agentが食っちゃうかもしれない
+ [個人的 Vibe Coding のやりかた https://zenn.dev/yoshiko/articles/my-vibe-coding]
+ 	まずドキュメントから生成する、って面白い
+ [情報は“並べる”のではなく、“構造化”する─B‑H‑Dフレームが組織のリードタイムを短縮する。｜nishiba https://note.com/nishiba/n/n6328125c300d]
+ 	Background（背景）
+  Hypothesis（仮説）
+  Decision（意思決定）
+ 	非同期コミュニケーションはコンテキストが共有されてないと話が通じない
+ 		非同期じゃなくてもそうだけど
+ [「no-reply@google.com」から送信されたように見えるフィッシングメール攻撃 - GIGAZINE https://gigazine.net/news/20250421-phishers-abuse-google-oauth-dkim-replay-attack/]
+ 	こえぇ...
+ 	Google Sitesの悪用か
+ 	[Google OAuthを悪用したDKIMリプレイ攻撃が発生、Googleが対策中 - イノベトピア https://innovatopia.jp/cyber-security/cyber-security-news/52148/]
+ 		DKIMもパスしちゃう
+ [UNIVERSITY of CREATIVITY(UoC) - デザインを考え続けた深澤直人が子どもたちに語るその本質｜【OCHABI × UoC】特別公開授業「デザイン教育シンポジウム#5」ゲスト講師：深澤直人氏 https://uoc.world/articles/details/?id=QEJzU1DkU9u]
+ 	おもしろかった！
+ 	>深澤さんが突き詰めてきたデザインって、人間本来の「やってしまう」に根ざしていて、もはやデザインって人間じゃなくて環境から持ってくるものなんだってことになってるんですよ。
+
+読んだ本
+ [書籍情報―よくわかる世界のサイバー犯罪【全国学校図書館協議会選定図書】 https://www.kohgakusha.co.jp/books/detail/978-4-7775-2275-0]
+ 	I/O誌連載をまとめたもの
+ 	おもしろかった
+
+書いた
+ 
+
+その他
+ 社内用のconfluenceをゴニョゴニョするCLIを書いた
+ 	オンプレでサーバ立てる方が安いのはそれはそうなんだけど、人以外がドキュメントを必要とするシーンが増える以上、今後は減っていくんだろうな
+
+#週報
+<[2025-04-08 - 2025-04-14]
+[2025-04-22 - 2025-04-28]>

@@ -1,0 +1,7 @@
+# Parquet
+
+- [https://parquet.apache.org/docs/overview/](https://parquet.apache.org/docs/overview/)
+>Apache Parquetはオープンソースの列指向データファイルフォーマットで、効率的なデータの保存と検索のために設計されています。 複雑なデータを一括処理するための高性能な圧縮とエンコード方式を提供し、多くのプログラミング言語と分析ツールでサポートされています。
+
+- [https://risingwave.com/blog/apache-iceberg-vs-parquet-file-formats-vs-table-formats/](https://risingwave.com/blog/apache-iceberg-vs-parquet-file-formats-vs-table-formats/)
+>Apache IcebergとParquetのどちらを選ぶかは、特定のユースケースによる。 動的なスキーマ変更と効率的なメタデータ管理には、Apache Icebergが大きな利点を提供する。 ストレージの効率と読み取り集約的なタスクには、Parquetが依然として優れた選択肢である。 各プロジェクト固有の要件を評価することが、意思決定プロセスの指針となります。

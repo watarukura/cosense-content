@@ -1,0 +1,100 @@
+2024-12-03 - 2024-12-09
+読んだ記事
+ [mizchiさんによる「LAPRAS 公開パフォーマンスチューニング」~調査編~ - YouTube https://www.youtube.com/watch?v=j0MtGpJX81E&t=32s]
+ 	耳だけだとわからんので後でちゃんと観よう
+ 	[DevTools の使い方を可能な限りスクショ付きで解説してみる https://zenn.dev/mizchi/scraps/c72e6a55deca18]
+ 		mizchiさん本人の解説資料
+ 		眺めながら自社サイトのLighthouse Performanceをいじってみた
+ 			GTMを外すと点数が倍になる
+ 			この状態でいくつか改善した後で戻すともとに戻る
+ 				ボトルネックを改善しないとそれ以外の改善は無駄ということっぽい
+ [AWS ECS Service のオススメ監視項目 | 外道父の匠 https://blog.father.gedow.net/2024/12/04/aws-ecs-service-monitoring/]
+ 	外道父さん、メトリクスをダウンロードして保存してたりする？
+ 		Cloudwatchコンソールで見てるだけじゃわからないことがあるのかもなぁ...
+		>インフラエンジニアや SRE といった職種において、本当の意味で正しくできるエンジニアは数少ないと考えているカテゴリは、【負荷試験】【監視】の２大タスクだと思っており、その１つとなります。
+ 		刺さる...
+ 		副業先の上司はこれができる人で、いつもすげぇなと思っている
+ [「今年の新語2024」ベスト10｜三省堂 辞書を編む人が選ぶ「今年の新語2024」 https://dictionary.sanseido-publ.co.jp/shingo/2024/best10/]
+ 	ランキングは、誰が選んだかが大事よね
+ [毎日ブログを書くようにしたら体調が良くなった - だいくしー(@daiksy)のはてなブログ https://daiksy.hatenablog.jp/entry/2024/12/04/151836]
+ 	EM業から多少解放されてはいるものの、だいくしーさん・こにふぁーさんは定点観測している
+ [ファインディの4年にわたる技術的負債の返済 / Repaying 4 Years of Technical Debt at Findy - Speaker Deck https://speakerdeck.com/ma3tk/repaying-4-years-of-technical-debt-at-findy]
+ 	見事なリカバリ
+ [AWS アクセス管理を一歩先へ！カミナシのセキュアな AWS アクセス管理を実現するシステムの紹介 - カミナシ エンジニアブログ https://kaminashi-developer.hatenablog.jp/entry/2024/12/04/080000]
+ 	wimくんが作ってくれたやつと似た仕組みだ
+ 	AWSマネージドなやつほしいな確かに
+ [【AWS re:Invent 2024】耐障害性を高めるCell-based Architectureを体験してきた - カミナシ エンジニアブログ https://kaminashi-developer.hatenablog.jp/entry/2024/12/3/aws-reinvent-cell-based-architecture]
+ 	マルチテナント、やったことないなそういえば
+ [docker buildx bake で高速並列ビルド - 誰かの役に立てばいいブログ https://ymmt.hatenablog.com/entry/2024/12/04/004608]
+ 	docker-build-push actionでも使えるのかな？
+ [爆伸び中のGoライブラリhuma https://zenn.dev/mercy34/articles/1fa551165d8ac1]
+ 	vim-jp Slackより
+ 	>みんなFastAPIが欲しいんだよな
+ 		ほんとにそう
+ 		とはいえ、スキーマファーストにしたい気持ちもある...
+ [シェルスクリプトで雪の結晶を描く | IIJ Engineers Blog https://eng-blog.iij.ad.jp/archives/28606]
+ 	変態だー！
+ [AWS Transfer Family web apps S3にアクセスできるWebアプリケーションをさくっと作ってみた | DevelopersIO https://dev.classmethod.jp/articles/try-transfer-family-web-apps/]
+ 	脱Cyberduckできるかも
+ [アップデートApache Iceberg形式のテーブルデータに最適化されたストレージAmazon S3 Tablesが発表されました | DevelopersIO https://dev.classmethod.jp/articles/reinvent2024-amazon-s3-tables/]
+ 	話題になってる
+ 	Cloudwatch Logsじゃなくて直接LogをIceberg形式で出力できればいいのにな？
+ 	CDCでS3出力できればS3がDWHになって嬉しい、みたいな話もあるし
+ [Next.jsからSPAに移行し、Next.jsに戻した話 - Hello Tech https://tech.hello.ai/entry/2024/12/2/incremental-migration-nextjs]
+ 	必要に応じて変更できる強さ
+ [永続データプログラミングと永続データ構造 - 一休.com Developers Blog https://user-first.ikyu.co.jp/entry/2024/12/03/091133]
+ 	スプレッド構文、うまく使えないんだよなー
+ 	PHPでもTypeScriptでも最近良く見る
+ [クレカ表現規制に対するVisaの見解、山田議員が日本法人に「価値判断しない」と再確認　社長の発言を受け（ITmedia NEWS） - Yahoo!ニュース https://news.yahoo.co.jp/articles/cc0c7d6b75906a9f62fc941cc6f487ec302967d2]
+ 	Visa/Masterを使うことによるリスク、特に引き受ける義理はないんだよな
+ 	JCB移行してもいいんだけど、SMBCがOliveで対応してくれたら移行しよう
+ [インターンした企業へのDDoS攻撃容疑で摘発された事案についてまとめてみた - piyolog https://piyolog.hatenadiary.jp/entry/2024/12/03/011032]
+ 	ひどい話だった
+ [DuckDB-Wasm を利用したブラウザでのログ解析機能 https://zenn.dev/shiguredo/articles/duckdb-wasm-dashboard]
+ 	DuckDBにするかS3 Tablesにするか
+ 	両方使えるようにしておきたい
+ [日本人はソブリンクラウドを理解できるか？｜ミック https://note.com/mickmack/n/n29efd9281ba7]
+ 	Gov Cloudでは必要な視点だけど、まぁ日本の企業では特に気にしなくて良さそう
+ 		アメリカとの関係次第ではある
+ [【AWS re:Invent 2024】Amazon Verified Permissionsを本番適用した人のリアルな声を聞いた - カミナシ エンジニアブログ https://kaminashi-developer.hatenablog.jp/entry/2024/12/5/aws-reinvent-avp]
+ 	高い！
+ [コードレビューでよくあったコメント9選 〜Terraform編〜 https://zenn.dev/mixi/articles/terraform-code-review-tips]
+ 	わかるー
+ [EGG '24 | ゲーム業界ホワイト化の光と影 | ドクセル https://www.docswell.com/s/EGG/ZYDV8N-KazuhisaMinato]
+ 	副業先で話題になってた
+ 	アスリートとか職人とかも同じ話があるよね
+ [フロントエンドの段階的モダナイズ、のための自走設計 (株式会社スタディスト様) https://zenn.dev/mizchi/articles/studist-modernize-frontend]
+ 	openapi.yaml、独自仕様があるのか...こえぇな
+ [データ分析で用いるSQLクエリの設計方法 - 風音屋TechBlog https://techblog.kazaneya.com/20241208-design-of-analytical-sql-queries/]
+ 	CTEを細かく分けてクエリを作る手法、BigQueryでよく見るんだけどMySQL 8以降でも使えるのかな？
+ 		設計文書を残しておくのは有効かも
+ 		コメントだけ残ってても後からクエリの意図を汲み取るのが難しい場合はある
+ [ずんだもんがvimでパワポをするのだ🫛 #Vim - Qiita https://qiita.com/uesseu/items/c458b3a6378262c5a37c]
+ 	ずんだもんはともかく、スライドに音声機能つけて喋ってもらえば本人不在LTができるな...
+ [RustでBrainfuckのJITコンパイルをする https://zenn.dev/taka2/articles/0fdd88d6b5ffbc]
+ 	すげー
+ [宇宙最速のランチRecap LT会（AWS re:Invent 2024) - Speaker Deck https://speakerdeck.com/watany/reinvent-catchup-db-storage?slide=27]
+ 	Exadata on AWS!!!
+
+読んだ本
+
+書いた
+ [watarukura/saba_study https://github.com/watarukura/saba_study]
+ 	[［作って学ぶ］ブラウザのしくみ | プログラミング・システム開発,その他プログラミング・システム開発 | Gihyo Direct https://direct.gihyo.jp/view/item/000000003560] の写経中
+ 		CSS
+ 		GUI
+ [GitHub RunnerとBuildJet Runnerを切り替えながら使う - TORANA TECH BLOG https://tech.torana.co.jp/entry/2024/12/09/123000]
+ 	[ブログネタ]
+
+その他
+ [ミスコンパイルを修正 - YouTube https://www.youtube.com/watch?v=AqSRxb-iEdY]
+ 	rui ueyamaさんのターミナルさばきがカッコよい
+ [Deno first でやっていく https://zenn.dev/mizchi/articles/deno-first-choice]
+ 	再度denoで書き捨てスクリプトを書いてみている
+ 	daxの使い所、別にない気がする...
+ 		なんでもないobjectの取り回しがものすごく悪いのは型を書いてtypeにしろって話なのかな
+ 		dictみたいなのを宣言できるといいのか？
+ 	[/deno-ja]
+ 		良さそう
+
+#週報

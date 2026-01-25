@@ -1,0 +1,1 @@
+# {"name":"NotFoundError","message":"Page not found","details":{"linkTo":"https://scrapbox.io/watarukura/"}}

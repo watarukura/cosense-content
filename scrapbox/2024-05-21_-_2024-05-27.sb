@@ -1,0 +1,80 @@
+2024-05-21 - 2024-05-27
+読んだ記事
+ [第812回　aptの新機能あれこれ ［Ubuntu 24.04 LTS版］ | gihyo.jp https://gihyo.jp/admin/serial/01/ubuntu-recipe/0812]
+ 	GitHub Runnerのubuntu-latestがいつ24.04に切り替わってもいいように情報収集しないと
+ 	`apt install hogehoge -U` を覚えた
+ [最近ローカルLLMがアツいらしい – soy-software https://soysoftware.sakura.ne.jp/archives/3903]
+ 	エロ・グロのためにはローカルLLMが必要
+ 		そういう話ばかりではないけど
+ [CodeBuildでマネージドなActionsのランナーを使えるように｜Productivity Weekly(2024-05-01) https://zenn.dev/cybozu_ept/articles/productivity-weekly-20240501]
+ 	[LLM校正CIを自社のブログに導入してみた - NTT Communications Engineers' Blog https://engineers.ntt.com/entry/2024/04/17/084103]
+ 	自前のzennの方はtextlintが入ってるからある程度のlintがかかって嬉しいんだけど、自社テックブログはなんのlintもかからないのでなんとも
+ [データ基盤のためのリーダブルSQL https://zenn.dev/tenajima/articles/e8f82f6a0889d3]
+ 	すき
+ 	CTEが多くて現代のSQLって感じだ
+ [Apache または NGINX を ELB のバックエンドサーバーとして使用する | AWS re:Post https://repost.aws/ja/knowledge-center/apache-backend-elb]
+ 	改めてタイムアウト周りを見直したい
+ [すべてのコードやライブラリ自体が技術的負債である / 高利率な技術と低利率な技術 - Lambdaカクテル https://blog.3qe.us/entry/2024/05/22/204910]
+ 	エンジニアが急減する、みたいな環境に置かれているので身につまされる
+ 	事業の継続にエンジニアが不要になることはないけど、最重要ではないのよね
+ 		最悪、効率を無視すれば全部手書きでも仕事はできる
+ [【サービス名変更のお知らせ】「Scrapbox」は「Helpfeel Cosense（ヘルプフィール コセンス）」に変わります | 株式会社Helpfeelのプレスリリース https://prtimes.jp/main/html/rd/p/000000323.000027275.html]
+ 	Scrapboxはともかく、Helpfeelの方はLLMと競合しそうなのでがんばってほしい
+ 		Cosense(旧Scrapbox)か
+ 		X(旧Twitter)みたいになりそう
+ [アイテムレビュー基盤で導入したアーキテクチャとその成果 / Item Review Introduction Architecture Outcome - Speaker Deck https://speakerdeck.com/chichi1091/item-review-introduction-architecture-outcome]
+ 	戦術的DDD、なー
+ 	効果がある、という報告なのでよかったのでは
+ [分散システム？モジュラーモノリス？モノレポ？全部やってみた結果は？ - Speaker Deck https://speakerdeck.com/leveragestech/fen-san-sisutemu-mosiyuramonorisu-monoreho-quan-bu-yatutemitajie-guo-ha]
+ 	モノレポがちょうどいい、の感覚わかる
+ 	モジュラーモノリス、ちょっとやってみたものを手仕舞いしたし
+ [Running PHP blazingly fast at the Edge with WebAssembly · Blog · Wasmer https://wasmer.io/posts/running-php-blazingly-fast-at-the-edge-with-wasm]
+  wordpress on edge、どうにかならんかなー
+   もうちょいという気はする
+ [いわゆる”中年”の僕がミッドライフ・クライシスを乗り越えるためにやったこと https://nulab.com/ja/blog/nulab/how-i-survived-midlife-crisis/]
+  真っ只中なので他人事ではない
+  趣味の読書ができなくなりつつあるし
+ [会社が天引きした税金を納付してなくて俺に督促状が来た話(1)｜よんてんごP https://note.com/yontengop/n/n27022beb77b8?sub_rt=share_pb]
+  怖すぎる
+ [pyenvを初心者に薦めるのはもうやめよう - methaneのブログ https://methane.hatenablog.jp/entry/2024/05/26/pyenv%E3%82%92%E5%88%9D%E5%BF%83%E8%80%85%E3%81%AB%E8%96%A6%E3%82%81%E3%82%8B%E3%81%AE%E3%81%AF%E3%82%82%E3%81%86%E3%82%84%E3%82%81%E3%82%88%E3%81%86]
+  PHPもこうなってほしい
+  pecl使わない縛りならなー
+ [awslim - Goで実装された高速なAWS CLIの代替品を作った - 酒日記 はてな支店 https://sfujiwara.hatenablog.com/entry/2024/05/27/091630]
+ 	おもしろ
+
+聴いた
+　[Misreading Chat：Apple Podcast内の#132: Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations https://podcasts.apple.com/jp/podcast/misreading-chat/id1364330509?i=1000656268477]
+　	CUDA、特殊技能扱いで面白い
+　		書いたことはない
+　[ゆるコンピュータ科学ラジオ：Apple Podcast内の機械式コンピュータの挫折。その原因は、凡庸な人間ドラマだった。【バベッジ2】#125 https://podcasts.apple.com/jp/podcast/%E3%82%86%E3%82%8B%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%A7%91%E5%AD%A6%E3%83%A9%E3%82%B8%E3%82%AA/id1604353315?i=1000656024525]
+　	エイダに触れずにバベッジについて語ってて、なんか狙いがあるんだろうな
+　[Yokohama North AM：Apple Podcast内のep 96 @o0h_とPHPカンファレンス香川、本の話、readline.fmについて https://podcasts.apple.com/jp/podcast/yokohama-north-am/id1512608373?i=1000655796457]
+　	積みPodcastが減ってきたし、readline.fmも聴いてみようかな
+　[readline.fm：Apple Podcast内のEP000 自己紹介 https://podcasts.apple.com/jp/podcast/readline-fm/id1743696233?i=1000653856208]
+　[readline.fm：Apple Podcast内のEP001 『ゆとりの法則』Part1 https://podcasts.apple.com/jp/podcast/readline-fm/id1743696233?i=1000654655644]
+　	聴いてみた
+　	楽しい
+　	デマルコさん、何冊かは読んでるはずなんだけど手元にはないし、再読したい
+
+読んだ本
+　[Software Design 2024年6月号｜技術評論社 https://gihyo.jp/magazine/SD/archive/2024/202406]
+　	実行計画、何度読んでもあんまり覚えられないので何度も読んでいる
+　[人間はどこまで家畜か──現代人の精神構造-ハヤカワ・オンライン https://www.hayakawa-online.co.jp/shopdetail/000000015735/]
+　 30年ちょいぶりに小学校と関わって、色々面食らっている
+　 段々と暴力や衝動性から遠い世界になってきているが、人間の中のある部分はそれを意志を持って制御しなければならない
+　 一方で、求められる能力の下限は上がり続け、際限がない
+　[新装版 学術的に「正しい」若い体のつくり方 -谷本道哉 著｜ラクレ｜中央公論新社 https://www.chuko.co.jp/laclef/2020/02/150679.html]
+　 有酸素運動へのモチベーションが増した
+
+書いた
+
+その他
+ 晩酌すると3時くらいに目が覚め、二度寝すると6時くらいに目が覚めるのでイマイチ体験が良くない
+ 	朝は4時半くらいに起きたい
+ 	一方で晩酌といってもノンアルコールビールなので、いつ飲んでもいい
+ 		おやつの時間にナッツで一杯やるか...
+ 	中年男性の膀胱問題とは今後も継続した戦いになると思われ、悲しい
+ 		年は取りたくないものだ
+ 		 体力も筋力も鍛えればそれなりにつくが、鍛えづらいところは衰えてしまう
+
+#週報

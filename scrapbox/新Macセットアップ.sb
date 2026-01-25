@@ -1,0 +1,96 @@
+新Macセットアップ
+	✅jetbrains toolbox
+		✅IntelliJ IDEA Ulitimate
+		✅IDEA Vim
+		✅Python
+		✅PHP
+		✅RainbowBrackets
+		✅Key Promoter X
+	✅Docker for Mac
+	✅Chrome
+	✅Shiftit
+	✅Alfred
+		Ctrl+SpaceでAlfredが起動するようにする
+	✅Clipy
+	✅iTerm2
+		https://qiita.com/ruwatana/items/8d9c174250061721ad11
+		Alt+SpaceでiTerm2が起動するようにする
+	VSCode
+		https://qiita.com/naru0504/items/c2ed8869ffbf7682cf5c
+			code . でVSCodeが開けるようにするやつ
+	✅homebrew
+		✅fish
+			✅sudo echo $(which fish) >> /etc/shells
+				zshから実行
+			✅sudo chsh (which fish)
+		✅anyenv
+			https://qiita.com/rinpa/items/81766cd6a7b23dea9f3c
+			✅pyenv
+				3.9.1
+			✅phpenv
+				https://qiita.com/hamakou108/items/4744818dd166191c3e6b
+					すげーコケる
+					brewでinstallしてたときは簡単だったのになぁ・・・
+						phpのbuild、大変なのね
+				7.4.16
+				8.0.3
+			✅nodenv
+				14.16.0
+		✅coreutils
+		✅findutils
+		✅gnu-sed
+		✅diffutils
+		✅vim
+		✅wget
+		✅tree
+		✅tig
+		✅sqlite
+		✅nkf
+		✅jq
+		✅gzip
+		✅grep
+		✅go
+		✅git
+		✅gh
+		✅gawk
+		✅direnv
+		✅curl
+		✅bash
+		✅gnu-tar
+		✅neovim
+		✅yq
+		✅fzf
+			pecoから移行してみる
+	✅go get
+		✅ghq
+		✅tbls
+		✅tsv2mdtbl
+	✅cargo install
+		https://wonderwall.hatenablog.com/entry/rust-command-line-tools ←参考
+		✅cargo-make
+		✅bat
+		✅starship
+			powerlineから移行してみる
+			https://starship.rs/	
+			✅nerd-fonts も入れてみる
+				https://vwrs.github.io/font/2018/09/26/nerd-fonts/
+	✅pip install
+		✅xq
+		✅awscli
+	✅defaults
+		https://qiita.com/seteen/items/5698089808612f6b87e0
+		✅defaults write -g InitialKeyRepeat -int 12
+		✅defaults write -g KeyRepeat -int 1
+ ✅HHKB Driver
+ 	入れないと英数/かなキーが効かない
+ ⬜contour RollerMouse Proo3 Driver
+ 	BigSur未対応だった・・・マジかよ
+ 		https://www.contourdesign.com/mouse-drivers/
+ 		スクロールボタンクリックでExposeしたいんだがなー
+ 	[https://gyazo.com/8d6829e77fbe4a098066a77e121fccdc]
+ 	β版きた
+			[https://gyazo.com/ab6734a44e027ac362f3cbe30b492021]
+
+ ✅goneovim
+ 	GVim的に使えないかなー
+ ✅zoom

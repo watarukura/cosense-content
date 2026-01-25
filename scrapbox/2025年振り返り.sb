@@ -1,0 +1,184 @@
+2025年振り返り
+健康
+　引き続き、21時就寝、4時起床
+　	寝る前にルーティンでストレッチをしていたが、12月は寒いので即布団へinしている
+　	冬は寝付きが良い気がする
+　筋トレ
+　	近所にLifefitができたので契約
+　		歩いていきやすいので
+　	エニタイムフィットネスは週末に車で
+　		トレーニング器具が多いので
+　	ジムへ行かない日はHIIT
+　		[‎HIIT & Tabata Timer -simple App - App Store https://apps.apple.com/us/app/hiit-tabata-timer-simple/id1166542235] を使っている
+　			ready: 10sec, training: 40sec, rest: 20sec
+　	weekdayはプッシュ + 腹筋 / スクワット + 腹筋、週末はプル + 有酸素運動、で分割法にしてローテーションしている
+　		6km/hで大体45−60min歩きながら雀魂してると30minくらいで汗だく
+　	ようやく懸垂が一回はできるようになった
+　		まだデッドハングの状態からはできないんだけど
+　		広背筋をもっと鍛えたい
+　体重が増えた
+　	入院したときはぐっと痩せたんだけど、その後にぐんぐん増えてしまった...
+　		大学の頃から体型かわってなかったから服のサイズとか気にしなくてよかったのに、ズボンがパツパツになってきて買い替えないと駄目かも知れなくて絶望
+　			UNIQLOのツータックチノパンがオンラインで買えなくなっているのに
+　		そろそろ減量期ってやつを作るべきか...
+　			2ヶ月増量 + 1ヶ月減量のサイクルが良いってYoutubeで見た
+　				Youtubeで見た、っていうだけでなんでこんなに根拠がなさそうなんだろう
+　	シャオミの体組成計が使えなくなったのも痛い
+　		mi bandと一緒に使ってたアプリがバージョンアップしたときに体組成計に非対応になって、iPhone 17にしたら使えなくなった...
+　		体組成計、なんかいいのないかなー
+
+仕事
+　1-3月
+		転職活動がうまくいかない中、[急性虫垂炎で入院]
+			副業先だったDMMの上長に泣きついて「一緒に働かせてください」と懇願、無事入社
+			もし、次に転職ってなったときはとりあえず業務委託から始めたい
+				質問への回答が思わしくなかったときに、目から興味が失われる感じ、マジで凹むので
+					[2025-01-28 - 2025-02-03] ここで書いてた
+			現職への拾ってもらった恩をちゃんと返せるようにがんばる
+		2月 [無職になる]
+			無職期間が1ヶ月あるために国民年金・国民健康保険に切り替えが必要で超面倒だった...
+			トラーナと元トラーナの同僚の会社で副業を開始
+				シェルスクリプト + terraform + GASでプロトタイプを作成
+					シェルスクリプト→Pythonに書き換え
+		3月から新入社員
+			週1勤務から週5勤務に切り替わっただけで特に仕事の内容は変わってない
+	4-6月
+　　フルリモート → 月4出社へ
+　　	出社はポジティブ、通勤はネガティブ
+　　AIツールのハンズオンをいっぱいやる
+　　	なぜオレ...???
+　　	まぁ、最近Cursor + MCPハンズオンをやったPdMのチームから「使ってますよ！」って話が出て嬉しかった
+　　副業
+　　	GCloudでBigQuery + CloudRunみたいな構成にして動かす
+　　	テストを生成してリファクタリングコードも生成する
+　　		JetBrainsのAIアシスタントが活躍した
+	7-9月
+		terraformの新規リポジトリを3つくらい作った
+		新卒さんのフォローに入ったり
+	10-12月
+		MBPを交換してもらった 
+			久々に[新Macセットアップ202512]したので、ついでにdotfilesもきれいにした
+				https://github.com/watarukura/dotfiles
+				Nixデビューもした
+				fish + vim → zsh + neovimに移行してみた
+		新規事業のインフラ構築をぱぱっとやる、みたいな仕事が多かった
+			クラウドインフラ屋さんが足りてない感がある...
+		社の負荷試験ツールのシナリオを書いて実際に動かして負荷を掛けてみた
+			自前でインフラも面倒みてた身からするとすげー楽だった
+	全体
+		得意なことを自分で手を動かして成果を上げられる状況で大変ありがたい
+			一方で、年齢とともに市場価値が下がっていくことを受け入れないといけない
+			どこかで年収が下がるので心の準備をする
+		AIな一年だった
+			2026年は更に加速する気もするが、気をつけてないとバーンアウトするので適度に美味しいところだけつまんでいきたい
+
+読書
+　技術書
+　	[ 関数型ドメインモデリング - アスキードワンゴ https://asciidwango.jp/post/754242099814268928/%E9%96%A2%E6%95%B0%E5%9E%8B%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0]
+　	[JavaScriptプログラマーのためのTypeScript厳選ガイド 〜JavaScriptプロジェクトを型安全で堅牢にする書き方を理解する：書籍案内｜技術評論社 https://gihyo.jp/book/2024/978-4-297-14577-4]
+　	[実装で学ぶフルスタックWeb開発 エンジニアの視野と知識を広げる「一気通貫」型ハンズオン 電子書籍｜翔泳社の本 https://www.shoeisha.co.jp/book/detail/9784798179834]
+　	[フロントエンド開発のためのセキュリティ入門  知らなかったでは済まされない脆弱性対策の必須知識（平野 昌士 はせがわ ようすけ 後藤 つぐみ）｜翔泳社の本 https://www.shoeisha.co.jp/book/detail/9784798169477]
+　	[ソフトウェア開発現場の「失敗」集めてみた。  42の失敗事例で学ぶチーム開発のうまい進めかた（出石 聡史）｜翔泳社の本 https://www.shoeisha.co.jp/book/detail/9784798185187]
+　	[［改訂新版］プロになるためのWeb技術入門：書籍案内｜技術評論社 https://gihyo.jp/book/2024/978-4-297-14571-2]
+　	[ハイパーモダンPython - O'Reilly Japan https://www.oreilly.co.jp/books/9784814400928/]
+　	[HTML&CSS Webデザイン 現場レベルのコーディング・スキルが身につく実践入門 | Webサイト制作・Webマーケ,Web制作・HTML・CSS,HTML・CSS | Gihyo Direct https://direct.gihyo.jp/view/item/000000003609]
+　	[TECHNICAL MASTER はじめてのPHP エンジニア入門編 - 秀和システム あなたの学びをサポート！ https://www.shuwasystem.co.jp/book/9784798073224.html]
+ 　[n月刊ラムダノート Vol.5, No.1(2025) – 技術書出版と販売のラムダノート　https://www.lambdanote.com/products/n-vol-5-no-1]
+  [書籍詳細 - イラストで学ぶ　世界を変えたコンピュータの歴史 - 創元社 https://www.sogensha.co.jp/productlist/detail?id=4613&srsltid=AfmBOooBreZWOl3Wc_J-1oH6LPJkFljf5BJ4U2URej_ZGKigNeFP6WTa]
+　	[OWASP ZAPとGitHub Actionsで自動化する脆弱性診断 | インプレス NextPublishing https://nextpublishing.jp/book/13844.html]
+　	[書籍情報―よくわかる世界のサイバー犯罪【全国学校図書館協議会選定図書】 https://www.kohgakusha.co.jp/books/detail/978-4-7775-2275-0]
+　	[伝わるコードレビュー  開発チームの生産性を高める「上手な伝え方」の教科書（鳥井 雪 久保 優子 諸永 彩夏 島田 浩二）｜翔泳社の本 https://www.shoeisha.co.jp/book/detail/9784798186009]
+　	[ビジネスパーソンのためのGoodnotes 使いこなしブック – 辰巳出版株式会社 https://tg-net.co.jp/tatsumi_book/17247/]
+  [Obsidianで“⁠育てる⁠”最強ノート術 | 技術評論社 https://gihyo.jp/book/2023/978-4-297-13719-9]
+　	[7日間でハッキングをはじめる本  TryHackMeを使って身体で覚える攻撃手法と脆弱性（野溝 のみぞう）｜翔泳社の本 https://www.shoeisha.co.jp/book/detail/9784798181578]
+　	[ゲームAI技術入門 | 技術評論社 https://gihyo.jp/book/2019/978-4-297-10828-1]
+　	[すぐわかる！ ぷよぷよプログラミング SEGA公式ガイドブック | 技術評論社 https://gihyo.jp/book/2025/978-4-297-14760-0]
+		[GitHub Enterprise 設定・管理 大全 | 技術評論社 https://gihyo.jp/book/2025/978-4-297-15178-2]
+			あんまり読めなかった...
+   	近所の公共図書館がリニューアルで閉館中なのが痛い
+ 一般書
+ 	[普通の人が資産運用で99点をとる方法とその考え方 | 日経BOOKプラス https://bookplus.nikkei.com/atcl/catalog/24/08/30/01570/]
+ 	[学力喪失 - 岩波書店  https://www.iwanami.co.jp/book/b650415.html]
+ 	[情報分析力 https://www.sun.s-book.net/slib/slib_detail?isbn=9784396618261]
+ 	[「マンガの原理」大場渉 生活・実用書 - KADOKAWA https://www.kadokawa.co.jp/product/322312000330/]
+ 	[図解入門業界研究 最新AI産業の動向とカラクリがよ～くわかる本 - 秀和システム あなたの学びをサポート！ https://www.shuwasystem.co.jp/book/9784798071176.html]
+ 	[ シンギュラリティはより近く 人類がAIと融合するとき | NHK出版 https://www.nhk-book.co.jp/detail/000000819802024.html]
+ 	[朝日新聞出版　最新刊行物：新書：財務3表一体理解法「管理会計」編 https://publications.asahi.com/product/24663.html]
+ 	[問いかける技術――確かな人間関係と優れた組織をつくる – 英治出版 https://eijipress.co.jp/products/2171]
+ 	[人を助けるとはどういうことか――本当の「協力関係」をつくる7つの原則 – 英治出版 https://eijipress.co.jp/products/2060]
+ 	[町の本屋はいかにしてつぶれてきたか - 平凡社  https://www.heibonsha.co.jp/book/b659325.html]
+ 	[BAD BLOOD シリコンバレー最大の捏造スキャンダル 全真相／ジョン・キャリールー／関 美和／櫻井 祐子 | 集英社　―　SHUEISHA　― https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-786126-6]
+ 	[運動しても痩せないのはなぜか | 話題の本 | 草思社 https://www.soshisha.com/book_wadai/books/2602.html]
+ 	[英語独習法／今井　むつみ｜岩波新書 - 岩波書店  https://www.iwanami.co.jp/book/b548866.html]
+ 	[面倒くさくないメンズスキンケア：アラフォーおじさんのための最小限美容入門：遊戯部すずき組 https://techbookfest.org/product/p2HWtFAsM2b7UBbWJL02VZ?productVariantID=rnDu7zNykxR02V9x0G3TGy]
+ 	[見るだけでわかるピケティ超図解 | フォレスト出版 https://www.forestpub.co.jp/author/kamiki/book/B-1699]
+ 	[不格好経営 | 日経BOOKプラス https://bookplus.nikkei.com/atcl/catalog/2013/9784532318956/]
+ 	[「社会正義」はいつも正しい　―人種、ジェンダー、アイデンティティにまつわる捏造のすべて―: 書籍- 早川書房オフィシャルサイト｜ミステリ・SF・海外文学・ノンフィクションの世界へ https://www.hayakawa-online.co.jp/shop/g/g0000614145/]
+ エンタメ
+ 	[汝、暗君を愛せよ - DREノベルス公式サイト | ドリコムメディア https://drecom-media.jp/drenovels/product/140]
+  [かくて謀反の冬は去り　特設サイト｜ガガガ文庫｜小学館 https://gagagabunko.jp/special/kakute/]
+  [新刊案内 2025.07.28 | カラフ撤退戦　上 | 星海社 https://www.seikaisha.co.jp/information/2025/07/28-post-curaf-1.html]
+  [侯爵令嬢アリアレインの追放　上 | 株式会社アース・スター エンターテイメント https://www.earthstar.co.jp/service/detail/item-9178/]
+  [「シートン動物戦記」芝村裕吏 新文芸 - KADOKAWA https://www.kadokawa.co.jp/product/322506000081/]
+  [魔女と傭兵 | GCノベルズ | 夢をつかむ、次世代型ノベルレーベル https://gcnovels.jp/book/1514]
+  [ブレイド＆バスタード5 -奴の屍を曳いてゆけ- - DREノベルス公式サイト | ドリコムメディア https://drecom-media.jp/drenovels/product/134]
+  	2025年のベストは「カラフ撤退戦」かな
+  	今年は当たり年だった気がする
+  		かくて謀反の冬は去り、は2025年出版じゃないけど
+ Kindle
+ 	1007冊
+ 年間定期購読
+ 	Software Design
+ 		継続
+ 	NHKラジオ英会話
+ 		継続
+ 		やっと口が回るようになってきた気がする
+ 		1.25倍で速聴もできるようになった
+ 		書く方はまるで駄目で、単語も文も全然出てこないのが来年に向けた課題
+ 	Newton
+ 		面白いけど、毎月読む感じではないので終了
+
+GitHub
+　https://git-wrapped.com/profiles/watarukura
+　	[https://gyazo.com/63c1446bfcd4e71d4173c1dcb5b30f8b]
+　	副業先のrenovateを月曜動作にしてる関係で火曜のマージが多い
+　作った
+　	https://github.com/watarukura/clineusage
+　		Clineの利用金額集計ツール
+　			ccusageのパクリ
+　	社内向けのツールをいくつか書いた
+　		Confluence Server <-> Local Markdown file
+　		DuckDB WASM + 全文検索
+　		ClaudeCodeにプロンプトを考えてもらうCLI
+
+その他
+　サブスク
+	　Youtubeプレミアム
+　	コテンラジオ
+　		gender inclusive音源も聴いた
+　	Rebuild.fm
+　	iCloud 200GB
+　	Googleフォト
+　	マネーフォワードME
+　	JetBrains All Products Pack
+　		Intellij IDEAしか使わなくなったからAll Products Packやめてもいいなー
+　	JetBrains AI
+　		いずれも継続
+ 週報
+　	継続中
+　テックブログ
+　	zenn.dev: 8本
+　		[https://gyazo.com/6e0640d1ca5ccb10eab69b7b7421c736]
+　	前職・前々職のテックブログが共に吹っ飛んでしまったので、[テックブログのサルベージ]
+　		X(旧Twitter)上でテックブログの読者を発見して小躍りした
+　		世のため人のためにテックブログを書いてるつもりなので、吹っ飛んでしまったこと自体は悲しい
+　Laprasのrecap動画
+　	[https://scrapbox.io/files/6954c1def2148906d56eab3a.mp4]
+　　自動生成されてすごい
+
+総括
+　2026年にやりたいこと
+		frontendエンジニアの気持ちがわかるようになりたい
+ 	「何とかインチキできんのか」の精神で2026年も乗り切りたい
+
+#振り返り

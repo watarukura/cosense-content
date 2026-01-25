@@ -1,0 +1,73 @@
+2025-03-18 - 2025-03-24
+読んだ記事
+ [Devindabot: Devinで実現するライブラリの脆弱性自動対応システム - freee Developers Hub https://developers.freee.co.jp/entry/devindabot]
+ 	毎日renovateの上げてくるPRをマージしてるんだけど、素直にバージョンアップできないときはまぁまぁあるからDevinが手伝ってくれたら嬉しい
+ [良いReactを書くことは凡事徹底だと考えている話 - カミナシ エンジニアブログ https://kaminashi-developer.hatenablog.jp/entry/2025/3/17/intro-react]
+ 	理屈はなんとなくわかる
+ 		手が動かないな、まだ
+ [AI コーディングアシスタント Claude Code を Amazon Bedrock で試してみた https://zenn.dev/morisawa/articles/claude-code-bedrock]
+ 	Claude Code、使ってみたい
+ [データ品質を守り続けるための データ基盤の考え方 - Speaker Deck https://speakerdeck.com/tenajima/detapin-zhi-woshou-risok-kerutameno-detaji-pan-nokao-efang]
+ 	データのレイヤーの考え方、ユニケージのレベルデータがマッチするんだけど伝わらないからなぁ...
+ 		モダンな言い換えが必要
+ [SREとしてSLI_SLOをどう普及してきたか、CTOとしてSLI_SLOをどう活用しているか | ドクセル https://www.docswell.com/s/integrated1453/KL1RRP-sli-slo-cto]
+ 	3年って数字がリアル
+ [オブザーバビリティ入門: OpenTelemetryについて知っておくべきこと - joker1007’s diary https://joker1007.hatenablog.com/entry/2025/03/21/135949]
+ 	OTel、ちゃんと入門したい
+ [AWS Amplify がサーバーでレンダリングされた Next.js アプリケーションの HttpOnly Cookie をサポート - AWS https://aws.amazon.com/jp/about-aws/whats-new/2025/03/aws-amplify-httponly-cookies-server-rendered-next-js-applications/]
+ 	サポートされてなかったんかい
+ [クックパッドを退職しました | diary.sorah https://diary.sorah.jp/2025/03/17/leaving-cookpad]
+ 	そらはさんも辞めてしまった
+ 	前職の元同僚も辞めてしまったしなぁ
+ [GitHub Action supply chain attack: reviewdog/action-setup | Wiz Blog https://www.wiz.io/blog/new-github-action-supply-chain-attack-reviewdog-action-setup]
+ 	coinbase社がターゲットだったらしい(追記)
+ 	[Security Advisory Supply Chain Attack on reviewdog GitHub Actions during a specific time period · Issue \#2079 · reviewdog/reviewdog https://github.com/reviewdog/reviewdog/issues/2079]
+ 		hayabusaさんのレポート
+ [アップデート AWS Amplify Hosting に追加された「スキュー保護」を試してみた | DevelopersIO https://dev.classmethod.jp/articles/amplify-hosting-deployment-skew-protection/]
+ 	使い所はわからないけど、メモ
+ [Gitの中身 https://kaityo256.github.io/github/internals/index.html]
+ 	コンパイラをいじめる人のGitの話
+ [【プロンプト付】上司をAI化して、フィードバックの質とスピードを両取りする方法｜はたけ https://note.com/hatakejp/n/n7df8996f3edf]
+ 	コードじゃないものもレビューできるのが強い
+ [読み取り専用 DB を Aurora から SQLite に移行してコストを 1/8 に削減した話 - エムスリーテックブログ https://www.m3tech.blog/entry/sqlite-on-ecs-fargate]
+ 	読み取り専用、ってところがミソよね
+ 	Goで読んでるけど、シングルコネクションじゃなくても動くのかな...???
+ [助けて！ CloudWatch Logs のコストが急上昇!! ログ管理の最適化でコストを 1/3 にした話 - カミナシ エンジニアブログ https://kaminashi-developer.hatenablog.jp/entry/2025/3/21/aws-cloudwatch-cost-optimization]
+ 	>現在、API サーバーから出力されるログのうち、即時性が求められるError ログのみ CloudWatch Logs へ送信し、 即時性が求められない Info ログなどは CloudWatch Logs を使わず Kinesis Data Firehose 経由で S3 に保存する改善を行っています。
+ 	現実的な線かなー
+ [ギャルとのペアプロが想像以上に楽しかった（VSCodeのカスタム指示） #AI - Qiita https://qiita.com/bonanza-olaf/items/5453fc0e3ad1c8f9f971]
+ 	Clineにもなにかさせるか...
+ 	ギャル口調で、って社用のリポジトリに書けないけど
+ [DSQL Vignette: Transactions and Durability - Marc's Blog https://brooker.co.za/blog/2024/12/05/inside-dsql-writes.html]
+ 	Aurora DSQLの謎技術
+ [安全に倒し切るリリースをするために：15年来レガシーシステムのフルリプレイス挑戦記 - Speaker Deck https://speakerdeck.com/sakuraikotone/an-quan-nidao-siqie-ruririsuwosurutameni-15nian-lai-regasisisutemunohururipureisutiao-zhan-ji]
+ 	ペンギンリリースの話
+ [OSS活動してたらRuffの会社で働くことになった話 https://zenn.dev/mtshiba/articles/how-i-joined-astral]
+ 	すげー
+ [Next.jsの脆弱性CVE-2025-29927まとめ https://zenn.dev/t3tra/articles/c293410c7daf63]
+ 	まとめありがたい
+ 		[CVE-2025-29927 | Next.js https://nextjs.org/blog/cve-2025-29927]
+ [モジュラーモノリスでスケーラブルなシステムを作る - BASE のリアーキテクチャのいま - Speaker Deck https://speakerdeck.com/panda_program/base-modular-monolith]
+ 	モジュラーモノリスなー
+ 		実際にやってみてどうだった、って話は貴重
+ [私の愛したLaravel 〜レールを超えたその先へ〜 - Speaker Deck https://speakerdeck.com/kentaroutakeda/si-noai-sitalaravel-reruwochao-etasonoxian-he]
+ 	デカくても破綻しないLaravel、やっぱり難しい
+ 		Laravelじゃなくてもそうで、デカいと難しい
+ [2025 OWASP Top 10 for LLM Applications: A Quick Guide https://www.mend.io/blog/2025-owasp-top-10-for-llm-applications-a-quick-guide/]
+ 	LLMアプリケーションへの攻撃なー
+
+読んだ本
+　[Software Design 2025年4月号｜技術評論社 https://gihyo.jp/magazine/SD/archive/2025/202504]
+　	AIコーディングアシスタントにより、ますますドメイン知識が重要になる
+　		業務ドメイン、技術ドメインのそれぞれを破綻させないサイズでAIのコンテキストに落とし込む技術が技術力になっていく、のかな...
+
+書いた
+　
+
+その他
+ 
+
+#週報
+< [2025-03-11 - 2025-03-17]
+[2025-03-25 - 2025-03-31]>
+

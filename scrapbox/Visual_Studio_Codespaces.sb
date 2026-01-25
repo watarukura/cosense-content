@@ -1,0 +1,14 @@
+Visual Studio Codespaces
+ブラウザから使えるVSCode https://visualstudio.microsoft.com/ja/services/visual-studio-codespaces/
+ GitHubアカウントでログインできる
+ 	OAuth認証
+ 		OAuth認証で取得できる権限にはGitHub ActionsのWorkflowの更新権限がない？
+ 普通にVSCodeとして使える
+ 	vimプラグインは重いので切った
+ 		standard
+ 	自宅のMBPはヘボスペックなのでIDEは使いづらい
+ 1ヶ月は無償(?)
+ [https://gyazo.com/6ea438842e69f1a67d3677a22328e04d]
+ Azure内のLinux上で動作している様子
+ 	terminalから使うツールはaptでinstallできる
+ 		sudoする

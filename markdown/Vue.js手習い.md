@@ -1,0 +1,16 @@
+# Vue.js手習い
+入門した
+
+- ドットインストールの無料分
+- [https://scrimba.com/p/pXKqta/cZr7rSL](https://scrimba.com/p/pXKqta/cZr7rSL)
+
+感想
+
+- PHPをテンプレートで使うのと見た目はそんなに変わらん気がする
+  - SPAとして育っていくと感想も変わってくるはず
+
+考える
+
+- がんばらないReact by suzukenさん from https://ajito.fm/31/
+  - がんばらないVue、も当然あり？
+  - ペライチのjsファイルで、いつでも捨てられるようにしておく
