@@ -1,5 +1,5 @@
 # responder
-Flask心配なのでこっちで作るかwatarukura.icon
+[Flask](Flask)心配なのでこっちで作るか[watarukura.icon](watarukura.icon)
 
 [公式ドキュメント](https://python-responder.org/en/latest/index.html)
 [Github](https://github.com/kennethreitz/responder)
@@ -19,12 +19,12 @@ starlette = "==0.8"
 
   - [https://github.com/watarukura/responder_study](https://github.com/watarukura/responder_study)
 
-SQLAlchemy使うかPyMySQL使うか悩む
+[SQLAlchemy](SQLAlchemy)使うか[PyMySQL](PyMySQL)使うか悩む
 
 - [Pythonで話題のWEBフレームワークresponderでサンプルのtodoリストを作成](https://note.mu/shimakaze_soft/n/ne47bc123dc83)
-- PyMySQLは社内で導入事例あるからSQLAlchemyの知見を貯めるか・・・という気持ち
+- [PyMySQL](PyMySQL)は社内で導入事例あるから[SQLAlchemy](SQLAlchemy)の知見を貯めるか・・・という気持ち
 
-Vue.js + Flask で検討した構成も取れる
+[Vue.js + Flask](Vue.js + Flask) で検討した構成も取れる
 
   - SPA対応もできる
 

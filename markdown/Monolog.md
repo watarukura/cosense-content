@@ -1,5 +1,5 @@
 # Monolog
-Slim Frameworkのデフォルトのロガー。PSR-3準拠。
+[Slim Framework](Slim Framework)のデフォルトのロガー。PSR-3準拠。
 
 [https://github.com/Seldaek/monolog](https://github.com/Seldaek/monolog)
 [http://tech.quartetcom.co.jp/2018/05/31/monolog/](http://tech.quartetcom.co.jp/2018/05/31/monolog/)

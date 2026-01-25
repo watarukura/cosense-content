@@ -1,5 +1,5 @@
 # SATySFi
-神殺しアプリケーションwatarukura.icon
+神殺しアプリケーション[watarukura.icon](watarukura.icon)
 
 [Github](https://github.com/gfngfn/SATySFi)
 [The SATySFiBook](https://gfngfn.booth.pm/items/1127224)

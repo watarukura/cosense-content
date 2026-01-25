@@ -1,6 +1,6 @@
 # Amazon書影＋Affiリンク
 
-  - /wkwknote/アソシエイト対応版 AmazonからScrapboxへ書影を取り込むブックマークレット←をほぼお借りした
+  - [/wkwknote/アソシエイト対応版 AmazonからScrapboxへ書影を取り込むブックマークレット](/wkwknote/アソシエイト対応版 AmazonからScrapboxへ書影を取り込むブックマークレット)←をほぼお借りした
   - Amazonアソシエイトの申請時、URLにハイフンが入っているとNGのようで、仕方なくwatarukuraプロジェクトに作成
     - kindleマンガ本棚用に分離したかったが仕方ない
     - 違った タイトルにkindleが入っているとNGのようだ

@@ -2,7 +2,7 @@
 [https://twitter.com/mizchi/status/1083063008673165312](https://twitter.com/mizchi/status/1083063008673165312)
 [https://gyazo.com/9453728f665da254d24ed7170fad4f39](https://gyazo.com/9453728f665da254d24ed7170fad4f39)
 
-React も TypeScript も styled-components も使ったことない(2019/01/13時点)watarukura.icon
+React も TypeScript も styled-components も使ったことない(2019/01/13時点)[watarukura.icon](watarukura.icon)
 そろそろフロントエンド触っておかないと、今後よくわからなくなりそう
 
   - HTML
@@ -22,7 +22,7 @@ React
 - [公式](https://reactjs.org/)
 - >A JavaScript library for building user interfaces
 
-TypeScript
+[TypeScript](TypeScript)
 
 styled-components
 

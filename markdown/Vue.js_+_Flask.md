@@ -6,17 +6,17 @@ Python手習いのため、FlaskでWebAPIサーバを書く
 
 フロントエンド
 
-- Vue.js
-  - Nuxt.js ・・・使用するか悩む
+- [Vue.js](Vue.js)
+  - [Nuxt.js](Nuxt.js) ・・・使用するか悩む
 
 バックエンド
 
-  - Flask
+  - [Flask](Flask)
 
 データストア
 
-- RDB: SQLAlchemy
-- DynamoDB: PynamoDB
+- RDB: [SQLAlchemy](SQLAlchemy)
+- DynamoDB: [PynamoDB](PynamoDB)
 
 開発環境
 

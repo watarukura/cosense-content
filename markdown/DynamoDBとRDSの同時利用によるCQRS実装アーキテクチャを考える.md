@@ -1,13 +1,13 @@
 # DynamoDBとRDSの同時利用によるCQRS実装アーキテクチャを考える
-watarukura.iconユニケージのレベルデータ概念を参考にRESTなAPIサーバの実装を考える
+[watarukura.icon](watarukura.icon)ユニケージのレベルデータ概念を参考にRESTなAPIサーバの実装を考える
 
 Command
 
 - APIサーバへはJSONをPOSTする
-  - POSTされたJSONファイルはS3に保持する ← Level1データ
+  - POSTされたJSONファイルはS3に保持する ← [Level1データ](Level1データ)
     - クレジットカード情報などは非保持とする必要があるため除外するか、マスクする
   - 保持されたJSONファイルからAPIサーバへのリクエストを再現できるように実装する
-- DynamoDBへput-itemする ← Level2データ
+- DynamoDBへput-itemする ← [Level2データ](Level2データ)
   - この時点ではDynamoDBの利点を活かし、非正規化データで構わない
   - 書き込み速度の早さ、テーブル単位でprovisioningできるDynamoDBの特性を活かす
   - 24時間程度のTTLを設定し、データの肥大化を防ぐ
@@ -16,8 +16,8 @@ Command
 
 Event-Sourcing
 
-- FIFO-SQSをポーリングして取得したキューの情報からRDSへデータを書き込む ←  Level2データ
-- 定期的にRDSのマテリアルビューを更新する ← Level3データ
+- FIFO-SQSをポーリングして取得したキューの情報からRDSへデータを書き込む ←  [Level2データ](Level2データ)
+- 定期的にRDSのマテリアルビューを更新する ← [Level3データ](Level3データ)
 
 Query
 

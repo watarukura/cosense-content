@@ -14,7 +14,7 @@ Tracing with async/CLI setups · Issue #704 · DataDog/dd-trace-php · GitHub �
 まぁ、Swoole 4.6.xでは動いてましたし、なんとかなるでしょう。
 
 なお、弊社のプロダクトはLaravel Octaneではなくlaravel-swooleを使用しています。
-Bug: Laravel Octane traces not showing in dashboard · Issue #2636 · DataDog/dd-trace-php · GitHub Octaneでの動作に苦戦している方もいらっしゃるようで、不幸中の幸いかもしれません。
+[Bug](Bug): Laravel Octane traces not showing in dashboard · Issue #2636 · DataDog/dd-trace-php · GitHub Octaneでの動作に苦戦している方もいらっしゃるようで、不幸中の幸いかもしれません。
 (いずれはOctane移行したい)
 
 Swooleをインストール
@@ -276,7 +276,7 @@ ECS Execでコンテナに入ってartisanコマンドを実行するとTraceが
 どうやら、アプリケーションとdd-agent、Datadogの設定には問題なさそうです。
 リクエストをhookしてTraceを始めるところがうまくいってないのかと推測。
 
-Bug: Laravel Octane traces not showing in dashboard · Issue #2636 · DataDog/dd-trace-php · GitHub
+[Bug](Bug): Laravel Octane traces not showing in dashboard · Issue #2636 · DataDog/dd-trace-php · GitHub
 先ほどの「Octaneで動かない」のIssueを見ると、laravel.request の文字があります。
 雰囲気でこれをhookしているのかとアタリをつけてdd-trace-phpのコード中を検索すると、どうやらそれっぽい。
 dd-trace-php/src/DDTrace/Integrations/Laravel/LaravelIntegration.php at 48190be6f5d8f4b500345923d193a333675fc6ff · DataDog/dd-trace-php · GitHub

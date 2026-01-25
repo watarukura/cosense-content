@@ -29,6 +29,8 @@ def scrapbox_to_md(sbfile):
     url_title_re = re.compile(r"\[(https?://[^\s\]]+)\s+([^\]]+)\]")
     # URLのみの[]
     bracket_url_re = re.compile(r"\[(https?://[^\s\]]+)\](?!\()")
+    # ページリンク
+    bracket_page_re = re.compile(r"\[([^\]]+)\](?!\()")
     # Scrapboxのカードリンク
     double_bracket_link_re = re.compile(r"\[\[([^\s\]]+)(?:\s+[^\]]+)?\]\]")
     # Gyazo画像URL
@@ -98,9 +100,17 @@ def scrapbox_to_md(sbfile):
         text = text_hyperlink_re.sub(replace_text_link, text)
         text = url_title_re.sub(replace_url_title, text)
         text = bracket_url_re.sub(replace_bracket_url, text)
-        text = re.sub(r"\[([^\]]+)\](?!\()", r"\1", text)
         text = strike_re.sub(r"~~\1~~", text)
         text = bold_re.sub(r"**\1**", text)
+        def replace_page_link(match):
+            label = match.group(1).strip()
+            if not label:
+                return ""
+            if label.startswith(("http://", "https://", "*", "-")):
+                return match.group(0)
+            return f"[{label}]({label})"
+
+        text = bracket_page_re.sub(replace_page_link, text)
         return text
 
     md_array = []
