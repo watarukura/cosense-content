@@ -1,6 +1,6 @@
 # cosense-content
 
-cosense(https://scrapbox.io/watarukura)のコンテンツバックアップ用リポジトリ
+cosense(https://scrapbox.io/watarukura) のコンテンツバックアップ用リポジトリ
 
 ## 必要なツール
 
