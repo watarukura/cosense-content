@@ -38,7 +38,7 @@ VS Code
     - ><div /> という構文は、ビルド時に React.createElement('div') に変換されます。
     - Reactが隠蔽している挙動が全く想像できない
       - Vueでも同じ？
-    - 続きはReactに書く
+    - 続きは[React](React)に書く
 
 - GitHub Actionsでlint
   - prettier -> eslintでlint

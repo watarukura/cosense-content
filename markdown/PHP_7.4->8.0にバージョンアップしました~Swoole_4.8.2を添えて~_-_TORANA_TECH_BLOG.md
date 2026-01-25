@@ -58,7 +58,7 @@ $hasX = @count(array_keys($hash['x'])) !== 1;
 
 これが一番のハマりどころで、移行が1週間遅れました...。
 
-バッチ処理の高速化のために[\Symfony\Component\Process\Process](https://symfony.com/doc/current/components/process.html)を使ってマルチプロセスで実行している箇所があるのですが、`$process->isRunning()`がtrueを返すのにSwooleのCoroutineが`WARNING swoole_signalfd_event_callback(): read from signalfd failed, Error: Resource temporarily unavailable11`って警告を吐いて死んでしまっていました。
+バッチ処理の高速化のために[\Symfony\Component\Process\Process](https://symfony.com/doc/current/components/process.html)を使ってマルチプロセスで実行している箇所があるのですが、`$process->isRunning()`がtrueを返すのにSwooleのCoroutineが`WARNING swoole_signalfd_event_callback(): read from signalfd failed, Error: Resource temporarily unavailable[11](11)`って警告を吐いて死んでしまっていました。
 
 (余談ですが、signalfdってsignal用のファイルディスクリプタなんですね。初めて知りました [Man page of SIGNALFD](https://linuxjm.osdn.jp/html/LDP_man-pages/man2/signalfd.2.html))
 

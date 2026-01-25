@@ -3,7 +3,7 @@
 
 知らなかったことメモ
 
-  - objdump
+  - [objdump](objdump)
     - コンパイル結果をobjdumpしてもアセンブリと同じにならないのはなんでだろう
       - [godbolt.org](https://godbolt.org) を使うとリアルタイム・オンライン・コンパイルできる
     - なんかいっぱい出る

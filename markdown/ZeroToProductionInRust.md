@@ -145,28 +145,28 @@ table: error
   - fish config
     - set gx PATH "$HOME/.local/share/aquaprojaqua/bin" $PATH
   - aqua install
--   sccache
+-  sccache
   - [# コンパイルキャッシュでRustのビルド時間を短縮しよう](https://qiita.com/tatsuya6502/items/76b28a6786a1ddc9d479)
   - [https://github.com/dimensionhq/fleet](https://github.com/dimensionhq/fleet)
--   OpenAPI
+-  OpenAPI
   - [https://dylananthony.com/blog/fastapirust2research/](https://dylananthony.com/blog/fastapirust2research/)
 ✅Rust 1.59.0 > 1.60.0
 
--   code coverage
+-  code coverage
 
 後で調べる
 
--   mod
--   OpenTelemetry
-  -   Jaeger
-  -   Honeycomb.io
--   PgPool with Transaction
--   lifetime
+-  mod
+-  OpenTelemetry
+  -  Jaeger
+  -  Honeycomb.io
+-  PgPool with Transaction
+-  lifetime
   - [https://github.com/pretzelhammer/rustblog/blob/master/posts/commonrustlifetimemisconceptions.md#commonrustlifetimemisconceptions](https://github.com/pretzelhammer/rustblog/blob/master/posts/commonrustlifetimemisconceptions.md#commonrustlifetimemisconceptions)
--   async
+-  async
   - [https://ryhl.io/blog/asyncwhatisblocking/](https://ryhl.io/blog/asyncwhatisblocking/)
--   mTLS
--   PostgresのCREATE TYPE、配列型
+-  mTLS
+-  PostgresのCREATE TYPE、配列型
 
 感想
 
