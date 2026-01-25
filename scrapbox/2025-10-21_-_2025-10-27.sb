@@ -1,0 +1,72 @@
+2025-10-21 - 2025-10-27
+読んだ記事
+ [あなたはVersion Skew問題を知っていますか？ Web開発者なら知って損はない原因と対策 https://zenn.dev/coconala/articles/nextjs-version-skew-vercel-skew-protection]
+ 	フロントエンドのキャッシュ、難しいんだよな...
+ 	ブラウザキャッシュもあるし、CDNでもキャッシュするし
+ [RustのDockerfile、2025年はこれでいこう - じゃあ、おうちで学べる  https://syu-m-5151.hatenablog.com/entry/2025/10/17/070250]
+ 	マルチスレッド + muslは相性が悪い、ってことなのか
+ [RDS の負荷が高い場合に AWS で取りうる具体策 N 連発/a-series-of-specific-countermeasures-available-on-aws-when-rds-is-under-high-load - Speaker Deck https://speakerdeck.com/emiki/a-series-of-specific-countermeasures-available-on-aws-when-rds-is-under-high-load]
+ 	これはいいなー
+	[【海外記事紹介】インテルによるLinuxカーネルパッチがデータベースのパフォーマンスを最大18%向上させる — ベンチマークによっては30%もの改善も - TechFeed https://techfeed.io/entries/68f55e76170d8b37b0b1419a]
+		すげぇ
+	[【PHP】PHP公式のMCP SDKが出たよ #Symfony - Qiita https://qiita.com/rana_kualu/items/abd2bfed0aec43ae33fa]
+		PHPで書きたいか、って言われるとそうは思わないけど、PHPでも書けるのは大事よね
+	[Summary of the Amazon DynamoDB Service Disruption in Northern Virginia (US-EAST-1) Region  https://aws.amazon.com/jp/message/101925/]
+		[Amazon Web Services(AWS)障害が大規模化したのは「us-east-1」リージョンがSPOF化していることに起因している - GIGAZINE https://gigazine.net/news/20251021-aws-us-east-1-region-insident/]
+			一番投資してるのもus-east-1だろうから、SPOF化もしてるけど耐障害性も高いんだとは思うんだよな
+			そのうえで、SPOF対策をする費用対効果を見ていくってことになるんだろうけど、アーキテクチャの見直しコストがクソデカな可能性
+		[【海外記事紹介】AnthropicとCursorがAWSに支払っているコストを分析したブログ記事が話題に — 恐るべき金額、更に赤字幅は拡大する一方か？ - TechFeed https://techfeed.io/entries/68f7fdbcb335ef58049b18eb]
+			AWS障害の間、Cursorが呼べなかったんだけど、AWS使ってるのね
+			AnthropicもCursorも、これだけ使ってればもうちょいコスト回収したくなるよな...
+	[Cursorの料金改定に全力で対応する #AI - Qiita https://qiita.com/sakamoto-ryosuke/items/c8cdae4260a873d0b28e]
+		Cursorで固定料金だぜ、って思ってたら思ったより早く従量課金になってしまった
+	[【日本語訳全文】Kent Beck氏 基調講演：開発生産性測定のトレードオフ「グッドハートの法則」はもっと悲観的に捉えるべきだった・後編 - Findy Tech Blog https://tech.findy.co.jp/entry/2025/10/21/070000]
+		計測して改善する、という手法は万能じゃない
+		計測はした方がいいが、よっぽど良い数値目標でないと歪む
+	[Vite を使う理由 | Vite https://ja.vite.dev/guide/why]
+		frontendわからねー
+		viteを使うと何が早くなるんだ？
+	[TODOコメントを撲滅する仕組みを提供するreminder-lintをOSSで公開しました | CyberAgent Developers Blog https://developers.cyberagent.co.jp/blog/archives/59442/]
+		これはいいな
+		お？aquaでも入りそう
+	[「メルカリで稼げなくなる？」の声広がる　事業者は「個人アカウント」利用不可に　きょうから規約改定 - ITmedia Mobile https://www.itmedia.co.jp/mobile/articles/2510/22/news066.html]
+		メルカリせどり族の人たちも、確定申告しないで怒られたりするのかなー
+	[AWS ECS Managed Instance の実戦的な基礎知識 | 外道父の匠 https://blog.father.gedow.net/2025/10/23/aws-ecs-managed-instance-knowledge/]
+		性能が安定していて欲しいユースケースなら、ってところか
+		ECS on EC2よりは楽そうだし、EKSもちょっとな、ってときに使う余地はあるか？
+		GPU使いたいとき、とかはいいかも
+	[オープンソースソフトの「MinIO」がDockerイメージの無料配布を停止し大炎上 - GIGAZINE https://gigazine.net/news/20251023-minio-stops-distributing-free-docker-images/]
+		影響が...うう...
+		rustfs移行か？めんどーい
+	[スクラムを導入したのに、なぜ組織は変わらないのか https://zenn.dev/nttdata_tech/articles/34b4172b467aee]
+		組織を変えたいとは思わないからなぁ...
+	[増えすぎた GitHub Actions を「3 層アーキテクチャ」で整理した話 https://zenn.dev/simpleform_blog/articles/99cea8c1af0657]
+		prefixでtriggerを分類、やってるチームがあるなー
+		monorepoだと増えがち、とかはあるよね
+	[複数の並行開発におけるDocker Composeのポート競合を何とかする（Mac） https://zenn.dev/shinoyu/articles/6a79758070df88]
+		ループバックアドレス、なるほどなー
+ [量子コンピューターがRSA暗号や楕円曲線暗号(ECC)を解読可能になるXデーは2030年前後、それまでに実行すべきこととは？ - GIGAZINE https://gigazine.net/news/20251024-when-quantum-computer-crack-rsa/]
+ 	量子コンピュータの実用化、ほんまかいな、とは思ってるけど2030年ってすぐそこだよな...
+ [ LINEヤフー株式会社を退職したので歴代社長の感想を書く（元ヤフー社員視点） - ariyasacca(2025-10-20) http://sangoukan.xrea.jp/cgi-bin/tDiary/?date=20251020]
+ 	社長を比較できるくらい長く務めたい
+ [3PCA 32 日目: Privacy Sandbox の後始末 | blog.jxck.io https://blog.jxck.io/entries/2025-10-21/deprecation-of-effort.html]
+ 	3rd Party Cookie廃止話の続き
+ 	Privacy Sandboxもなくなってしまった
+ [README ファイルの心配をやめた方法 | Amazon Web Services ブログ https://aws.amazon.com/jp/blogs/news/how-i-stopped-worrying-about-readme-files/]
+ 	AWSのようなレベルの会社にとっても、READMEファイルが更新されないことの解決策がAIなのが面白い
+ [yoku0825さんがMySQLのインデックスの知見を語り倒す - Findy Media | IT/Webエンジニアの転職・求人サイトFindy – GitHubからスキル偏差値を算出 https://findy-code.io/media/articles/chotto-wakaru-mysql-index]
+ 	インデックスを貼ることによる書き込みオーバーヘッド、増えるのはわかるけど「どのくらい」増えるかを計測したことはなかったな...
+
+読んだ本
+ 
+
+書いた
+ 
+
+その他
+ 常々、「なんとかインチキできんのか」を考えている
+ 	なんというか、単純作業とか1回しかやらないから手でがんばる系の作業が嫌いすぎてな...
+
+#週報
+<[2025-10-14 - 2025-10-20]
+[2025-10-28 - 2025-11-03]>

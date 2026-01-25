@@ -1,0 +1,126 @@
+副業を始める
+2023年10月から希望者のみ週休3日になるので、週1副業を始めたい
+
+開業届
+	[freee開業届 https://accounts.secure.freee.co.jp/login/launch/personal]
+		マイナンバーカードを何度も読み込む必要があるので手元に準備
+		青色申告にした
+		無事に2023/09/26開業できた
+		[https://gyazo.com/b88a3711eafdb2a32ddc9ce360c53fc6]
+	[マイナポータル https://myna.go.jp/]
+		e-taxサイトへの接続には、iPhone利用の場合はSafariで開く必要がある
+			デフォルトブラウザをChromeにしているとダメ
+
+帳簿どれでつけよう？
+ [やよいの青色申告 https://www.yayoi-kk.co.jp/shinkoku/aoiroshinkoku/price/]
+ 	初年度無料、2年目から8,800円/年
+ [freee会計 https://www.freee.co.jp/accounting/individual/pricing/]
+ 	1ヶ月お試し、11,760円/年
+ [MoneyForwardクラウド確定申告 https://biz.moneyforward.com/tax_return/price/]
+		1ヶ月お試し、9,600円/年
+ 自社で有益な情報を得た
+ 	マネフォにする
+>マネフォクラウド一年度につき 50 件まで仕訳登録が無料で
+> 確定申告出すときには課金が必要
+> 地代家賃/事業主貸
+> 通信費/事業主貸
+> 水道光熱費/事業主貸
+> 売掛/売上
+> 普通預金/売掛
+> が大体一ヶ月あって，5 * 12 = 60 なので
+> 最後の二ヶ月くらい課金すればよい
+		売上を上げて入金してもらう、以外は経費の計上だけだから、確かに大した件数は必要ない
+			経費を準備しておいて、赤字にならない程度に計上するのが良さそう？
+			赤字にすると今後ローンを借りるときに面倒があるらしい
+				あんまりローンを組むことは想定してないが、想定外はあるのが普通なので黒字にしておく
+
+副業先の求職
+ シューマツワーカー
+ 	現職の社長から先方の社長に伝えてもらう
+ 	案件から相場感を眺める
+ X(旧Twitter)
+　	ぼやいたらフォロワーのみんながリポストしてくれた
+　	元同僚のリファラルで面談、無事に求職期間が終わった
+
+副業の青色申告について調べる
+ [https://www.freee.co.jp/kb/kb-blue-return/notes/ サラリーマンが確定申告＆青色申告するときの注意事項]
+ [https://biz.moneyforward.com/tax_return/basic/58559/ 副業したら青色申告にできる？節税やメリットは？やり方や条件を解説]
+　[https://www.freee.co.jp/kb/kb-fukugyou/secondary-job/ 副業している人の年末調整はどうなる？確定申告・住民税の申告についても解説]
+  年末調整は普通にした上で、確定申告もする、ということみたい
+  	ちがった
+  	そうしてもいいが、年末調整なしで確定申告にした
+  副業の住民税、会社公認の場合は特別徴収してもらえるもの？
+  	[https://www.city.handa.lg.jp/zemu/yokuarushitumon/hukugyousyuunyuu.html#:~:text=%E5%9C%B0%E6%96%B9%E7%A8%8E%E6%B3%95%E4%B8%8A%E3%80%81%E5%8E%9F%E5%89%87%E3%81%A8%E3%81%97%E3%81%A6,%E3%81%A6%E7%89%B9%E5%88%A5%E5%BE%B4%E5%8F%8E%E3%81%A8%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82 副業分の収入の住民税の納付方法を選択することはできますか]
+  	してもらえる様子
+  	一応、労務担当に確認しておく
+  		副業していた同僚が特別徴収していたので、大丈夫そう！
+
+帳簿をつける
+ MoneyForwardクラウド請求書で請求書を作る
+ 	自動で、MoneyForwardクラウド会計で売掛金/売上の仕訳ができる
+ MoneyForwardクラウド会計と住信SBIネット銀行を連携した
+ 	入金されたら普通預金/売掛金の仕訳ができる？ 要確認
+ 	SBI証券でNISAするために作ったんだけど、役に立ってよかった
+ 		SMBCからSBI証券に普通に入金できちゃうし、今はOliveでクレカ入金設定したので何もつかってなかった...
+　地代家賃・水道光熱費・通信費の按分どうしよう
+　	できればやりたいが、副業に使っている分をどう計算する、みたいなの超めんどい
+　		証憑も必要だろうしなぁ...
+　新聞図書費どうしよう
+　	毎月1万円くらいは技術書を買ってるので経費になると嬉しいが...
+
+電子印鑑
+　画像でいいので押印してくれ、との要請
+　シャチハタクラウド無料版がちょうど死んでしまった
+　副業の先達に相談したところ、紙に押印してスマホで撮影して画像処理すればよい、とのこと
+　	[Photoshop https://apps.apple.com/jp/app/adobe-photoshop/id1457771281]アプリを使った
+ MoneyForwardクラウド請求書に印影登録した
+
+確定申告
+	MoneyForwardクラウドで帳簿を作る
+		経費はMoneyForward Meから確定申告フラグを立てて取り込む
+			この際、新聞図書費にしたいので、カテゴリを趣味・娯楽ではなく教養・教育にしておくとよい
+			電気代とかなんとかはめんどくさいので諦めた
+			自宅用にMacBook Airを買ったので経費に入れた(消耗品費)
+				30万円未満なので一括償却できる
+		Amazon.co.jpから領収書をPDF化する
+			MoneyForwardクラウドへのアップロード時に5MB以下という制限があるため、ghostscriptを使ってサイズを縮小する
+				brew install ghostscript しておくこと
+			領収書の一括ダウンロード機能とかつけてほしいが、どの注文番号にどの商品が含まれるか、みたいなのもあるし簡単ではなさそう
+				この辺もMoneyForward Meで面倒見てくれればいいのになー
+					[Q. 「証憑自動取得」機能を使って「Amazon.co.jp」から「支払明細書」を取得することはできますか？ https://biz.moneyforward.com/support/account/faq/features/20220524.html]
+						できるんじゃん！？
+		売上は請求書から作る
+			入金を確認して消込する
+	MoneyForwardクラウドアプリから申告する
+		入力はWebからでもできるのでこっちのほうが楽だが、申告自体はアプリから行う
+			なので、サブスクリプションはAppStoreで行うのが良く、パーソナルミニにした
+ 		[https://gyazo.com/318571909835a0f6d9461ec582f60e78]
+		iDeCo、生命保険料控除の証明書から転記する
+			e-Taxまたはアプリからの申請の場合、証明書自体の送付は不要だが、5年保持する義務あり
+			https://www.e-tax.nta.go.jp/toiawase/qa/kakutei/tempu01.htm
+		新NISAも1800万円超えた分は収入扱いになるのかな？
+			まだしばらくそんな金額にならないので、様子見
+
+code:gs.bash
+ #!/usr/bin/env bash
+ set -euo pipefail
+ 
+ input=$1
+ /usr/local/Cellar/ghostscript/10.02.1/bin/gs \
+     -sDEVICE=pdfwrite \
+     -dPDFSETTINGS=/ebook \
+     -dNOPAUSE \
+     -dQUIET \
+     -dBATCH \
+     -sOutputFile="$input-圧縮.pdf" "$input"
+
+二年目ToDo
+　予定納税どうなる？
+　	→来なかった(2025-01-28)
+　SEShopでの領収書ダウンロードは発送から1ヶ月後までにダウンロードする
+　技術書も電子書籍で購入することが増えると新聞図書費の仕訳登録がめんどい...
+　	Kindle一本化か？
+　		O'ReillyがKindleこないから駄目
+　	SEShopの割引率が高いときにまとめ買いしている
+　		O'Reilly公式からPDFで買うか...
+

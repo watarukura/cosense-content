@@ -1,0 +1,85 @@
+2025-04-22 - 2025-04-28
+読んだ記事
+ [After Cline - あるいは語りえぬ者について語ろうとする時代について · GitHub https://gist.github.com/mizchi/1ad9d75fd008201571e85496fc736185]
+ 	>「でも将来的にはAIが～」を無視する
+ 	強く生きよう
+ [テキストエディタ以外が嫌いです https://zenn.dev/shougo/articles/i_like_text_editors]
+ 	相変わらずすごい人だ...
+ [S3 + CloudFront構成のSPAでWAFによるブロックが効かないときの解決策 - Nealle Developer's Blog https://nealle-dev.hatenablog.com/entry/2025/04/22/114803]
+ 	オモシロインシデントだ
+ [GitHub - bahdotsh/wrkflw: Validate and execute GitHub Actions workflows locally. https://github.com/bahdotsh/wrkflw]
+ 	動くなら試してみたい
+ 	actは重くて諦めた...
+ [cover-agent を使ってみる https://zenn.dev/mizchi/scraps/2b68746cb38079]
+ 	普通に「カバレッジ80%にして」って伝えてもClaude 3.7 Sonnet辺りだとやってくれる
+ 	とはいえ、プロンプトを専門家が書いてくれてるのは嬉しい
+ 		英語で書けって言われるとつらいしなー
+ [携帯大手を苦しめる「偽基地局」問題、2Gフォールバックの盲点と対策の難しさ | 日経クロステック（xTECH） https://xtech.nikkei.com/atcl/nxt/column/18/00687/042100213/?n_cid=nbpnxt_twbn]
+ 	これ、対策されてほしい
+ 	総務省マジでがんばれ
+ [AWS Lambda MCP Server: Lambda 関数を MCP ツールとして呼び出そう - kakakakakku blog https://kakakakakku.hatenablog.com/entry/2025/04/24/125220]
+ 	リモートMCPサーバをどう用意するかを考えている
+ 	CloudRunかLambdaかなー
+ [テクノロジーとヒトのあいだに - Speaker Deck https://speakerdeck.com/yuiseki/tekunorozitohitonoaidani]
+ 	思い浮かんだものから選択するわけだから、思い浮かぶ対象に入らないといけない
+ 		ブランド認知はそれだな...
+ 	[https://gyazo.com/ec75d8e4aa6f7e6fa046cf3afabe4281]
+ 		ライトユーザにより使ってもらう・やめないでもらう + 新規ユーザを獲得する
+ 			そのために、という話
+ [全巻無料で漫画読み放題！ - マンガ図書館Z https://www.mangaz.com/]
+ 	帰ってきたマンガ図書館Z
+ 		VISA/Masterはつかえないみたい
+ [エンジニアとして緩やかに死んでいくんだろーなと思った話 - pospomeのプログラミング日記 https://www.pospome.work/entry/2025/04/27/144734]
+ 	毎日緩やかに死んでいっているんだけど、それでも自分の面倒は自分で見るしかないからな...
+ 		成長できるかはともかく、変化できる自分は保持したい
+ [3PCA 31 日目: 3rd Party Cookie 廃止の廃止 | blog.jxck.io https://blog.jxck.io/entries/2025-04-25/end-of-effort.html]
+ 	Google + ChromeとWebの話だった3PCD(3rd Party Cookie Deprecation)が、色々あってGoogleとChromeの話になっている
+ 	Trackingからユーザを守る、という前提は今後どうなっていくのか...
+ [DuckDB で日本語全文検索 https://voluntas.ghost.io/duckdb-japanese-full-text-search/]
+ 	おもしろ
+ [JetBrains IDEs Go AI: JetBrainsの大規模AIアップデート https://zenn.dev/toliner/articles/9a93ed487525d9]
+ 	JetBrains AI、買いました
+ 		正確には、All Products Packを更新したんだけど
+ 	MCPも呼べるし、十分感はある
+ 	(まだJunieを使えてない...)
+ [mcp-server-motherduck と DuckDB でデータ分析をしよう - kakakakakku blog https://kakakakakku.hatenablog.com/entry/2025/04/26/151547]
+ 	DuckDBでtext2sqlできたら嬉しいよなー
+ [Neovim起動時にロゴをﾋｭﾝﾋｭﾝﾋｭﾝﾋｭﾝﾋｭﾝ!!ﾌﾜﾜ~~ﾝ!!する https://zenn.dev/vim_jp/articles/de942e6414685e]
+ 	おもしろ
+ [3つの先行事例から学ぶ、「TiDB」を上手く使いこなす術──「分散」と「統合」の振り子関係の変遷 (1/3)|EnterpriseZine（エンタープライズジン） https://enterprisezine.jp/article/detail/21700]
+ 	ミックさんのTiDBの記事
+ 	DMMも出ます
+ [バッチ処理を監視したいだけなんだが…  - Speaker Deck https://speakerdeck.com/yjszk/batutichu-li-wojian-shi-sitaidakenandaga-dot-dot-dot]
+ 	バッチ処理自体が難しいのにその監視ってなるとな...
+ 		動かなかったときの監視、むずいよね
+ 			わかる
+ 			わかるよ
+
+読んだ本
+ [Software Design 2025年5月号｜技術評論社 https://gihyo.jp/magazine/SD/archive/2025/202505]
+ 	オブザーバビリティ特集、じっくり読みたい
+ [科学雑誌ニュートン（2025年5月号）　「柳沢教授が教える　睡眠の正解」 | ニュートンプレス https://www.newtonpress.co.jp/newton/back/bk_2025/bk_202505.html]
+ 	睡眠特集が読みたくて定期購読してしまった
+ 		JAFMATE特典でちょっと割引
+ [朝日新聞出版　最新刊行物：新書：財務3表一体理解法「管理会計」編 https://publications.asahi.com/product/24663.html]
+ 	管理会計、むずいよなーと日頃から思っている
+ 	「全体としてはどうやら儲かってるっぽいんだけど」みたいな状態ならまだいいんだけど、「最近調子が良くないんだけどどこが悪いのかわからない」ときに管理会計できる人が社内にいないと詰むんだよな
+
+書いた
+ [Confluence Serverにmarkdownドキュメントを同期したい https://zenn.dev/watarukura/articles/20250426-ocehld2bvlk2twmctteckzybuyrhe0]
+ 	社内用にConfluence Serverへのページ作成スクリプト・更新スクリプトを書いてたんだけど、よくよく調べてみたら割とConfluence Serverの情報がなかったので書いてみた
+ 	もともとはGemini DeepResearchへ質問してて、どうにも信じられないところを裏とりした内容だったんだけど、思ったよりGeminiが言った通りでビビった...すげぇわ...
+
+その他
+　Bedrock呼び出しのコストをユーザごとに集計したくてAWSのTAMの方に相談してて教えてもらったPR
+ 	[feat: Support AWS Bedrock Application Inference Profiles for Cost Tracking by clicube · Pull Request #2078 · cline/cline · GitHub https://github.com/cline/cline/pull/2078]
+ 	マージされてくれー
+ 	推論プロファイルっていう概念がまず理解できなかった...。blogも読んだんだけど
+ 技術書をNotebookLMに食わせて質問できるようにしたい、と思うとPDFがやっぱりいいんよね
+ 	kindleを直接食わせられればいいんだけど、AmazonがGoogleのためにそれをやるか？っていうとのぞみ薄
+ 	DMMブックスでepubで買ってPDFに変換したらどうか、というが今日の思いつき
+ 		勤務先だからな！
+
+#週報
+<[2025-04-15 - 2025-04-21]
+[2025-04-29 - 2025-05-05]>

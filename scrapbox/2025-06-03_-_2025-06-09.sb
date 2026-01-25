@@ -1,0 +1,82 @@
+2025-06-03 - 2025-06-09
+読んだ記事
+ [GitHub Actions でプライベートリポジトリを checkout する https://zenn.dev/kou_pg_0131/articles/gh-actions-checkout-private-repo]
+ 	PAT発行するのもなー、って探してたらデプロイキーでcheckout action使えるのを知った。便利！
+ [macOSのbashでエスケープシーケンスをechoするときは気をつける - すぎゃーんメモ https://memo.sugyan.com/entry/2025/06/05/164336]
+ 	おもしろバグ
+ 	GNU Bashをbrewで入れてるのでお目にかからないやつだ、と思ったら見事に食らった
+		code:echo.bash
+		 bash-5.2$ echo '\e[0;31;47m CAUTION!! \e[0m'
+   \e[0;31;47m CAUTION!! \e[0m
+   bash-5.2$ echo -e '\e[0;31;47m CAUTION!! \e[0m'
+    CAUTION!!
+   bash-5.2$ printf '\e[0;31;47m CAUTION!! \e[0m\n'
+    CAUTION!!
+ [AI生成の記事を「読む価値のある読み物」に変える、リライトのポイントを紹介するぜ - nomolkのブログ https://nomolk.hatenablog.com/entry/2025/06/05/171234]
+ 	企業テックブログがAI生成されてたらなんか嫌だもんな
+ 	せめてレビューを通してほしい
+ [PostgreSQL設計ガイドライン | Future Enterprise Arch Guidelines https://future-architect.github.io/arch-guidelines/documents/forDB/postgresql_guidelines.html]
+ 	PostgreSQL使ってないから直接参考にはならないけど、「外部キー制約使わない」とか「区分値は連番」とかのエンタープライズアプリケーションのDBってこんな感じだよね、っていう話が面白い
+ 		会社で雑談してて、外部キー張るとテーブル間に依存関係ができちゃうから、データ構造の変更がないことを契約で縛らない限りは受けない、みたいな話を聞いた
+ [これから伸びるエンジニア職とは？  - AI時代に市場価値を高めるキャリア戦略 @エンジニア業界セミナー in 会津大学 - じゃあ、おうちで学べる  https://syu-m-5151.hatenablog.com/entry/2025/05/21/122752]
+ 	生成されたコードを読む力が今後のエンジニアの力になるんだろうな
+ 	AIに説明させることはもちろんできるけど、説明が理解できるかは別なので...
+ [Builder.ai破綻の真相：700人のインドエンジニアが「AI」を偽装、Microsoft出資の4億4500万ドル調達企業が破産 - イノベトピア https://innovatopia.jp/ai/ai-news/56173/]
+ 	AIって言わないとVCからお金が引っ張れない時代なんだな...
+ 	とはいえ、こーゆー企業に騙されないようにしないといけない
+ 		どうやって？
+ [「自分で書いた」と証明するために論文を“最適化”する学生たち。AI検出ツールをめぐる混乱 | レバテックラボ（レバテックLAB） https://levtech.jp/media/article/column/detail_677/]
+ 	デキが良すぎてAIが書いたと判定されるのはツラいなぁ...
+ 	まぁ、実社会に出ればAIが書こうが人が書こうがいいものはいい、になるはず
+ 		なってほしい
+ [アップデート既存の利用状況から見積もりを作成できる新しいPricing CalculatorがGAされました | DevelopersIO https://dev.classmethod.jp/articles/aws-pricing-calculator-in-console-import-usage-history/]
+ 	見積もりが必要なときに、同じようなシステム構成のアカウントから引っ張ってこられるなら楽かも？
+ [Claude Code ActionをBedrockで動かす | DevelopersIO https://dev.classmethod.jp/articles/cca-bedrock/]
+ 	これ、やりたいんだよなー
+ 	[Claude Codeを使ってリポジトリからWikiを生成する https://zenn.dev/aktriver/articles/2025-06-claude-code-github-wiki]
+ 		これと組み合わせれば、Devin lessでDevinwikiができるはず
+ [GitHub 標準の Annotation を活用してレビューを可視化する | フューチャー技術ブログ https://future-architect.github.io/articles/20250604a/]
+ 	reviewdogのセットアップめんどくてaquaでlocalでもCIでも同じツールをinstallして実行するようにしてるから、この辺を使いこなせるといいかもなぁ
+	[RedisをナイーブにQueueにするとデータロストする／可視性タイムアウトの役割 - hacomono TECH BLOG https://techblog.hacomono.jp/entry/2025/06/03/110000]
+		Redis stream、ここで使うのか！
+		Redis導入済みでキューが必要なときに、SQS使わなくていいならこれもアリだな
+	[glibc vs. musl — Chainguard Academy https://edu.chainguard.dev/chainguard/chainguard-images/about/images-compiled-programs/glibc-vs-musl/]
+		Dockerのベースイメージ何にするか、みたいな話でAlpine使うか使わないかは議論になりがち
+			性能が必要な場合、言語によっては選ばないほうがいいよ、というのが結論かな
+			Python、Rustは性能影響が大きい様子
+	[Pull Request ごとに S3 + CloudFront へ SPA のプレビュー環境をデプロイする - Classi開発者ブログ https://tech.classi.jp/entry/2025/05/27/180000]
+		Amplify Hostingだと簡単なんだけど、CloudFront + S3でやりたいよなー
+	[Zennの検索スピードを5倍に高速化した話 https://zenn.dev/team_zenn/articles/zenn-search-tuning-story]
+		PostgreSQLの全文検索インデックスかー
+	[寺に設置しているAEDが買い替え時期になったが、以前より高額になってて大変→マンションなどでも悩みのタネに「あれってそういうもんなの！？」 - Togetter トゥギャッター https://togetter.com/li/2559293]
+		たけぇんだなー
+	[【FrankenPHP】今後はPHP Foundationが公式でFrankenPHPをサポートするよ #Go - Qiita https://qiita.com/rana_kualu/items/b381b593b899515df7ab]
+		FrankenPHP、アプローチはRoadRunnerと同じだと思うんだけど、何が違うんだろう？
+			公式がサポートするのはでかい
+		ただ、正直PHP公式にasync functionが入るまでは、php-fpmかmod-phpを使うかな...
+	[気づけばDevinのナレッジが山積みに。Terraformで片づけてみた - Timee Product Team Blog https://tech.timee.co.jp/entry/2025/06/05/121914]
+		Devinに何を伝えたか、どういうルールを設定したか、をバージョン管理したい、ってのはそれはそうだなー
+	[「広範囲で執拗、かつテスト的」──年末年始のDDoS攻撃、有識者はどう見る：辻伸弘氏×アカマイ中西一博氏ロング対談（1/2 ページ） - ITmedia NEWS https://www.itmedia.co.jp/news/articles/2505/30/news038.html]
+		体感で、DDoS、増えてるよな...
+	[AI生成の記事を「読む価値のある読み物」に変える、リライトのポイントを紹介するぜ - nomolkのブログ https://nomolk.hatenablog.com/entry/2025/06/05/171234]
+		何のために書くか、なんだよな
+			未来の自分のために書くなら、AI生成の記事をそのまま出す意味がない
+			未来の自分＋同じ悩みを持つ誰かのために書くからこそ、読みやすくしようという意図が生まれる
+	[.d.tsファイルをちゃんと使うために必要な知識 https://zenn.dev/uhyo/articles/use-d-ts-correctly]
+		なんとなく型を書くファイル、くらいの認識だったんだけど、生成されるものなのね
+	[viのようなTUIエディタを作ってみる https://zenn.dev/razokulover/articles/3ff996903f8b0c]
+		すげぇ
+
+読んだ本
+ 
+
+書いた
+　
+
+その他
+ AIの専門家でもないのにAI導入推進的な仕事をしてて申し訳無さがある
+ 	ここにいるのがオレじゃなくてもっとすごい人だったら良かったのにね、ってのは最近よく考えるんだけど、まぁ引いた手札で勝負するしかない
+
+#週報
+<[2025-05-27 - 2025-06-02]
+[2025-06-10 - 2025-06-16]>

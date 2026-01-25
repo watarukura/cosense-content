@@ -1,0 +1,61 @@
+2024-04-23 - 2024-04-29
+読んだ記事
+ [「Google Chat」が「Microsoft Teams」「Slack」とチャットできる機能を一般提供／ https://forest.watch.impress.co.jp/docs/news/1586296.html]
+  chatworkもきてほしいな
+ https://x.com/3dvr3/status/1782453298081169805?s=46&t=fjkFV3OPDIJYv5ssUBmueA
+ [IPAの登氏に聞く、「分散型クラウド基盤ソフトを作れるクラウド人材育成」 - ZDNET Japan https://japan.zdnet.com/article/35217768/]
+ 	さくらインターネットやペパボ、ヨドバシとかかな
+ 	すっかりクラウド利用エンジニアなので胸が痛い
+ [江崎グリコ、SAPのシステム導入に大失敗して地獄を見る : 市況かぶ全力２階建 https://kabumatome.doorblog.jp/archives/66021195.html]
+ 	グリコ続報。SAP導入だったのね
+ 		えすえーぴーって読むのか さっぷだと思ってた
+ [Node.js + TypeScriptのモジュールを整理してみる https://blog.koh.dev/2024-04-23-nodejs-typescript-module/]
+ 	Node.jsのカオスの一端を覗くことができる
+ 	誰しも、混沌を呼び込みたいわけではないが、Node.jsは混沌を呼ぶのが簡単に見える(そんなに使い込んでないから印象だけど)
+ [意外と便利！こんなところにもTerraform https://zenn.dev/fez_tech/articles/603e46192e933c]
+ 	GitHubの管理はずっとしたいと思っている
+ 	GoogleGroup用のproviderの存在、初めて知った
+ [出版された本の90％は2000部未満・50％は12部未満しか売れていないことが裁判記録から判明 https://gigazine.net/news/20240424-buy-books/]
+  アメリカの話だけど、日本もたいして変わらんだろうなー
+ [2024年11月、Mackerelのメトリックがオブザーバビリティ標準であるOpenTelemetryに正式対応し、あわせて価格体系を全面的に改定します - Mackerel お知らせ #mackerelio https://mackerel.io/ja/blog/entry/announcement/20240423]
+ 	Otel対応、いいなー
+ [HOYA 3月に発生したサイバー攻撃によるシステム障害が復旧 | NHK | サイバー攻撃 https://www3.nhk.or.jp/news/html/20240423/k10014430911000.html]
+ 	よかった...
+ 	メガネが注文できなくなるところだった
+ [HashiCorp joins IBM to accelerate multi-cloud automation https://www.hashicorp.com/blog/hashicorp-joins-ibm]
+  時代って感じだ
+  IBM、クラウドもAIもコケてるように見えるけどHashiCorp買って何ができるんだろう...
+  	RedHatとはシナジーありそうか？
+ [関数としてのテーブル - 写像と命題関数｜ミック https://note.com/mickmack/n/n42e8f69e62db]
+  なんとなく知ってる話を典拠込みで詳しく説明されてて嬉しい
+ [【トーハン会代表者総会】近藤社長 出版社の流通コスト負担強く求める - BookLink https://book-link.jp/media/archives/13919]
+  再販制をやめる時期か
+  定価は倍になって、返本NGが基本になり、売れない本は電子書籍のみになる、のかな
+ [なぜGoogleは“あなたの不満”を無視できるのか https://p2ptk.org/monopoly/4535]
+ [The Man Who Killed Google Search https://www.wheresyoured.at/the-men-who-killed-google/]
+  google、evilになってしまったのか？
+ [The beginning of the end for Terraform? https://medium.com/netpremacy-global-services/the-beginning-of-the-end-for-terraform-cfffcd2c5420]
+  opentofu移行、真面目に考えないとな
+  しばらくは静観するけど
+
+聴いた
+　[おいラジオ：Apple Podcast内のoi 19 年度始め、しんししき、地方カンファレンス https://podcasts.apple.com/jp/podcast/%E3%81%8A%E3%81%84%E3%83%A9%E3%82%B8%E3%82%AA/id1697428015?i=1000652328861]
+　	三者三様のネガティブな精神性の魅力がある
+　[ゆるコンピュータ科学ラジオ：Apple Podcast内のLispの勉強をしたら『葬送のフリーレン』と同じカタルシスが待っていた。【Lisp2】#119 https://podcasts.apple.com/jp/podcast/%E3%82%86%E3%82%8B%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%A7%91%E5%AD%A6%E3%83%A9%E3%82%B8%E3%82%AA/id1604353315?i=1000651648368]
+　[ゆるコンピュータ科学ラジオ：Apple Podcast内の大人の勉強は「夢の中」が主戦場。寝ながらマクロを書くといい【Lisp雑談】#120 https://podcasts.apple.com/jp/podcast/%E3%82%86%E3%82%8B%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%A7%91%E5%AD%A6%E3%83%A9%E3%82%B8%E3%82%AA/id1604353315?i=1000652363060]
+　	Lisp、何度も入門しては挫折してるので、堀元さんはすごい
+　[Misreading Chat：Apple Podcast内の#131: FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness https://podcasts.apple.com/jp/podcast/misreading-chat/id1364330509?i=1000653283871]
+　[Yokohama North AM：Apple Podcast内のep 93 @o0h_と新卒研修、AI Assistant、FF8について https://podcasts.apple.com/jp/podcast/yokohama-north-am/id1512608373?i=1000653556800]
+　[mozaic.fm：Apple Podcast内のep148 mozaic renewal 202404 | mozaic.fm https://podcasts.apple.com/jp/podcast/mozaic-fm/id851914495?i=1000653183505]
+
+その他
+　先週読んだ [Deno first でやっていく https://zenn.dev/mizchi/articles/deno-first-choice] を思い出してdenoでbashスクリプトを置き換えるのを試してみた
+　	PhpStormでガリガリ書けて便利だけど、importの解決の感じとかがよくわからん
+　	でも、TypeScriptならみんな読めると期待していいし、AIにも聞きやすいしMDN探せば良いドキュメントがある
+　		自分ではあんまり読み書きできないけど、まぁまぁやる気は出る
+　	Deno、いいじゃん
+　		コンパイルしなくていいし、aquaprj/aquaで入るからバージョン管理も楽
+　Podcastの聴取記録をもうちょっとうまく取りたい
+　	iOSアプリで聴いてるんだけど、聞き終わった日の順に並べる、とかできるといいのになー
+
+#週報

@@ -1,0 +1,101 @@
+2025-05-27 - 2025-06-02
+読んだ記事
+ [「これが世界か！」と打ち震えた。偶然出会ったLinuxカーネルで、メンテナーとして認められるまで【フォーカス】 | レバテックラボ（レバテックLAB） https://levtech.jp/media/article/focus/detail_671/]
+ 	すげぇなぁ
+ [k1LoW/deck: MarkdownでGoogleスライドを作る | lacolaco's marginalia https://blog.lacolaco.net/posts/deck-markdown-to-google-slides/]
+ 	deck、使いたいと思って幾星霜
+ 	社内LTとかで使えるといいな
+ [Just make it scale: An Aurora DSQL story | All Things Distributed https://www.allthingsdistributed.com/2025/05/just-make-it-scale-an-aurora-dsql-story.html]
+ 	DSQL、Rustだ
+ [Devin とGitHub Actionsで実現する継続的カバレッジ改善の取り組み - VISASQ Dev Blog https://tech.visasq.com/improved-coverage-with-devin]
+ 	Devinにカバレッジ上げてよ、っていうと上げてくれるならいいなー
+ [AIエージェントで並列実装なら必須技術！ Git Worktree を理解する https://zenn.dev/siu_issiki/articles/git_worktree]
+ 	並列実装、まだやったことないんだよな
+ 	そんなにマシンパワーないし...
+ [#AIお嬢様コーディング部 とは - エレガントなAI協働開発のススメ https://zenn.dev/git_ai_code/articles/ai-ojousama-coding-club]
+ 	馬鹿にならないご利益がある気はしている
+ 	まぁ、チームでは使えないけども
+ [地に足の付いた現実的な技術選定から魔力のある体験を得る『AIレシート読み取り機能』のケーススタディ / From Grounded Tech Choices to Magical UX: A Case Study of AI Receipt Scanning - Speaker Deck https://speakerdeck.com/moznion/from-grounded-tech-choices-to-magical-ux-a-case-study-of-ai-receipt-scanning]
+ 	取り入れやすそうなプラクティスが詰まっていて勉強になる
+ 	技術選定はバランス
+ [https://tskaigi.mizchi.workers.dev/#1 TS特化Clineプログラミング]
+ 	コレと同じものをPHPで作りたいがそんなにPHPに詳しくないんだよな
+ 		誰か頼む
+ 	同じファイル中にテストを書ける言語がいいのかなー
+ 		Rustはわかりやすい例
+ 		Denoも多分書ける
+ [【PHP8.5】PHPでパイプライン演算子が使えるようになる #日本語訳 - Qiita https://qiita.com/rana_kualu/items/72434273d20f05fdbd7a]
+ 	パイプライン演算子きた！
+ 	まぁ、書き味以外は特に変わらないけど
+ 	途中でエラーになったときの制御とかどうするのかな？
+ [Claude 4 プロンプトエンジニアリングのベストプラクティス - Anthropic https://docs.anthropic.com/ja/docs/build-with-claude/prompt-engineering/claude-4-best-practices]
+ 	公式のベストプラクティスうれしい
+ [GitHub WorkflowにClaude Codeを統合するとレビューもPRもよしなにやってくれる良い話🎉 https://zenn.dev/minedia/articles/be0005c37f7229]
+ 	これをうまく使って、ドキュメント更新くんを作れないかなー
+ [TSKaigi 2025「TypeScriptとは何であって何でなく、誰のもので、どこへ向かうのか」スピーカーノート https://zenn.dev/sosukesuzuki/articles/5146c84504445f]
+ 	TypeScript、JSがブラウザにとって必須だから、書く人が多くて、エコシステムがでかいのが一番の特徴なんだよな
+ 		勝ち馬に乗りたかったらTS、みたいな感じはするし
+ [GitHub Actions Self-hosted runner を利用した継続的な負荷試験 https://voluntas.ghost.io/github-actions-self-hosted-load-test/]
+ 	Akamai CloudでSelf-hosted Runner、安くていいなー
+ 	「監視では検知できない本番障害」って、こえぇな...
+ 		けど、そういうものがあるって認識の有無は大事
+ [強化イメージのご紹介 | Docker https://www.docker.com/blog/introducing-docker-hardened-images/]
+ 	distrolessみたいなやつをDocker社が作ってくれるのか
+ 		PHPではどうですかね？
+ [LLMを使ってファイル間の矛盾を指摘するCLIツール - hitode909の日記 https://blog.sushi.money/entry/2025/05/19/221532]
+ 	あるプログラムと1:nで紐づくドキュメントをどうつなげるか、なんだけど始めから1:1で書いておくてはあるよなー
+ 		testもそうだし
+ 		であれば、docsディレクトリに同じパス・同じファイル名でドキュメントを書いて、整合性チェックする手はありそう
+ [君だけのオリジナル async / await を作ろう / TSKaigi 2025 - Speaker Deck https://speakerdeck.com/susisu/tskaigi-2025]
+ 	generatorってそういうものなのか!?
+ 		名前は知っててコードも読んでたけど、ようやく挙動の想像がつくようになってきた
+ 			まだよくわからんけども
+ 	[TypeScript でエフェクトシステムを再現したい https://zenn.dev/mizchi/articles/domain-modeling-by-generator]
+ 		>難点としては、他で見たことがない形式なので、自分でも書くのがしんどい。
+ 		まさにそれ
+ [プロファイラを利用して Node.js サーバーのレスポンス時間を 200 秒 → 20 秒に短縮した話｜ogino https://note.com/pnd3871/n/n57784b33feff]
+ 	負荷試験でこういう事ができる人になりたいなー
+ [エンジニアのための 法規制への取り組み方 #healthtechmeetup - Speaker Deck https://speakerdeck.com/77web/enzinianotameno-fa-gui-zhi-henoqu-rizu-mifang-number-healthtechmeetup]
+ 	今、ちょうどヘルスケア事業の支援に入ってるのでありがたい
+ [AIエージェントで並列実装なら必須技術！ Git Worktree を理解する https://zenn.dev/siu_issiki/articles/git_worktree]
+ 	ホモサピはマルチタスクできないけどAIエージェントには並列で動いてほしい
+ 		けど、結局実装が早くて高速でレビューしたりコンテキストスイッチしたりしなきゃいけなくて脳がアレになるのでは
+ [最速のサーバーレス分散SQLデータベース、Amazon Aurora DSQLが一般提供開始 | AWSニュースブログ https://aws.amazon.com/jp/blogs/aws/amazon-aurora-dsql-is-now-generally-available/]
+ 	AWS版NewSQLという認識のDSQL
+ 		高そう
+ 		メンテナンス時にサービスダウンが発生するかが知りたい
+ [『LLMのプロンプトエンジニアリング』を読んだ https://blog.lai.so/prompt-engineering-for-llm/]
+ 	読まないとなー
+ [Noam Chomsky Speaks on What ChatGPT Is Really Good For https://chomsky.info/20230503-2/]
+　　>一つは、LLMシステムが言語、学習、その他の認知の側面について何も教えてくれないように設計されていることです。これは原則的に、修復不可能な問題です。
+　　>科学の主たる目的は、人間の言語能力における初期状態と、習得過程における特定の形態の両方において、内部システムを発見することです。
+　[PHPUnit 高速化テクニック / PHPUnit Speedup Techniques - Speaker Deck https://speakerdeck.com/pinkumohikan/phpunit-speedup-techniques]
+　	setup-php、defaultでXDebug入ってるのか！知らなかったー
+　		https://github.com/shivammathur/setup-php#disable-coverage うおお
+　[AIのためのオンボーディングドキュメントを整備する - hirotea - Speaker Deck https://speakerdeck.com/hirotea/ainotameno-onbodeingudokiyumentowozheng-bei-suru]
+ 	AIのためにも人のためにもドキュメント整備が大事
+ [AWS SQSとLaravelで大規模トラフィックを捌く - Google スライド https://docs.google.com/presentation/d/1_vOdQO0SY671SRQpnpEz1xvVyUy-Vzl_Dk4Ph6ujy84/mobilepresent?slide=id.p]
+ 	たけてぃさんに教えてもらったやつ↓
+ 	[Amazon EventBridge での SaaS パートナーからのイベントの受信 - Amazon EventBridge https://docs.aws.amazon.com/ja_jp/eventbridge/latest/userguide/eb-saas.html]
+ 	StripeならたしかにEventBridgeで受けられるからだいぶ楽だなー
+
+読んだ本
+ Newton 2025年7月号
+ 	世界を変える10大テクノロジー特集の量子コンピュータと核融合、気になってる
+ [人を助けるとはどういうことか――本当の「協力関係」をつくる7つの原則 – 英治出版 https://eijipress.co.jp/products/2060]
+ 	readline.fmで聴いて図書館で借りてみた
+ 	支援する人・される人の間には、自然に立場の高低が生まれてしまう
+ 	支援する側が得たい結果のためには、立場が邪魔になる
+
+書いた
+　PR TimesのRSSを取得してtitleかdescriptionに特定の文字列が入ってるものを収集するGAS + GSheetを作った
+ 　	「AI」で収集したらモサモサ溜まってしまってとても読みきれない
+ 　	https://docs.google.com/spreadsheets/d/1slu4x-bwayKFJO4fLvGwKt5H6kNmvskACEdsoxoa3rc/edit?usp=sharing
+
+その他
+ アイデアだけ出してClineやChatGPTにコードを書かせてばかりだ
+ 	そろそろプログラマーを名乗れなくなるかもしれない
+
+#週報
+<[2025-05-20 - 2025-05-26]
+[2025-06-03 - 2025-06-09]>

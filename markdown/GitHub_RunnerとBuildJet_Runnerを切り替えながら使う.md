@@ -1,0 +1,101 @@
+# GitHub RunnerとBuildJet Runnerを切り替えながら使う
+[GitHub RunnerとBuildJet Runnerを切り替えながら使う - TORANA TECH BLOG](https://web.archive.org/web/20250120132706/https://tech.torana.co.jp/entry/2024/12/09/123000)
+2024-12-09
+SREのクラシマです。
+トラーナの全リポジトリでGitHub Actionsを使用しており、さらにコスト削減のためにBuildJetを導入しています。
+が、GitHub Actionsには無償枠があり、これは使い切ったほうがお得です。
+ということで、無償枠を使い切ったら単価のやすいBuildJetに切り替え、無償枠が復活したらGitHubに戻す、ということをしたいわけです。
+しばらくは手動でやっていたのですが、自動化できたのでご紹介。
+事前準備
+GitHub OrganizationのvariablesにRUNNER_AMDとRUNNER_ARMを作成します。
+ubuntu-latestしかruns-onに指定していない、という場合はAMDのみでも良いのですが、FargateをGraviton化したのでdocker buildやPHPのテストはARMを使用する必要があり、分離しています。
+OrganizationのSetting > Secrets and variables > actions に以下のように設定
+で、GitHub Actions workflowのruns-onを以下の様に指定します。
+```swap-runner-part.yaml
+jobs:
+  jobname:
+  runs-on: ${{ vars.RUNNER_AMD }}
+```
+これで、RunnerをOrg Variables経由で変更する準備が整いました。
+Variablesを書き換える
+切り替えるためのscheduled actionがこちら
+```swap-runner.yaml
+--
+name: Swap GHA runners
+
+on:
+  schedule:
+    - cron: "0 1,5,9 * * 1-5" # 10:00, 14:00, 18:00 Mon-Fri JST
+    - cron: "0 0 12 * *" # 09:00 毎月12日 JST
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: read
+
+jobs:
+  g2b:
+    runs-on: ${{ vars.RUNNER_AMD }}
+    if: ${{ vars.RUNNER_AMD == 'ubuntu-latest' }}
+    timeout-minutes: 1
+    steps:
+      - name: GitHub Actions usage minutes
+        id: is_free_time
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
+        run: |
+          set -xv
+          remain=$(gh api \
+                     -H "Accept: application/vnd.github+json" \
+                     -H "X-GitHub-Api-Version: 2022-11-28" \
+                     /orgs/torana-us/settings/billing/actions \
+                     --jq '.included_minutes - .total_minutes_used')
+          if [[ "$remain" -gt 0 ]]; then
+            is_free_time=true
+          fi
+          echo "is_free_time=${is_free_time:-false}" >> "$GITHUB_OUTPUT"
+      - name: GitHub -> BuildJet
+        if: ${{ steps.is_free_time.outputs.is_free_time == 'false' }}
+        env:
+          GH_TOKEN: ${{ secrets.SWAP_RUNNER_PAT }}
+        run: |
+          set -xv
+          gh api --method PATCH \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            /orgs/torana-us/actions/variables/RUNNER_AMD \
+            -f "name=RUNNER_AMD" \
+            -f "value=buildjet-2vcpu-ubuntu-2204" \
+            -f "visibility=all"
+
+  b2g:
+    runs-on: ${{ vars.RUNNER_AMD }}
+    if: ${{ vars.RUNNER_AMD == 'buildjet-2vcpu-ubuntu-2204' && github.event.schedule == '0 0 12 * *' }}
+    timeout-minutes: 1
+    steps:
+      - name: BuildJet -> GitHub
+        env:
+          GH_TOKEN: ${{ secrets.SWAP_RUNNER_PAT }}
+        run: |
+          set -xv
+          gh api --method PATCH \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            /orgs/torana-us/actions/variables/RUNNER_AMD \
+            -f "name=RUNNER_AMD" \
+            -f "value=ubuntu-latest" \
+            -f "visibility=all"
+
+```
+GitHub Runnerが動いている場合は、1日3回無償枠が残っていないかチェック
+(無償枠を使い切った場合)はOrg Variablesを書き換え
+毎月12日になったらGitHub RunnerへOrg Variablesを書き換え
+という挙動です。
+ちょうどよく1.のチェックでの切り替えができない場合のために、手動実行もできるようにしてあるので安心です。
+なお、ARM RunnerはGitHub Runnerに無償枠がないのでBuildJet固定にしています。
+また、Org Variablesを書き換えるため、SWAP_RUNNER_PATというPersonal Access Tokenを作成、リポジトリsecretsに登録して使用しています。
+まとめ
+GitHub + BuildJetを使うための一工夫の話でした。
+BuildJet、CPU強いし安いしでとてもオススメです。
+[#トラーナテックブログ](トラーナテックブログ)

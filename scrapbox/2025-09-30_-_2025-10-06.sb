@@ -1,0 +1,61 @@
+2025-09-30 - 2025-10-06
+読んだ記事
+ [Onward | Domenic Denicola https://domenic.me/retirement/]
+ 	Domenicさん、mozaic.fmで何度か名前だけ聞いたし、Node学園祭かどこかで顔も見たことがあるような
+ 	引退する、っていう選択肢があるのがすごいな
+ [V8 の JSON.stringify が二倍高速になった理由 (翻訳) - inzkyk.xyz https://inzkyk.xyz/v8/json-stringify/]
+ 	SIMD、さっぱりわからないけど専用のハードウェア命令を呼ぶから速い、ってことなのかな？
+ [履歴の適用日を日付化しました —— 大規模なデータ構造変更の苦労と学び - SmartHR Tech Blog https://tech.smarthr.jp/entry/2025/09/12/115617]
+ 	timestamp型 -> date型の変換の話
+ 	段階を踏んでるところが、とてもよくて、参考にしたい
+ [Pythonによる契約プログラミング入門 / PyCon JP 2025 - Speaker Deck https://speakerdeck.com/7pairs/pycon-jp-2025]
+ 	FastAPI + Pydanticで契約プログラミング、とか良さそうだなー
+ 	icontractも良さげ
+ [アップデート Amazon CloudWatchがリソースのタグを用いてメトリクスモニタリングができるようになり、リソースの追加や変更に自動的に適応する動的なCloudWatchアラームを設定可能になりました | DevelopersIO https://dev.classmethod.jp/articles/aws-cloudwatch-tags-observability/]
+ 	Datadog使ってるのであんまりCloudWatchメトリクスの出番は少ないんだけど、1アカウント複数環境、みたいなケースでちょいと監視を追加したい、みたいなときはいいかも
+ [Announcing Amazon ECS Managed Instances for containerized applications | AWS News Blog https://aws.amazon.com/jp/blogs/aws/announcing-amazon-ecs-managed-instances-for-containerized-applications/]
+ 	AWSにEC2をマネージしてもらって、その上でコンテナアプリケーションを動かす方式
+ 		今までECS on EC2してた、とか、GPU使いたい、とかあるなら、という感じ
+ 		Fargateから移行する、までのメリットがあるか？
+ 	[Amazon ECS Managed Instanceは AWS Fargate と何が違うのか？ - How elegant the tech world is...! https://iselegant.hatenablog.com/entry/2025/10/03/120315]
+ 		解説
+ [ペン入力もできる「Kindle Scribe」に新型。カラー表示対応モデルも登場  - PC Watch https://pc.watch.impress.co.jp/docs/news/2051741.html]
+ 	画面がでかいのがいいんだよな
+ 	Kindle Colorsoft 11インチとかでないかな
+ [10月1日サービス開始の「NHK ONE」でトラブル　認証コードを記載したメールが「Gmail」「ドコモメール」「auメール」などに届かず - ITmedia Mobile https://www.itmedia.co.jp/mobile/articles/2510/01/news059.html]
+ 	GMailスパム対応が存在しない世界線の方が構築したんですかね
+ [アサヒグループホールディングスへのサイバー攻撃についてまとめてみた - piyolog https://piyolog.hatenadiary.jp/entry/2025/10/04/023247]
+ 	ランサムウェアかなーと思ったらランサムウェアだった
+ [「ソフトウェア開発運用に関するコストパフォーマンス」に関するメモ - 猫型の蓄音機は 1 分間に 45 回にゃあと鳴く https://nekogata.hatenablog.com/entry/2025/10/02/112010]
+ 	プロジェクトを普通に進めようとするとデスマーチになるように、プロダクトを普通に開発しようとすると負債が積み上がるのだった
+ 		そういう引力がある、ということを認めないといけない
+ [全プロセスが一秒止まる不具合、原因はLinuxカーネルにあり？ https://zenn.dev/turing_motors/articles/a460fe08b54253]
+ 	メモリのサイズがデカくなることで顕在化した、みたいな話なのかもなー
+ [docker build の apt-get update で The repository ... is not signed エラー #Docker - Qiita https://qiita.com/yukia3e/items/6e2536dd90d34a8b01cc]
+ 	docker buildが急にコケるようになった原因が、DockerDesktopで指定してたdisk usage limitを食いつぶしてしまってたことで、半日くらい潰した...
+ [どのくらい生成AIに任せているかをあらわす指標 - Mitsuyuki.Shiiba https://bufferings.hatenablog.com/entry/2025/10/02/235024]
+ 	図がすごく良くて、そうそうそれそれ、って思いながら読んだ
+ [チームの自律性を重んじるだけでは組織がうまく回らない / 「Spotify’s Failed #SquadGoals」を読み解く - mtx2s’s blog https://mtx2s.hatenablog.com/entry/2025/10/02/201310]
+ 	自律的なチームが、所属する組織とは独立した方向に向かってしまう、みたいなことを防げなかった様子
+ [Amazon CloudFrontでのクリックジャッキング対策：非推奨のX-Frame-OptionsからCSP frame-ancestorsへの移行 | iret.media https://iret.media/166683]
+ 	最近CursorにもX-Frame-Optionsは非推奨、って教えてもらった
+ 
+
+読んだ本
+ 
+
+書いた
+ 
+
+その他
+ iPhone17ほしい
+ 	eSIMに切り替えないといけない
+ 		ahamoなので切り替えは簡単？[eSIMクイック転送について | お客さまサポート | NTTドコモ https://www.docomo.ne.jp/support/uimcard/esim/iphone_transfer/]
+　　　先にeSIMに切り替えてからiPhone17を買わないと詰む気はする...
+　ラジオ英会話半年継続
+　	継続、といいつつ3日くらい遅れているのだった...
+　	土日にやれば追いつくんだけど、そこまでのやる気はないのだ
+
+#週報
+<[2025-09-23 - 2025-09-29]
+[2025-10-07 - 2025-10-13]>

@@ -1,0 +1,57 @@
+2024-11-05 - 2024-11-11
+読んだ記事
+ [次世代 PHP 静的解析リンター Fennec https://zenn.dev/top/articles/34bac61119eee4]
+ 	Rust製ツールがPHPへ進出
+ [いまならこう作りたい AWSコンテナ本格入門ハンズオン　〜2024年版 ハンズオンの構想〜 - Speaker Deck https://speakerdeck.com/horsewin/imanarakouzuo-ritai-awskontena-ben-ge-ru-men-hanzuon-2024nian-ban-hanzuonnogou-xiang?slide=20]
+ 	CloudshellがVPCアクセス可なのでbastion不要にできる？
+ 	ちょっと試したい
+ [tokioから発表された新しいORM「toasty」を触ってみる - Don't Repeat Yourself https://blog-dry.com/entry/2024/11/04/001421]
+ 	PrismaみたいなやつをRustで、って話っぽい
+ 	[Prisma クライアント Rust https://prisma.brendonovich.dev/] Prisma使う手もあるけど
+ [Next.js App Router セキュリティ - Speaker Deck https://speakerdeck.com/zaru_sakuraba/nextjssekiyuritei]
+ 	Next.jsもAppRouter + ServerActionsみたいなことやるとバックエンドと同じような脆弱性が生まれるのね
+ 		フロントエンド触ってないセキュリティ屋さんとか大変かもなぁ...
+ [さくらインターネット入社後3ヶ月のいまの話 - たごもりすメモ https://tagomoris.hatenablog.com/entry/2024/11/07/112931]
+ 	さくらインターネットさん、気になっている
+ [安全に倒し切るリリースをするために：15年来のレガシーシステムのフルリプレイス挑戦記 https://zenn.dev/neinc_tech/articles/2d25e455ae63a6]
+ 	よい話の塊だった
+ 	新旧ロジックの更新だけでよければどうにかなりそう
+ 		DBにも影響、とかなると辛い
+ [S3にあるALBログの調査はAthenaよりDuckDBのほうが簡単 - road288の日記 https://road288.hatenablog.com/entry/2024/11/06/113954]
+ 	これはいい
+ [方針に納得できない時のお作法 - Konifar's ZATSU https://konifar-zatsu.hatenadiary.jp/entry/2024/11/05/192421]
+ 	にゃーんってtimesに書いてはいけないのだ
+ 		旧Twitterではよく見るけど
+ [AWS ECS Fargate Autoscaling の実戦的な基礎知識 | 外道父の匠 https://blog.father.gedow.net/2024/11/08/aws-ecs-fargate-autoscaling-knowledge/]
+ 	まとめ方が丁寧で素敵
+ [MonorepoでのTerraform運用を楽にする！tfactionを使ったGitHub Actions Workflowの構築 - newmo 技術ブログ https://tech.newmo.me/entry/tfaction-github-terraform-workflow]
+ 	tfactionの事例
+ 		初手からtfactionで行く、って決めてればいいんだけど、後からいれるのが億劫でなかなか試せてない
+ [オープンソースの S3 互換オブジェクトストレージ MinIO を DuckDB で使う https://zenn.dev/shiguredo/articles/duckdb-minio]
+ 	ローカルで試せるのは良さそう
+ [パーサーコンビネータを自作してみる | フューチャー技術ブログ https://future-architect.github.io/articles/20241108a/]
+ 	takenocoをうまく使えなかったので自作にもいつか挑戦してみたい
+ [「オープンソースの開発に貢献せず搾取するだけの大企業」の解決方法をDrupal開発コミュニティが示す - GIGAZINE https://gigazine.net/news/20241110-open-source-maker-taker-problem/]
+ 	面倒なことをしてるなー、という印象だけど、実行する企業が増えればもっと洗練されるかしらん
+ [「なぜ30％値下げできないの？どれくらいなら下げられるの？」「できるか、できないかで答えてください」と高圧的に言われたらどうするか？『戦略的交渉入門』: わたしが知らないスゴ本は、きっとあなたが読んでいる https://dain.cocolog-nifty.com/myblog/2024/11/post-b02074.html]
+ 	席を立って回れ右、って選択肢をとりたいが、そうできない場合はあるからなぁ...
+
+読んだ本
+ [エンジニアチームの生産性の高め方 〜開発効率を向上させて、人を育てる仕組みを作る：書籍案内｜技術評論社 https://gihyo.jp/book/2024/978-4-297-14502-6]
+  PRD、DDの話を読みたくて買ったんだけど、実践エンジニア組織づくりの章が良かった
+   生々しい試行錯誤
+   偉い人には長く働いてもらいたい、と常々思っている
+   	が、すごくデキる人なら短期で結果を出して次の人を見つけて、ってできるのかも知れない
+ [人工衛星をつくる ―設計から打ち上げまで―  | Ohmsha https://www.ohmsha.co.jp/book/9784274503719/]
+ 	図書館から借りて読んでみた
+ 		公共図書館、よいね
+
+書いた
+ 
+
+その他
+ 寒くなってきて筋トレサボりがち
+  早朝は特に寒い
+  風邪も引きたくないし
+
+#週報

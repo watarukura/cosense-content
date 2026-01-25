@@ -1,0 +1,58 @@
+2024-10-22 - 2024-10-28
+読んだ記事
+ [システムをVMからコンテナに移行して、結局VMに戻した話 - MonotaRO Tech Blog https://tech-blog.monotaro.com/entry/2024/10/22/090000]
+ 	Fargate -> EC2かー
+ [Terraform v1.10 からは S3 Backend の State Lock に DynamoDB が必要なくなる https://zenn.dev/terraform_jp/articles/terraform-s3-state-lock]
+ 	待ち遠しい
+ [Repro で遭遇した Aurora MySQL にまつわるトラブル 5 選 - Repro Tech Blog https://tech.repro.io/entry/2024/10/23/085610]
+ 	DBのトラブルの話、大好物
+ [https://www.mizuhobank.co.jp/corporate/industry/mra/pdf/vol030.pdf MIZUHO Research & Analysis 米大統領選を受けた経済・産業への影響 ～国民の「内向き化」が招く米国第一主義の帰結とは？～]
+ 	どっちが大統領になっても、大小や場所は違うが変化は起きる
+ 	備えよ、って話
+ [デプロイを任されたので、教わった通りにデプロイしたら障害になった件 ～俺のやらかしを越えてゆけ～ - Speaker Deck https://speakerdeck.com/techouse/depuroiworen-saretanode-jiao-watutatong-rinidepuroisitarazhang-hai-ninatutajian-an-noyarakasiwoyue-eteyuke]
+ 	いい話だった
+ 	深堀りしてるのが偉い
+ [RustでWeb開発コソコソ噂話 - Speaker Deck https://speakerdeck.com/helloyuk13/rustdewebkai-fa-kosokosozun-hua]
+ 	RustでWeb開発本、買わねば
+ [[Kaigi on Rails 2024] Rails Way, or the highway - Speaker Deck https://speakerdeck.com/palkan/kaigi-on-rails-2024-rails-way-or-the-highway]
+ 	RailsもLaravelもコードベースやチームがデカくなってくると同じ悩みにぶつかるんだな...
+	[Goのnil panicを防ぐ静的解析ツール：nilaway https://zenn.dev/sho_hata/articles/1a70781e5a0b95]
+		よさそう
+	[AWS CDKの脆弱性が発覚したらしいので元レポートを読んでみた https://zenn.dev/ncdc/articles/df170f524d9c0c]
+		S3バケット名決め打ちなー
+	[The Road to Terragrunt 1.0. In this blog post, we’re excited to… | by Josh Padnick | Oct, 2024 | Gruntwork https://blog.gruntwork.io/the-road-to-terragrunt-1-0-4d5a0b416086]
+		Terragrunt、外すかなぁ...
+		バージョンアップをrenovateに任せてるから更新漏れみたいなのを考えなくて良いのよね
+	[中堅の停滞期、ゆるやかな死。｜FromAtom https://sizu.me/fromatom/posts/w10ht59w9572]
+		後輩に教えを乞えるかどうか、じゃないかなー
+	[go.mod、DockerfileやCI設定に分散しがちなGoのバージョンをまとめて管理する / Go Connect #3 - Speaker Deck https://speakerdeck.com/arthur1/go-toolchain-version]
+		いまいち把握できてないので読む
+	[go-graphviz が新しくなりました - Route54 https://goccy54.hatenablog.com/entry/2024/10/24/164715]
+		Pure goにするためにWASM化
+			全然わからないけどすごそう
+	[DuckDB-Wasm + 生成AI on Next.js で、どなたでも、いますぐ、地理空間情報の分析ができましてよ https://zenn.dev/yuiseki/articles/3cb30e14fda6e2]
+		すげぇ
+		生成AIをChatGPTのAPIで呼んでたらお金かかる気がしてて申し訳ないんだけど、その辺はどうなってるのかしらん
+	[Loggolの検知対象である「リコネサンス」とは何なのか - Loggol ブログ https://blog.loggol.jp/entry/2024/10/24/120000]
+		アタックの前に下見に来てるな、みたいなところでブロックできるのは確かに良さそう
+	[Cloud Profilerを使ってNode.jsのメモリリークの原因を特定する https://zenn.dev/ubie_dev/articles/b77f3a8e0fe056]
+		おもしろ
+
+読んだ本
+ [世界史を俯瞰して、思い込みから自分を解放する 歴史思考 | 書籍 | ダイヤモンド社 https://www.diamond.co.jp/book/9784478112274.html]
+ 	COTEN RADIOのMC、深井さんの著作
+ 	ほぼほぼCOTEN RADIOまとめだけど、音声よりは後から探しやすいからこれはこれで
+
+書いた
+ [Amplifyのビルド開始・終了をSlack通知する - TORANA TECH BLOG https://tech.torana.co.jp/entry/2024/10/28/123000]
+		小ネタ
+		Amplify -> EventBridge -> SNS -> Lambdaで通知してたLambdaを削除したくてChatbotに差し替えた
+			脱Lambdaするとソースコードの管理が不要になって嬉しい
+
+その他
+ まだ咳が止まらない...
+ 	困った
+ 	夜は寝られるからまだマシだけど
+ 	息子から移った風邪がまた息子に移って親子で咳をしている
+
+#週報

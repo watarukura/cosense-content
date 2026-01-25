@@ -1,0 +1,262 @@
+# 踏み台Fargateの構築の話 - TORANA TECH BLOG
+[踏み台Fargateの構築の話 - TORANA TECH BLOG](https://web.archive.org/web/20241109034016/https://tech.torana.co.jp/entry/2023/04/07/123000)
+SREチームのクラシマです。
+
+先日のblogでFargate移行完了について書きました。[https://tech.torana.co.jp/entry/2023/02/17/123000](https://tech.torana.co.jp/entry/2023/02/17/123000)
+
+
+さて、EC2が無くなって困るのが踏み台サーバも無くなってしまうことです。EC2にssmを使ってport forwardしていたのですが、使えなくなってしまいます。
+
+折よくFargate内のssm-agentのバージョンアップによりssmで接続できるようになったので、踏み台Fargateを構築しました。
+
+↓こちらを参考にさせていただきました！[https://zenn.dev/quiver/articles/1458e453118254](https://zenn.dev/quiver/articles/1458e453118254)
+
+### bastion-clusterにbastion-serviceを構築する
+
+平日の日中は常時立っていてほしいですが、夜間や土日は必要なときだけで良さそうなので、Application AutoScalingを使って平日09:00に起動して、21:00には0インスタンスになるようにします。また、踏み台以外のことはしてほしくないので、できるだけ小さなイメージが良いです。ということで、busyboxを[dockerhub](https://hub.docker.com/_/busybox)に覗きに行ったところ、uclibcというのを使ってるイメージが一番小さい。試してみたら動いたのでこれにします。([https://ja.wikipedia.org/wiki/UClibc](https://ja.wikipedia.org/wiki/UClibc) 組み込みLinux向けの小型標準Cライブラリ、とのこと。小さいわけですね)
+
+terraformで書きます。IAMロールやECSクラスタなどは省いています。
+↓
+
+```(hcl)
+locals {
+  container_definitions_bastion = [
+    {
+      "command" : ["sleep", "43200"],
+      "essential" : true,
+      "image" : "busybox:uclibc",
+      "mountPoints" : [],
+      "name" : "bastion-${var.env}",
+      "portMappings" : [],
+      "secrets" : []
+      "ulimits" : [],
+      "volumesFrom" : [],
+      "logConfiguration" : {
+        "logDriver" : "awslogs",
+        "options" : {
+          "awslogs-group" : "bastion-${var.env}",
+          "awslogs-region" : "ap-northeast-1",
+          "awslogs-stream-prefix" : "bastion-${var.env}"
+        }
+      },
+    }
+  ]
+}
+
+resource "aws_ecs_task_definition" "bastion" {
+  container_definitions = jsonencode(local.container_definitions_bastion)
+  cpu                   = "256"
+  execution_role_arn    = "arn:aws:iam::${data.aws_caller_identity.self.account_id}:role/ecsTaskExecutionRole"
+  family                = "bastion-${var.env}"
+  memory                = "512"
+  network_mode          = "awsvpc"
+  requires_compatibilities = [
+    "FARGATE"
+  ]
+
+  task_role_arn = module.bastion_task_role.role.arn
+
+  depends_on = [
+    module.ecs_cluster_bastion
+  ]
+
+  lifecycle {
+    ignore_changes = [
+     container_definitions
+    ]
+  }
+}
+
+resource "aws_ecs_service" "bastion" {
+  name                   = "bastion-${var.env}"
+  cluster                = module.ecs_cluster_bastion.cluster.id
+  task_definition        = replace(aws_ecs_task_definition.bastion.arn, "/:\\d+$/", "")
+  enable_execute_command = true
+
+  capacity_provider_strategy {
+    capacity_provider = "FARGATE_SPOT"
+    base              = 0
+    weight            = 1
+  }
+
+  network_configuration {
+    assign_public_ip = "true"
+    security_groups  = [module.bastion_sg.id]
+    subnets          = var.alb_subnet_ids
+  }
+
+  lifecycle {
+    ignore_changes = [
+      desired_count,
+      task_definition,
+    ]
+  }
+}
+
+resource "aws_appautoscaling_target" "bastion" {
+  service_namespace  = "ecs"
+  resource_id        = "service/${module.ecs_cluster_bastion.cluster.name}/${aws_ecs_service.bastion.name}"
+  scalable_dimension = "ecs:service:DesiredCount"
+  role_arn           = "arn:aws:iam::${data.aws_caller_identity.self.account_id}:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService"
+  min_capacity       = 0
+  max_capacity       = 1
+
+  lifecycle {
+    ignore_changes = [
+      min_capacity
+    ]
+  }
+}
+
+resource "aws_appautoscaling_scheduled_action" "bastion_up" {
+  name               = "bastion-scheduled-scale-up-${var.env}"
+  service_namespace  = aws_appautoscaling_target.bastion.service_namespace
+  resource_id        = aws_appautoscaling_target.bastion.resource_id
+  scalable_dimension = aws_appautoscaling_target.bastion.scalable_dimension
+  schedule           = "cron(0 9 ? * MON-FRI *)"
+  timezone           = "Asia/Tokyo"
+
+  scalable_target_action {
+    min_capacity = 1
+    max_capacity = 1
+  }
+}
+
+resource "aws_appautoscaling_scheduled_action" "bastion_down" {
+  name               = "bastion-scheduled-scale-in-${var.env}"
+  service_namespace  = aws_appautoscaling_target.bastion.service_namespace
+  resource_id        = aws_appautoscaling_target.bastion.resource_id
+  scalable_dimension = aws_appautoscaling_target.bastion.scalable_dimension
+  schedule           = "cron(0 21 * * ? *)"
+  timezone           = "Asia/Tokyo"
+
+  scalable_target_action {
+    min_capacity = 0
+    max_capacity = 1
+  }
+}
+
+```
+肝は、コンテナ定義のcommandのところです。12時間sleepして停止します。
+で、その頃にはApp AutoScalingでmin_capacityが0になってる、というわけです。
+
+### ecsta を AWS SSOと一緒に使う
+
+@fujiwaraさんのツールにはいつもお世話になっています。ecspresso、lambrollに続き、ecstaも利用させてもらうことにしました。またBashスクリプトを書いている...のですが、まぁ、ちょうどAWSアカウント移行の時期で書き換えが多かったのでプロトタイプ的に書くには丁度いいんですよ(誰にともなく言い訳)。
+
+で、夜間や土日に踏み台が起動していないときを考慮して、インスタンス数が0のときは1になるようにaws cliを実行します。あとはecstaに渡すパラメータを組み立てて渡しているだけです。
+プロファイル名はaws configure ssoを実行したときのデフォルト(ロール名 - アカウントID)を使っているので、ここは運用でカバーになっててかっこ悪いところです。
+
+```(shell)
+❯ cat portforward.bash
+#!/usr/bin/env bash
+set -eo pipefail
+
+usage() {
+    echo "Usage: ENV=(stg|prd) $(basename "$0") <app> <db|es|redis> [localPort]"
+}
+
+if [[ ${ENV} != "stg" ]] && [[ ${ENV} != "prd" ]]; then
+    usage && exit 1
+fi
+
+PRD_ACCOUNT=888888888888
+STG_ACCOUNT=999999999999
+
+app=$1
+datastore=$2
+
+bastion=${app}-bastion-${ENV}
+
+app_datastore_env="${app}-${datastore}-${ENV}"
+
+case "$datastore" in
+"db")
+    port=3306
+    localPort=${3:-$port}
+    ;;
+"es")
+    port=443
+    localPort=${3:-9200}
+    ;;
+"redis")
+    port=6379
+    localPort=${3:-$port}
+    ;;
+*) usage && exit 1 ;;
+esac
+
+case "$app_datastore_env" in
+"app1-db-prd")
+    host=hoge.cluster-hoge.ap-northeast-1.rds.amazonaws.com
+    profile="AdministratorAccess-${PRD_ACCOUNT}"
+    ;;
+"app1-db-stg")
+    host=fuga.cluster-fuga.ap-northeast-1.rds.amazonaws.com
+    profile="AdministratorAccess-${STG_ACCOUNT}"
+    ;;
+"app1-es-prd")
+    host=vpc-elasticsearch-service-prd-hoge.ap-northeast-1.es.amazonaws.com
+    profile="AdministratorAccess-${PRD_ACCOUNT}"
+    ;;
+*) usage && exit 1 ;;
+esac
+
+# bastionが未起動の場合は起動する
+if [[ $(AWS_PROFILE="$profile" aws ecs describe-services \
+    --services "$bastion" \
+    --cluster "$bastion" \
+    --query services[0].desiredCount) -eq 0 ]]; then
+    AWS_PROFILE="$profile" aws ecs update-service \
+        --service "$bastion" \
+        --cluster "$bastion" \
+        --desired-count 1 \
+        --no-cli-pager
+
+    echo "bastion task is starting..."
+
+    while [[ "$(AWS_PROFILE=$profile aws ecs list-tasks \
+        --cluster "$bastion" \
+        --query taskArns[])" == "[]" ]]; do
+        echo -n .
+        sleep 3
+    done
+
+    task_id=$(AWS_PROFILE="$profile" aws ecs list-tasks \
+        --cluster "$bastion" \
+        --query taskArns[] \
+        --output text |
+        cut -d'/' -f3)
+
+    while [[ "$(AWS_PROFILE=$profile aws ecs describe-tasks \
+        --cluster "$bastion" \
+        --tasks "$task_id" \
+        --query tasks[0].lastStatus \
+        --output text)" != "RUNNING" ]]; do
+        echo -n .
+        sleep 3
+    done
+fi
+
+AWS_PROFILE="$profile" ecsta portforward \
+    --local-port="$localPort" \
+    --remote-port="$port" \
+    --remote-host="$host" \
+    --id="$(AWS_PROFILE="$profile" aws ecs list-tasks \
+        --cluster "$bastion" \
+        --family "$bastion" \
+        --query taskArns[0] \
+        --output text |
+        cut -d'/' -f3)" \
+    --family="$bastion" \
+    --service="$bastion" \
+    --cluster="$bastion" \
+    --container="$bastion"
+
+```
+### まとめ
+
+
+実はまだEC2が数インスタンス残っておりまして、これからどうにかするところです。でも、もうEC2が無くなっても大丈夫になりました。
+
+[#トラーナテックブログ](トラーナテックブログ)

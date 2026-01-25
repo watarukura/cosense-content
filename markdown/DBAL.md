@@ -1,0 +1,16 @@
+# DBAL
+The Doctrine database abstraction & access layer (DBAL)
+複数のDBMSを交換可能にする抽象層を作る
+
+[https://github.com/doctrine/dbal](https://github.com/doctrine/dbal)
+[https://qiita.com/okonomi/items/3b0581bcad2b90e15e44](https://qiita.com/okonomi/items/3b0581bcad2b90e15e44)
+[https://www.doctrine-project.org/projects/doctrine-dbal/en/2.8/reference/introduction.html](https://www.doctrine-project.org/projects/doctrine-dbal/en/2.8/reference/introduction.html)
+```query.php
+<?php
+use Doctrine\DBAL\DriverManager;
+
+$conn = DriverManager::getConnection($params, $config);
+
+$sql = "SELECT * FROM articles";
+$stmt = $conn->query($sql); // Simple, but has several drawbacks
+```

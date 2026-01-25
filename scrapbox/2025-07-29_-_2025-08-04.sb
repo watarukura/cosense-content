@@ -1,0 +1,70 @@
+2025-07-29 - 2025-08-04
+読んだ記事
+ [90秒かかるDELETE文の原因を探る【PostgreSQL】 - エムスリーテックブログ https://www.m3tech.blog/entry/2025/07/25/120000]
+ 	複合インデックスかー
+ [TypeScript 上達の道 - Speaker Deck https://speakerdeck.com/ysknsid25/typescript-shang-da-nodao]
+ 	ジェネリクスわからん勢
+ [それ CLI フレームワークがなくてもできるよ / Building CLI Tools Without Frameworks - Speaker Deck https://speakerdeck.com/orgachem/building-cli-tools-without-frameworks]
+ 	社の同僚がものすごい依存減らす派閥の人がいて、go.modちっさくてかっこいいんだよなー
+ 	renovate/dependaBotも設定してるけどほぼ呼ばれなくて年単位で放置できる、って強い
+ [クラスメソッド、AI支援型テスト駆動開発フレームワーク「Tsumiki」を公開〜AIを活用しながら品質を確保する開発手法をオープンソースで提供〜 | クラスメソッド株式会社 https://classmethod.jp/news/20250729-tsumiki/]
+ 	[classmethod/tsumiki: tsumiki https://github.com/classmethod/tsumiki]
+ 	メソさんのこれ、面白い取り組み
+ [【PHP8.5】OPcacheが常に使用可能になる #日本語訳 - Qiita https://qiita.com/rana_kualu/items/93532e7ac221cf99b958]
+ 	OPcache、嬉しいなー
+ 		なお、Swoole/OpenSwooleとは同居できません
+ [AI新興のオルツ、民事再生法を申請　東証「IPO監査の信頼揺るがす」 - 日本経済新聞 https://www.nikkei.com/article/DGXZQOUC308370Q5A730C2000000/]
+ 	謎のAI企業、潰れた
+ 		これ、誰も逮捕とかされないの...???
+ 		株主訴訟とかさ
+ [「バイブコーディング」が招いた暴走--「Replit」による命令無視と本番DB消去という惨劇 - ZDNET Japan https://japan.zdnet.com/article/35236045/]
+ 	こえぇ
+ 		でも、ありうると思って使わないといけない
+ [「Confluenceの検索、精度が悪くてRAGに活用しにくい」にどう挑む？　Cygamesの試行錯誤：CEDEC2025 - ITmedia AI＋ https://www.itmedia.co.jp/aiplus/articles/2507/31/news014.html]
+ 	お、同じことを悩んでる
+ [RidgepoleによるDBスキーマの宣言的定義に移行して便利になりました（ちょっと高速化もしました） - inSmartBank https://blog.smartbank.co.jp/entry/2025/08/01/103000]
+ 	宣言的定義するアプローチ、好き
+ 		Laravelでdatabaseディレクトリが太っていくのを見るのが辛い
+ [Amazon ECS Blue/Green Deploymentは既存のCodeDeploy方式と何が違うのか？ - How elegant the tech world is...! https://iselegant.hatenablog.com/entry/2025/08/01/081020]
+ 	あー、ALBレスにできる可能性があるのか
+ 		内部用のECSサービスなら、これは嬉しい
+ 	機能差分も結構あるけど、これから良くなっていく感じはするなー
+ [Even G1 ファーストインプレッション｜Naoki |電電猫猫  https://note.com/electrical_cat/n/ncb4bbeace99a?sub_rt=share_pb]
+ 	スカウターきたコレ
+ 		や、まだちょっと高いけど...
+ 	XREALとは違う方向性で面白い
+ [「UPSIDERが消滅するシナリオ」── 1枚のメモから始まった過去最大投資の舞台裏｜UPSIDER 代表取締役 宮城徹 https://note.com/toru_miyagi/n/n4ce952d73a74]
+ 	UPSIDERさん、前職でちょっとお世話になったなーくらいで読んでみたけど面白かった
+ [既存のDeploy Preview環境をmirage-ecsに移行する - 実装編 - Hatena Developer Blog https://developer.hatenastaff.com/entry/2025/02/28/204729]
+ 	preview環境、Amplifyじゃない環境で簡単に作る方法がほしい
+ [現代開発を加速させる古来の術式 https://zenn.dev/na0x2c6/articles/buff-your-development]
+ 	Makefile、もうちょっとうまく使えるようになりたいんだよなー
+ [Go製CLIツールをnpmで配布するには - Speaker Deck https://speakerdeck.com/syumai/how-to-publish-go-cli-tool-to-npm]
+ 	wasmにコンパイルしてnpmで配布するの面白い
+ [計画と曖昧さ - Speaker Deck https://speakerdeck.com/mosa_siru/ji-hua-toai-mei-sa]
+ 	妥当な計画を立てるのは難しいし、計画通りに進まないし、環境が変われば立て直しだし、割に合わないけど、なしで進められるものでもない
+ 	8割の計画じゃないと動けないチームよりは、6割で動けるチームの方がいいし、計画を立て直しやすくなるはず
+ [AWS deleted my 10-year account and all data without warning https://www.seuros.com/blog/aws-deleted-my-10-year-account-without-warning/]
+ 	こえぇ！
+ 	AWS MENA(Middle East and North Africa)がヤバい、ってだけなのか？
+ 
+
+読んだ本
+ [ゲームAI技術入門 | 技術評論社 https://gihyo.jp/book/2019/978-4-297-10828-1]
+ 	ゲーム屋さんには、Web屋さんとは違う技術体系があるよなーと思っている
+ 		ゲームAIもその一つ
+ 	DQ4とかガンパレとかでてこないかな、くらいでパラッと読んだんだけど
+ 		全然でてこなくて、自分の知識の浅さを改めて思い知った
+ 
+
+書いた
+ [terraform local moduleの更新差分をterraform-config-inspectで抽出する https://zenn.dev/watarukura/articles/20250803-z6uk8sy6bkhz8abcdsh8yvqidj9oq3]
+ 	がんばって書いたんだけど特に反響なし
+ 	いつものことだけどニッチ
+
+その他
+ 
+
+#週報
+<[2025-07-22 - 2025-07-28]
+[2025-08-05 - 2025-08-11]>

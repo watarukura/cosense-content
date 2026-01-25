@@ -1,0 +1,73 @@
+2025-07-22 - 2025-07-28
+読んだ記事
+ [情報ではなく経験をアウトプットすること | lacolaco's marginalia https://blog.lacolaco.net/posts/output-your-experiences/]
+ 	AI生成のblogには経験も何もないからな...
+ [1Password と遺言保管制度を用いたデジタル終活 | blog.jxck.io https://blog.jxck.io/entries/2025-07-25/digital-regacy.html]
+ 	Passkeyの話とエンディングノートの話を読んだあとでこのエントリ、jxckさんすげぇなー
+ 	[親にエンディングノートを書いてもらう | blog.jxck.io https://blog.jxck.io/entries/2025-07-24/ending-note-for-parent.html]
+ 		自分のエンディングノートをまず書きたいところ
+ [Kiroの仕様書駆動開発プロセスをClaude Codeで徹底的に再現した https://zenn.dev/gotalab/articles/3db0621ce3d6d2]
+ 	https://x.com/naoya_ito/status/1946770635423924311
+ 	Kiroに仕様書書いてもらうことで、「必ず仕様書がある」開発ができる、というのはそう
+ 		テストファーストみたいなもん
+ 	とはいえ、動くソフトウェアで初めてわかること、いっぱいあるんだよな
+ [SQLアンチパターン第2版 データベースプログラミングで陥りがちな失敗とその対策 / Intro to SQL Antipatterns 2nd - Speaker Deck https://speakerdeck.com/twada/intro-to-sql-antipatterns-2nd]
+ 	初版もよかったけど、第2版も改めてじっくり読みたい
+ [MacBookで無料AI。｢ローカルLLM｣がいい感じに進化してます | ギズモード・ジャパン https://www.gizmodo.jp/2025/07/overview_local_llm_for_laptops.html]
+ 	>膨大なローカルLLMからどれを使うかを決めダウンロードする必要もありますが、それについては｢Gemma 3n E4B Instruct text｣（4bit量子化版・本稿でも利用）をおすすめしておきます。モデルサイズは4.24GBほど、利用中はメモリ16GB中14GBほどを専有しますが、Chromeと同時に起動できており、YouTubeを見てるうちに翻訳完了！みたいな感じで使えています。
+ 	このくらいならデカ目のMacならどうにかなりそうだなー
+ [Amazon DynamoDB におけるシングルテーブル vs マルチテーブル設計 | Amazon Web Services ブログ https://aws.amazon.com/jp/blogs/news/single-table-vs-multi-table-design-in-amazon-dynamodb/]
+ 	公式がまとめてくれるのが嬉しいタイプの内容だなー
+ [AI vs 人間まとめ【AtCoder World Tour Finals 2025 Heuristic エキシビジョン】 - chokudaiのブログ https://chokudai.hatenablog.com/entry/2025/07/21/190935]
+ 	大半の人類よりはAIが強い
+ 		囲碁・将棋とかではAIの方が強いのに、競技プログラミングでまだ人間が強いのが面白い
+ [Waypoint Writers Quit Over Removal Of Articles Related To New Steam Policy Update - Aftermath https://aftermath.site/waypoint-quit-steam-vice]
+ 	オーストラリアのフェミニスト団体による抗議にSteamが屈し、それについて触れたblogも不掲載になり著者が退職、みたいな話に
+ 	クレジットカード会社の問題でもあり、GoogleのSEOの問題でもあって大変めんどくさい
+ 	表現の自由、そんなに簡単に手放していいものじゃないのだがな
+ [Reverse engineering GitHub Actions cache to make it fast | Blacksmith https://www.blacksmith.sh/blog/cache]
+ 	Azure Blob Storageを使ってるのね
+ 		S3みたいに、マルチパートアップロードすれば速いわけだ
+ 	[We reverse-engineered the GitHub Actions cache so you don't have to https://depot.dev/blog/github-actions-cache]
+ 		似たようなことをS3でやってる
+ [‎Gemini - モナド説明の分かりやすさ評価 https://gemini.google.com/share/f7d01ff2fc59]
+  モナド、なんもわからん
+ [Amazon.co.jp: New Amazon Kindle Colorsoft シグニチャーエディション | 32GBストレージ、防水、7インチカラーディスプレイ、色調調節ライト、最大8週間持続バッテリー、広告無し、メタリックブラック (2025年発売) : Amazonデバイス・アクセサリ https://www.amazon.co.jp/dp/B0CX8Y3CMG?&linkCode=sl1&tag=hkdmzpluscom-22&linkId=9b69e12b58cf8609a86f9c5e4ca9e5bf&language=ja_JP&ref_=as_li_ss_tl]
+ 	ついに来た
+ 	Kindle Fire 10で満足してるんだけど、カラーはいいよなー
+ 	7インチよりデカいのが来たら考える
+ [3ヶ月使ったAIペンダントの比較レビュー：8万円使って結局Plaud AI Note PinからLimitless Pendantに乗り換えた｜高木俊輔 Shunsuke Takagi https://note.com/tkgshn/n/nb7f0acaa9198]
+ 	ライフログ + AIか
+ 	自分では買うつもりはないけど、この方向性はあるな...
+ [最近のHTMLを改めてちゃんと学んでみた https://zenn.dev/dinii/articles/16b3e71b580b6c]
+ 	HTMLもまだまだ仕様が追加されてるんだなー
+ [GitHub の noreply メールアドレスの設定と、スパム業者に関するtips https://zenn.dev/kazzyfrog/articles/1c45a3672a1e95]
+ 	メールアドレス、外に出しておけない時代なんだなぁ...
+ [スタートアップにおいて「積極的に機能削除をする」ことの重要性｜suthio https://note.com/suthio/n/n6e39ebcad611]
+ 	前職のリポジトリ、どれを見ても追加した行数より削除した行数が多いのが自慢だったんだけど、最近見られなくなった？
+ [AIコーディングハンズオンの講師をやりました(株式会社DeNA様の事例) https://zenn.dev/mizchi/articles/dena-ai-live-coding]
+ 	最近、AIコーディングハンズオンやることが多いので参考に
+ [【炬燵編】Kaigi on Railsのプロポーザルを評価するときに考えていること、求めていること - 感情的ドリル https://sakahukamaki.hatenablog.jp/entry/2025/07/21/183625]
+ 	登壇してみたい気持ちはあるんだけど、まぁ、子どもがもう少しデカくなるまでは無理であるし
+ 		情報だけ収集して、いつか使えるといいなーと思っている
+
+読んだ本
+ [面倒くさくないメンズスキンケア：アラフォーおじさんのための最小限美容入門：遊戯部すずき組 https://techbookfest.org/product/p2HWtFAsM2b7UBbWJL02VZ?productVariantID=rnDu7zNykxR02V9x0G3TGy]
+ 	オールインワンジェルくらい楽じゃないと続かないマン
+ 	日傘、いいよね
+ [見るだけでわかるピケティ超図解 | フォレスト出版 https://www.forestpub.co.jp/author/kamiki/book/B-1699]
+ 	ピケティ、ちょっと興味があって読んでみた
+ 	生まれによって育ちが決まってしまうのは良いことではない
+ 	税率を上げると金持ちが逃げるが、逃げ道を塞いで税を収奪し、格差を縮小するべき、はそれはそう
+ [7日間でハッキングをはじめる本  TryHackMeを使って身体で覚える攻撃手法と脆弱性（野溝 のみぞう）｜翔泳社の本 https://www.shoeisha.co.jp/book/detail/9784798181578]
+ 	ハッキング、守るより攻める方が簡単すぎるんだよな...
+
+書いた
+ 
+
+その他
+ 
+
+#週報
+<[2025-07-15 - 2025-07-21]
+[2025-07-29 - 2025-08-04]>

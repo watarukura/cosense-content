@@ -1,0 +1,39 @@
+# SQLAlchemy
+Python用のORMの有名どころ
+SQL直書きもできる
+
+[公式](https://www.sqlalchemy.org/)
+[【PythonのORM】SQLAlchemyで基本的なSQLクエリまとめ](https://qiita.com/bokotomo/items/a762b1bc0f192a55eae8)
+
+動かない
+
+- > ModuleNotFoundError: No module named 'MySQLdb'
+- [SQLAlchemy create_engine で No module named 'MySQLdb' エラー](https://qiita.com/xfan/items/f2c88aeb0d3945ed4775)
+    - mysqlclient 入れて、 PyMySQL 入れたら動いた
+    - `pipenv install mysqlclient pymysql`
+
+[Flask-SQLAlchemy-Quickstart](http://flask-sqlalchemy.pocoo.org/2.3/quickstart/)
+```user.py
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+db = SQLAlchemy(app)
+
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+
+    def __repr__(self):
+        return '<User %r>' % self.username
+
+```
+> >>> from yourapplication import User
+> >>> admin = User(username='admin', email='admin@example.com')
+> >>> guest = User(username='guest', email='guest@example.com')
+
+[https://gyazo.com/fb2584d08cbe78f6676d3eba1535b96b](https://gyazo.com/fb2584d08cbe78f6676d3eba1535b96b)
+[#python](python)

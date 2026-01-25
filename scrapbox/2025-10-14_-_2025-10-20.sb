@@ -1,0 +1,55 @@
+2025-10-14 - 2025-10-20
+読んだ記事
+ [万博で、いろんな国の人に前から気になっていたことをたずねてみた - 庭を歩いてメモをとる https://www.yoshiteru.net/entry/conversation-peace]
+ 	中央アジア、コテンラジオで聴いて世界最強の中央アジアリーグで遊牧民が超強いみたいな話が念頭にあるから、今そこに住んでる人の話も面白く聴けそう
+ 	アフリカを良く知らないのはあるなー
+ [【資料公開】生成AIでスクラムによる開発はどう変わるか | Ryuzee.com https://www.ryuzee.com/contents/blog/14605]
+ 	学習サイクルが早くなるのはいいけど、学習がチームや個人の頭に染み込むのにかかる時間はそう変わらないと思うんだよな...
+ [NixOS + Kubernetesで構築する自宅サーバーのすべて https://zenn.dev/ichi_h/articles/ff001e0005e33c]
+ 	NixOSをhost OSにするのは想像できなくもないんだけど、guest OSにする世界はどうなるだろう？
+ [AWS経験者が知るべきGoogle Cloudネットワークの基本思想と主要サービス比較 - NRIネットコムBlog https://tech.nri-net.com/entry/comparison_of_services]
+ 	さすがGoogle、という感じがする
+ 	CloudCDNがロードバランサーの1パラメータなのとか、AWSに慣れてる同僚がGCloudで混乱してたし
+ [4年越しに「REALFORCE R4」が登場。マウス機能や近接センサーを新たに搭載  - PC Watch https://pc.watch.impress.co.jp/docs/news/2054334.html]
+ 	REALFORCE、興味はずっとあるんだよな...
+ [September 2025 (version 1.105) https://code.visualstudio.com/updates/v1_105]
+ 	GitのconflictをAIが解消してくれる...!?
+ [【構文式を関数で実装するという概念】try式がないなら、自分で関数で実装すればいいじゃない【try-catch式・if式・etc】 https://zenn.dev/aiya000/articles/f343c347334ec8]
+ 	tryが式になったら嬉しいか...???
+ 		まだその感覚がわからん
+ 		わからんなりに面白い
+ [The State of PHP 2025 – Expert review https://blog.jetbrains.com/phpstorm/2025/10/state-of-php-2025/]
+ 	[https://gyazo.com/b0d5b540eacca1173579cb33336b0f4c]
+ 		他の言語ではVSCodeが覇権を取ってるけど、PHPではPhpStormが強い
+ 		Cursorが初めて出てきた
+ [アサヒを襲ったランサムウェア集団“麒麟”（Qilin）とは？　世界中で被害多発、カルテル結成でさらに勢力拡大も：この頃、セキュリティ界隈で - ITmedia NEWS https://www.itmedia.co.jp/news/articles/2510/16/news016.html]
+ 	こえぇなぁ...
+ 	どの会社も狙われる可能性があるだけに
+ [OneDriveをアンインストールして二度と復活させない方法 - GIGAZINE https://gigazine.net/news/20251014-onedrive-deactivate/]
+ 	MSと仲直りしたい気持ちはあるがOneDriveはどうにかならんのか
+
+
+読んだ本
+ Newton 2025年11月号
+ 	将棋AI特集の、「AI超えの一手」の話が面白かった
+ 		局面の評価値は悪くなるけど詰みがあるルートを見つけられれば、ってことなのね
+
+書いた
+ 
+
+その他
+ 最近またラノベを読んでいる気がする
+ 	[汝、暗君を愛せよ - DREノベルス公式サイト | ドリコムメディア https://drecom-media.jp/drenovels/product/140]
+ 	[かくて謀反の冬は去り　特設サイト｜ガガガ文庫｜小学館 https://gagagabunko.jp/special/kakute/]
+ 	[新刊案内 2025.07.28 | カラフ撤退戦　上 | 星海社 https://www.seikaisha.co.jp/information/2025/07/28-post-curaf-1.html]
+ ガンパレード・マーチがもう一度やりたい欲があり、方法を模索している
+ 	金に糸目をつけずにトライ・アンド・エラーすればいつかはできると思うが
+ 	PS1用のDiskを中古で買ってPS2のハードを買えば運次第でできるかもしれない
+ 	PS1用のDiskを吸い出してPS1 emulatorでプレイ、もなぁ...
+ 		そろそろDiskが劣化で死んでそうだし
+ 	そもそもコンソールゲームを自宅でできる環境ではないのである
+ 	Nintendo SwitchあたりでどうにかPlayできるようにならんかなぁ...???
+
+#週報
+<[2025-10-07 - 2025-10-13]
+[2025-10-21 - 2025-10-27]>

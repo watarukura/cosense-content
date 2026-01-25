@@ -1,0 +1,50 @@
+2025-08-05 - 2025-08-11
+読んだ記事
+ [「Confluenceの検索、精度が悪くてRAGに活用しにくい」にどう挑む？　Cygamesの試行錯誤：CEDEC2025 - ITmedia AI＋ https://www.itmedia.co.jp/aiplus/articles/2507/31/news014.html]
+ 	S3 Vectorとか使って安く実装できないかなー
+ [Polis https://pol.is/home]
+ 	ゆるコンピュータ科学ラジオで話題に出てたPolis
+ 	[世界を救うSNSを見つけました。#187 - ゆるコンピュータ科学ラジオ - Apple Podcast https://podcasts.apple.com/jp/podcast/%E4%B8%96%E7%95%8C%E3%82%92%E6%95%91%E3%81%86sns%E3%82%92%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%BE%E3%81%97%E3%81%9F-187/id1604353315?i=1000720454413]
+ 	これ、会社とか部署とかの意思決定に使えないかなー
+ https://pages.awscloud.com/rs/112-TZM-766/images/AWS-42_Architecture_AWS-Summit-JP-2025.pdf
+ 	ZOZOさんのカートの事例を見に
+ 	カート投入時に在庫引当して、カートに入れっぱなしのまま離脱したらカートの情報消えるのかな
+ 		[【ヘルプ】ZOZOTOWN - ショッピングカートの有効期限 https://zozo.jp/_help/default.html?id=5ece39d49ed84e001ea6e377]
+ 		5時間で消えるのか
+ 		でも、期間限定の商品とか、コンビニ払いキャンセルとか考えるとなぁ
+ 	[ヘテロジニアスデータベースによるECサイトの在庫管理]
+ 		昔書いたテックブログをWayback machineから引っ張ってきた
+ [OSC 52 で出力をクリップボードにコピーするためのワンライナー https://zenn.dev/sankantsu/articles/ef2d277789fa8a]
+ 	sshとかssmで入った先でpbcopyしたいとき、稀にあるからなぁ
+ [k1LoW/gh-triage: gh-triage is a tool that helps you manage and triage GitHub issues and pull requests through unread notifications.  https://github.com/k1LoW/gh-triage]
+ 	早速使ってみてる
+ 	便利ー
+ [脆弱性診断 with AIエージェント、ついに開発チームにひろがりました。 - freee Developers Hub https://developers.freee.co.jp/entry/AI-agent-securitytest-used-by-devteam]
+ 	Claude Codeにも診断機能ついたけど、freeeさんは自前
+ 	これ、needsあるよなー
+ [[アップデート] Amazon SES にノイジーネイバー対策となるテナント機能が追加されました | DevelopersIO https://dev.classmethod.jp/articles/ses-tenant-isolation-automated-reputation-policies/]
+ 	SES使ってる大きめの企業なら大事かもなー
+ 	リテラシーのない特定の部署に引っ張られてレピュテーションに影響出ると困るしなー
+ [アジャイルな見積もりと計画づくりをしないチームのはなし - カミナシ エンジニアブログ https://kaminashi-developer.hatenablog.jp/entry/no-agile-estimation-planning]
+ 	これで回るならこれでいいんだよな
+ 	採用を無茶苦茶絞って少数精鋭で離職率が低ければどうにかなる
+
+読んだ本
+ [すぐわかる！ ぷよぷよプログラミング SEGA公式ガイドブック | 技術評論社 https://gihyo.jp/book/2025/978-4-297-14760-0]
+ 	3連休で作った
+ 		まだネクストぷよとスコアとスマホ対応が未実装
+ 	ゲームプログラミング、webプログラミングと大きく違うと思ってて、体験できてよかった
+ 		`gameloop()` そうそうこれこれ
+ 	wasd / hjklにも対応しようかな
+ 	利用許諾書を読むと、残念ながらコードは公開できないみたい
+ 		これはまぁ、本家の画像とか使わせてもらってるし、仕方ないところ
+
+書いた
+ 
+
+その他
+ 
+
+#週報
+<[2025-07-29 - 2025-08-04]
+[2025-08-12 - 2025-08-18]>

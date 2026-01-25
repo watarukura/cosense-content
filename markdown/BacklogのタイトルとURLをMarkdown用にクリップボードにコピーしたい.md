@@ -1,0 +1,68 @@
+# BacklogのタイトルとURLをMarkdown用にクリップボードにコピーしたい
+DocBaseで日報書くときにコピるのがめんどい
+
+Bookmarklet書いた https://github.com/watarukura/CopyBacklogTaskTitleAndUrl
+
+- コンパイル前
+```copy.js
+// ==ClosureCompiler==
+// @compilation_level SIMPLE_OPTIMIZATIONS
+// @output_file_name default.js
+// @formatting pretty_print
+// ==/ClosureCompiler==
+
+// ADD YOUR CODE HERE
+javascript:(
+    function(){
+        const title = document.querySelector(".title-group__title-text").innerText;
+        const url = location.href.replace(/#.*/, '');
+        const project_key = url.split("/").pop();
+        const title_and_url =  "[" + project_key + " " + title + "]" + "(" + url + ")";
+        // execCopy https://qiita.com/simiraaaa/items/2e7478d72f365aa48356  
+        const temp = document.createElement('div');
+        temp.appendChild(document.createElement('pre')).textContent = title_and_url;
+        const s = temp.style;
+        s.position = 'fixed';
+        s.left = '-100%';
+        document.body.appendChild(temp);
+        document.getSelection().selectAllChildren(temp);
+        const result = document.execCommand('copy');
+        document.body.removeChild(temp);
+        if (result) {
+            alert("copied!")
+        } else {
+            alert("copy failed...")
+        }
+    }
+)();
+
+```
+
+  - コンパイル後
+```copy.js
+javascript:
+(function() {
+    var b = document.querySelector(".title-group__title-text").innerText, a = location.href.replace(/#.*/, "");
+    a = "[" + a.split("/").pop() + " " + b + "](" + a + ")";
+    b = document.createElement("div");
+    b.appendChild(document.createElement("pre")).textContent = a;
+    a = b.style;
+    a.position = "fixed";
+    a.left = "-100%";
+    document.body.appendChild(b);
+    document.getSelection().selectAllChildren(b);
+    a = document.execCommand("copy");
+    document.body.removeChild(b);
+    a ? alert("copied!") : alert("copy failed...");
+ })();
+
+```
+参考
+[JavaScriptでクリップボードに文字をコピーする(ブラウザ)](https://qiita.com/simiraaaa/items/2e7478d72f365aa48356)
+
+  - 任意の文字列をクリップボードに突っ込むために一度DOM要素を作ってやって、それをselect()してdocument.execCommand("copy")する、という流れのようだ
+    - 今回はtextboxの中の改行あり文字列をコピーしたりしないので不要なコードになってしまうが、どこが不要かわからないのでそのまま使わせてもらった
+    - 修正それほどなしでscrapbox用にも改変できる
+[Bookmarkletを作ろう(準備編）](https://qiita.com/kanaxx/items/63debe502aacd73c3cb8)
+
+- ClosureCompilerでコンパイルして最適化されたコードが出てくるのが面白

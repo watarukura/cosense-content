@@ -1,0 +1,42 @@
+# backlog wikiに編集リクエスト機能をつけたい
+backlog wikiの更新差分見たりプルリク送ったりして、読んだ人が誰でも編集リクエストが送れるようにしたい
+
+chrome-extension
+
+- テキスト編集時に編集リクエストボタン表示
+  - 押すとwiki idと更新中のテキストを POST
+
+API gateway + Lambda
+
+- リクエストを受け取る
+- git pull -> git checkout -b -> リクエストのテキストを適用してgit add -> git push
+  - gitpythonを使う
+- backlog APIを使ってプルリエストを作成
+
+backlog git
+
+- プルリクエストの作成をトリガーにwebhook
+
+GAS
+
+- webhookを受け取ってslackに通知
+
+backlog git
+
+- プルリクエストがmergeされたらwebhook
+
+API gateway + Lambda 2
+
+- webhookを受け取ったらgit pull origin master
+- 更新分のwikiをgit logから抽出して backlog  APIを使って更新
+
+何が嬉しい？
+
+- gitを使えなくても編集リクエストが作れる
+- 差分がわかる
+- とりあえずプルリクエスト作って、更新してほしい内容のやりとりはそこでできる
+
+課題
+
+- wiki側で削除した場合にgitに連動できない
+  - 一回tmpディレクトリに落としてディレクトリ名変更でいけた

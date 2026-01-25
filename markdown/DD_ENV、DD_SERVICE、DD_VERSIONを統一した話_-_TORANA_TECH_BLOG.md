@@ -1,0 +1,115 @@
+# DD ENV、DD SERVICE、DD VERSIONを統一した話 - TORANA TECH BLOG
+[DD_ENV、DD_SERVICE、DD_VERSIONを統一した話 - TORANA TECH BLOG](https://web.archive.org/web/20241207153517/https://tech.torana.co.jp/entry/2023/07/28/123000)
+SREのクラシマです。
+今回はDatadog用の設定を変更した話です。
+
+トラーナでは、frontend用にDatadog RUM、backend用にAPM、更にCloudwatch LogsをDatadogに連携して、エラー時はPagerDutyおよびSlackに通知しています。ここで、RUMででたエラーからbackendのエラーログに繋がったら便利ですよね？Datadogの設定を誤っていなければ、できます。そして、弊社は誤った設定のままずっと運用してきていました...。
+
+### 統合サービスタグ付け
+
+[https://docs.datadoghq.com/ja/getting_started/tagging/unified_service_tagging/?tab=ecs](https://docs.datadoghq.com/ja/getting_started/tagging/unified_service_tagging/?tab=ecs)
+Datadog公式ドキュメントに記載の通り、DD_ENV、DD_SERVICE、DD_VERSIONの3つをRUM、APM、LOGのそれぞれで共通のものを指定すると、一気通貫にtracingができます。
+
+ところが、DD_ENVの値が"prd"と"production"でずれてたり、DD_SERVICEはfrontendとbackendで別々のprefixをつけてたり、DD_VERSIONが固定値だったりでした。ということで、設定していきます。
+
+### LOG
+
+[https://tech.torana.co.jp/entry/2023/02/17/123000](https://tech.torana.co.jp/entry/2023/02/17/123000) で紹介した通り、弊社のAPIサーバはFargateで稼働しています。Datadog公式の推奨は、fluent-bitサイドカーを立ててDatadog Logsに直接連携、なのですが、トラーナではCloudwatch Logs -> Kinesis Firehose -> Datadog Logs連携としています。構築当初はfluent-bitサイドカーを立てていたのですが、latestで取得したfluent-bitイメージが特定のバージョンでOOMで死ぬことがあり、「ログの連携が行われているか」を監視する、ということはやりたくないので切り替えた、という経緯があります。最悪、Datadog連携が失敗してもCWLにはログが残るので...。
+
+で、Kinesis Firehoseを経由する場合、DD_SERVICEにはCloudwatch LogGroup名が設定されるようです。(ドキュメントは見つけられませんでした...)
+
+DD_ENV、DD_VERSIONは、HTTPエンドポイント設定のパラメータで指定できます。
+[https://gyazo.com/ba1bf4ce92b6bd966baf046fbb7e29e7](https://gyazo.com/ba1bf4ce92b6bd966baf046fbb7e29e7)
+
+
+```(yaml)
+jobs:
+  pre-job:
+    runs-on: ubuntu-latest
+    if: contains(github.event.commits.*.message, '[skip-cd]') == false
+    outputs:
+      GIT_HASH_SHORT: ${{ steps.git-hash-short.outputs.hash }}
+
+    steps:
+      - id: git-hash-short
+        run: |
+          echo "hash=$(echo ${{ github.sha }} | cut -c 1-7)" >> "$GITHUB_OUTPUT"
+
+# (中略)
+
+  deploy-api:
+    runs-on: ubuntu-latest
+    needs: [pre-job]
+    steps:
+
+# (中略)
+
+      - name: Set version hash to log for datadog
+        env:
+          delivery_stream_name: datadog-logs-forwarder-sample
+        run: |
+          aws firehose describe-delivery-stream \
+            --delivery-stream-name "$delivery_stream_name" \
+            >delivery.json
+
+          version_id=$(jq -r .DeliveryStreamDescription.VersionId <delivery.json)
+          destination_id=$(jq -r .DeliveryStreamDescription.Destinations[0].DestinationId <delivery.json)
+
+          jq -r .DeliveryStreamDescription.Destinations[0].HttpEndpointDestinationDescription \
+            <delivery.json \
+            | jq 'del(.S3DestinationDescription)' \
+            >http_endpoint.json
+
+          jq -r '.RequestConfiguration.CommonAttributes |= [{"AttributeName": "env", "AttributeValue": "staging"}, {"AttributeName": "version", "AttributeValue": "'"${{ needs.pre-job.outputs.GIT_HASH_SHORT }}"'"}]' \
+            <http_endpoint.json \
+            >update.json
+
+          aws firehose update-destination \
+            --http-endpoint-destination-update file://update.json \
+            --delivery-stream-name "$delivery_stream_name" \
+            --current-delivery-stream-version-id "$version_id" \
+            --destination-id "$destination_id"
+
+```
+### APM
+
+php-fpmのコンフィグにそれぞれ書く必要がありました。
+
+```(shell)
+[www]
+env[DD_AGENT_HOST] = 'localhost'
+env[DD_SERVICE] = 'example'
+env[DD_ENV] = 'production'
+env[DD_VERSION] = ''
+
+```
+ここでも、DD_VERSIONをdocker build時に引き渡す必要があり、Dockerfileの中で書き換えることにしました。
+
+```(shell)
+# 前略
+ARG GIT_HASH=''
+ENV GIT_HASH=${GIT_HASH}
+RUN sed -i "s/env\[DD_ENV\] = 'production'/env\[DD_ENV\] = '$DD_ENV'/" /usr/local/etc/php-fpm.d/dd-trace.conf && \
+    sed -i "s/env\[DD_VERSION\] = ''/env\[DD_VERSION\] = '${GIT_HASH:0:7}'/" /usr/local/etc/php-fpm.d/dd-trace.conf
+# 後略
+
+```
+### RUM
+
+Next.jsを使っているので、next.config.jsでGitのコミットハッシュを取得して
+
+```(js)
+  env: {
+    APP_VERSION_HASH: ["production", "qa", "staging"].includes(process.env.APP_ENV) ? gitRevSync.short() : "not priveded",
+
+```
+DD_VERSION用に渡してやればOKでした。↓こちら、Datadog RUMのcreate application画面のキャプチャですが、`version: = process.env.APP_VERSION_HASH;` で渡しています。
+[https://gyazo.com/dba6d35903c19cc350a50627c36072f4](https://gyazo.com/dba6d35903c19cc350a50627c36072f4)
+
+
+
+### まとめ
+
+ということで無事に動き始めました！が。上記が有効なのはマイページのみ。SwooleとDatadog APMは共存できないので、分散Tracingはまだ有効化できておりません。悲しいので、ココをどうにかする取り組みも継続しています。うまくいったら、また別の機会にご紹介しますね！
+
+[#トラーナテックブログ](トラーナテックブログ)

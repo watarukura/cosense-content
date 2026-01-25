@@ -1,0 +1,75 @@
+2024-05-14 - 2024-05-20
+読んだ記事
+ [【GitHub Actions】self-hosted runner をローカル環境の docker compose で起動してみた #Docker - Qiita https://qiita.com/tmatsu200/items/5817bc10c5241773a54b]
+ 	おもしろ
+ 	これ、会社にカネがないときにやってみてもいいかもしれない
+ [「GPT-4o」発表　頭一つ抜けた性能をChatGPT無料版にも展開　音声と視覚を備えて“自然な対話”可能に【追記済】 - ITmedia AI＋ https://www.itmedia.co.jp/aiplus/articles/2405/14/news081.html]
+ 	無料でも使えるのは嬉しい！
+ 	[OpenAI が新たな無料モデル GPT-4o とデスクトップ版 ChatGPT を発表ーーアプリはまるで人間と会話するような反応速度に - BRIDGE（ブリッジ）テクノロジー＆スタートアップ情報 https://thebridge.jp/2024/05/openai-announces-new-free-model-gpt-4o-and-chatgpt-for-desktop]
+ 		Macアプリも出たのか
+ 		や、まだ出てない？
+ [Amazon S3 will no longer charge for several HTTP error codes https://aws.amazon.com/jp/about-aws/whats-new/2024/05/amazon-s3-no-charge-http-error-codes/]
+ 	対応されてよかった
+ [フロントエンドから Amazon S3 にマルチパートアップロードしたい - カミナシ エンジニアブログ https://kaminashi-developer.hatenablog.jp/entry/2024/05/13/120000]
+ 	アップロード後にサムネイル作成とかは別途やるのかな
+ [GitHub Actions 上での Go の Docker ビルドを高速化する https://zenn.dev/takamin55/articles/8c68349a069b4c]
+ 	DockerのビルドキャッシュとGoモジュールのキャッシュをそれぞれ取得して、ってやると早くなる
+ 		それはそうなんだけど、実際にやってて偉い
+ 	https://github.com/moby/buildkit#s3-cache-experimental
+ 		Experimentalだけど、docker buildx buildでs3をキャッシュの置き場として指定できる
+ 			これなら削除されなくていいかも
+ [フルタイムで働く6児の母が副業でゲームを作った話を聞いたら「天才すぎて何の参考にもならねえ」と思ってしまった話 https://news.denfaminicogamer.jp/interview/240514a]
+  すげー
+  1児の父で7hは夜寝たいマンなのだけど、時間作ってやりたいことやらないとなー
+ [Lambda×RDSで構成するサーバレスアーキテクチャのIaCツール選定 https://zenn.dev/medicalforce/articles/e26b9cbe16305f]
+ 	Lambda + RDSで自社システムまかなっちゃうのがすげぇ
+ [グーグルのAI祭り「Google I/O 2024」基調講演を総まとめ - ケータイ Watch https://k-tai.watch.impress.co.jp/docs/news/1591510.html]
+ 	Geminiもがんばってるなー
+ 	ChatGPT / Gemini / Claude3 のどれに課金すればいいの？全部？
+ [なぜ西松屋はいつもガラガラなのに潰れないのか…赤ちゃん本舗とは全然違う｢売らなくていい｣驚愕の店づくり 縮小市場で生き残るための唯一の必勝法 | PRESIDENT Online（プレジデントオンライン） https://president.jp/articles/-/81454]
+ 	おもしろ
+ [戦略的DDDは重いのか？ / Is strategic DDD heavy? https://speakerdeck.com/pictiny/is-strategic-ddd-heavy]
+  あー、これならやるべき
+  DDDって名前がついてるともうおっかないから、何か別の名前をつけてほしい
+ [社内で検知された悪性通信を調査したらドメインパーキングだった話 - NTT Communications Engineers' Blog https://engineers.ntt.com/entry/2024/05/15/083115?fbclid=IwZXh0bgNhZW0CMTEAAR2igYSA20PpO8Hc070Gruh1OrxUUcJWPl1eXoU9wYYJ3SCgtFuaDq0NrNU_aem_AXaS-ymkMRFw6SHxNtlkyX2M9jVjmkQpBrEmfAL7fyVmSbFZ7nFmasc0qOsYLGLsxKiEc7SQoEBabocIasAhy9a9]
+ 	こえぇ
+ [マイクロサービス化するならリビルドで！ビジネスロジックをGoで書き直してわかったこと - MonotaRO Tech Blog https://tech-blog.monotaro.com/entry/2024/05/15/090000]
+ 	Pythonで遅いコードが見つかったなら、Pythonのまま書き直せばよかったのでは...
+ 		Goで書き直そうって調査してわかったことではあるんだろうけど
+ [並列化と自動化のあいだ ~ 4人子育て中のタスク管理のはなし ~ - Speaker Deck https://speakerdeck.com/prettyhappycatty/bing-lie-hua-tozi-dong-hua-noaida-4ren-zi-yu-tezhong-notasukuguan-li-nohanasi]
+ 	4人か...
+ [MySQLのインデックスですが、B-treeではなくB+treeを使用するのはどうしてなのでしょうか？ | mond https://mond.how/ja/topics/sv7z7ljlcyjax3q]
+ 	B+木、名前はしってる...
+ [Amazon Aurora MySQL バージョン 3 のバイナリロギングの最適化 | AWS データベースのブログ https://aws.amazon.com/jp/blogs/database/binary-logging-optimizations-in-amazon-aurora-mysql-version-3/]
+ 	CIでは止めてるbinlogだけど、本番環境では絶対必要だから高速化はうれしい
+
+聴いた
+　[おいラジオ：Apple Podcast内のoi 21 浜松まつり、GW、地元 https://podcasts.apple.com/jp/podcast/%E3%81%8A%E3%81%84%E3%83%A9%E3%82%B8%E3%82%AA/id1697428015?i=1000655250277]
+　[おいラジオ：Apple Podcast内のoi 16 パワースポット、スポーツテスト、心の相場 https://podcasts.apple.com/jp/podcast/%E3%81%8A%E3%81%84%E3%83%A9%E3%82%B8%E3%82%AA/id1697428015?i=1000650186486]
+　	浜松まつり、こわ
+　[ゆるコンピュータ科学ラジオ：Apple Podcast内の歯車でコンピュータを作った男。目的は、命を救うこと。【バベッジ1】#124 https://podcasts.apple.com/jp/podcast/%E3%82%86%E3%82%8B%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%A7%91%E5%AD%A6%E3%83%A9%E3%82%B8%E3%82%AA/id1604353315?i=1000655285611]
+　	バベッジなー
+　[ゆるコンピュータ科学ラジオ：Apple Podcast内のムーアの法則は誤解だらけ。元論文を読んだら全然違う主張だった。#122 https://podcasts.apple.com/jp/podcast/%E3%82%86%E3%82%8B%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%A7%91%E5%AD%A6%E3%83%A9%E3%82%B8%E3%82%AA/id1604353315?i=1000653789892]
+　	ムーアの法則、主張はともかく、まぁまぁそれらしい数字になってるグラフがあったような
+　[Rebuild：Apple Podcast内の384: Tandem Pizza (hak) https://podcasts.apple.com/jp/podcast/rebuild/id603013428?i=1000655534218]
+　 牛丼並x2とタンデムピザの話
+　[ツナギメエフエム：Apple Podcast内のEp.89 よしたｋ( @RabbitCP )さん、モリタロウ🌳(@ryotaro_simple )さんと雑談 #ツナギメエフエム https://podcasts.apple.com/jp/podcast/%E3%83%84%E3%83%8A%E3%82%AE%E3%83%A1%E3%82%A8%E3%83%95%E3%82%A8%E3%83%A0/id1633556885?i=1000655910861]
+　	自分たちでコミュニティを作ろう、ってすごいパワーがいると思うんだけど、やってる人はやっててすげぇ
+
+読んだ本
+　[書籍情報―ベテランプログラマーが伝授！現場で20年使える「C言語」入門 https://www.kohgakusha.co.jp/books/detail/978-4-7775-2238-5]
+　	平田豊さん、そんなに歳が変わらない...
+　	C言語わからねー、と常々思っていて何度か目のブームが来たので買って読んでみた
+　	Cの仕様書って、買わないと読めないのね
+　		JIS規格のあの分厚い本、本屋だった頃に売ってたなそういえば
+
+書いた
+ [Datadog APM with Swoole - TORANA TECH BLOG https://tech.torana.co.jp/entry/2024/05/20/123000]
+ 	悲願成就
+
+その他
+ 前・町内会長とジムが一緒で、時間帯が一緒なので挨拶するようになった
+  70代でジム通い、強い
+
+
+#週報

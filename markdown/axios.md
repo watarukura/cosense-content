@@ -1,0 +1,8 @@
+# axios
+Promise based HTTP client for the browser and node.js
+[https://github.com/axios/axios](https://github.com/axios/axios)
+
+> この Fetch API はこれらのタイプの要求のための強力なネイティブ API です。ご存知かもしれませんが、Fetch API の1つの利点は、これを使用するために外部リソースを読み込む必要がないことです。ただし、まだ完全にサポートされていないので、 polyfill を使用する必要があります。この API を使用するにはいくつか問題があり、そういった理由で多くの人が今のところ axios を使用することを好んでいます。しかし将来的には非常に変化するかもしれません。
+[https://jp.vuejs.org/v2/cookbook/using-axios-to-consume-apis.html](https://jp.vuejs.org/v2/cookbook/using-axios-to-consume-apis.html)
+
+[https://qiita.com/ksh-fthr/items/2daaaf3a15c4c11956e9](https://qiita.com/ksh-fthr/items/2daaaf3a15c4c11956e9)

@@ -1,0 +1,100 @@
+2026-01-13 - 2026-01-19
+読んだ記事
+ [Method: activity.query  |  Google Drive  |  Google for Developers https://developers.google.com/workspace/drive/activity/v2/reference/rest/v2/activity/query?hl=ja]
+ 	[日報をCursorに書いてもらうためにあれこれ収集する https://zenn.dev/watarukura/articles/20260104-rxrb8nh4ia68vlkc5om0sbvapd7dc] これにGoogle周りのactivity取得を追加したくて調べてた
+ 	どのファイルを何時に編集開始したか、くらいはわかるけど、それだけっぽい
+ 	revisionを取ってきて、更にそのlastModifyingUserでfilterしないと駄目？
+ 		[REST Resource: revisions  |  Google Drive  |  Google for Developers https://developers.google.com/workspace/drive/api/reference/rest/v2/revisions?hl=ja]
+ 		>出力専用。このリビジョンを最後に変更したユーザー。このフィールドは、ログインしたユーザーが最後に変更を行った場合にのみ入力されます。
+ 		んー？？？
+ [ログコスパ最強!?OpenObserveを触ってみた https://zenn.dev/yuta28/articles/openobserve-tutorial]
+ 	ログ、なんでも取っておきたいけど、保存のコストがなー
+ 		OpenObserveなら安いよ、って言われても運用コストがね...
+ 		と思いつつ、共用ログ基盤みたいなのを持って安く使える、みたいなのがあれば...
+ [RALGO : AIを組織に組み込む方法 -アルゴリズム中心組織設計- #RSGT2026 / RALGO: How to Integrate AI into an Organization – Algorithm-Centric Organizational Design - Speaker Deck https://speakerdeck.com/kyonmm/ralgo-how-to-integrate-ai-into-an-organization-algorithm-centric-organizational-design]
+ 	年に30,000人ずつ新卒が減っていく時代にあって企業・組織は立ち居振る舞いを変えざるを得ない
+ 	AIを機として「小さなチーム、大きな仕事」をどの企業・組織でも実現しなければならない
+ 		って、言うだけなら簡単なんだけど、何をどう実行していくか、って話
+ 		しかも、ここには「普通の人」しかいないんだぜ？
+ [田舎で20年スクラム（後編）：一個人が企業で長期戦アジャイルに挑む意味 - Speaker Deck https://speakerdeck.com/chinmo/the-meaning-of-an-individual-taking-on-the-long-term-challenge-of-agile-in-a-company]
+ 	すげー
+ 	個人が、一企業で踏ん張ることでここまでできる
+ 		特殊な事例であっても、事例があること自体がすごい
+ [GhosttyをVSCodeみたいにしよう！｜Naoki |電電猫猫  https://note.com/electrical_cat/n/n7a3b634a2b51]
+ 	おもしろ
+ [なぜ誰も手を付けなかったのか？ ― Vibeコーディングが解いた15年の沈黙 | DevelopersIO https://dev.classmethod.jp/articles/mp3gain-resuscitation-mp3rgain/]
+ 	いい話だった
+ 	だいぶ背伸びしても届かなそうなOSSっていっぱいあるけど、AI agentに手伝ってもらえば手が届く可能性が高まる
+ [AIが書く仕様書、どうレビューする？GitHub Spec Kit で出力される仕様書の詳細解説とレビュー方法 - サーバーワークスエンジニアブログ https://blog.serverworks.co.jp/spec-kit-specify-review-guide]
+ 	要求の一覧から仕様・実装をそれぞれ紐づけていく、みたいなこともSDDならできそうだな...
+ 		人類がやるとすぐ破綻するやつ
+ [エージェントを活用したコーディングのベストプラクティス · Cursor https://cursor.com/ja/blog/agent-best-practices]
+ 	cursor-agentしか使ってないからあんまり参考にならんかった...
+ [モバイル 4 社が呼びかけ フィッシングメールは DMARC だけではなくならない 今だからこそ見直したい SPF の設定不備 ～ JPAAWG 8th General Meeting レポート #02 | ScanNetSecurity https://s.netsecurity.ne.jp/article/2026/01/14/54406.html]
+ 	SPFの設定ミスなー...
+ 		GMailつかったりAmazon SES使ったりだとIP共用になるのは普通だしなー
+ [Reactのベストプラクティスの紹介 - Vercel https://vercel.com/blog/introducing-react-best-practices]
+ 	Vercel、性能についてはすごくよく考えてるんだよな、多分
+ 	性能以外の非機能要件もぜひ同じくらいよく考えてほしいところ
+ [サラリーマンソフトウェアエンジニアのキャリア - Speaker Deck https://speakerdeck.com/yuheinakasaka/sararimansohutoueaenzinianokiyaria]
+ 	最近、上司との1on1で似たような話をした
+ 	グレードが上がってくると、期末の評価ではなくて、難しい仕事を与えられること自体が評価になっていく
+ 	更に上になると上手く回すことや、株価自体が評価になっていく
+ [開発環境2026 https://r7kamura.com/articles/2026-01-15-development-environment-2026]
+ [好きなdotfiles発表ドラゴン | ドクセル https://www.docswell.com/s/mozumasu/5DWPG4-dotfiles-dragon]
+ [開発環境現状確認2026 - 5.1さらうどん https://giginet.hateblo.jp/entry/2026/01/14/101200]
+ [2026年開発環境のことはじめ https://zenn.dev/chiaoi/articles/2026_development_environment]
+ 	最近開発環境さらすやつが流行ってて楽しい
+ [AI に指示するのではなく、まずは AI に質問させた方が捗る https://zenn.dev/hataluck/articles/d347a5011cf71e]
+ 	元同僚のkitaiさんの記事、身内びいき関係なくいい内容だった
+ 	こういうAI agentの使い方がいいよね
+ 		正解がないやり方に向いてる
+ [ChatGPTの脆弱性「ZombieAgent」、AIプロダクトPMとして知っておきたいこと https://zenn.dev/sawadeeeen/articles/c7ccb3e91ee0c7]
+ 	はー...
+ 	Slackでチャンネルまとめ作る、とかでも全然できるなこれ
+ [AI エージェントのために CLI でブラウザを操作する agent-browser https://azukiazusa.dev/blog/agent-browser-for-ai-agents/]
+ 	これは、いいな
+ [知っているようでよくわかっていない「SLSA」とGitHub Advanced Securityとの関係 - APC 技術ブログ https://techblog.ap-com.co.jp/entry/2026/01/12/115500]
+ 	aquaやtrivyを使ってるので名前だけは知ってるSLSA
+ 	こーゆーものなのか
+ [LINEグループ作成を要求されるCEO詐欺メールについてまとめてみた - piyolog https://piyolog.hatenadiary.jp/entry/2026/01/16/155626]
+ 	1ホップ以内にこのメール受け取ってる人がいてビビる
+ [JSer.info 15周年: 15年間のJavaScriptを振り返る - JSer.info https://jser.info/2026/01/16/jser-info-15th/]
+ 	15年...!!!
+ 		すげー
+ [最初に登場したのは CNAME レコードですか、それとも A レコードですか? https://blog.cloudflare.com/cname-a-record-order-dns-standards/]
+ 	RFCはとても大事だけど、準拠してればALL OKじゃないよ、っていう教訓
+ [依存性切除 dependency elimination #23 http://0xcc.net/bknotes/23.html]
+ 	依存のない、あるいは少ないライブラリを自作する方が後々困らない、っていう考え方は確かにあるんだよな
+ 		GoでCLIを書く、みたいなときに、依存関係が十分少なければ放置しても将来使える可能性は高い
+ [GitHub Actions のシークレットは簡単に見れる https://zenn.dev/enjapan/articles/github-actions-secrets]
+ 	そんな仕組みだったのか...
+ [/shokai/プルリク事後レビュー会]
+ 	おもしろ
+ 	AI agentが普通になってshokaiさんと同じくらいPRが出てくるようになったら、日次で事後レビューみたいな形式になっていくかもしれない
+ 		現時点では、誰かは把握してる状態で本番マージはしたいと思うけど...
+
+読んだ本
+ 
+
+書いた
+ 
+
+その他
+ [watarukura のスキルプロフィール | Gitty https://gitty-code.com/user/watarukura]
+ 	vim-jp Slackで教えてもらったGitty
+ 		2025年までは副業もあって相応にcommitが多かったけど、2026年は減るだろうなー
+ [GitStars https://puzer.github.io/github_recommender/]
+ 	こっちも
+ 閃輝暗点がでた
+ 	10 - 20分くらい、強い光を見たあとの焼き付く感じが続いた
+ 	急に出たのでビビって眼科に行ったところ、目じゃなくて脳の血流の問題と言われた
+ 		そんなこと言われても、運動もして血行は悪くないと思うんだがなー
+ 		まぁ、血栓とか脳溢血とか言われなくて良かったとは言える
+ 		矯正視力は良くなってた(1.2)
+ 			なぜ...???
+ 			健康診断のときは0.6くらいだったのに
+
+#週報
+<[2026-01-06 - 2026-01-12]
+[2026-01-20 - 2026-01-26]>

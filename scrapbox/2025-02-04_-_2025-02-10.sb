@@ -1,0 +1,91 @@
+2025-02-04 - 2025-02-10
+読んだ記事
+ [Software development topics I've changed my mind on after 10 years in the industry - Blogomatano https://chriskiehl.com/article/thoughts-after-10-years]
+ 	iwashiさんがTwしてたので見に行ってみた
+ 	経験豊富なエンジニアが収束するところに収束してる気がする
+ https://speakerdeck.com/07jp27/kasutamuinsutorakusiyondegithub-copilotwokasutamaizu?slide=17
+ 	へー
+ 	mizchiさんがやってたみたいに、型定義ファイルを常に読むように指示する、とかがいいのかな
+ [ESLintがセグフォする件を調査していたら、Node.jsにコントリビュートしていた話 - CARTA TECH BLOG https://techblog.cartaholdings.co.jp/entry/2025/01/31/114002]
+ 	すげー
+ [Move on to ESM-only https://antfu.me/posts/move-on-to-esm-only]
+ 	[https://gyazo.com/30ce232e8aba3e88c61c11a0dc8cae8d] 
+ 	jestさん...
+   vitest移行は辛そうだなー
+ [Cline＋ローカル版DeepSeek R1でAIコーディングを使い放題にする（高スペックマシン向け）｜しぴちゃん https://note.com/cppp_cpchan/n/n92c7795f5939]
+ 	ローカルLLMが動くマシンがほしい
+ [React Router v7で実現するuseStateゼロ開発 https://zenn.dev/immedio/articles/1dedd5c1b9ee82]
+ 	タイトルはちょっと釣り気味で、useStateを使うシーンについても記述がある
+ 	使うべきでない場面がたくさんあるよ、って話なのかな
+ [リファクタリングについての彼此（あれこれ） - 電通総研 テックブログ https://tech.dentsusoken.com/entry/refactoring]
+ 	GC/full GCとリファクタリングの対比はいい比喩
+ [Apple、Xcodeで使われているビルドエンジン「Swift Build」をオープンソースで公開。WindowsとLinuxもサポートへ － Publickey https://www.publickey1.jp/blog/25/applexcodeswift_buildwindowslinux.html]
+ 	Mac買わなくてもLinuxでSwiftがビルドできるようになるのかな？
+ 	XCodeのバージョンとSwiftのバージョンを揃えないと！みたいな話も楽になるなら嬉しい人は多そう
+ [【朗報】MacBookの蓋を開いた際に自動起動しない方法がようやく判明 | ソフトアンテナ https://softantenna.com/blog/prevent-macbook-autoboot/]
+ 	必要になったときに
+ [アマゾン、LINEヤフーも“テレワーク”見直し…日本でも増えている「出社回帰」の会社が狙っていること ライフキャリア All About https://allabout.co.jp/gm/gc/508706/]
+ 	>「聞きたいこと」をすぐ質問したり、思いついた「アイデア」をその場で発信したりできる「即効性」と、会議の場よりも気軽に発言できる「ハードルの低さ」
+ 	それ、出社しないと実現できないんですかね？
+ [Escaping Surprise Bills & Over-engineered Messes: Why I Left AWS - Travis Bumgarner https://travisbumgarner.dev/blog/leaving-aws]
+ 	[Web Sites - NearlyFreeSpeech.NET https://www.nearlyfreespeech.net/services/hosting]
+ 		terraform-provider-nfs はなさそうね
+ [The End of Programming as We Know It – O’Reilly      https://www.oreilly.com/radar/the-end-of-programming-as-we-know-it/]
+ 	>It is not the end of programming. It is the end of programming as we know it today. 
+ 	それな
+ [Devinにコンテナイメージサイズを70%削減・デプロイ時間を40%削減してもらった話 - LayerX エンジニアブログ https://tech.layerx.co.jp/entry/2025/02/06/110027]
+ 	Devinさわりたいなー
+ [Amazon Auroraで、IAMデータベース認証とAWS Secrets Managerによるパスワードの自動ローテーションを設定してみる - サーバーワークスエンジニアブログ https://blog.serverworks.co.jp/aurora-iam-auth-secrets-manager]
+ 	IAMデータベース認証、勝手にDBのユーザも作ってくれればいいのになぁ
+ [日本発のオープンソースRDB「劔“Tsurugi”」正式版が登場　既存のものと何が違う？：「ないなら作りますか！」と開発者が結集 - ＠IT https://atmarkit.itmedia.co.jp/ait/articles/2412/12/news003.html]
+ 	Tsurugi、夢のあるプロジェクトなので応援している
+ [MySQL :: MySQL 8.0 リファレンスマニュアル :: 13.1.20.6 CHECK 制約 https://dev.mysql.com/doc/refman/8.0/ja/create-table-check-constraints.html]
+ 	MySQLでCHECK制約使えるのを知らなかった
+ [JetBrainsも自律的にコーディングを行うAIエージェント「Junie」を発表 － Publickey https://www.publickey1.jp/blog/25/jetbrainsaijunie.html]
+ 	JetBrainsのAIプラグイン、サブスクしてるのでJunieも使えるようになってほしいなー
+ [外部からWebhookを受ける共通基盤 - LayerX エンジニアブログ https://tech.layerx.co.jp/entry/2025/02/07/122157]
+ 	Webhook共通基盤、面白いアイデア
+ 	EventBridge Bus、使ったことないけどこれも面白そう
+ [新規事業は社内ドキュメント戦略が大事な話｜細見 優太 https://note.com/y_homi/n/n35eff0c97be4?sub_rt=share_b]
+ 	社内ドキュメント、権限管理し始めると重複を避けられないんだよな...
+ [KVSあるいはKVSベースのNewSQLに高速なAuto Incrementを実装する | CyberAgent Developers Blog https://developers.cyberagent.co.jp/blog/archives/42382/]
+ 	採番難しい
+ 	DynamoDBのAtomic Countは使ったことあるけど、Bulk Insertとの相性がイマイチ
+ [Rails 8はSQLiteで大幅に強化された「個人が扱えるフレームワーク」（翻訳）｜YassLab 株式会社 https://note.com/yasslab/n/n89d6850e296d]
+ 	ProductionでSQLite使うのを本気で考えてて面白いし、実績も積んでる
+ 	>しかし、この20年間で、SQLiteにはWebアプリケーションに適したさまざまな機能が追加されています。あと必要なのは、SQLiteのセットアップと利用方法をWeb向けに微調整することだけです。
+ 		この情報、ほしい
+ 		[同時実行性の向上 | Fractaled Mind https://fractaledmind.github.io/2023/12/11/sqlite-on-rails-improving-concurrency/]
+ 			この辺か
+ 			連載されてる！じっくり読もう
+ 			そのうちLaravelにも来るのかなぁ
+
+読んだ本
+ [［改訂新版］プロになるためのWeb技術入門：書籍案内｜技術評論社 https://gihyo.jp/book/2024/978-4-297-14571-2]
+ 	ncコマンドでWebサーバ立ててcurlコマンドでHTTPヘッダを眺めるやつ、面白かった
+ 	CGIについても再確認した
+ 		[CGIの仕様 - とほほのWWW入門 https://www.tohoho-web.com/wwwcgi3.htm]
+ 		とほほさんは何でもまとめてあってすごいな
+ [ハイパーモダンPython - O'Reilly Japan https://www.oreilly.co.jp/books/9784814400928/]
+ 	時代はuvですよ
+ 	Pythonの歴史的経緯でこの辺のツールは変遷が色々あってめんどいので、実際uvに大統一されてほしい
+ 	https://docs.github.com/ja/enterprise-cloud@latest/repositories/working-with-files/using-files/viewing-and-understanding-files#ignore-commits-in-the-blame-view
+ 		.git-blame-ignore-revs、知らなかったー
+ [HTML&CSS Webデザイン 現場レベルのコーディング・スキルが身につく実践入門 | Webサイト制作・Webマーケ,Web制作・HTML・CSS,HTML・CSS | Gihyo Direct https://direct.gihyo.jp/view/item/000000003609]
+ 	用語は参考になった
+ 		パララックスとか、自分にはwebデザイン用語の語彙が足りない
+ [「マンガの原理」大場渉 生活・実用書 - KADOKAWA https://www.kadokawa.co.jp/product/322312000330/]
+ 	コマの単位、ページの単位、話の単位、それぞれで読み進めてもらうための工夫がある
+ 		漫画家も編集者もすげぇなー
+ 		小説家も同じような工夫があるのかな？
+
+書いた
+　https://github.com/watarukura/fullstack-web-dev-study
+　	進捗がいまいち
+
+その他
+ 
+
+#週報
+<[2025-01-28 - 2025-02-03]
+[2025-02-11 - 2025-02-17]>

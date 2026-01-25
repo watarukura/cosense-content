@@ -1,0 +1,60 @@
+2024-08-13 - 2024-08-19
+読んだ記事
+ [元Google植山 類の“実装力”の源をSakana AI・秋葉拓哉が探る「集団開発のしがらみに、個人開発で殴りこむ」 - エンジニアtype | 転職type https://type.jp/et/feature/26625/]
+ 	かっけー
+ [E2Eテストの部分実行によるテスト時間短縮 - Cybozu Inside Out | サイボウズエンジニアのブログ https://blog.cybozu.io/entry/2024/08/13/110000]
+ 	E2Eテストの本が立て続けに出てて、興味がある箇所
+ 	playwrightのテストがflakyでなー
+ [ウォーターフォールを見直して自チームに最適化した開発フローを構築する - カンムテックブログ https://tech.kanmu.co.jp/entry/2024/08/14/153933]
+ 	ウォーターフォールを2回、はいいな
+ 	アジャイルが浸透したからこそ受け入れられる開発スタイル
+ [GitHub、コードの脆弱性を自動的に見つけてCopilotが修正案まで示す「Copilot Autofix」正式サービスに － Publickey https://www.publickey1.jp/blog/24/githubcopilotcopilot_autofix.html]
+ 	いいねぇ
+ [「Linux」でAI搭載ターミナルアプリ「AI Shell」を使うには - ZDNET Japan https://japan.zdnet.com/article/35222662/]
+ 	ターミナルで機密情報扱ってるときにOpenAIにリクエストしそうで怖い
+ [ブラウザの履歴を操作して「戻る」ボタンで広告を出すやつについて – コーヒーサーバは香炉である https://blog.maripo.org/2024/08/history-api-abuse/]
+ 	ゴミ広告UI問題
+ [事業価値と Engineering 2024年版 - Speaker Deck https://speakerdeck.com/recruitengineers/shi-ye-jia-zhi-to-engineering-2024nian-ban]
+ 	大作
+ [Shougo への質問への回答 https://zenn.dev/shougo/articles/faq-answer-shougo]
+ 	暗黒美無王Shougoさん
+ 	リアルに存在しているのがすごい
+ [「GoogleがAI競争に負けたのはリモートワークやワークライフバランスを優先したから」と元CEOのエリック・シュミット氏が発言するも撤回＆謝罪 - GIGAZINE https://gigazine.net/news/20240815-eric-schmidt-blaming-remote-work/]
+ 	エリック・シュミットもこんな認識なんだなー
+ [/nakaokat/Google スプレッドシートのテーブル機能が便利]
+  excelのテーブル機能も結局使わなかったんだけど、gsheetのは使ってみたい
+ [Go でマルチスレッドプログラミングする際に最低限知っておくべきこと - Cybozu Inside Out | サイボウズエンジニアのブログ https://blog.cybozu.io/entry/2024/08/13/111500]
+  goroutineはマルチスレッドなのか、とかをうまく説明できるようになりたい
+ [WebAssembyとしてPostgreSQLをビルドした「PGlite」公開。Node.jsやブラウザ上でPostgreSQLを実行、DBの永続化も可能 － Publickey https://www.publickey1.jp/blog/24/webassembypostgresqlpglitenodejspostgresqldb.html]
+ 	WASM Postgresかー
+ 	SQLiteは既にWASM化されてるけど
+ [Goで自作RDBMS - abekoh's tech note https://blog.abekoh.dev/posts/simple-db]
+ 	がんばれば作れないかなー、という気持ちになってきてはいるので迂闊に作り始めたい
+ 	[GolangでMySQLのSQL文をパースする（CREATE TABLE文のパース例） https://zenn.dev/nishisuke/articles/golang-parse-sql]
+ 		[pingcap/tidb: TiDB is an open-source, cloud-native, distributed, MySQL-Compatible database for elastic scale and real-time analytics. Try AI-powered Chat2Query free at : https://www.pingcap.com/tidb-serverless/ https://github.com/pingcap/tidb]
+ [kattouf/ProgressLine: ⏳Track commands progress in a compact one-line format https://github.com/kattouf/ProgressLine]
+ 	Swiftで書かれたCLIおもしろ
+
+聴いた
+	コテンラジオ
+		やなせたかし回
+		ケマル・アタテュルク回
+
+読んだ本
+ [Software Design 2024年9月号｜技術評論社 https://gihyo.jp/magazine/SD/archive/2024/202409]
+  Goのエラーハンドリング、読み返すと思う
+ [マルチクラウドデータベースの教科書  クラウドロックインを乗り越えるデータベースの構築ノウハウ ｜ SEshop｜ 翔泳社の本・電子書籍通販サイト https://www.seshop.com/product/detail/26356?utm_source=google_20240215&utm_medium=cpc&utm_campaign=r803&gad_source=1&gclid=Cj0KCQjw2ou2BhCCARIsANAwM2EhGYs1UIf-YmVFf_HgxsJBDEjaKO59MXKinM2N8-cy3qGfO9vGPXcaAt6JEALw_wcB]
+ 	DBaaSやクラウド固有のDBサービスも含めて、どれを、なぜ選ぶか、みたいなのが難しい
+ 	マルチクラウドが必要な会社ってそんなに多くないと思ってるけど、数分すら落としたくないサービスには必要になる場合がある
+
+書いた
+ https://github.com/watarukura/goscal
+ 	元ネタはRUSTy CALculatorらしいので、GO CALculatorでgocalのほうが良かったか
+ 	[パーサーコンビネータをもっと身近にする | フューチャー技術ブログ https://future-architect.github.io/articles/20240819b/]
+ 	[パーサー・コンビネーター・ライブラリ「takenoco」入門 https://zenn.dev/shellyln/articles/a460f81fb7e1df]
+ 		コレを使ってみよう
+
+その他
+　
+
+#週報

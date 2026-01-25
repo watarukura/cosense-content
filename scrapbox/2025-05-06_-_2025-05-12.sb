@@ -1,0 +1,74 @@
+2025-05-06 - 2025-05-12
+読んだ記事
+ [Excel上でLinuxを実行するプロジェクト「Linux In Excel」 - GIGAZINE https://gigazine.net/news/20250502-linux-in-excel/]
+ 	変態だー(褒め言葉)
+ 	>VBAマクロを介してRISC-Vエミュレーターの「riscv_emufun (mini-rv32ima)」を呼び出し、エミュレーターの出力をセルに書き出すという仕組みを採用しています。
+ [「本は読まないが学びは好きでオーディブルを利用している」という意見に、業界からは聞こえてこないという作家さんの気付き - Togetter トゥギャッター https://togetter.com/li/2546709]
+ 	audibleなー
+ [/shokai/他に似たような修正をやるべき場所ある？]
+ 	実用性のあるプロンプト
+ [GoogleのLLM「Gemini」でコードレビューをするGitHub Actionsを自力で構築してみた - NTT Communications Engineers' Blog https://engineers.ntt.com/entry/202503-gemini-cicd-code-review/entry]
+ 	自前でAIコードレビュー作るときの参考に
+ [Bedrock を組織で使う場合に推論プロファイル経由のみ許可する権限設計について考える https://zenn.dev/winteryukky/articles/b51ba6d63cf15e]
+ 	ABACが有効化できればなー
+ 	[AIエージェントCline、freeeはどうやって全社導入した？ - freee Developers Hub https://developers.freee.co.jp/entry/ai-cline-rolling-out]
+  　プロクシ立てないと駄目かなぁやっぱり...
+ [note の Elasticsearch 更新系を支える技術 - Speaker Deck https://speakerdeck.com/tchov/note-no-elasticsearch-geng-xin-xi-wozhi-eruji-shu]
+ 	protobufを挟むとこ、オモシロ
+ 		使ったことないから使ってみたいんだよな
+　[今はまだ生成AIに自分の文章を書かせたくない - An Epicurean https://blog.song.mu/entry/cautious-attitude-toward-generative-ai]
+　	AIに生成された臭い文章、読むのが辛いんだよな
+　		長いほど良い・黒いほど良い、みたいな文章、苦痛だからなー
+　[Tech hiring: is this an inflection point? - The Pragmatic Engineer https://blog.pragmaticengineer.com/tech-hiring-is-this-an-inflection-point/]
+　	コーディング試験もアーキテクティング試験もAIが解いちゃうならリモート面接は難しいわなー
+　		まぁ、対面面接は大変だけど...
+　		試用期間が重要になる、って話は頷けるところ
+ [SQLでQuine書いたから見て見て - エムスリーテックブログ https://www.m3tech.blog/entry/sql-quine]
+ 	すげー！
+ [ORM と向き合う - Speaker Deck https://speakerdeck.com/hoto17296/orm-toxiang-kihe-u]
+ 	SQL書くほうがいいじゃん派だけど、確かに型は自動でついてほしいもんな
+ 	JSONに型を付けたい、と似たような話だと感じたので、この辺もなんかシュッとできるといいな
+ 		SQLの実行結果がJSONになればいいのか？
+ [AIの2時間学習革命が教室を変える: 極東ブログ http://finalvent.cocolog-nifty.com/fareastblog/2025/05/post-8255a2.html]
+ 	中高一貫校で5年で全教科終えて残りは受験勉強に当てる、みたいなののすごいやつ？
+ [チームの“秘伝のタレ”を Gemini に継承！Code Customization 実践ガイド https://zenn.dev/google_cloud_jp/articles/02515ec66a13d1]
+ 	これは、いいなぁ
+ [アクセンチュアが週5出社義務化、IT・コンサルは出社への方向転換へ…実は社員の質を上げたいからか？「リモート派」と「対面派」とで意見が分かれる - Togetter トゥギャッター https://togetter.com/li/2548381]
+ 	別に出社でもいいんだけど、通勤時間が体感は会社への無償奉仕になってしまうからなー
+ 		滅私奉公とか流行らんじゃろ...
+ [The Death of Product Development as We Know it https://lg.substack.com/p/the-death-of-product-development]
+ 	こうはならないと思うけど、変化自体は避けられないだろうなー
+ [プレビュー Amazon Q Developer と GitHub の統合機能「Amazon Q Developer for GitHub」を使ってみた | DevelopersIO https://dev.classmethod.jp/articles/q-developer-integration-github-preview/]
+ 	似たようなツールは他にもあるけど、AWS用のIaCリポジトリとかならハマるかも
+ [初めての運用引き継ぎ | フューチャー技術ブログ https://future-architect.github.io/articles/20250507a/]
+ 	開発した人が運用するべき、とは思うけど、なかなかね...
+ 	>最悪詳細な仕様書がなくてもIF一覧は用意
+ 		これこれ
+ 		障害はインタフェースで起こる
+ [個人的 AI Writing のやりかた https://zenn.dev/yoshiko/articles/my-ai-writing]
+ 	AIが重い腰を上げる手助けをしてくれる、っていうのは感じるところ
+ [Goのテストをはじめてみよう（2025年版） | フューチャー技術ブログ https://future-architect.github.io/articles/20250509a/]
+ 	まとまっててすごい
+ [AWS RDS Aurora I/O-Optimized の基礎知識 | 外道父の匠 https://blog.father.gedow.net/2025/05/09/aws-rds-aurora-io-optimized/]
+ 	I/O-Optimizedが必要なI/Oの多さ、現職ではありそうなので道具箱に突っ込んでおきたい
+ [AI Coding Agent を使うことで、怒り狂い、視座が上昇する話 - Lambdaカクテル https://blog.3qe.us/entry/2025/05/03/000513]
+ 	AI == ルンバ説、納得感ある
+ [UUIDを短くするライブラリを作った https://zenn.dev/yoshinani_dev/articles/001be9fd0377b3]
+ 	いいなこれ
+ 	流行ったら使いたい
+
+読んだ本
+ [問いかける技術――確かな人間関係と優れた組織をつくる – 英治出版 https://eijipress.co.jp/products/2171]
+ 	readline.fmでエドガー・シャインの本を紹介してたので図書館で検索して借りてきた
+ 	「謙虚な問いかけ」が難しいのはアメリカっぽいなーと思った
+ 		アメリカ感が粗雑な気はするけど
+
+書いた
+ 
+
+その他
+　
+
+#週報
+<[2025-04-29 - 2025-05-05]
+[2025-05-13 - 2025-05-19]>

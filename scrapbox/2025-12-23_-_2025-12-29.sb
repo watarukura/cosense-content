@@ -1,0 +1,108 @@
+2025-12-23 - 2025-12-29
+読んだ記事
+ [htmxとjs/jquery/ajaxの動的更新における利点と欠点について教えてください。 : r/django https://www.reddit.com/r/django/comments/17opgih/advantages_and_disadvantages_between_htmx_and/?tl=ja]
+ 	HTMX、jQueryと何が違うのかよくわかってない
+ [良いコードの書き方 #Java - Qiita https://qiita.com/alt_yamamoto/items/25eda376e6b947208996]
+ 	Xで流れてきた
+ [最速最強の Markdown コンパイラ作るぞ https://zenn.dev/mizchi/articles/markdown-incremental-preview]
+ 	moonbit、流行るかなぁ...
+ [AIを活用したドキュメント執筆技術｜michiomochi https://note.com/michiomochi/n/nffa93191b5e9]
+ 	ドキュメントが最終成果物ならなんぼでもAI使って書いたらいいんですが、最終成果物はドキュメントを使って書くコードであり、コードによって生み出されるプロダクトであり、プロダクトによるUXであるわけで
+ 		書きながらヌケモレを洗い出す、みたいなスタイルで仕事をしてるのでAIにドキュメントを書かせることがない
+ [AWS データベースのデータベース Savings Plans の紹介 | Amazon Web Services ブログ https://aws.amazon.com/jp/blogs/news/introducing-database-savings-plans-for-aws-databases/]
+ 	DB SavingsPlansによって、Valkey Serverlessは間違いなく選びやすくなる
+ 		Aurora Serverless v2はちょっと癖があるけど...
+ [瞬間的なアクセス集中はオートスケールに検知されない ― GitHub Actionsでコンテナ事前調整を自動化 - Findy Tech Blog https://tech.findy.co.jp/entry/2025/12/23/070000]
+ 	AppAutoScalingでスケジューリングすればいいのにな、と思った
+ [マイクロサービスへの5年間 ぶっちゃけ何をしてどうなったか - Speaker Deck https://speakerdeck.com/joker1007/maikurosabisuheno5nian-jian-bututiyakehe-wositedounatutaka]
+ 	個人の腕力でマイクロサービス化、うまくいくならそれが正解...
+ 	「完全に載せ替えるまで先に進まない」この覚悟の決まり方があって初めて成功するよな
+ [MoonBitで簡単なLisp処理系を実装する https://zenn.dev/nuskey/articles/moonbit-lisp-implementation]
+ 	計算機の次はLisp処理系を作る、とかがいいのかな
+ [5年間 Laravel を使って辿り着いた，AI 時代に考える「なんちゃってクリーンアーキテクチャ」のその先 https://zenn.dev/yumemi_inc/articles/ebc6e634fa57a1]
+ 	なんちゃってクリーンアーキテクチャでも十分難しかったのでなぁ
+ [論理削除という技術的負債、それでも僕たちは使い続ける - じゃあ、おうちで学べる  https://syu-m-5151.hatenablog.com/entry/2025/12/24/110101]
+ 	後段にDWHや全文検索がある場合に物理削除だと連携がめんどいのよね
+ 	履歴テーブルはRDBじゃないところで持ちつつ、スナップショットはRDBに持つ、くらいかなー
+ [いまさら go generate 入門 https://zenn.dev/r4mimu/articles/63c6d9ca211dcc]
+ 	Goの文化的なところをあまり知らないのでためになった
+ [DuckDB as a Pipeline: Findyデータ基盤におけるDuckDBの活用事例 - Findy Tech Blog https://tech.findy.co.jp/entry/2025/12/24/080000]
+ 	あー！BigQuery拡張が動かなかったの、amd64にしてればよかったのか！？
+ 		もう解決済みとのこと
+ [DevelopersIO基盤を「パブリックサブネットレス」なECS構成に移行してみた | DevelopersIO https://dev.classmethod.jp/articles/developersio-public-subnet-less-ecs/]
+ 	パブリックサブネットレス、やりたいのよなー
+ [go.modのgo directiveは1つ前のメジャーリリースより最新にしないでほしい - Diary of a Perpetual Student https://blog.arthur1.dev/entry/2025/12/23/163153]
+ 	ちょっと前からrenovateの挙動がこうなってる気がする
+ 	`tool` とかもよくわかってなかったのでありがたい
+ [「カード番号と有効期限」だけで通った時代から10年～決済セキュリティの進化と今すべき対策 #Security - Qiita https://qiita.com/ahera/items/5c5bcfeeeea69081744d]
+ 	この辺、知らずにクレカ決済機能とか作ってたなぁ...
+ 		作ってから勉強したけども
+ [Luna UI - JS/Moonbit のための宣言的UI. 軽量、高速、そして WebComponents First https://zenn.dev/mizchi/articles/moonbit-luna-ui]
+ 	すげぇなぁ
+ [RDS の CPU 使用率上昇に対する原因調査と改善対応 https://developers.prtimes.jp/2025/12/25/rds-cpu-usage-investigation-and-optimization/]
+ 	良い資料
+ [再現性を見つける #Kyonlender｜kyon_mm https://note.com/kyon_mm/n/nb4617989c409?sub_rt=share_sb]
+ 	>BAD事例：SMART ゴールは効果が出にくい
+ 	Oh
+ [Linter 開発こそ Vibe Coding の最も優れた適用例の 1 つである https://zenn.dev/yumemi_inc/articles/go-linter-vibe-coding]
+ 	既存linterのカスタムルールとかを生成するのは良さそうよね
+ [理解負債：LLM生成コードの時限爆弾 – Codemanshipのブログ https://codemanship.wordpress.com/2025/09/30/comprehension-debt-the-ticking-time-bomb-of-llm-generated-code/]
+ 	理解できてないコードでも運用はできるけど、ストレスでの燃え尽きが増えちゃう
+ 	とはいえ、理解にかけられる時間は減り、理解しなければならないコードは増える...
+ [25年愛するお絵かき掲示板のために、54歳でコードを書き始めた。Javaアプレット廃止に抗って【フォーカス】 | レバテックラボ（レバテックLAB） https://levtech.jp/media/article/focus/detail_776/]
+ 	いい話だった
+ [【アドベントカレンダー2025】JavaのEOSL対応について取り組んだこと - ぐるなびをちょっと良くするエンジニアブログ https://developers.gnavi.co.jp/entry/adventcalendar-251223-2/]
+ 	Java8って2030年までいけるのか
+ [AI vs 人間によるコード生成レポート：AIコードは1.7倍多くの問題を引き起こす https://www.coderabbit.ai/ja/blog/state-of-ai-vs-human-code-generation-report]
+ 	まぁねぇ
+ [Evan Priestley 氏がどうやってプログラミングを学んだかを教えてください | Knoh https://web.archive.org/web/20130702152539/http://knoh.jp/answers/d65c7a82]
+ 	Xで流れてきた
+ 	何年かぶりに再読した
+ [Amazon ECS で、AWS Fargate でのタスクの終了をスケジュールするための週次イベントウィンドウを定義できるようになりました - AWS https://aws.amazon.com/jp/about-aws/whats-new/2025/12/ecs-weekly-windows-scheduling-task-retirements-fargate/]
+ 	これ、嬉しいやつな気がする
+ 		メモリリークしてるけど直せないタスクを運用してる、地獄みたいな状況は稀にあるからなぁ
+ [t-wadaが説く、今あえて“自分の手”でコードを書く理由「バイブコーディングは、エンジニアのためのものではない」 - エンジニアtype | 転職type https://type.jp/et/feature/29773/]
+ 	大規模開発経験がないエンジニアにも大規模開発と同じプロセスが割とすぐに必要になるから混乱するんだよな...
+ [おい、テックブログを書け - Speaker Deck https://speakerdeck.com/nwiizo/oi-tetukuburoguwoshu-ke]
+ 	nwiizoさん、3shakeの人だったのか
+ [フロントエンドエキスパートチームの解散は 「いい話」なのか？ - Speaker Deck https://speakerdeck.com/mugi_uno/fee-mid-age-crisis]
+ 	横断支援チームにいるので、参考になる話だった
+ [大企業の幹部がやっている事について - Software Transactional Memo https://kumagi.hatenablog.com/entry/what-executives-do]
+ 	[201909 - アペンワール https://apenwarr.ca/log/?m=201909]
+ 	確かにそうだな、と思える程度には大企業に所属している
+ 	平社員から見て、ミドルマネジメントがマジで優秀、トップマネジメントは何をしてるかわからない、くらいがバランスがいいのかもしれない
+
+読んだ本
+ [Software Design 2026年1月号 | 技術評論社 https://gihyo.jp/magazine/SD/archive/2026/202601]
+ 	Nix連載、終わってしまった
+ 		NixOSでサーバ運用、良さそうなんだよなー
+
+書いた
+ 
+
+その他
+ Jetbrains AI Assistantとのチャット履歴を取得するシェルスクリプト
+ 	あとはClaudeCodeのも作れば普段遣いには耐えるな
+ 	もうちょい、複数環境前提のシェルスクリプトを書けるようになりたいなぁ
+ 		Pythonでやれ、でもいいんだけど
+code:chat.bash
+ #!/usr/bin/env bash
+ set -euo pipefail
+ 
+ cd "$HOME/Library/Application Support/JetBrains" || exit 1
+ 
+ grep -r -m 1 displayContent ./*/workspace/*.xml |
+   cut -d':' -f1 |
+   while IFS= read -r xmlfile; do
+     echo "=================================="
+     # shellcheck disable=SC2012
+     gdate -d @"$(stat -f '%B' "$xmlfile")" '+%Y-%m-%d %H:%M'
+ 
+     grep displayContent "$xmlfile" |
+       yq -oj -p xml '.option[0] | .+@value' |
+       jq -r .
+   done
+
+#週報
+<[2025-12-09 - 2025-12-15]
+[2025-12-30 - 2026-01-05]>

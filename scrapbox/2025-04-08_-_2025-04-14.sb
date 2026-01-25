@@ -1,0 +1,84 @@
+2025-04-08 - 2025-04-14
+読んだ記事
+ [Dataplex のビジネス用語集の作成と管理  |  Google Cloud https://cloud.google.com/dataplex/docs/create-glossary?hl=ja]
+ 	類義語集を作れるのはいいな
+ 	この辺を整備できると、NL2SQLが進みそう
+ 	BigQueryにこの機能があるのがいい
+ 	[MotherDuck(DuckDB)のMCPサーバーを導入して分析させてみた with Claude Code | DevelopersIO https://dev.classmethod.jp/articles/motherduck-duckdb-mcp-with-claude-code/]
+ 		これもいいなー
+ [プロダクト仕様ドキュメントを腐らせないためのCursorとMCPの活用｜shinpr https://note.com/shinpr/n/neb6664fa45ef]
+ 	AIにはコード生成よりドキュメント生成させる方がいいと思うんだよな
+ 		安く上がる
+ [Devin に週報を書いてもらった https://zenn.dev/genda_jp/articles/2025-04-05-weekly-report-by-devin]
+ 	まとめてもらうのもいい
+ 	自分でまとめるのめんどいしなー
+ [MCPでLLMに行動させる - Terraformを例とした tfmcp の紹介 - じゃあ、おうちで学べる  https://syu-m-5151.hatenablog.com/entry/2025/03/09/020057]
+ 	RustでMCPサーバ、のサンプルとして良さそう
+ 		GoはGitHub公式、denoはmizchiさんのやつとかを見るといいか
+ [なぜ MCP なのか https://voluntas.ghost.io/why-mcp/]
+ 	自作が安心な気はするので、MCPフレームワークとかないかな
+ [その知識、身に付いてる？　本の知識を自分のものにする『SQ4R』読書術 - STUDY HACKER（スタディーハッカー）｜社会人の勉強法＆英語学習 https://studyhacker.net/SQ4R]
+ 	まとめ方としては良さそう
+ 	Survey
+ 	Question
+ 	Read
+ 	Respond
+ 	Record
+ 	Review
+ [Devinが作るPull Requestのセルフマージを禁止する - newmo 技術ブログ https://tech.newmo.me/entry/ai-pull-request-protection]
+ 	これはまぁ必要だろうねぇ
+ [Googleがサイバーセキュリティ特化のAIモデル「Sec-Gemini v1」を発表 - GIGAZINE https://gigazine.net/news/20250407-sec-gemini/]
+ 	よさそう
+ 	まだプレビューだから申請とおらないと使えないけど
+ [AWSのドキュメント検索MCPサーバーが最新ドキュメントを参照できる仕組み | DevelopersIO https://dev.classmethod.jp/articles/how-aws-documentation-mcp-server-works/]
+ 	まだ試せてないんだよなー
+ 	公式ドキュメントが膨大な量になるのは仕方ないことなので、MCPが今後は増えると思う
+ [SiteMCP: 任意のサイトを丸ごとMCPサーバー化 https://zenn.dev/ryoppippi/articles/1eb7fbe9042a88]
+ 	これも試したい
+ [シニアとジュニア – O'Reilly https://www.oreilly.com/radar/seniors-and-juniors/]
+ 	ますます上流工程が重要になり、人と人の調整がエンジニアの仕事になる、って話を最近上司としていた
+ 		RoRでSonic gardenさんがやってたような、動くデモをすごい速さで提供して上流工程の時間を圧縮する、みたいな話が常識になっていくのかもなー
+ [暗躍する北朝鮮IT労働者　なりすましで得た情報を悪用しサイバー攻撃、外貨獲得も - ITmedia NEWS https://www.itmedia.co.jp/news/articles/2504/08/news139.html]
+ 	フルリモートの怖さの一旦がこの辺だよな
+ 	https://x.com/iwashi86/status/1910950875369267380?s=46&t=fjkFV3OPDIJYv5ssUBmueA
+ 		面接もハックされるし
+ [新刊『型システムのしくみ』の発売を4/18に予定しています – 技術書出版と販売のラムダノート https://www.lambdanote.com/blogs/news/typescript]
+ 	買います
+ 	n月刊ラムダノートの記事も面白かったし
+ [生成AIの時代にクリーンアーキテクチャは古いかなと思った https://zenn.dev/kooo5252/articles/2e9e45bdab99b1]
+ 	RoRやそのフォロワーのアーキテクチャからクリーンアーキテクチャに移行する話は割と聞くけど、Package by featureに移行した話はあんまり聞かないんだよな
+ 		これから増えるのかしらん
+ 		それとも、コンテキストのサイズがデカくなる方が早いか？
+ [Announcing vertical scaling in Amazon ElastiCache for Memcached - AWS https://aws.amazon.com/jp/about-aws/whats-new/2025/04/vertical-scaling-amazon-elasticache-memcached/]
+ 	おもしろ機能だ
+ 	まぁ、大体一番小さいやつで事足りるからコスト削減目的なら別の方法を検討したほうが良さそう
+ 	Memcachedだからできる、って話なのかな？Valkey対応してほしい
+ [フェロー就任と独立のお知らせ | おそらくはそれさえも平凡な日々 https://songmu.jp/riji/entry/2025-04-11-fellow-and-freelance.html]
+ 	Songmuさん、おつかれさまでした
+ [/kawasima/バリデーション解体新書]
+ 	すげーまとまってるー
+ [Terraform設計ガイドラインを公開しました | フューチャー技術ブログ https://future-architect.github.io/articles/20250409a/]
+ 	上から全部読んだ
+ 	`data.terraform_remote_state`が非推奨になってて、それ以外は大体準拠できてそう
+ 		ちゃんと飲み込んでここも修正するか...
+ 		tfstate間の依存、ちゃんとコードにするのがむずいんだよなー
+ [GitHub のセキュリティ改善 https://zenn.dev/shunsuke_suzuki/articles/github-security-2025]
+ 	[autofix.ci: automatically fix pull requests https://autofix.ci/]
+ 	autofix.ci、CI上でlintじゃなくてlint:fix使えていいかも
+ [新しいPHP拡張モジュールインストール方法「PHP Installer for Extensions (PIE)」を使ってみよう！ - Speaker Deck https://speakerdeck.com/cocoeyes02/lets-use-php-pie]
+ 	PIE、良さそう
+ 	peclと違ってtar.gzのダウンロードもできるのかな？
+
+読んだ本
+ [OWASP ZAPとGitHub Actionsで自動化する脆弱性診断 | インプレス NextPublishing https://nextpublishing.jp/book/13844.html]
+ 	OWASP ZAPをdockerで動かす本、他になくて読んでみたけど大体試した内容だった...
+
+書いた
+ 
+
+その他
+ 
+
+#週報
+<[2025-04-01 - 2025-04-07]
+[2025-04-15 - 2025-04-21]>

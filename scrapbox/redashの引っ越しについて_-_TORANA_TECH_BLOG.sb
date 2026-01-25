@@ -1,0 +1,51 @@
+redashの引っ越しについて - TORANA TECH BLOG
+[https://web.archive.org/web/20250120124605/https://tech.torana.co.jp/entry/2023/07/03/120000 redashの引っ越しについて - TORANA TECH BLOG]
+SREチームのクラシマです。...基、でした。SREチームはチームメンバーの退職に伴い発展的解消、各プロダクトの開発チームにSREerが溶けてSREingしていこう、という体制になりました。ということで、SREのクラシマです。
+
+さて。redashの話です。公式AMIから起動したEC2でredash v8を2年ほど運用してきました。Fargateにしよう、って話は以前から出ていたのですが、2年前に起動した公式AMIはUbuntu 18.04 LTSベース。AWSより、2023年5月31日以降、セキュリティアップデートが停止するとの告知がありました。重い腰をあげてFargate移行することにしました。
+
+[*** アカウント分離]
+
+元々、管理画面であるMadras用のDBを参照するため、Madrasと同じVPCで動作させていました。が、複数のプロダクトができ、プロダクト単位でアカウント分離を進めています。redashは複数のプロダクトを横断して関与するツールであるため、どこに置くか迷いましたが、共用ツールをまとめておくアカウントを作り、そこに配置することにしました。
+
+いずれはDWHを構築する構想はありますが、現時点ではredashサーバから各プロダクト用DBのReaderを参照に行く構成です。アカウントを分離したため、VPCピアリングで接続します。共用ツールアカウント <-> プロダクトアカウントのVPCピアリングを設定、ルートレコードを既存のルートテーブルに追記して接続を確立します。と、共用ツールアカウントからの参照だけだからルートレコードの追加も共用ツールアカウント側だけで良さそう？と思って接続確認しましたが繋がらず。無精はいけませんね。両方のルートレコードを追記、セキュリティグループも変更して、接続できるようになりました。
+
+[*** PostgreSQLの構築と移行]
+
+redashのクエリや実行結果、ユーザ情報などはPostgreSQLで保存されています。弊社のプロダクトではMySQLを使用しており、同居できそうなDBはありません。SQLite3にPostgreSQLのフリをさせる[postlite https://github.com/benbjohnson/postlite]というツールがあり、これでどうにか、と思ったのですが残念ながらredashが使用しているpsycopg2には非対応でした。無念。諦めて、素直に小さなRDSを立てます。
+
+中身は、既存のredashに接続してpgdumpコマンドでEXPORTしたものを取り込みます。
+[AWS Aurora for PostgreSQL から pg_dumpall のバックアップをS3に直接転送 https://zenn.dev/hiroe_orz17/articles/ce1ceb7e654306] こちらを参考にさせていただきました！多謝。eventsとquery_resultsはとにかく件数が多く、IMPORTに時間がかかるため除外することにしました。クエリを実行すればquery_resultsは最新化されますし。
+
+code: (shell)
+ #!/bin/bash
+ 
+ set -xv
+ 
+ starttime=$(date)
+ 
+ filename=db-$(date '+%Y%m%d%H%M%S').gz
+ echo "${starttime}: creating backup ${filename} ..."
+ sudo /usr/local/bin/docker-compose exec postgres /bin/bash \
+     -c "pg_dump --username=postgres --exclude-table-data events --exclude-table-data query_results --format=plain postgres" \
+     | gzip -c \
+     | /usr/bin/aws s3 cp - s3://redash-backup/${filename}
+ 
+ endtime=$(date)
+ echo "${endtime}: done."
+
+[[https://dev.classmethod.jp/articles/how-to-connect-rds-instance-via-eic-endpoint/:title https://dev.classmethod.jp/articles/how-to-connect-rds-instance-via-eic-endpoint/:title]]
+折よく、VPCにEC2 Instance Connect Endpointを生やせば踏み台なしにRDS接続できる、というので試したところうまく行き、これを使ってIMPORTしたのですが、6/28に利用可能なポートがTCP22番と3389番に制限されてしまいました。せっかく接続用のスクリプトも書いたのになぁ...。
+
+[*** バージョンアップ]
+
+現時点で最新のredashはv10です。v8からv10への移行はDDLの変更が必要で、v8用のDDLでは起動できません。多少面倒ではありますが、v8用のDBをIMPORTした後、redash用Fargateにecs execして、upgrade用のコマンドを実行します。
+
+[[https://redash.io/help/open-source/admin-guide/how-to-upgrade:title https://redash.io/help/open-source/admin-guide/how-to-upgrade:title]] 公式を参考に、`python manage.py db upgrade` を実行したところ、起動できるようになりました。
+
+[*** まとめ]
+
+redash v10がFargateで動くようになり、まずは一安心です。が、最近は更新がないようで、移行先を考えないと...。Fargateでの構築ができるBIツールであれば、同じクラスタに別でサービスを立てればいいので、検証環境の準備はある程度容易にできそうです。
+そろそろBigQueryかRedshift ServerlessかSnowflakeあたりでDWHを構築してもいいし、ユーザの権限も分離したいし、とまだまだやることがいっぱいです。
+
+#トラーナテックブログ

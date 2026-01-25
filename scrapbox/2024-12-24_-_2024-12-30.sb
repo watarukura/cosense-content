@@ -1,0 +1,93 @@
+2024-12-24 - 2024-12-30
+読んだ記事
+ [今、リモートワークについて思うこと - BASEプロダクトチームブログ https://devblog.thebase.in/entry/2024/12/24/110000]
+ 	リモートワークは経営判断であり、どんな働き方であるかを各社は公開すべきと思う
+ 	個人的にはリモートワークしたいが、大きな組織での事業の場合に可能かどうか？
+ [Digger + GitHub Actionsで作るTerraform/OpenTofuのCI/CD #Terraform - Qiita https://qiita.com/minamijoyo/items/b61806b570d9d1257f0b]
+ 	Digger、面白そう
+ 	なかなか移行は腰が重いけど
+ [Amazon CloudFront VPC オリジンの魅力と WAF バイパスからの脱却 - カミナシ エンジニアブログ https://kaminashi-developer.hatenablog.jp/entry/2024/12/24/160000]
+ 	ALBの不十分な検証、確かにやばいな...
+ 		まぁHTTPヘッダ見てるけど
+ 		CloudFront VPCオリジン、ほんといいものだ
+ [ABEMA のオブザーバビリティアーキテクチャ変遷 - Findy Tools https://findy-tools.io/articles/abematv/37?utm_source=20241225&utm_medium=email&utm_campaign=abema]
+ 	Otel + Grafana、いいなー
+ 		サンプリングレート下げないとコストが許容できない、ってのはこの構成でも起きるのか...
+ [読むとお得なソフトウェアエンジニアリングの技術書一覧 https://zenn.dev/lugendre/articles/021f8c39a7380a]
+ 	読むぞー
+ 	低レイヤーブームなのでありがたい
+ [2024年のPHP利用動向調査(超バイアス版) https://zenn.dev/sotarok/articles/1ee4fb5b1a4a5f]
+ 	そういえばアンケートに回答していた
+ [2024年のDenoのまとめと今後について https://zenn.dev/uki00a/articles/whats-new-for-deno-in-2024]
+ 	Deno、今後もスクリプト用に使っていきたい
+ 		でかいものが作れるかはまた別...
+ [Devin AIにテストを丸ごと書かかせてCIがパスするまで作業してもらう方法 https://zenn.dev/ubie_dev/articles/devin-for-test]
+ 	Slackから依頼を投げるのは面倒だな...
+ 	けど、CIを通すところまでやってくれるのは嬉しい
+ [ZOZO開発組織の2024年の振り返りと現状 #組織 - Qiita https://qiita.com/sonots/items/f0374464e54214fd5ad4]
+ 	ZOZOの規模でアーキテクチャリファクタリングすると何年もかかるよなぁ
+ 		とはいえ、売れてないうちはモノリスじゃないと遅いし、売れてからも実績があるものがいいし
+ 		踏み切るのはいつだって難しい
+ [TraderTraitorによるDMM Bitcoinのビットコイン不正流出についてまとめてみた - piyolog https://piyolog.hatenadiary.jp/entry/2024/12/25/180139]
+ 	こえぇ..
+ 	Linkedinから来るのもやばいし、北朝鮮なのもやばい
+ 	[DMMからビットコインを盗んだのは北朝鮮だと日本とFBIが名指しで発表、これまでの北朝鮮による仮想通貨強盗まとめ - GIGAZINE https://gigazine.net/news/20241225-dmm-bitcoin-north-korea/]
+ 		脱中央集権すると無法者国家が得をするのって、どんな皮肉なんだ
+ [ある日突然あなたが管理しているサーバーにDDoSが来たらどうなるでしょう？知ってるようで何も知らなかったDDoS攻撃と対策 #phpcon.2024 - Speaker Deck https://speakerdeck.com/akase244/aruri-tu-ran-anatagaguan-li-siteirusabaniddosgalai-taradounarudesiyou-zhi-tuteruyoudehe-mozhi-ranakatutaddosgong-ji-todui-ce-number-phpcon-dot-2024]
+ 	DoSをNACLで対処はしてたし、何ならDDoSも対処したことはある...
+ 		:shit:
+ 	AWSならAWS WAFでrate limit掛けられるけど、多層防御するに越したことはない
+ 		CloudFront置くべし、CloudFront VPCオリジンにすべし
+ 		ALB直アクセスを許可するならCognito挟むとかがGood
+ [Function URLsとIPv6リクエストで実現するケチケチLambda活用術 - KAYAC Engineers' Blog https://techblog.kayac.com/cost-intensive-lambda]
+ 	Egress Only Gateway、そう使うのか！頭いい！
+ [作業服姿の初心者風情にだまされた！　AWSでこんなに作業を自動化するなんて - 週刊アスキー https://weekly.ascii.jp/elem/000/004/236/4236625]
+ 	いい話だった
+ [COBOL技術者の減少と、技術の「時限爆弾」に我々はどう向き合うべきか　～「昭和100年」を前に～【フォーカス】 | レバテックラボ（レバテックLAB） https://levtech.jp/media/article/focus/detail_583/]
+ 	COBOLの話じゃなくて本題は2038年問題
+ 	またCOBOLさわれって言われたら断る
+ [TypeScriptの型システムに命を吹き込む: Typia と unplugin-typia https://zenn.dev/ryoppippi/articles/c4775a3a5f3c11]
+ 	zod使ってたはずだからTypiaも横目に見ておくか...
+ [なぜIT企業は“フルリモートから撤退”するのか？　表向きの理由は「社員のコミュニケーション不足」でも、企業の本音はより深刻な「コンプライアンス問題」（デイリー新潮） - Yahoo!ニュース https://news.yahoo.co.jp/articles/d6f8e97a56be0ba67933fdb86b626ecbdbe19b05?page=1]
+ 	ブリリアントジャーク問題と似た話なんだな
+ 		結果が出ていればいい、というわけではなくて、プロセスも大事
+ [RealWorld 業務 Rust #Rust - Qiita https://qiita.com/legokichi/items/4e85ec1e74f4e754fb94]
+ 	いい話の塊だった
+ [AWS RDS Proxy の実戦的な基礎知識 | 外道父の匠 https://blog.father.gedow.net/2024/12/26/aws-rds-proxy-knowledge/]
+  > 昔は厳密に計算していた Thread Buffer ごとに確保されていたメモリ容量は、今は一部は必要容量しか消費しないようになったり
+  最近max_connectionsを増減させてもFreeableMemoryに影響ないのはこの辺か！
+ [Ghostty使っていこうかな - Mitsuyuki.Shiiba https://bufferings.hatenablog.com/entry/2024/12/27/133038]
+ 	通りすがりのShiibaさんにGhosttyのQuick terminalについて教えてもらった
+ 	しばらくGhosttyにしてみよう
+ 		iTerm2を使ってる理由の1/2くらいは [iTerm2のおすすめ設定〜ターミナル作業を効率化する〜 #初心者 - Qiita https://qiita.com/ruwatana/items/8d9c174250061721ad11] これだったから
+ 			globalにホットキーAlt + SpaceでTerminalを呼びたい
+ 	[Ghosttyを使う - Don't Repeat Yourself https://blog-dry.com/entry/2024/12/27/162410]
+ 		こちらも参考にさせてもらった
+ 		opacity、反映できないんだけどな...
+ [プロジェクトS: Scala 3で #ISUCON 14に出て優勝せよ (点数: 0点) - Lambdaカクテル https://blog.3qe.us/entry/2024/12/09/033007]
+ 	Scala愛が溢れている
+ 	Scalaは勉強会をしてたからちょっとだけ触ったことがある
+ 		型を合わせるだけで精一杯だったなぁ...
+ [自分がwebシステム作るときに考慮してることリスト https://zenn.dev/uyas/articles/6942c585fda100]
+ 	大長編
+ [systemdのトラブルあるあるネタ - mrwk update https://mrwk.hateblo.jp/entry/2024/12/28/101402]
+ 	そのうち役に立ちそう
+
+読んだ本
+ [物流センターのしくみ 船井総研ロジ(著/文) - 同文舘出版 | 版元ドットコム https://www.hanmoto.com/bd/isbn/9784495541538]
+ 	物流関係の本を読むブーム、ほんのり継続中
+
+書いた
+　
+
+その他
+ 副業先の上長と1on1でしてた話
+ 	開発者体験はこの10年で大きく前進したけど、利用者体験はそれほど変わらないのでは？
+ 	パッとものを作ってさっと出したいネタのとき、やらなければいけないことが多すぎる
+	悲しいことがあったので、でかいディスプレイを買った
+		経費にする
+	過去の事例を覚えていない
+		blogに書いたり社内ドキュメントに書いたりして外部記憶化し、是正対応を行うことで忘れて良い状態まで持っていくようにしているので、大体のことは忘れている
+			印象に残っているものもあるが、輪郭は大分ぼやけている
+
+#週報

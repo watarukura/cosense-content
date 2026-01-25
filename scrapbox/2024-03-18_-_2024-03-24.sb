@@ -1,0 +1,33 @@
+2024-03-18 - 2024-03-24
+読んだ記事
+ [MySQL(InnoDB)のSQLパフォーマンスチューニングのエッセンス https://zenn.dev/team_soda/articles/mysql-innodb-sql-perfomance-tuning-essentials]
+ [Markdown を拡張する MDX はドキュメント作成の新たな可能性？ https://zenn.dev/spring_raining/articles/3eb62ff93df1eb]
+ [cloudflare-workers で動く claude3 の discord-bot を作ってみた https://zenn.dev/mizchi/articles/discord-bot-cloudflare]
+ [【OpenTelemetry】オブザーバビリティバックエンド8種食べ比べ https://zenn.dev/sumiren/articles/dfe5219a272cd3]
+ 	Otel、そろそろ自分でつかってみないとなぁ
+ [“LLM for SRE“の世界探索 - ゆううきブログ https://blog.yuuk.io/entry/2024/the-world-of-llm4sre]
+ 	Slackチャンネルの要約をLLMに、という話は前からあるし、インシデント用のSlackチャンネルを作る運用も普通
+ 		だけど、SREとしてLLMを使う、っていうのは、予想はできていてももうちょっと遠い話だと思っていた
+ [Deep Dive 大規模システムアーキテクチャ／開発組織エンジニアリング / Deep Dive Large-Scale System Architecture, Development Organization Engineering - Speaker Deck https://speakerdeck.com/nrslib/deep-dive-large-scale-system-architecture-development-organization-engineering]
+ [Terraform連載2024 テストとモックを使ってみる | フューチャー技術ブログ https://future-architect.github.io/articles/20240321a/]
+ 	いまだにterraform test使ったことない
+ 	moduleのexamples書くときに使ってみるか...
+ [miseを使って複数のPHPバージョンをインストールする  #PHP - Qiita https://qiita.com/yuki777/items/8c71f4535e696a2434b3]
+ 	miseチャレンジ中
+ 	asdfとほぼコンパチなので特に迷わない
+ 	PHPのinstallが早くなったりはしなそう
+ [Deep Dive 大規模システムアーキテクチャ／開発組織エンジニアリング / Deep Dive Large-Scale System Architecture, Development Organization Engineering - Speaker Deck https://speakerdeck.com/nrslib/deep-dive-large-scale-system-architecture-development-organization-engineering]
+ 	キューとストリームの使い分けのとこが初見
+ 		キューにコマンド、ストリームにデータ
+ [Redisよ安らかに眠れ: Garantia Dataが引き起こしたオープンソースの歴史上最大の強盗とは – Momento https://jp.gomomento.com/blog/rip-redis-how-garantia-data-pulled-off-the-biggest-heist-in-open-source-history/]
+ 	redisよお前もか、って話かと思ったら、もっと生臭かった
+ [大規模なアジャイル開発の現場と技術負債 / Technical Debt - Speaker Deck https://speakerdeck.com/yoshiitaka/technical-debt]
+ [「『50%の時間を技術的負債返済に』はぜんぜん駄目だった」　カミナシ社・原トリ氏が語る、試行錯誤の過程- ログミーTech https://logmi.jp/tech/articles/330323]
+ 	あー
+ 	専任じゃないと駄目なんだな、という気持ち
+
+読んだ本
+ [Software Design 2024年4月号 https://gihyo.jp/magazine/SD/archive/2024/202404]
+ [イラスト図解式 この一冊で全部わかるWeb制作と運用の基本 https://www.sbcr.jp/product/4815609559/]
+
+#週報

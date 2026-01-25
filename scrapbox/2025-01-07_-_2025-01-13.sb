@@ -1,0 +1,72 @@
+2025-01-07 - 2025-01-13
+読んだ記事
+ [米国でスタートアップの要職をやってたけどレイオフされてしまった話｜井上恭輔（きょろ） https://note.com/kyoro353/n/na0571fff61d9]
+ 	つらい話だった
+ 		身につまされる
+ [PublickeyのIT業界予想2025。AIはプロンプトからエージェントへ、ソブリンクラウドに注目、RDBはスケーラブルが基本になるなど － Publickey https://www.publickey1.jp/blog/25/publickeyit2025airdb.html]
+ 	スケーラブルなRDB、なー
+ 	Writerのスケーリングを自前でやる難しいから、マネージド・サービスとして提供されるのは嬉しい
+ [なぜスプリントレトロスペクティブでKPTをお勧めしないのか | Ryuzee.com https://www.ryuzee.com/contents/blog/14597]
+ 	なるほどなぁ...
+ 		確かに、毎週KPTをやるのは辛かった
+ 	[スプリントレトロスペクティブ Deep Dive | Ryuzee.com https://slide.meguro.ryuzee.com/slides/123]
+ 		全体はこっち
+ 		「集中」か...なるほどなぁ...(2回目)
+ [AIエージェントを使って10倍早く工場OTデータシミュレータを開発してしまった記録と旧来型開発ビジネスの終焉｜天辰健一 https://note.com/amatatsuk/n/n88ba32723a3d?sub_rt=share_pw]
+ 	業務にもエンジニアリングにも十分に詳しい人が1人いればこれができるわけだなー
+ 		どっち側から寄せていくか、っていう話でもある
+ [Swiftコンパイラ開発入門 https://zenn.dev/omochimetaru/articles/8a7f35c5e23a24]
+ 	Swift、C++で書いてあるのね
+ 		一部はSwift
+ [Rustプロジェクトのビルド高速化に関するベストプラクティス（ローカル環境編） https://zenn.dev/fairydevices/articles/59cd718341da58]
+ 	moldは使ってたけど、sccacheは使ったことない
+ 	cargo chefも面白そう
+ [人生の谷底にいる氷河期世代 幸福度をあげるための処方箋とは｜村上 臣（電脳コラムニスト） https://comemo.nikkei.com/n/n4eff253104d9]
+ 	凹んでいるときに読んだので染みた
+ [「State of HTML 2024」でキャッチアップ。HTMLの最新トレンドと注目機能 | レバテックラボ（レバテックLAB） https://levtech.jp/media/article/column/detail_587/]
+ 	HTML、まだ変更されてるのよね当たり前だけど
+ [Radar Trends to Watch: January 2025 – O’Reilly https://www.oreilly.com/radar/radar-trends-to-watch-january-2025/]
+ 	AIが多い
+ [PHPStan 2.1: PHP 8.4のプロパティフックなどのサポート！ - 超PHPerになろう https://www.phper.ninja/entry/2025/01/07/020453]
+ 	PHP8.4の機能をPHPStan経由で知る
+ [眠っていたAnsibleを叩き起こす! Ansibleバージョンアップ作業まとめ - RAKUS Developers Blog | ラクス エンジニアブログ https://tech-blog.rakus.co.jp/entry/20250108/ansible]
+ 	Ansible-Lintにバージョンアップを任せられるなら強いなー
+ [Vim正規表現の\zsと\zeが便利って話 https://yasunori0418-blog.pages.dev/p/vim_regex_are_useful/]
+ 	Vim正規表現！そういうのもあるのか
+ [AutomatticがWordPressへのコントリビューションを減らして自社製品に注力すると宣言 – Capital P – WordPressメディア https://capitalp.jp/2025/01/10/automattic-declines-wordpress-contribution/]
+ 	WordPressのないAutomattic社に魅力があるならそれでもいいだろうけど...
+ [Ktor × Exposed × Koin × kotlin-resultを用いたDDDを意識したアプリケーションの実装 - Don't Repeat Yourself https://blog-dry.com/entry/2025/01/06/235337]
+ 	Kotlin全く触ったことないけど、関数型ドメインモデリングの話が出てたので
+ 	Rust的なマルチパラダイム言語の印象 > Kotlin
+
+読んだ本
+　[実装で学ぶフルスタックWeb開発 エンジニアの視野と知識を広げる「一気通貫」型ハンズオン 電子書籍｜翔泳社の本 https://www.shoeisha.co.jp/book/detail/9784798179834]
+　	主にfrontendのことが知りたい
+　		Next.jsわからん
+　			API Routesがあるのになんでbackendで別にAPIサーバ立てるんだ？
+　				backendとの分業のため？
+　				API Routesのためにサーバ立てたくないから？
+　					frontend側ではインフラの面倒みたくない的なやつ？
+　					でもBFFはfrontend責務だったりするよね
+　		TypeScriptわからん
+　		[AWS Amplify での Next.js API routes | Amazon Web Services ブログ https://aws.amazon.com/jp/blogs/news/next-js-api-routes-with-aws-amplify/]
+　			Amplifyが隠蔽してるサーバ(Lambda@Edge？)部分がおっかないので、どこで動かすかはちゃんと考えたい
+　[2025年2月特大号 | 日経サイエンス https://www.nikkei-science.com/page/magazine/202502.html]
+　	特集：科学者に迫る人工知能 が読みたくて買った
+　	論文を書くAIか...すげー時代だなぁ
+
+書いた
+　[watarukura/fullstack-web-dev-study https://github.com/watarukura/fullstack-web-dev-study]
+　	あまりにもfrontendわからないのでNext.jsの勉強がてら写経中
+　	Django部分はNode.jsベースのなにかで置き換えたい
+　		Next.js
+　		Hono
+
+その他
+ 今年買ったカレンダーが去年までと違って日曜始まりになっててちょっと混乱した
+ 実家に帰ってきた
+ 	雪遊びをした
+
+#週報
+<[2024-12-31 - 2025-01-06]
+[2025-01-14 - 2025-01-20]>

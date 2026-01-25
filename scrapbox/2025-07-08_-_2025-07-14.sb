@@ -1,0 +1,40 @@
+2025-07-08 - 2025-07-14
+読んだ記事
+ [AI時代のソフトウェア開発を考える（2025/07版） / Agentic Software Engineering Findy 2025-07 Edition - Speaker Deck https://speakerdeck.com/twada/agentic-software-engineering-findy-2025-07-edition]
+ 	Agentic Codingにより、未熟なチームにでかいコードベースが急にやってくるようになった
+ 		チームが早急に技術的に成熟しないといけない...
+ [Kindle で購入済み本の一覧を CSV / JSON でダウンロードするブラウザ拡張を作りました！ #Chrome - Qiita https://qiita.com/YujiSoftware/items/8313687e64b33e9e546e]
+ 	これはいいな
+ 	前回からの差分をダウンロードできると嬉しい
+ https://github.com/rejot-dev/semcheck
+ 	ドキュメントと実装の乖離をチェックできないかなーと考えている
+ 		コードと実装が近い方がいいのは間違いないので、PHPDocとかがいいのかなーと思っている
+ 		書ききれない分はPHPDocにリンク先のURLを書く
+ 	semcheckは参考にできそう
+ [claude codeにNG Word集を設定すればキレなくてすむのでそのやり方 https://zenn.dev/sesere/articles/e3d5695e0a7d14]
+ 	やってほしくないことをhookでチェックするのか
+ [職場のプロジェクトに必ず配置しちゃうMakefileの話 https://zenn.dev/loglass/articles/0016-make-makefile]
+ 	タスクランナーどうしよう問題とMakefile / シェルスクリプトどうしよう問題が相乗効果で一言物申したくなるんだよな...
+ 	compose.ymlが置いてあって`docker compose up`するために`make up`が定義されてるとうーん...てなるのはわかるし、一つのrepoだけの話でもないんだよな
+ 		チームで合意を取る必要がある
+ [Passkey への道 #0: Intro | blog.jxck.io https://blog.jxck.io/entries/2025-07-07/load-to-passkey-0.html]
+ 	Passkey、広まってほしい
+ [pg_duckdbとDuckLakeがもたらすOLAP統合の未来 https://zenn.dev/nttdata_tech/articles/tzkoba-pgduckdb-ducklake-202506]
+ 	おもしろ
+ 	OLAPとOLTPの統合にこんなパターンが生まれるとはなー
+ 		小規模組織ではかなり使えそう
+
+読んだ本
+ 
+
+書いた
+ 
+
+その他
+ [A New Chapter as a Community-Led Project · getredash/redash · Discussion #5962 https://github.com/getredash/redash/discussions/5962]
+ 	redash、またプロジェクトが死んでしまった...
+ 		悲しい
+ 		ユーザが簡単にSQLを書けて、APIでアクセスできるBIツール、今は何があるのかなー
+#週報
+<[2025-07-01 - 2025-07-07]
+[2025-07-15 - 2025-07-21]>

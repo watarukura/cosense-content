@@ -1,0 +1,58 @@
+2024-10-15 - 2024-10-21
+読んだ記事
+ [DuckDB-Wasm + DuckDB-Spatial = Webブラウザ上で完結する地理空間情報分析 https://zenn.dev/yuiseki/articles/d89aaba0eb80c6]
+ 	最近、一部界隈で流行りのDuckDB-Wasm
+ 		詳しく手順が書いてあるので触ってみたい
+ [Amazon ECS & AWS Fargate 今昔物語 / past and present stories of Amazon ECS and AWS Fargate - Speaker Deck https://speakerdeck.com/iselegant/past-and-present-stories-of-amazon-ecs-and-aws-fargate]
+ 	k8s以外の選択肢が少ない...
+ 	けど、ECS + FargateがAWSなら良い選択肢だと思う
+ [Terraform x BigQuery の権限周りでやらかしたやつ - そばちゃ https://sobacha22.hatenablog.com/entry/2024/07/11/212355]
+ 	こわー！
+ [エンジニア採用のパラダイムシフト - laiso https://laiso.hatenablog.com/entry/2024/10/14/193546]
+ 	北米、お給料いいからなぁ多分
+ 	英語話者のエンジニアで競争が発生するのか...
+ [中国の研究者が量子コンピューターでRSA暗号の解読手法を構築 - GIGAZINE https://gigazine.net/news/20241015-rsa-encryption-quantum-computer/]
+ 	すぐではないけど、遠くない未来には解読されちゃうのかもなぁ
+ [知られざるNaNの世界 - Speaker Deck https://speakerdeck.com/hole/nan-and-inf]
+ 	おもしろ
+ [Amazon、初のカラーKindle　米国では280ドルで10月30日発売へ - ITmedia NEWS https://www.itmedia.co.jp/news/articles/2410/17/news107.html]
+ 	7インチかー
+ 	10インチくらいで4万円くらいならほしい
+ [WordPressがWP Engine保有の超有名プラグイン「Advanced Custom Fields」を勝手に「フォーク」、開発元はプラグインが「同意なしに持ち去られた」と主張 - GIGAZINE https://gigazine.net/news/20241015-wordpress-acf-plugin-fork/]
+ 	そろそろ脱WordPressを考えないと駄目かな...
+ [XFSの2038年問題にオンラインでも勝利したい - Gentoo metalog https://gentoo.hatenablog.com/entry/2024/10/16/173710]
+ 	XFS v5以降なら大丈夫そう
+ 		v4以前、どころかXFSじゃないときもあるよなぁ...
+ [Google Cloudでのクラウド破産をAIが警告、抑止。「Cost Anomaly Detection」パブリックプレビュー － Publickey https://www.publickey1.jp/blog/24/google_cloudaicost_anomaly_detection.html]
+ 	GCPでもコスト異常検知できるようになった
+ [ブックオフ調査報告書に見る店舗不正の全部盛り｜てりたま｜元大手監査法人パートナー｜会計士の新しい生き方を見つける https://note.com/teritamadozo/n/n6803bdffed8d]
+ 	内部監査で発見されてるもんなー
+ [DuckDB で JSON Lines 形式のログを精査する https://zenn.dev/shiguredo/articles/duckdb-jsonlines-log]
+ 	zst圧縮したjsonlをS3に置いてduckdbでクエリ...いいなぁ...
+ 	CWLを不要にしたい
+ 		ログからアラート上げるところをどうにかできれば...
+ [エディタ内でテスト結果が表示される開発体験を、エディタに依存せず実現するツールを作った https://zenn.dev/kbwok/articles/588cb8584c99b2]
+ 	LSPに更に情報を追加する、みたいな使い方、おもしろいな
+ [医療機関やMicrosoftなどをDDoS攻撃したスーダンの兄弟をDoJが起訴 - ITmedia NEWS https://www.itmedia.co.jp/news/articles/2410/17/news161.html]
+ 	スーダンからDDoSの指示を投げてたのか...
+ [アジャイル型開発における未完成の責任　東京地判令3.11.25（平30ワ25117） - IT・システム判例メモ https://itlaw.hatenablog.com/entry/2024/10/20/141111]
+ 	真っ当な判決で良い判例になったのでは
+ 		まぁ、反訴の分は持ち出しになっちゃうから赤字だろうけど...
+ [PostgreSQL で私たちが最も嫌う部分 // ブログ // Andy Pavlo - カーネギーメロン大学 https://www.cs.cmu.edu/~pavlo/blog/2023/04/the-part-of-postgresql-we-hate-the-most.html]
+ 	ほえー
+ [75 倍高速化: Ion コンパイラ バックエンドの最適化 | SpiderMonkey JavaScript/WebAssembly エンジン https://spidermonkey.dev/blog/2024/10/16/75x-faster-optimizing-the-ion-compiler-backend.html]
+ 	リンクリストをベクターに書き換えたら20倍高速化した
+ 		データ構造でこんなに変わるのかー
+
+読んだ本
+ 
+
+書いた
+ 
+
+その他
+ 咳が続き、よく眠れないので医者へ
+ 	喘息とかマイコプラズマとかを疑ったけど、どうやら風邪らしい
+ 	もうちょい早く医者に行け、と嫁さんに怒られた
+
+#週報
