@@ -9,8 +9,8 @@ SQL直書きもできる
 
 - > ModuleNotFoundError: No module named 'MySQLdb'
 - [SQLAlchemy create_engine で No module named 'MySQLdb' エラー](https://qiita.com/xfan/items/f2c88aeb0d3945ed4775)
-    - mysqlclient 入れて、 [PyMySQL](PyMySQL) 入れたら動いた
-    - `pipenv install mysqlclient pymysql`
+        - mysqlclient 入れて、 [PyMySQL](PyMySQL) 入れたら動いた
+        - `pipenv install mysqlclient pymysql`
 
 [Flask-SQLAlchemy-Quickstart](http://flask-sqlalchemy.pocoo.org/2.3/quickstart/)
 ```user.py

@@ -1,9 +1,9 @@
 # OpenBD書影
 OpenBDから書影を取ってきてscrapboxページを作るようにした
 
-  - 残念ながら書影が登録されていないコミック多数
-    - 気持ちよく使えるのはありがたいが
-  - ISBNから公式サイトを引いてそこから画像を取得できればよいのだが・・・
+    - 残念ながら書影が登録されていないコミック多数
+        - 気持ちよく使えるのはありがたいが
+    - ISBNから公式サイトを引いてそこから画像を取得できればよいのだが・・・
 ```amazon_to_scrapbox.js
 javascript: (function() {
     const title = document.getElementById("ebooksProductTitle").innerText.trim();
@@ -44,7 +44,7 @@ javascript: (function() {
 ```
 2023/12/30 追記
 
-  - [「openBD API（バージョン1）」の終了によるカーリルへの影響について](https://blog.calil.jp/2023/07/openbd-v1-end.html)
-    - 書影の公開利用、いい話だと思ってたんだけどなぁ
-    - 削除
+    - [「openBD API（バージョン1）」の終了によるカーリルへの影響について](https://blog.calil.jp/2023/07/openbd-v1-end.html)
+        - 書影の公開利用、いい話だと思ってたんだけどなぁ
+        - 削除
 [https://gyazo.com/09e4e0d23eceaac12af117e8eb7a28d0](https://gyazo.com/09e4e0d23eceaac12af117e8eb7a28d0)

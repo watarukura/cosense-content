@@ -8,7 +8,7 @@
 いきなりハマる
 
 - `pipenv install responder --pre` で `ModuleNotFoundError: No module named 'pkg_resources'` が出力される
-  - [https://rutei.hatenablog.com/entry/2018/12/02/020358](https://rutei.hatenablog.com/entry/2018/12/02/020358)
+    - [https://rutei.hatenablog.com/entry/2018/12/02/020358](https://rutei.hatenablog.com/entry/2018/12/02/020358)
 ```Pipfile
 [packages]
 responder = "*"
@@ -17,7 +17,7 @@ starlette = "==0.8"
 ```
 入門した
 
-  - [https://github.com/watarukura/responder_study](https://github.com/watarukura/responder_study)
+    - [https://github.com/watarukura/responder_study](https://github.com/watarukura/responder_study)
 
 [SQLAlchemy](SQLAlchemy)使うか[PyMySQL](PyMySQL)使うか悩む
 
@@ -26,7 +26,7 @@ starlette = "==0.8"
 
 [Vue.js + Flask](Vue.js + Flask) で検討した構成も取れる
 
-  - SPA対応もできる
+    - SPA対応もできる
 
 OpenAPI v3にも対応
 

@@ -6,6 +6,6 @@
 
 いい記事見つけた
 
-  - [Rustの Arc を読む(1): Arc/Rcの基本 - Qiita](https://qiita.com/qnighy/items/4bbbb20e71cf4ae527b9)
+    - [Rustの Arc を読む(1): Arc/Rcの基本 - Qiita](https://qiita.com/qnighy/items/4bbbb20e71cf4ae527b9)
 
 [#Rust](Rust)

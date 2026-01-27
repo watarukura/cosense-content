@@ -18,25 +18,25 @@ SREのクラシマです。
 リポジトリに入れているツール
 
 - [GitHub - aquaproj/aqua: Declarative CLI Version manager written in Go. Support Lazy Install, Registry, and continuous update with Renovate. CLI version is switched seamlessly](https://github.com/aquaproj/aqua)
-  - 開発周りのツールは、基本的にはaquaでinstallします
+- 開発周りのツールは、基本的にはaquaでinstallします
 - [GitHub - evilmartians/lefthook: Fast and powerful Git hooks manager for any type of projects.](https://github.com/evilmartians/lefthook)
-  - Git hookの管理ツールです
-  - pre-commit hookでローカルでlint / formatを掛けます
-  - 初回だけlefthook install が必要です
+- Git hookの管理ツールです
+- pre-commit hookでローカルでlint / formatを掛けます
+- 初回だけlefthook install が必要です
 
 共通で入れているlinterは↓こんな感じ
 
 - [GitHub - rhysd/actionlint: :octocat: Static checker for GitHub Actions workflow files](https://github.com/rhysd/actionlint)
-  - GitHub Actionsのlinter
-  - GitHub Actionsのworkflow、早くしようとすると壊れがちなので大事
+- GitHub Actionsのlinter
+- GitHub Actionsのworkflow、早くしようとすると壊れがちなので大事
 - [GitHub - gitleaks/gitleaks: Protect and discover secrets using Gitleaks 🔑](https://github.com/gitleaks/gitleaks)
-  - credentials情報をリポジトリ内に置かないようにする
+- credentials情報をリポジトリ内に置かないようにする
 - [GitHub - crate-ci/typos: Source code spell checker](https://github.com/crate-ci/typos)
-  - typoチェック
+- typoチェック
 - [GitHub - mvdan/sh: A shell parser, formatter, and interpreter with bash support; includes shfmt](https://github.com/mvdan/sh)
-  - シェルスクリプトのformater
+- シェルスクリプトのformater
 - [GitHub - koalaman/shellcheck: ShellCheck, a static analysis tool for shell scripts](https://github.com/koalaman/shellcheck)
-  - シェルスクリプトのlinter
+- シェルスクリプトのlinter
 
 aqua.ymlのサンプルは↓こんな感じです。
 ```aqua.yaml
