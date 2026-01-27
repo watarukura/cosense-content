@@ -14,7 +14,7 @@ cosense(https://scrapbox.io/watarukura) のコンテンツバックアップ用�
 # 全件取得→markdown変換
 ./scripts/download_cosense.bash
 # 期間指定
-./scripts/download_cosense.bash 2021-01-01
+./scripts/download_cosense.bash --since 2021-01-01
 # markdown変換のみ
 ./scripts/convert_markdown.bash --skip-download
 ```
