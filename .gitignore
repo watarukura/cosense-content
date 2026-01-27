@@ -5,3 +5,5 @@ site/
 .venv/
 .idea/
 .cache/
+*.pyc
+.coverage
