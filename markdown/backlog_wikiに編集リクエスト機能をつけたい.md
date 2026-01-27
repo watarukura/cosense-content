@@ -4,13 +4,13 @@ backlog wikiの更新差分見たりプルリク送ったりして、読んだ�
 chrome-extension
 
 - テキスト編集時に編集リクエストボタン表示
-  - 押すとwiki idと更新中のテキストを POST
+- 押すとwiki idと更新中のテキストを POST
 
 API gateway + Lambda
 
 - リクエストを受け取る
 - git pull -> git checkout -b -> リクエストのテキストを適用してgit add -> git push
-  - gitpythonを使う
+- gitpythonを使う
 - backlog APIを使ってプルリエストを作成
 
 backlog git
@@ -39,4 +39,4 @@ API gateway + Lambda 2
 課題
 
 - wiki側で削除した場合にgitに連動できない
-  - 一回tmpディレクトリに落としてディレクトリ名変更でいけた
+- 一回tmpディレクトリに落としてディレクトリ名変更でいけた

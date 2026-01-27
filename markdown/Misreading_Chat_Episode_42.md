@@ -3,6 +3,6 @@
 
 FIrecrackerって何？
 
-  - kvm + QEMU じゃなくて kvm + Firecracker
+    - kvm + QEMU じゃなくて kvm + Firecracker
 
 [#Podcast](Podcast)

@@ -92,23 +92,23 @@ order by
 その他の小さなコスト削減で言うと、以下のような施策を実施しました。
 
 - QA環境のAWS WAFの停止
-  - 本番環境・ステージング環境では稼働させたままにし、開発中のフィーチャーごとに構築するQA環境では停止した
+- 本番環境・ステージング環境では稼働させたままにし、開発中のフィーチャーごとに構築するQA環境では停止した
 - ステージング環境からDatadogへのMetrics Stream、およびcontainer insightsの停止
 - AWS ConfigからEC2:NetworkInterfaceの記録の停止
-  - [https://aws.amazon.com/jp/blogs/news/announcing-aws-config-now-supports-recording-exclusions-by-resource-type/](https://aws.amazon.com/jp/blogs/news/announcing-aws-config-now-supports-recording-exclusions-by-resource-type/) を参考に、管理アカウントからCloudFormationを実行
+- [https://aws.amazon.com/jp/blogs/news/announcing-aws-config-now-supports-recording-exclusions-by-resource-type/](https://aws.amazon.com/jp/blogs/news/announcing-aws-config-now-supports-recording-exclusions-by-resource-type/) を参考に、管理アカウントからCloudFormationを実行
 - 開発用ALBの集約
-  - 複数のステージング環境で共用するALBを一つつくり、ホスト名で振り分けをしています
-  - [https://tech.torana.co.jp/entry/2023/09/28/123000](https://tech.torana.co.jp/entry/2023/09/28/123000) などで使用しています
+- 複数のステージング環境で共用するALBを一つつくり、ホスト名で振り分けをしています
+- [https://tech.torana.co.jp/entry/2023/09/28/123000](https://tech.torana.co.jp/entry/2023/09/28/123000) などで使用しています
 
 
 また、re:invent 2023の発表より、以下を実施中です。
 
 - Cloudwatch Logsのlog classをINFREQUENT_ACCESSに変更
-  - terraform-provider-awsにもすでに来ているので、Lambda等のログはこちらに変更
-  - [https://github.com/hashicorp/terraform-provider-aws/issues/34570](https://github.com/hashicorp/terraform-provider-aws/issues/34570)
+- terraform-provider-awsにもすでに来ているので、Lambda等のログはこちらに変更
+- [https://github.com/hashicorp/terraform-provider-aws/issues/34570](https://github.com/hashicorp/terraform-provider-aws/issues/34570)
 - AWS Configの定期記録
-  - こっちはterraform待ちで未着手
-  - [https://github.com/hashicorp/terraform-provider-aws/issues/34577](https://github.com/hashicorp/terraform-provider-aws/issues/34577)
+- こっちはterraform待ちで未着手
+- [https://github.com/hashicorp/terraform-provider-aws/issues/34577](https://github.com/hashicorp/terraform-provider-aws/issues/34577)
 
 
 ### まとめ

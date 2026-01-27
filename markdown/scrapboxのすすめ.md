@@ -19,23 +19,23 @@ Markdownって、非エンジニアには書きにくいんじゃないか疑惑
 社内ドキュメント管理辛い問題
 
 - [/shokai/階層整理型WiKiはスケールしない](/shokai/階層整理型WiKiはスケールしない)
-  - >今後人間を増やさず、新製品を未来永劫作らない会社は階層[ドキュメントツール](ドキュメントツール)で文書共有していても大丈夫
+    - >今後人間を増やさず、新製品を未来永劫作らない会社は階層[ドキュメントツール](ドキュメントツール)で文書共有していても大丈夫
 - [都市はツリーではない](都市はツリーではない) クリストファー・アレグザンダー
-  - 都市がツリーではないなら、人間の思考もツリーじゃないのでは？[watarukura.icon](watarukura.icon)
+    - 都市がツリーではないなら、人間の思考もツリーじゃないのでは？[watarukura.icon](watarukura.icon)
 
 scrapboxにすると何がいいの？
 
 - 階層型ではなくネットワーク型のドキュメントツール
 - `[]` で囲むだけでリンクが作れる
 - 構造化はインデントするだけ
-  - タブでもいいし(全角|半角)ブランクでもいい
+    - タブでもいいし(全角|半角)ブランクでもいい
 
 結論
 
 - Googleアカウントあればすぐ使えるから使おうscrapbox！
 - 非公式だけどiOSアプリもあるよ
-  - Porter for Scrapbox https://itunes.apple.com/jp/app/porter-for-scrapbox/id1305805708?mt=8
-  - スマホからmarkdown書けないでしょ？
+- Porter for Scrapbox https://itunes.apple.com/jp/app/porter-for-scrapbox/id1305805708?mt=8
+- スマホからmarkdown書けないでしょ？
 
 one more things...
 

@@ -38,7 +38,7 @@ javascript:(
 
 ```
 
-  - コンパイル後
+    - コンパイル後
 ```copy.js
 javascript:
 (function() {
@@ -60,9 +60,9 @@ javascript:
 参考
 [JavaScriptでクリップボードに文字をコピーする(ブラウザ)](https://qiita.com/simiraaaa/items/2e7478d72f365aa48356)
 
-  - 任意の文字列をクリップボードに突っ込むために一度DOM要素を作ってやって、それをselect()してdocument.execCommand("copy")する、という流れのようだ
-    - 今回はtextboxの中の改行あり文字列をコピーしたりしないので不要なコードになってしまうが、どこが不要かわからないのでそのまま使わせてもらった
-    - 修正それほどなしでscrapbox用にも改変できる
+    - 任意の文字列をクリップボードに突っ込むために一度DOM要素を作ってやって、それをselect()してdocument.execCommand("copy")する、という流れのようだ
+        - 今回はtextboxの中の改行あり文字列をコピーしたりしないので不要なコードになってしまうが、どこが不要かわからないのでそのまま使わせてもらった
+        - 修正それほどなしでscrapbox用にも改変できる
 [Bookmarkletを作ろう(準備編）](https://qiita.com/kanaxx/items/63debe502aacd73c3cb8)
 
 - ClosureCompilerでコンパイルして最適化されたコードが出てくるのが面白

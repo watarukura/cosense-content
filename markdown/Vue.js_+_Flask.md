@@ -7,11 +7,11 @@ Python手習いのため、FlaskでWebAPIサーバを書く
 フロントエンド
 
 - [Vue.js](Vue.js)
-  - [Nuxt.js](Nuxt.js) ・・・使用するか悩む
+    - [Nuxt.js](Nuxt.js) ・・・使用するか悩む
 
 バックエンド
 
-  - [Flask](Flask)
+    - [Flask](Flask)
 
 データストア
 
@@ -26,4 +26,4 @@ Python手習いのため、FlaskでWebAPIサーバを書く
 ハマりメモ
 
 - python用にgenerateされた.gitignoreで`build/`が無視されるため、webpack用のbuildコマンドが通らなかった
-  - .gitignoreから`build/`を削除して解決
+    - .gitignoreから`build/`を削除して解決

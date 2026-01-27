@@ -36,18 +36,20 @@ def scrapbox_to_md(sbfile):
     # Gyazo画像URL
     gyazo_link = re.compile(r"https?://(?:gyazo\.)[^\s\]]+")
 
+    indent_unit = 4
+
     def indent_level(indent):
         width = 0
         for ch in indent:
             if ch == "\t":
-                width += 2
+                width += indent_unit
             elif ch == "\u3000":
-                width += 2
+                width += indent_unit
             else:
                 width += 1
         if width <= 1:
             return 0
-        return width // 2
+        return width // indent_unit
 
     def strip_url_options(url):
         last_slash = url.rfind("/")
@@ -163,7 +165,7 @@ def scrapbox_to_md(sbfile):
 
         if result_indent := indent_re.match(line):
             indent, content = result_indent.group(1), result_indent.group(2)
-            prefix = "  " * indent_level(indent)
+            prefix = " " * indent_unit * indent_level(indent)
             if result := gyazo_link.fullmatch(content):
                 item = f"![]({strip_url_options(result.group(0))})"
             elif result := url_re.fullmatch(content):

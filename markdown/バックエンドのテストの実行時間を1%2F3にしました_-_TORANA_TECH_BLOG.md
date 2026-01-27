@@ -71,11 +71,11 @@ Yeah!
 
 - `phpunit 'filename1' 'filename2'`で動くのでは？ -> 最初の1ファイルしか実行されない
 - `phpunit --filter 'filename1|filename2|...'`で動くのでは？ -> 何度か動かしたものの、`no test found`で落ちる
-  - --filterにはnamespace + class名を書きましょう
-  - ファイル名から↑に変換できなくもない？と粘ったものの、phpunit.xmlを書き換えるほうが簡単でした・・・
+- --filterにはnamespace + class名を書きましょう
+- ファイル名から↑に変換できなくもない？と粘ったものの、phpunit.xmlを書き換えるほうが簡単でした・・・
 - ローカル環境ではdocker内でphpunitを実行するためにラッパースクリプトを使用しており、phpunitへ引き渡す引数について中身が問題なのか形式が問題なのかの切り分けが大変でした・・・
-  - `set -xv` はBashのデバッグ用途でつけています
-  - `$test_target`が展開して表示されるので、実行予定のテストの一覧ができて便利です
+- `set -xv` はBashのデバッグ用途でつけています
+- `$test_target`が展開して表示されるので、実行予定のテストの一覧ができて便利です
 
 
 ### 最後に

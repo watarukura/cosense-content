@@ -5,17 +5,17 @@
 React も TypeScript も styled-components も使ったことない(2019/01/13時点)[watarukura.icon](watarukura.icon)
 そろそろフロントエンド触っておかないと、今後よくわからなくなりそう
 
-  - HTML
-    - 1999年くらいに手書きしてたことはある
-    - 正直form周りはわからん
-  - CSS
-    - あんまり書いたことない
-    - スクレイピングは好きなのでSelectorはわかる
-    - BootStrapを社内用の管理画面で入れてるのは知ってる
-  - JavaScript
-    - ES5はGASで書いてる
-    - ES6-をVanillaで書くのはたまにやる
-    - jQuery？知らない子ですね・・・
+    - HTML
+        - 1999年くらいに手書きしてたことはある
+        - 正直form周りはわからん
+    - CSS
+        - あんまり書いたことない
+        - スクレイピングは好きなのでSelectorはわかる
+        - BootStrapを社内用の管理画面で入れてるのは知ってる
+    - JavaScript
+        - ES5はGASで書いてる
+        - ES6-をVanillaで書くのはたまにやる
+        - jQuery？知らない子ですね・・・
 
 React
 
@@ -37,6 +37,6 @@ styled-components
 
 JavaScriptがそんなにわからない状態でReactとTypeScriptはどっちから勉強すべき？
 
-  - Node.jsの読み書きは機会がありそうなので、TypeScriptからかな
-  - styled-componentsは後でよさそう
+    - Node.jsの読み書きは機会がありそうなので、TypeScriptからかな
+    - styled-componentsは後でよさそう
 
