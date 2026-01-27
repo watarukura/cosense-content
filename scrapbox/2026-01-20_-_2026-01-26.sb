@@ -24,7 +24,10 @@
  		使いたい場面が最近結構ある
  		ブランチの生存期間が長くなってしまうけど、git-wtでいい感じに並行して開発したい
  [Amazon RDS Blue/Green Deployments reduces downtime to under five seconds - AWS https://aws.amazon.com/jp/about-aws/whats-new/2026/01/amazon-rds-blue-green-deployments-reduces-downtime/]
- 	RDS B/G Deploymentes
+ 	RDS B/G Deploymentesが早くなるのは嬉しい
+ 		DBのmigrationにカジュアルに使えるようになってくれるといいな
+ [エンジニアの技術と給料 - megamouthの葬列 https://www.megamouth.info/entry/2026/01/20/225357]
+ 	人の給料を決める立場になりたくないなーと常々思う
 
 読んだ本
  
@@ -37,6 +40,14 @@
 その他
  cosenseのデータも↑みたいにblogとして公開できないかな？
  	githubにcosense-contentみたいなリポジトリ作って、週次でsyncして、markdownに変換して、zensicalでGitHub Pagesにする感じ
+ 	https://watarukura.github.io/cosense-content/  https://github.com/watarukura/cosense-content できた
+ 		週次更新も自動化した
+ 		PRができるので、マージしたら更新
+ 		JetBrains AI assistant経由でCodexを使ってPythonで正規表現とBashのコマンドラインオプションをいっぱい書いてもらった
+ 			人類には読み書きしづらいアレらをAI agentくんたちは小器用に書いてくれてたいへん助かる
+ 		世の中にあふれるsb2mdコマンド群が大体2022年くらいの実装で軒並み動かず、3つくらい試して動いてくれたものをCodexさんに更に追加仕様を投げつけた
+ 		[/help-jp/API] 内部APIがあったが「いつ動かなくなっても知らんよ？」という品であった
+ 			しゃーなし
 
 #週報
 <[2026-01-13 - 2026-01-19]
