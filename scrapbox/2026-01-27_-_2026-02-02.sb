@@ -1,0 +1,80 @@
+2026-01-27 - 2026-02-02
+読んだ記事
+ [IPA、「情報セキュリティ10大脅威2026」を発表～ AI利用によるサイバーリスク初選出 - INTERNET Watch https://internet.watch.impress.co.jp/docs/news/2082250.html]
+ 	まぁ、ランサムウェアだよな
+ 	国家が裏にいるハッカーとか、なんというか電子戦は戦争扱いされてない気がする
+ [2年半かけて作ってきたスタートアップのSRE 〜体制編〜 - Findy Tech Blog https://tech.findy.co.jp/entry/2026/01/30/070000]
+ 	SREチーム、こういう風に作っていきたかった...
+ [リーナス・トーバルズの後任を決める緊急時対応計画をLinuxカーネル開発コミュニティが策定、ファイル名は「コンクラーベ」 - GIGAZINE https://gigazine.net/news/20260129-linux-conclave-linus-torvalds/]
+ 	教皇選挙だ
+ [パスワード不要「マジックリンク認証」に潜む危険　“業者側の不備”でアカウント乗っ取りの恐れも：この頃、セキュリティ界隈で - ITmedia NEWS https://www.itmedia.co.jp/news/articles/2601/28/news043.html]
+ 	まぁ、設計が悪いね
+ [Overview | Junie Documentation https://junie.jetbrains.com/docs/get-started-with-junie.html]
+ 	Junie-cli、使ってみている
+ 	え、英語しか入力できないの...???
+ [LLMの能力の「穴」 - ｼﾞｮｲｼﾞｮｲｼﾞｮｲ https://joisino.hatenablog.com/entry/zeh]
+ 	おもしろ
+ [XMLの失われた芸術 — mmagueta https://marcosmagueta.com/blog/the-lost-art-of-xml/]
+ 	要は、「大半はJSONで良くて、複雑度がある閾値を超える場合はXML」って話なんだと思うのよね
+ 	XMLRPC...う、頭が...
+ [今の時代にマークダウンの書き方を強制すること https://zenn.dev/jackchuka/articles/9a2c7b7c811c22]
+ 	READMEの構成を強制する、とかはできそう
+ 		とはいえ、READMEに何を書くかはチームが決めるべきで、上位組織が強制する、っていうのは違う気もする
+ [Laravelは単なるバックエンドフレームワークではない。急速に進化し続けるLaravelエコシステム。 https://zenn.dev/avosalmon/articles/966101753a9efa]
+ 	Livewire、なぜか流行ってない
+ 	Interia.js、初耳
+ 		利用者が多くて続きそうなら良さそう
+ [AIの見張り番をやめよう - AIチームを指揮するOSS「takt」を公開しました https://zenn.dev/nrs/articles/c6842288a526d7]
+ 	これはいいな
+ 	隣のチームでAI Agentがコーディング規約を忘れる、みたいな話をしてるので紹介しておいた
+ 		精神衛生に良さそう
+ [Claude Codeで「AI部下10人」を作ったら、勝手にバグ直して「違反は切腹」ルールを追加してきて、オレは適当にしゃべるだけになった https://zenn.dev/shio_shoppaize/articles/5fee11d03a11a1]
+ 	おもしろ
+ [Is There a WordPress Replacement in 2026? I Went Looking | Jean Galea https://jeangalea.com/wordpress-replacement/]
+ 	WordPress代替なー
+ 	WordPressをコンテナで動かすのがそもそも大変だし
+ 	マーケティング用途で簡便に使いたい人たちがプラグインを追加したがるけど安全に運用したい側としては断りたい、みたいな対立構造になりがちなので組織で導入するときは慎重にしたほうがいいけど、一人で使う分には好きにしたら良い
+ [プロキシーサーバーの不具合による事象の発生について | 企業・IR | ソフトバンク https://www.softbank.jp/corp/news/press/sbkk/2026/20260127_02/]
+ 	設定ミスってキャッシュが表示されたとかかなー
+ 	こえぇ
+ [AWS Lambda のログ出力先を S3 や Data Firehose とした場合もログ取り込み料金が大きく下がらない理由を調べてみた | DevelopersIO https://dev.classmethod.jp/articles/aws-lambda-logs-s3-firehose-cost/]
+ 	あんまり安くならないのよね
+ 		Lambda自体があんまりログ吐くようにしないし
+ 		Lambdalithとかやってたらわからんけども
+ [AIコーディング時代、Pythonに厳格な型付けは必要？　作者グイド・ヴァンロッサム氏にGitHubが聞いた（＠IT） - Yahoo!ニュース https://news.yahoo.co.jp/articles/36e784efa6932e752f357b0ed0ecded02c29ac7d]
+ 	>ヴァンロッサム氏によると、Pythonは当初、新しいOS向けのユーティリティーを作る中で、「C言語の複雑さ」と「シェルスクリプトの表現力の限界」という現場の不満を解消するために生まれたという。
+ 	PHPと似たような生まれなんだよな
+ 		PHPの方はCで書くCGIへの不満から、だったはず
+ [開発環境現状確認（2026年） https://zenn.dev/shundeveloper/articles/e403a5083148d2]
+ 	[hurl https://github.com/Orange-OpenSource/hurl]、いいなぁ
+ [今、密かに起きている｢Windows離れ｣。“思ったより快適な移住先”とは？ | ギズモード・ジャパン https://www.gizmodo.jp/2026/01/some_windows_users_decide_to_change_linux.html]
+ 	WSL2があればWindowsでも快適に開発できるよ、って話は聞くんだけど、息子のLenovoとかポップアップがポンポンでて使いやすいとはとても思えないんだよな...
+ [Railsのcontrollerは凄いぜ! https://zenn.dev/aileron/articles/0b83fa2e98c4d1]
+ 	Railway Oriented Programmingだ
+ 	Laravelでもtap()はあるっぽい？
+ 		https://www.linkedin.com/pulse/understanding-utilizing-tap-laravel-binu-mathew-5wn7c
+ [ローカルブログという考え方 - Jazzと読書の日々 https://wineroses.hatenablog.com/entry/2023/11/07/104315]
+ 	仕事のメモをどこに置くか、みたいなのを考えていて参考に
+ [Findyの爆速インフラ構築を支えるTerraform活用術 〜汎用モジュール編〜 - Findy Tech Blog https://tech.findy.co.jp/entry/2026/01/26/070000]
+ 	共用するmoduleはterraform test書きたいのよね
+ 		共用しないなら、あんまり書かなくていいと思っている
+ [Go 1.26で go fix が面白くなった | フューチャー技術ブログ https://future-architect.github.io/articles/20260129a/]
+ 	go fix、初耳
+ 
+
+読んだ本
+ 
+
+書いた
+ [ZensicalでGitHub Pages公開する https://zenn.dev/watarukura/articles/20260131-grvtjamwbsojs3v9ksp5lt2ugrkda]
+ 	zenn.devの自動英訳への反応でプラットフォームを使ってるとプラットフォームが作るルールに従わなければいけない、みたいな話があり
+ 		まぁ、それはそうで、便利に使わせてもらっているし、そもそもお金払ってないし
+ 	それはそれとして、なんかあったときにbackupがないのは嫌だな、ということで
+ 		GitHubがなくなったら終わるけども、まぁ、それはね
+
+その他
+ 
+
+#週報
+<[2026-01-20 - 2026-01-26]
+[2026-02-03 - 2026-02-09]>

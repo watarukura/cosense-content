@@ -29,7 +29,7 @@ cronで実行するジョブ群は、以下の要件を満たすためにbashス
 
 ↓ざっくりこんな感じのスクリプトで包んでいました。
 
-code: (shell)
+code: entrypoint.bash
  #/usr/bin/env bash
  timeout=600
  count=0
@@ -45,7 +45,7 @@ code: (shell)
 同時実行制御は、アプリケーションからredisにmutexを置き、存在チェックをしてから後続の処理を動かすようにしています。
 これは、EventBridgeは「最低1回の実行を保証」という動作のため、2回以上の呼び出しに耐える必要があるためです。
 
-code: (php)
+code: mutex.php
      public function exec(): int
      {
          try {
