@@ -1,0 +1,71 @@
+GitHub Issue to Docbase Article workflow
+code:docbase.yaml
+ ---
+ name: Create or update Docbase.io article
+ 
+ on:
+   issues:
+     types: [opened, edited]
+ 
+ concurrency:
+   group: ${{ github.workflow }}-${{ github.ref }}
+   cancel-in-progress: true
+ 
+ env:
+   DOCBASE_TEAM_DOMAIN: hoge
+ 
+ jobs:
+   docbase:
+     runs-on: ubuntu-latest
+     permissions: {}
+     steps:
+       - name: Sync article on Docbase.io
+         timeout-minutes: 5
+         env:
+           TITLE: ${{ github.event.issue.title }}
+           BODY: ${{ github.event.issue.body }}
+           URL: ${{ github.event.issue.url }}
+         if: ${{ contains(github.event.issue.labels.*.name, 'postmortem') }}
+         run: |
+           set -xv
+           url=$(echo ${{ env.URL }} | sed -e 's/api.//' -e 's;/repos;;')
+           body=$(cat <<EOL
+           ${BODY//$'\r'/}
+ 
+           GitHub URL: $url
+           EOL
+           )
+           id=$(curl \
+                  -H "X-DocBaseToken: ${{ secrets.DOCBASE_API_TOKEN }}" \
+                  https://api.docbase.io/teams/${{ env.DOCBASE_TEAM_DOMAIN }}/posts \
+                  --get \
+                  --data-urlencode 'q=body:"'"$url"'"' \
+                  | jq -r .posts[0].id)
+           if [[ $id == "null" ]]; then
+             json=$(jq -r --arg body "$body" \
+                     --arg title "$TITLE" \
+                     -n '{title: $title, body: $body]}')
+             result=$(curl \
+                        -XPOST \
+                        -o tmp.log \
+                        -w '%{json}' \
+                        -H "X-DocBaseToken: ${{ secrets.DOCBASE_API_TOKEN }}" \
+                        -H "Content-Type: application/json" \
+                        -d "$json" \
+                        "https://api.docbase.io/teams/${{ env.DOCBASE_TEAM_DOMAIN }}/posts")
+           else
+             json=$(jq -r --arg body "$body" -n '{body: $body}')
+             result=$(curl \
+                        -XPATCH \
+                        -o tmp.log \
+                        -w '%{json}' \
+                        -H "X-DocBaseToken: ${{ secrets.DOCBASE_API_TOKEN }}" \
+                        -H "Content-Type: application/json" \
+                        -d "$json" \
+                        "https://api.docbase.io/teams/${{ env.DOCBASE_TEAM_DOMAIN }}/posts/$id")
+           fi
+ 
+           if [[ $(echo "$result" | jq -r '.http_code|tostring[:2]') != "20" ]]; then
+             cat tmp.log
+             exit 1
+           fi
