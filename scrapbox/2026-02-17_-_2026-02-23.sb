@@ -1,0 +1,88 @@
+2026-02-17 - 2026-02-23
+読んだ記事
+ [10 years of agile transformation buried in 6 months : r/agile https://www.reddit.com/r/agile/comments/1r0gtw3/10_years_of_agile_transformation_buried_in_6/]
+ 	悲しい話が流れてきた
+ 	10年積み上げたものでも、崩すのに半年あれば十分ってこと
+ 	新しいボードメンバーは、壊してしまった組織文化に対して責任を取らないだろうしな...
+ [また病院がVPN経由でやられたわけだがVPNは悪だね｜ロードバランスすだちくん（仮） https://note.cloudnative.co.jp/n/ndee08b72db63]
+ 	久々にロードバランスすだちくんみた
+ 	ベンダ用の保守用VPNについてはマジでちゃんと口を閉じないと駄目...
+ 		何らかのアクセス制限を受けてくれないベンダだったらそれこそ変えないと駄目だ
+ [クラウドなら5倍の費用がかかるところを「8億円の自前データセンター」を運用することで劇的コストカットに成功した企業の体験談 - GIGAZINE https://gigazine.net/news/20260209-owning-5m-data-center/]
+ 	それはそう、という感じである
+ 	人件費との見合いでしかない
+ [インデックスを張るだけでは足りない。数億件の名刺データを扱うSansanのSQLパフォーマンス改善 | レバテックラボ（レバテックLAB） https://levtech.jp/media/article/interview/detail_798/]
+ 	インデックスで対応できるレコード数を超えたとき、自分の手札では何ができるかな...
+ 	マルチテナントも色々落とし穴がありそう
+	 技術で殴れる腕力があるからこそ業務要件を絞り始めるタイミングが遅くなる、みたいなパラドックスもあるのかもしれないな
+			腕力に自信がないので性能が落ちたところで「これを諦めてください」って相談が増える気がする
+	[生成AIがGoogleテクノロジーの公式ドキュメントを参照できる「Developer Knowledge API & MCP Server」、Googleが発表 － Publickey https://www.publickey1.jp/blog/26/aigoogledeveloper_knowledge_api_mcp_servergoogle.html]
+		GCloudの仕様について自然言語で質問したいことが増えたのでありがたい
+		AWSについては社内のドキュメントbotによく質問をしてるので
+	[AIコーディング時代のレビュー負荷を可視化したい！ —— GASとGitHub APIで「誰がどのくらいレビューしたか」をSlackに通知する仕組み - SmartHR Tech Blog https://tech.smarthr.jp/entry/2026/02/10/162401]
+		もっと雑にガっと取ってきてAI Agentに食わせてレポート作る、みたいなことはできそう
+	[Next.jsはどのようにCSRF対策をしているのか？ - プププなテクブ https://blog.inorinrinrin.com/entry/2026/02/20/183408]
+		当然だけど、CSRFトークンじゃない形で対策してるんだな
+			Server Actionsだけは、か
+	[Amazon EC2が仮想化のネスト（Nested Virtualization）に対応。KVMやHyper-Vを用いた仮想マシンを設定可能に － Publickey https://www.publickey1.jp/blog/26/amazon_ec2nested_virtualizationkvmhyper-v.html]
+		使い所はわからないけど、脱VMWare系のソリューションが考えられなくもない？
+	[非同期設計ガイドライン | フューチャー株式会社 https://future-architect.github.io/arch-guidelines/documents/forAsync/async_guidelines.html]
+		読み応えがある
+		SQS FIFO-QueueとDLQを同時に利用しない、みたいなの、気づかず使っちゃいそうで怖いところだ
+	[Qwen3-Swallow & GPT-OSS-Swallow https://zenn.dev/tokyotech_lm/articles/fa56f10e51fd7d]
+		社内のQwen3の検証では日本語でのやり取りで日本で使われる以外の漢字が出力される、みたいなケースがあってそれの対処に使えないか読んでた
+			結論、読む側の知識不足でわからん...
+	[ライブラリや言語のバージョンを継続的に上げるという営みについて - その手の平は尻もつかめるさ https://moznion.hatenadiary.com/entry/2026/02/21/233904]
+		外部への依存を減らしつつ、バージョンアップは継続する、かな
+		ローカルでしか使わないCLIだから塩漬け、はありうるけど、環境まるごと動態保存、でもなければいつか死ぬ
+	[「AIは雇用や生産性にほとんど影響を与えていない」と数千人の企業幹部が認める、「生産性のパラドックス」の再来か - GIGAZINE https://gigazine.net/news/20260219-ai-productivity-paradox/]
+		>実際、ITテクノロジーの普及は速やかな生産性向上には結びつきませんでしたが、1990年代半ばから2000年代初頭にかけて生産性の急上昇をもたらし、1995～2005年には1.5％の生産性向上がみられました。
+  そんなもんなんだなー
+ [AWSが推進するAI駆動開発ライフサイクル入門 〜 AI駆動開発時代に必要な人材とは 〜/ introduction_to_aidlc_and_skills - Speaker Deck https://speakerdeck.com/fatsushi/introduction-to-aidlc-and-skills]
+ 	エンジニアだけのチームじゃなくて、企画側まで含めた小さなチームで寄り集まって反復的に構築すること、がAI-DLCの仮説なんだな
+ 	今までも、一部のアジャイル上位層では既に取り入れられていたことが、今後は必須になっていく、のかなー
+ [文字コードの話 - Speaker Deck https://speakerdeck.com/qnighy/encoding]
+ 	超大作
+ 	まだ第一部までしか読めてない
+ [robots.txtを無視するクローラーまとめ【検索エンジン・生成AI】 https://www.so-right.jp/ignoring-robots-txt/]
+ 	諸事情あって弊社はクローラー対策をしっかりしているので大体みたことがあるUA
+ 	robots.txt、無視しても特に罰則とかないもんな
+ [AddyOsmani.com - 21 Lessons From 14 Years at Google https://addyosmani.com/blog/21-lessons/]
+ 	Googleみたいなトップ企業の、更にトップオブトップ層の話だけど、驚くような内容はないのが面白い
+ [DLL Hell から .NET の自己完結型デプロイまで：30年の依存関係戦争 https://zenn.dev/takekazuomi/articles/dll-hell-over30y]
+ 	全然知らない界隈の話で面白かった
+ [GIFで理解するCache-Control入門 https://zenn.dev/praha/articles/z-cache-control-gif-guide]
+ 	ぼんやりとしか把握してなかったのでありがたい
+ 	CDNでのキャッシュについてはともかく、ブラウザのキャッシュがむずい...
+ [bump というバージョンバンプツールを作った https://zenn.dev/mattn/articles/28ff86d209d081]
+ 	たまにCLIツールを書くので参考に
+ [Amazonでの12年間を振り返る https://zenn.dev/moomindani/articles/5b4ee6d4f33b44]
+ 	すげーなー
+ [なぜ、AIで生産性があがっていると錯覚してしまうのか https://hirokidaichi.github.io/presentation/devsummit.html]
+ 	hirokidaichi先生最新作、スライドが動く
+ 	[https://gyazo.com/939f94e5331db4c556fcbb8e7114e1c1]
+ 	20倍の速さで書けました、っていう本に魅力を感じない問題があるな...
+ 	品質とか内容とかに関わらず、魅力に欠ける
+ 		これは、なんだろうな...???
+
+読んだ本
+ [Software Design 2026年3月号 | 技術評論社 https://gihyo.jp/magazine/SD/archive/2026/202603]
+ 	Rustで作るイベント駆動アーキテクチャ 特集がよかった
+ 		ちょうどフューチャーさんの非同期設計ガイドラインも読んでたので
+
+書いた
+ [Google DocsをCLIでmarkdownに変換する https://zenn.dev/watarukura/articles/20260222-iyacaejtx3xnf6umqpwqlyeavkhdlr]
+ 	週末の調べ物がAI Agentのおかげで捗ってうれしい
+
+その他
+ [2025年分確定申告]
+ 	確定申告して納税を済ませた
+ 	半日費やしたけど、だいぶブルシット・ジョブが減ったように思う
+ 		主にマネフォ方面とマイナカード方面に感謝
+ 	三井住友銀行アプリのスマートパスってやつが機種変後に自動で移行してくれなくてめんどかった...
+ 		まぁ銀行のアプリだから安全側に振ってもらったほうがいいという気もする
+ 		旧機種側で解除、新機種側で再登録しないといけない
+
+#週報
+<[2026-02-10 - 2026-02-16]
+[2026-02-24 - 2026-03-02]>
