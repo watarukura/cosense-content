@@ -1,0 +1,104 @@
+2026-03-10 - 2026-03-16
+読んだ記事
+ [南場智子「ますます“速さ”が命題に」DeNA AI Day2026全文書き起こし - エンジニアtype | 転職type https://type.jp/et/feature/30605/]
+ 	>逆に言えば、このベロシティを伴わないプロダクトに成長はなく、この“びゅんびゅん回し”ができない、このスピード感で戦えないのであれば、参戦する資格さえない時代になったと言えるでしょう。
+ 	早く走るために、ハーネスが必要なんだよな
+ 		壊れちゃうから
+ [BFF(Backend For Frontend)入門：なぜ中間にサーバーを置くのか？ #初心者 - Qiita https://qiita.com/aki_number16/items/c4b0a91e1a6b5cf2041f]
+ 	インフラエンジニアがいないときにバックエンドエンジニアが兼任、ってよくあると思っていて
+ 	最近はフロントエンド領域でもインフラ知識が必要なので、BFFのセキュリティみたいなところはとても心配している
+ [Markdown ドキュメント間の整合性を検証する contextlint を作っている話 https://zenn.dev/nozomi_cobo/articles/contextlint-introduction]
+ 	ドキュメントの書き方はまだ標準化するには早いと思うんだがなぁ...
+ [AI生成によるchardet再実装におけるライセンス変更の是非に関するメモ – Shuji Sado https://shujisado.com/2026/03/09/license_change_for_aigenerated_reimplementation_of_chardet/]
+ 	[Ruby 1.9.2リリースとWEBrick脆弱性問題の顛末 - 西尾泰和のはてなダイアリー https://nishiohirokazu.hatenadiary.org/entry/20100819/1282200581]
+ 	クリーンルーム実装事例あるんだよな
+ 		学習内容として既存コードを含んでいないことを保証するのは無理だろう...
+ [ER図はなぜすぐ古くなるのか（実務で破綻しない運用） https://zenn.dev/tonbi_attack/articles/2b914a739f347e]
+ 	tbls使ってERD出力、大体やってるんだけど、テーブル数が100を超えると、「見てもしょうがないもの」になっちゃうのが悩み...
+ 	ドメインごとにERDを分離する、っていうのは良さそう
+ 		ドメインをまたいで参照することもよくあるけど...
+ 		(hoge_table.user_id <-> users.id とか山程あるのが普通...)
+ [アップデート AWS WAF に追加された「AIトラフィック分析」機能を使ってみた | DevelopersIO https://dev.classmethod.jp/articles/aws-waf-ai-activity-dashboard/]
+ 	GAとかでいずれ見られるようになるのかな？
+ [ノア・スミス「誰も語っていないAIバブル崩壊の第三シナリオ」（2025年12月9日）｜経済学101 https://note.com/econ101_/n/n3a9a87ab3c7f]
+ 	OpenAI破綻するかAGIがその前にできるか、っていうチキンレースだからな...
+ 		AGIができればどうにかなるのか？は何もわからない
+ 	AGIができずに破綻したとき、世界恐慌が来る
+ [デバッグはもう人間の仕事ではなくなった https://zenn.dev/dinii/articles/debugging-is-solved]
+ 	AIの権限管理において、本番環境に触れる権限を付与するのはまだまだ怖いな...
+ 		ローカルの.envファイルを読んでしまう問題すらまだ解決していないのに
+ [【GitHub】GitHubは低品質なユーザによるContributeを拒否する仕様を検討・実装中 #AI - Qiita https://qiita.com/rana_kualu/items/78fdef38b201985cb0d9]
+ 	AI Slop対策、GitHub公式が実施し始めたか...
+ 	信用スコアみたいでちょっとディストピア感があるけど
+ 	[AI生成PRが自分のOSSプロジェクトに送られてくることについて思うこと、コントリビューターにできる助け方 https://zenn.dev/dai_shi/articles/a686bdf7fd5800]
+ 		コントリビュート時にPRを作らない、みたいな方向になっていくのかなー
+ [AWS WAFは「とりあえず入れる」だけでは足りない？攻撃をすり抜けさせないための設定術 | iret.media https://iret.media/188074]
+ 	>A. 「オーバーサイズ処理」と「JSONフォールバック」を甘く見ない
+ 	知らなかった...
+ [なぜ、SOLIDの単一責務の原則(SRP)は理解しにくいのか？ https://zenn.dev/pdfractal/articles/f3edfb13487e25]
+ 	時間軸を念頭におかないといけないコード、よくバグるんだよな
+ 		ホモサピには難しい
+ 		AIにも難しいのではないかなぁ...
+ [マンガの9割がAIで作られる未来も？『はじめの一歩』森川ジョージ氏らがAI時代のマンガ制作と著作権問題について議論 https://news.denfaminicogamer.jp/kikakuthetower/260310y]
+ 	週間連載じゃなくてAIなら日間連載も可能、とかになって、そこから人気作が生まれたら、どうなるかなー
+ [CloudFront と S3 を使った構成で B/G 切り替えを実現するもうひとつの方法 | iret.media https://iret.media/188390]
+ 	CloudFront B/G Deployなー
+ 		まだ使ったことない
+ [Qwenがプロプライエタリになる件について https://zenn.dev/ihasq/articles/ac9d8c1c68fcdd]
+ 	Qwenも色々面倒だなー
+ [【訃報】あの超有名傑作アルゴリズム「クイックソート」の作者トニー・ホーアが92才で亡くなる、チューリング賞受賞者で元オックスフォード大学名誉教授 - GIGAZINE https://gigazine.net/news/20260311-tony-hoare-passed-away/]
+ 	R.I.P.
+ [RISC-Vは本当に遅い：Red HatエンジニアがFedoraビルドの実測データで突きつけた現実 | XenoSpectrum https://xenospectrum.com/risc-v-fedora-build-time-slow-juszkiewicz/]
+ 	RISC-V、まだ遅いんだな...
+ 	これから中国企業がどんどん金を突っ込んで速くなったら面白いけど
+ [日本国内で広がる中国系スマホ決済「税務当局による売り上げ把握が困難に」維新議員が問題提起 片山さつき大臣も「非常に由々しき問題」（ABEMA TIMES） - Yahoo!ニュース https://news.yahoo.co.jp/articles/68d3477ef6552a3e3a86cec906a9ec49aee54b6f]
+ 	どうやって把握するのかはともかく、脱税は取り締まって欲しい
+ [リリース直前に技術スタックを入れ替えたけどうまくいった話 https://zenn.dev/rescuenow/articles/de42ef1e09aedb]
+ 	テストがあれば言語の移行はできる、って話なら、言語独立にテストは作っておくべきなのかもなー
+ 	APIドキュメントもそう
+ [クエリサービスはユースケースごとに独立させたい https://zenn.dev/soycha/articles/query-service-single-action-design]
+ 	一覧と詳細でもユースケースは別って考えたほうがいいのかなー
+ [SQL で区間同士の重なり（interval overlap）を一発で判定する方法 https://zenn.dev/medicu/articles/cd97674e6faa91]
+ 	どこかで役に立ちそう
+ [WordPressが「My WordPress」リリース、ウェブブラウザだけで完全に動作しプラグインが使えるWordPressを構築可能でバックアップしてどこにでも復元可能でRSSリーダー化も可能 - GIGAZINE https://gigazine.net/news/20260312-my-wordpress/]
+ 	WASM WordPress、できたのか？
+ [CloudFront 経由で配信する API のマイクロキャッシュ戦略 | iret.media https://iret.media/188465]
+ 	nginxで似たようなことをしてたけど、CloudFrontでがんばるのも意味はあるなー
+ [AWSを退職しました - YAMAGUCHI::weblog https://ymotongpoo.hatenablog.com/entry/leaving-aws]
+ 	Google → AWSってすげぇキャリアだけど、それでもやりたいことがあるから退職するってかっけーなぁ
+ [三省堂（出版）と三省堂書店はなぜ混同されるのか【お詫びと訂正】（飯田一史） - エキスパート - Yahoo!ニュース https://news.yahoo.co.jp/expert/articles/6f741db5225f65762010c6f2977b05e75ea442e1]
+ 	別なのは知ってたけど創業者は一緒なのね
+ [コンピュータ科学の神様が「AIに負けた」日 — Donald Knuth『Claude's Cycles』を読み解く #LLM - Qiita https://qiita.com/nogataka/items/ecbaedb3d7ffc29c9fb2]
+ 	解はOpus 4.6が見つけたけど証明はKnuthがしたんだなー
+ [Goが15年でバックエンドの標準になるまで。偉大なる“退屈さ”が世界の開発文化を変えた理由 | レバテックラボ（レバテックLAB） https://levtech.jp/media/article/interview/detail_821/]
+ 	Go、好きな人は好きだよなー
+ [まだAIコードをレビューするか、しないかで言い争ってるの？ https://zenn.dev/nuits_jp/articles/2026-03-08-reviewing-ai-code]
+ 	開発速度が最重要なら人がレビューしてる場合じゃない、っていう判断はありうるか...
+ [MySQLが好きな私が、今はPostgreSQLを勧めたい理由 https://zenn.dev/catatsuy/articles/f3721135c6f8f6]
+ 	MySQLも順調に機能は追加され続けているんだけど、PostgreSQLの方が成長が早い気はするんだよな
+ 		AuroraMySQLはまだMySQL8.0固定だしな...
+ [Raycast Script Commands で Neovim をどこからでも使えるようにした https://zenn.dev/ayuzaka/articles/raycast-neovim]
+ 	設定してみたけど、起動があんまり早くないのが悲しい
+ [AI時代、アジャイルコーチの役割はどこへ向かうのか —— プロセスから「人」へ - SmartHR Tech Blog https://tech.smarthr.jp/entry/2026/03/10/165523]
+ 	S@Sなー...
+ 
+
+読んだ本
+ 
+
+書いた
+ 
+
+その他
+ Obsidian的なやつでブラウザで開けてローカルのmarkdownを更新できるツールが欲しい
+ 	scrapbox的な要素も欲しい
+ 	なんでObsidianじゃ駄目なんだっけ？
+ 		1アプリ開いておくのが邪魔
+ 		コマンド一発で必要なページを開いた状態にしたい
+ 		workspace移動時に追随してほしい
+ 	https://note.com/kanawoo/n/n1de8e64b0032
+ 		[Welcome to Quartz 4 https://quartz.jzhao.xyz/]、試してみるか
+
+#週報
+<[2026-03-03 - 2026-03-09]
+[2026-03-17 - 2026-03-23]>
