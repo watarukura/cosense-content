@@ -1,3 +1,22 @@
 個人開発ネタ
  scrapboxクローン
- 
+ 	ローカルで動く
+ 	WYSIWYG
+ 	markdownで書けるほうが良いかも
+ 	既存のmarkdownファイルを読み込んで表示できる
+ 	2hop link、back link
+ wordpress wasm + wordpress sqlite
+ 	[wordpress-playground] とりあえず情報収集
+ 	sqliteファイルをバックアップしたり複数インスタンス間で同期したりできれば激安WordPressサーバを運用できるんじゃないか、というアイデア
+ 	ついでに言うと、ローカルだけ管理画面を有効化して公開用WordPressは管理機能を全部潰すことができればセキュアじゃないか？
+ 		wp-adminディレクトリを削除してしまうような乱暴なadminレスWordPress、どうだろう？
+ AI Agentの長期記憶ツール
+ 	[Claude Codeに長期記憶を持たせたら、壁打ちの質が変わった https://zenn.dev/noprogllama/articles/7c24b2c2410213] コレのパクリ
+ 	[Search | DeepWiki https://deepwiki.com/search/how-about-openclaw-memory-into_dc77c882-4ff7-4b59-886a-47885283448e?mode=fast] OpenClawが実装してるので、上手く持ってこられれば汎用的に覚えておいてくれるツールができるかもしれない
+ AWS WAFでブロックしたIPアドレスを集計して通知するツール
+  slack通知
+  OKボタン押下でブロックIPに追加
+
+済
+ memoコマンド
+ 	[watarukura/memo https://github.com/watarukura/memo]

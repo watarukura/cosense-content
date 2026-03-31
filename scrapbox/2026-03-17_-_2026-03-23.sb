@@ -1,0 +1,108 @@
+2026-03-17 - 2026-03-23
+読んだ記事
+ [AI機能搭載のRSSリーダーを作った https://zenn.dev/babarot/articles/ai-rss-reader-oksskolten]
+ 	babarotさんの新作、広告貼ってるサイトの広告剥がしちゃうのか...
+ 		広告はうっとうしいけど、Laravelのドキュメントサイトとかも広告収入で何とか続けられてますって書いてたし
+ 	Cookpadのレシピ取り込みと同根の話かな
+ 		[もう、レシピ迷子にならない！クックパッドに全部まとめる方法 | クックパッドニュース https://news.cookpad.com/articles/63697]
+ 		まぁ、法的には問題なさそうに見える
+ 			倫理としてどうか、という話で、うーん
+ [PostgreSQL 18からNOT NULL制約をNOT VALIDで追加できるようになりました - エムスリーテックブログ https://www.m3tech.blog/entry/2026/03/13/110000]
+ 	これはいいなー
+ 	MySQL -> PostgreSQLのmigrationとかも、考えたほうがいいのかなー
+ [Agentic Coding  実践ワークショップ - Speaker Deck https://speakerdeck.com/watany/agentic-coding-workshops-20260121]
+ 	一通りまとまっててすごい
+ [リリース単位で管理するGit運用術 | iret.media https://iret.media/189592]
+ 	リリーストレイン式ならこうなるかなー
+ [急成長でぶつかったMySQLの罠とその向き合い方 - Speaker Deck https://speakerdeck.com/hirosi1900day/ji-cheng-chang-debutukatutamysqlnomin-tosonoxiang-kihe-ifang]
+ 	知見の塊
+ 	集計クエリはREAD COMMITED、これはいいかも
+ [Carinaの開発状況（2月下旬〜3月中旬） - Gosuke Miyashita　https://mizzy.org/blog/2026/03/20/1/]
+ 	terraform代替ツールの開発記録
+ 	自動生成できる部分はする、っていうのがterraform-provider系にも反映されるといいのかもなー
+ [Devin だけでは足りなかったので、エラー調査 AI Agent を自作した — AI 時代のエラー対応のやり方 - inSmartBank https://blog.smartbank.co.jp/entry/2026/03/18/110000]
+ 	こーゆーやつ、あちこちで別々に作ってるよな...
+ [伊藤直也が「技術の原点」として読んだ3冊 | 日経BOOKプラス https://bookplus.nikkei.com/atcl/column/070300541/030400009/]
+ 	>「部下と1on1して話を聞く」とかみなさんよくやっているようですが、僕はあまりそういうことはしません。そういう「上司が部下の面倒を見る」というマインドの組織は作らない。
+ 	そんなことできるんだ、という発見がある
+ [プッツンした人間が AI にダメ出しし続けたら flaky テストが全滅した | BLOG - DeNA Engineering https://engineering.dena.com/blog/2026/03/flaky-test-elimination-with-ai/]
+ 	flakyテストなー...
+ 	AIに直してもらうためにもローカルでCIを回したいんだよな
+ [GitHub Actions 互換のローカルタスクランナーを作った https://zenn.dev/mizchi/articles/introduce-actrun]
+ 	ということでこれ
+ 	actrun、試してみています
+ [SREはAgentic Engineering時代のHarnessになれるのか？ - じゃあ、おうちで学べる  https://syu-m-5151.hatenablog.com/entry/2026/03/16/135031]
+ 	機能を追加することで増える運用コストを金額として可視化する、みたいなことができれば、増える売上・利益との見合いにできるはず
+			それができれば苦労はしねぇ、んだけどさ
+	[我々の知るコンピュータープログラミングの終焉、そしてその後コーダーはどうなるか - YAMDAS現更新履歴 https://yamdas.hatenablog.com/entry/20260316/coding-after-coders]
+		クヌースの話が先週あったけど、どこかで誰かが書いたコードや、平均的なプログラマが書けるようなコードは概ね生成できるわけで、平均を逸脱して優秀なプログラマに関しては「書けるけどつまらない」コードは生成して難しくて楽しいコーディングが残る、のかもしれない
+	[コードを書くのをやめた。Claude Codeに月商300万のSaaSの全コードを書かせ、完全ソロ運用しているという話。 https://zenn.dev/nnze/articles/e3f648e335a947]
+		月商300万円稼ぐコード、ちゃんと他者のペインを解決してる
+	[フロントエンドのディレクトリ構成で再帰的な features 構成を推したい https://zenn.dev/pksha/articles/recursive-features-directory-structure]
+		よさそう
+	[記録のための日記から、対話で育てる日記へ ーClaude × Obsidian × MCPで作る思考のジャーナリングー | フューチャー技術ブログ https://future-architect.github.io/articles/20260317a/]
+		対話、なー
+		とりあえず、毎日自分が何を書いているかは1ディレクトリに集めるようにしてみている
+			APIで収集してるので、JSONLにしてる
+			ObsidianだとMarkdown以外を見てもなぁ...
+
+読んだ本
+ [Software Design 2026年4月号 | 技術評論社 https://gihyo.jp/magazine/SD/archive/2026/202604]
+ 	連載の「Rustで作るイベント駆動アーキテクチャ」が先月号に引き続き面白い
+ 		GoとJavaScriptは非同期処理の実装が大きく違うけど、Rustはどちらも選べる感じなのかな
+ 	PostgreSQL特集も良かった
+
+書いた
+ [watarukura/memo https://github.com/watarukura/memo]
+ 	memoコマンドもGolang化
+ 	todoコマンドとコードの共通部分が多いので、todoコマンドからコピって書き直すことで両方のコードを把握できた
+ 	この機会にwikilinkをmarkdown linkに書き直した
+ 		ChatGPTがシュッと書いてくれました
+code:convert_wikilinks_inplace.sh
+ #!/usr/bin/env bash
+ set -euo pipefail
+ 
+ # convert_wikilinks_inplace.sh
+ #
+ # Usage:
+ #   ./convert_wikilinks_inplace.sh file.md
+ 
+ if [[ $# -eq 0 ]]; then
+   echo "Usage: $0 <file>"
+   exit 1
+ fi
+ 
+ file="$1"
+ 
+ perl -i -pe '
+   s{
+     \[\[
+     ([^|\]]+)
+     (?:\|([^\]]+))?
+     \]\]
+   }{
+     my $target = $1;
+     my $alias  = defined $2 ? $2 : $1;
+ 
+     # trim
+     $target =~ s/^\s+|\s+$//g;
+     $alias  =~ s/^\s+|\s+$//g;
+ 
+     # space → %20
+     my $href = $target;
+     $href =~ s/ /%20/g;
+ 
+     "[$alias]($href)"
+   }gex;
+ ' "$file"
+
+その他
+ [k1LoW/mo: mo is a Markdown viewer that opens .md files in a browser. https://github.com/k1LoW/mo]
+ 	[tomohiro-owada/wikigen: Generate GitHub Wiki from source code using Claude Code. Single Go binary, no Docker needed. https://github.com/tomohiro-owada/wikigen]と一緒に使うと強かった...
+ 	markdownファイルが入っているディレクトリを丸ごと指定して `mo *.md` すると当該ディレクトリ内でリンクが貼ってあると辿れるしめっちゃ便利
+ 	[wikigen — Claude Codeでコードベースの仕様ドキュメントを自動生成するCLIツールを作りました https://zenn.dev/abalol/articles/f522bfdf23a56f]
+ 		自社でもDevin入れてるリポジトリと入れてないリポジトリがあって不便だし、wikiを手書きしても大体更新されなくなっちゃうから、こーゆーツールで常に追随するのは筋が良さそう
+
+#週報
+<[2026-03-10 - 2026-03-16]
+[2026-03-24 - 2026-03-30]>
