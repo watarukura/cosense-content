@@ -1,0 +1,69 @@
+2026-03-24 - 2026-03-30
+読んだ記事
+ [AIバグ発見システム「Sashiko」がGoogle社員によって開発される、日本の「刺し子」に由来する名前でLinuxカーネルの未発見バグを次々に検出 - GIGAZINE https://gigazine.net/news/20260319-sashiko-linux-bug-ai/]
+ 	未発見バグを次々見つけても、修正パッチが反映されるまではそれなりに掛かるからバグを利用する側を利するだけかもしれないな...
+ [Ghostty 1.3が来たぞ https://zenn.dev/kawarimidoll/articles/5382959edf38fc]
+ 	Cmd + f、なぜか効かない...
+ [FDEは「客先常駐SES」と何が違う？人間の複雑さに向き合う「AI SaaSの生存戦略」【ログラス×LayerX】 - レバテックLAB https://levtech.jp/media/detail_829/]
+ 	Palantirで確立されたポジション、ってあるけど軍事系の情報企業よな...
+ 		[パランティア・テクノロジーズ - Wikipedia https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%A9%E3%83%B3%E3%83%86%E3%82%A3%E3%82%A2%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA]
+ 	エンジニアの向かう先がコレだとは思えないんだがなぁ...
+ 		一つはこれかもしれないが
+ [PO・PdMが感じるスクラムの限界 https://zenn.dev/dp_techblog/articles/5ab783ef029d44]
+ 	PO領域のプロセスが存在しない、確かにそう
+ 		エンジニア側が越境して、チームでプロセスを作っていくしかない？
+ [モジュラモノリス導入から4年間の総括：アーキテクチャと組織の相互作用について /  Architecture and Organizational Interaction - Speaker Deck https://speakerdeck.com/nazonohito51/architecture-and-organizational-interaction]
+ 	長期に存在するプロダクト、技術負債より返済しづらい組織負債が溜まりがちかもなぁ...
+ 	2年くらいで辞めちゃうエンジニアも多いから、4年経ったらどのくらい入れ替わってるかわからない
+ [あなたのGo製CLIをAI Agent Readyにするskillsmith | おそらくはそれさえも平凡な日々 https://songmu.jp/riji/entry/2026-03-17-skillsmith.html]
+ 	AI Agent Ready、今後はこうなっていくんだろうなー
+ [100万種類以上のランキング集計を支える Sidekiq チューニング | BLOG - DeNA Engineering https://engineering.dena.com/blog/2026/03/sidekiq-huge-ranking-aggregation/]
+ 	Sidekiq、Laravel Queueみたいなやつか
+ 	CPUバウンド・I/Oバウンドでconcurrencyの値を調整するとこは参考になりそう
+ [AIエージェント自作のための基礎知識 - 誰かの役に立てばいいブログ https://ymmt.hatenablog.com/entry/2026/03/24/221754]
+ 	ADKでAgent自作、みたいなことができるんだなー
+ [Buzzwordによる設計 | BEAR Blog https://koriym.github.io/blog/2026/03/25/design-by-buzzword/]
+ 	提唱者の意図を(良くも悪くも)超えて、Buzzwordは広がる
+ [小ネタ Webサーバ、Node.js は無限ループで停止するが Go は停止しない #Python - Qiita https://qiita.com/ssc-ksaitou/items/c22fabfc35a897896aab]
+ 	理屈はわかるけど実際にやってみたのがいい
+ [OFFSET はなぜ遅いのか？ページネーションの仕組みと実践 https://zenn.dev/farstep/articles/pagination-offset-vs-keyset]
+ 	いっぱい取ってきて要らない分を削る、ってやってれば遅いのは当然なんよね
+ [個人的にGitHub Actionsまわりで気をつけていること | ssrf.dev https://ssrf.dev/posts/2026/03/27/personal-gha-security-tips/]
+ 	最近のOSSへのサプライ・チェーン攻撃がGitHub Actions経由で起きてるので、個人含めて対策必須なんよなー
+ [【消費トークン1/12】コーディングエージェントにRAGは罠だった。「検索」ではなく「コンパイル」するDAGツールを作った話 https://zenn.dev/yumemi_inc/articles/a61de3467bc182]
+ 	ドキュメント間の依存関係を管理してくれるツール？
+ [触媒としての人工知能――それを作る前に人類は絶滅するのではないか？ – WirelessWire & Schrödinger's https://wirelesswire.jp/2026/03/93124/]
+ 	ロシアやイランが十分な性能のAIを持っている状態で戦争していたら、と思うとゾッとするが、アメリカ・イスラエルあたりは既に持っていて戦争している側だし、中国だってそうだよな...と思うと人類の絶滅もそれほど突飛な話じゃない
+ [負荷テストの種類を総整理｜k6・ISTQB・信頼性工学の分類比較と3軸フレームワーク - Howdunit https://gr1m0h.hatenablog.com/entry/2026/03/23/110000]
+ 	負荷テスト、大体2時間で予約するんだけど大体足りなくなるのよね
+ 	いろんな観点で見ないといけないし
+ [AIエージェントでポートフォリオを作ろう！ - 5.1さらうどん https://giginet.hateblo.jp/entry/2026/03/19/013438]
+ 	職務経歴書自動生成的なのはいいなー
+ 	公開情報から作る分には誰でも誰かの職務経歴書をつくれるってことだよなこれ
+ [AIエージェントの暴走を防ぎ導くguard-and-guide https://zenn.dev/kawarimidoll/articles/42f8a9c57e8ea6]
+ 	良さそう
+ [Coding Agent時代の開発ワークフローについてのまとめ - 逆瀬川ちゃんのブログ https://nyosegawa.com/posts/coding-agent-workflow-2026/]
+ 	これ、ココ1年の振り返りなんだよな...
+ 	濃密すぎん？
+
+読んだ本
+ 
+
+書いた
+ [watarukura/scrapbox-clone-md https://github.com/watarukura/scrapbox-clone-md]
+ 	Junie CLI使ってReact + Tauriでscrapbox cloneを作ってみている
+ 	あっという間にクレジットを使い切ってしまった
+
+その他
+ [夜間頻尿の原因と治し方｜夜中トイレに起きない最新セルフケア12選 – Journal https://journal.bajune.com/2026/03/19/nocturnal_urination_selfcare12/]
+ 	夜間1回起きることが多い
+ 	いびきも大きいと家族に言われているので、次の健康診断のときに睡眠時無呼吸症候群の検査もする予定
+ 	足上げ15-30分、骨盤底筋トレーニングはやっておきたい
+ 		寝る前に15分も足上げてたら寝ちゃうけどなぁ
+ [シリコン タイピングベッド　セパレートタイプ - HHKB Optios Store | バード電子オンラインショップ https://shop.bird-electron.co.jp/?pid=190581580]
+ 	う、ハーフサイズ、ほしい、買っちゃう
+ 	木製のを使ってるんだけど、色が変わってくるんだよな...
+
+#週報
+<[2026-03-17 - 2026-03-23]
+[2026-03-31 - 2026-04-06]>
