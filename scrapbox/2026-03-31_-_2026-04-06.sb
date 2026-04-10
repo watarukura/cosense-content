@@ -1,0 +1,81 @@
+2026-03-31 - 2026-04-06
+読んだ記事
+ [GitHub Actionsはあなたのエンジニアリングチームを徐々に蝕んでいる - イアン・ダンカン https://www.iankduncan.com/engineering/2026-02-05-github-actions-killing-your-team]
+ 	GitHub Actions、CI/CDを民主化した素晴らしいツールなんだけど不満がないわけではない
+ 	PR作ってpushしないとCIが動かないしな...
+ 	代替ツールの提案
+ 		[Deliver software at any scale with the world’s fastest CI platform | Buildkite https://buildkite.com/]
+ 		[garnix | the nix CI https://garnix.io/]
+ [GitHub Appの秘密鍵をGitHub Secretsから追い出す - 10X Product Blog https://product.10x.co.jp/entry/2026/04/01/163814]
+ 	OIDCを使ってAWSにアクセスしてparameterstore / secretsmanagerからsecretを取ってくる、ってこともできるな
+ [Terraformマップ変数：実践ガイド https://stategraph.com/blog/terraform-map-variables]
+ 	mapは使うけどlookup()は使ったことないな
+ [EmDashのご紹介 ― WordPressの精神的後継者であり、プラグインのセキュリティ問題を解決する https://blog.cloudflare.com/emdash-wordpress?utm_campaign=cf_blog&utm_content=20260401&utm_medium=organic_social&utm_source=twitter/]
+ 	WordPressの精神的後継、そうなってほしいものだなー
+ [主キーはもう「UUIDv7」一択なのか？ 〜 ID技術の歴史的変遷と現時点の最適解 〜 https://zenn.dev/loglass/articles/c2db7e85702571]
+ 	外部用の内部用でIDを分離するのは良さそうだなー
+ 	UUIDv4を外部用、UUIDv7を内部用、とかでもいい気はする
+ [AWS Security Agentを組織で活用していく上での考慮点を考えてみた https://zenn.dev/cscloud_blog/articles/securty-agent-ga-organization-how-to]
+ 	AWSを選択した時点でソブリンクラウドとか無理なのでなー
+ 	クロスリージョン推論とかも便利に使いたいから、推論も国内限定で、みたいな企業は大変よね
+ [オープンロジ CRE のいま - OPENLOGI TECH BLOG https://openlogi.hatenablog.com/entry/2026/04/03/133301]
+ 	元同僚氏、CREがんばってる
+ [ターミナルに引きこもる極意 | ドクセル https://www.docswell.com/s/mozumasu/ZN71M7-2026-04-02-dotfiles]
+ 	あー、ghコマンドでrepo作るのはいいな
+ [MarkdownだけでWikiを作ろう https://zenn.dev/kyome/articles/9937ce78b948bc]
+ 	やべ、オレが欲しかったものだ
+ 		と思ったら編集はできないのか
+ [製造業と医療業界がパスワード管理で共通の課題を抱える https://www.darkreading.com/cyber-risk/manufacturing-and-healthcare-share-struggles-with-passwords]
+ 	共有パスワード問題なー...
+ [ランサムウェアはもう防ぎきれない？ 大企業だって無理なのに中小企業はどうすればいいの!? その「現実解」とは【Security Days Spring 2026】 - INTERNET Watch https://internet.watch.impress.co.jp/docs/event/2097588.html]
+ 	社内セキュリティ人材、それほど多くは抱えられないのが難しい
+ 	その上、その人に求められるのは多くの場合社内政治だし
+ [Inertia.js (inertia-rails) を触っているので所感を書いておく - id:onk のはてなブログ https://onk.hatenablog.jp/entry/2026/03/31/052250]
+ 	覚えておく
+ [AWS Step FunctionsでJSONataを使ったSQSメッセージ処理バッチの構築と検証 | iret.media https://iret.media/186531]
+ 	JSONPathから機械的に変換できるといいんだけどな
+ [Post Mortem: axios npm supply chain compromise · Issue #10636 · axios/axios https://github.com/axios/axios/issues/10636]
+ 	こえぇ...
+ [AWS Service Availability Updates - AWS https://aws.amazon.com/jp/about-aws/whats-new/2026/03/aws-service-availability/]
+ 	AppRunner終わっちゃう
+ [There are only two paths left for software https://www.a16z.news/p/there-are-only-two-paths-left-for]
+ 	とてもじゃないが長続きする経営方針ではないけど、市場のプレッシャーに負ける経営者はいるだろうな...
+ [garden.ooo ⌇ Baku Hashimoto https://baku89.com/garden]
+ 	garden.ooo、いいな
+
+読んだ本
+ 
+
+書いた
+ [watarukura/scrapbox-clone-md https://github.com/watarukura/scrapbox-clone-md]
+ 	scrapboxのcloneを作ろうと試みている
+ 		scrapbox記法 / wiki記法へのこだわりがないのでmarkdownに
+ 		ローカルのmarkdownファイルをSSoTに
+ 		sqliiteで全文検索
+ 	まぁ、コード書いてるのはJunie CLI経由のClaudeなんだけど
+ 	初期設計はChatGPTで、[Coding Agent時代の開発ワークフローについてのまとめ - 逆瀬川ちゃんのブログ https://nyosegawa.com/posts/coding-agent-workflow-2026/] のHarper Read式でやってみた
+ 		ChatGPTにspec.mdを書いてもらって、Junieでprompt_plan.mdとtodo.mdを書かせて開始
+ 			prompt_plan.mdとtodo.mdの違いはよくわからない...
+ 		React + Tauriがいいですよ！っていうからそのまま書かせたらバグって動かなくなった上、3月分のクレジットも使い切ってしまったので回復待ち
+ 		TDDでやって、って最初に言わないとテスト書かれないので、最初からカバレッジ80%以上を保って、っていうのが良さそう
+ 		ステップごとにgit commitして、って言わないとgit commitしない
+ 		formatは大体掛けなくてもきれいだけどlintエラーはいっぱい出るのでこれもhookでやると良さそう
+ https://github.com/watarukura/local-md-wiki
+ 	↑の初回の失敗を糧に更にシンプルにした
+ 	scrapboxのclone、って伝えるとscrapboxの機能をコピーしようとする
+ 	markdownで書けるwikiでローカルのmdファイルを編集できるやつ、って伝えたら上手くいったので、後は技術要件としてhonoを使って、っていうくらいにした
+ 		最初はexpressででてきた
+ 		自分で書かないならTypeScriptじゃなくてもいいかと思ってJSにした
+ 		せっかくなのでoxlint / oxfmtにしてみた
+ 	syntax highlightはいれた
+ 		イマイチCSSがわかっていないのであんまり見栄えが良くない
+ 	vimキーバインドを入れるか迷っている
+ 	ワンバイナリにするかも迷っている
+ 		SEA
+
+その他
+ 
+
+#週報
+<[2026-03-17 - 2026-03-23]
+[2026-03-31 - 2026-04-06]>
