@@ -1,0 +1,49 @@
+2026-04-14 - 2026-04-20
+読んだ記事
+ [その筋トレ、逆効果かも。アメリカ専門機関が17年ぶりに更新した「筋トレ新常識」 | ライフハッカー・ジャパン https://www.lifehacker.jp/article/2604-six-strength-training-rules-you-can-safely-ignore-according-to-the-acsm/]
+ 	瞬発力・筋力・筋肥大を分けて考えるのは良さそう
+ 	瞬発力、マジで落ちてるからな...
+ [あらゆるもののパランティア化 | アンドリーセン・ホロウィッツ https://a16z.com/the-palantirization-of-everything/]
+ 	Palantir + FDE、適用可能なビジネス領域が狭い説ないかこれ
+ 	大企業 or 自治体向けっぽい
+ https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/
+ 	pinactは布教に努めてきたけど、zizmorも布教していくか...
+ [同僚のスキル：中国におけるAI雇用への不安が、能力収穫ツールとされるものの爆発的な拡散を引き起こす｜サウスチャイナ・モーニング・ポスト https://www.scmp.com/tech/tech-trends/article/3349790/colleague-skill-ai-job-fears-china-set-viral-spread-supposed-ability-harvester]
+ 	引き継ぎが不要になるのはいいことだけど、これはもう駄目だろう...
+ [MAD Bugs: Even "cat readme.txt" is not safe - Calif https://blog.calif.io/p/mad-bugs-even-cat-readmetxt-is-not]
+ 	`cat` でも駄目なのか！？知らなかった...
+ 	この脆弱性はiTerm2のみかな
+ [deleted_atにインデックスを雑に貼ったら本番DBが死んだ https://zenn.dev/ukkyon/articles/mysql-deleted-at-index-optimizer-trap]
+ 	[SQLのパフォーマンスが急に悪化した話]で同じような目にあったことがある
+ [「1.58ビットに進化したから8GBで十分ですよ。任せてくださいよ」とBonsaiが言うのでMacBook Neoに組み込んでその性能差を体感。iPhoneでも楽々動くしで、ローカルAIが超進化中（CloseBox） | テクノエッジ TechnoEdge https://www.techno-edge.net/article/2026/04/17/4997.html]
+ 	ローカルLLM，MacBook Neoで動くのはいいな
+ [Pull Requestごとにバックエンドも含めたプレビュー環境を自動構築する仕組みを作った - Sweet Escape https://www.keisuke69.net/entry/2026/04/15/081353]
+ 	同じようなことを最近考えたんだけど、CloudFront部分がめんどいなーと思っていたところ
+ 		Vercelか...
+ [Claudeトークン消費を抑えて５倍使う: 「原始人」口調が80%削減 https://zenn.dev/mikana0918/articles/7ad57493a04f88]
+ [Claudeに原始時代に行ってもらっては困る話 https://zenn.dev/holy_fox/articles/e0c0bf75fba9e6]
+ 	原始人もロールプレイで、ロールプレイは性能が下がる、って話
+ 	もしかして、日本語にして性能が下がるって話もこの辺起因？
+ [SREを「努力」から「仕組み」へ — Platform Engineeringという選択 https://zenn.dev/loglass/articles/f4dda877788337]
+ 	>開発者にとって、インフラに関わる設定はできるだけ触りたくないのが本音です。
+ 	これ、ホントなのかなぁ...???
+ 		開発者、ドメイン特化のコードを書くのが仕事じゃなくて、ドメインの課題を解決するためにあらゆる手段を取れたほうがいいと思うんだけど
+ 
+
+読んだ本
+ 
+
+書いた
+ https://github.com/watarukura/lwm
+ 	yank用のレジスタとclipboardを共用したい → 済
+ 		CodeMirror6 + CodeMirror-vimを使用しているが、yank時にレジスタではなくOSのクリップボードを使用してほしい
+ 	バックアップを取りたい
+ 	 gitバックエンドを作る？ → 済
+ 	 remoteへのpushは一旦待ち
+
+その他
+ 
+
+#週報
+<[2026-04-07 - 2026-04-13]
+[2026-04-21 - 2026-04-27]>

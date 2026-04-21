@@ -1,0 +1,72 @@
+2026-04-07 - 2026-04-13
+読んだ記事
+ [How Microsoft Vaporized a Trillion Dollars https://isolveproblems.substack.com/p/how-microsoft-vaporized-a-trillion]
+ 	Azure触ってるんだけど、コンソールがエラい使いづらいんだよな...
+ 		terraformは多少マシだけど癖強
+ 		idがほぼURLなのでimportはし易いとこだけはAWSよりいいところ
+ 			まぁ、最初に触ったクラウドを親だと思うアレかもしれないが
+ [全PRの83%をAIレビューだけでマージできるようにした https://zenn.dev/kauche/articles/e051583461c181]
+ 	コードベース全体を人間が把握するのを諦める代わりに開発速度を上げるアプローチか...
+ 		まぁ、ある程度のサイズになると全体を把握することはできないけど、リードエンジニアは把握に務めるものだと思ってた
+ [Agent CI — Run GitHub Actions Locally https://agent-ci.dev/]
+ 	Mac + DockerDesktopだと動かんなー
+ 		Orbstack推奨っぽいいけど
+ 		`docker pull ghcr.io/actions/actions-runner:latest` したら動いた
+ [LaravelとRails、道は違えど志は同じ？ スペシャリスト同士が酌み交わす - Findy Media | IT/Webエンジニアの転職・求人サイトFindy – GitHubからスキル偏差値を算出 https://findy-code.io/media/articles/gsi-laravel-rails]
+ 	TaylorとDHH、やっぱり似てないよね
+ 	似てない二人が似たフレームワークを作ってるのが面白いところ
+ [自作の短縮URLを社内Slackに貼ったら「フィッシングです」とセキュリティチームに通報された #Security - Qiita https://qiita.com/kojin_dev_hub/items/e8803a092dd192543fb4]
+ 	まぁ、機能が魅力的であっても提供元を信用できないサービスを使うべきではないよね
+ [Apple Silicon MacでGeForce/RadeonでのAI処理が可能に  - PC Watch https://pc.watch.impress.co.jp/docs/news/2099980.html]
+ 	外付けGPUなー
+ 	できるようになったこと自体は嬉しいけど使うことがあるかは...???
+ [GitHub App の秘密鍵を AWS KMS に閉じ込める https://zenn.dev/aws_japan/articles/b311c3710826a6]
+ 	KMSに入れるのは思いつかなかった
+ [実はそれ、やらなくていい筋トレかも。アメリカ専門機関が17年ぶりに更新した「筋トレ新常識」 | ライフハッカー・ジャパン https://www.lifehacker.jp/article/2604-six-strength-training-rules-you-can-safely-ignore-according-to-the-acsm/]
+ 	週2で全身、ってやろうと思うと平日のどこかで2hくらい自由時間を作らないといけない
+ 		他の5日も1万歩(少なくとも5千歩)歩きたい
+ 		時間の確保が一番難しい
+ [Infracost Agent SkillでTerraform管理リソースのクラウドコスト最適化をAIエージェントに任せてみた | DevelopersIO https://dev.classmethod.jp/articles/infracost-agent-skill-ai-cloud-cost-optimization/]
+ 	Infracostも導入したいと思ってできてない...
+ 	コスト削減アドバイスしてくれるのは嬉しいな
+ [新しくプロジェクトに入った人がリポジトリの現状を素早く把握するためのGitコマンド5選 - GIGAZINE https://gigazine.net/news/20260410-git-command-before-reading-code/]
+ 	おもしろい
+ 	git、改めて色々できるなー
+ [Terraformを使わずにGitHubをコードで管理する https://zenn.dev/babarot/articles/github-as-code-with-gh-infra]
+ 	べんりー
+ 	EnterpriseとかOrganizationでも同じことができたら便利かな？
+ [S3 Filesで消えるアーキテクチャ層、生まれるアーキテクチャ https://zenn.dev/genda_jp/articles/b6ff5ea33c7a71]
+ 	WordPressで使えるかなーと思ったけどEFSのコスト乗るのかな？
+ [「難しいのに役に立たない、それが面白い」KOBA789さん ｜私がアウトプットを続ける理由 - Findy Media | IT/Webエンジニアの転職・求人サイトFindy – GitHubからスキル偏差値を算出 https://findy-code.io/media/articles/my-output-story-koba789]
+ 	mattnさんも同じようなこと言ってたなー
+ [grill-me スキルがめちゃ良いので布教したい https://zenn.dev/ryonakae/articles/8783c6b3ead2cb]
+ 	おもしろスキルだ
+ [Claude Teamプラン完全ガイド【2026/4最新】 https://zenn.dev/canly/articles/e7300b4d758119]
+ 	労作
+ [よくわからないで使っていたPHPの復習 https://zenn.dev/mima_ita/articles/7bfbab47e93860]
+ 	PHP1のコード、こんなだったのか
+ [脱CDKしてTerraformに移行すべきn個の理由(または私はなぜCDKをやめたか) https://zenn.dev/okazu_dm/articles/d35f863365cabf]
+ 	CDKは特に好き嫌いないんだけどCloudFormationは嫌い
+ 		反映遅いし読みづらいし
+ 	差分取得とかに違いがあるのは初めて知った
+
+読んだ本
+ 
+
+書いた
+ https://github.com/watarukura/lwm
+ 	local-md-wiki -> lwm に改名
+ 	vimキーバインドを有効化
+ 		レジスタをclipboardと共有したい...できるのかな？
+ 	レスポンシブデザイン対応
+ 	ダークモード対応
+ 	[k1LoW/mo: mo is a Markdown viewer that opens .md files in a browser. https://github.com/k1LoW/mo] を参考にGoでワンバイナリに
+ 		frontend側はembedする
+ 		バイナリサイズはデカ目だけど、好きな場所で実行できて良い
+
+その他
+ 
+
+#週報
+<[2026-03-31 - 2026-04-06]
+[2026-04-14 - 2026-04-20]>

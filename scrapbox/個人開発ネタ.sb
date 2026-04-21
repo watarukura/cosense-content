@@ -1,10 +1,4 @@
 個人開発ネタ
- scrapboxクローン
- 	ローカルで動く
- 	WYSIWYG
- 	markdownで書けるほうが良いかも
- 	既存のmarkdownファイルを読み込んで表示できる
- 	2hop link、back link
  wordpress wasm + wordpress sqlite
  	[wordpress-playground] とりあえず情報収集
  	sqliteファイルをバックアップしたり複数インスタンス間で同期したりできれば激安WordPressサーバを運用できるんじゃないか、というアイデア
@@ -20,3 +14,10 @@
 済
  memoコマンド
  	[watarukura/memo https://github.com/watarukura/memo]
+ scrapboxクローン
+  ローカルで動く
+ 	WYSIWYG
+ 	markdownで書けるほうが良いかも
+ 	既存のmarkdownファイルを読み込んで表示できる
+ 	2hop link、back link
+  	https://github.com/watarukura/lwm
