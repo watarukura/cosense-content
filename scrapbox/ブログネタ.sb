@@ -10,6 +10,7 @@
 　Next.js + SSR構成のDockerイメージから静的ファイルだけ取り出してS3アップロードする
 　開発環境2026
 　Toranaでの勤務を振り返る
+　GitHubリポジトリ棚卸し手法
 
 済み
  amplifyのデプロイ結果をslack通知する

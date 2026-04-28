@@ -1,0 +1,217 @@
+HTMLファイルをmarkdownに変換する
+code:html2md.js
+ javascript: (function() {
+   function clean(s) {
+     return (s || '')
+       .replace(/\r\n/g, '\n')
+       .replace(/\u00a0/g, ' ')
+       .replace(/[ \t]+\n/g, '\n')
+       .replace(/\n{3,}/g, '\n\n');
+   }
+ 
+   function textOf(node) {
+     return (node.textContent || '').replace(/\s+/g, ' ').trim();
+   }
+ 
+   function getCodeLanguage(codeEl) {
+     if (!codeEl) return '';
+ 
+     var cls = codeEl.className || '';
+     var match = String(cls).match(/(?:^|\s)(?:language|lang)-([a-zA-Z0-9_+-]+)/);
+     if (match) return match[1];
+ 
+     var dataLang = codeEl.getAttribute('data-language') ||
+       codeEl.getAttribute('data-lang') ||
+       codeEl.getAttribute('data-code') ||
+       codeEl.getAttribute('lang');
+ 
+     return dataLang || '';
+   }
+ 
+   function convert(node, indent) {
+     indent = indent || '';
+     if (!node) return '';
+ 
+     if (node.nodeType === Node.TEXT_NODE) {
+       return node.nodeValue || '';
+     }
+ 
+     if (node.nodeType !== Node.ELEMENT_NODE) {
+       return '';
+     }
+ 
+     var tag = node.tagName.toLowerCase();
+ 
+     function childrenToText(childIndent) {
+       var s = '';
+       Array.prototype.forEach.call(node.childNodes, function(child) {
+         s += convert(child, childIndent);
+       });
+       return s;
+     }
+ 
+     if (tag === 'script' || tag === 'style' || tag === 'noscript') {
+       return '';
+     }
+ 
+     if (/^h[1-6]$/.test(tag)) {
+       var level = parseInt(tag.charAt(1), 10);
+       return '\n\n' + '#'.repeat(level) + ' ' + clean(textOf(node)) + '\n\n';
+     }
+ 
+     if (tag === 'p') {
+       return '\n\n' + clean(childrenToText(indent).trim()) + '\n\n';
+     }
+ 
+     if (tag === 'br') {
+       return '  \n';
+     }
+ 
+     if (tag === 'strong' || tag === 'b') {
+       return '**' + clean(childrenToText(indent).trim()) + '**';
+     }
+ 
+     if (tag === 'em' || tag === 'i') {
+       return '*' + clean(childrenToText(indent).trim()) + '*';
+     }
+ 
+     if (tag === 'code') {
+       if (node.parentElement && node.parentElement.tagName.toLowerCase() === 'pre') {
+         return clean(node.textContent || '');
+       }
+       return '`' + (node.textContent || '').replace(/`/g, '\\`') + '`';
+     }
+ 
+     if (tag === 'pre') {
+       var codeEl = node.querySelector('[class^="language-"]') || node.querySelector('.shiki') || node.querySelector('.hljs');
+       var lang = getCodeLanguage(codeEl);
+       var code = codeEl ? codeEl.textContent : node.textContent;
+ 
+       return '\n\n```' + lang + '\n' + clean(code).trim() + '\n```\n\n';
+     }
+ 
+     if (tag === 'a') {
+       var href = node.getAttribute('href') || '';
+       var label = clean(childrenToText(indent).trim()) || href;
+       if (!href) return label;
+       return '[' + label + '](' + href + ')';
+     }
+ 
+     if (tag === 'img') {
+       var alt = node.getAttribute('alt') || '';
+       var src = node.getAttribute('src') || '';
+       if (!src) return '';
+       return '![' + alt.replace(/\]/g, '\\]') + '](' + src + ')';
+     }
+ 
+     if (tag === 'blockquote') {
+       var q = clean(childrenToText(indent).trim());
+       if (!q) return '';
+       return '\n\n' + q.split('\n').map(function(line) {
+         return '> ' + line;
+       }).join('\n') + '\n\n';
+     }
+ 
+     if (tag === 'ul') {
+       var items = [];
+       Array.prototype.forEach.call(node.children, function(li) {
+         if (li.tagName && li.tagName.toLowerCase() === 'li') {
+           items.push(convert(li, indent));
+         }
+       });
+       return '\n' + items.join('') + '\n';
+     }
+ 
+     if (tag === 'ol') {
+       var items = [];
+       var i = 1;
+       Array.prototype.forEach.call(node.children, function(li) {
+         if (li.tagName && li.tagName.toLowerCase() === 'li') {
+           items.push(convert(li, indent + i + '. '));
+           i++;
+         }
+       });
+       return '\n' + items.join('') + '\n';
+     }
+ 
+     if (tag === 'li') {
+       var marker = indent || '- ';
+       var content = clean(childrenToText(indent).trim());
+       if (!content) return '';
+       return marker + content + '\n';
+     }
+ 
+     if (tag === 'hr') {
+       return '\n\n---\n\n';
+     }
+ 
+     return childrenToText(indent);
+   }
+ 
+   function getTarget() {
+     var sel = window.getSelection();
+ 
+     if (sel && sel.rangeCount > 0 && !sel.isCollapsed) {
+       var container = document.createElement('div');
+       for (var i = 0; i < sel.rangeCount; i++) {
+         container.appendChild(sel.getRangeAt(i).cloneContents());
+       }
+       return container;
+     }
+ 
+     return document.querySelector('article') ||
+       document.querySelector('main') ||
+       document.body;
+   }
+ 
+   function makeFileName() {
+     var title = document.title || 'export';
+     title = title
+       .replace(/[\\/:*?"<>|]/g, '')
+       .replace(/\s+/g, '-')
+       .replace(/-+/g, '-')
+       .replace(/^-|-$/g, '');
+ 
+     if (!title) title = 'export';
+ 
+     return title + '.md';
+   }
+ 
+   function downloadMarkdown(markdown) {
+     var blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
+     var url = URL.createObjectURL(blob);
+     var a = document.createElement('a');
+ 
+     a.href = url;
+     a.download = makeFileName();
+     document.body.appendChild(a);
+     a.click();
+ 
+     setTimeout(function() {
+       URL.revokeObjectURL(url);
+       a.remove();
+     }, 1000);
+   }
+ 
+   try {
+     var root = getTarget();
+ 
+     if (!root) {
+       alert('変換対象が見つかりませんでした。');
+       return;
+     }
+ 
+     var markdown = convert(root).replace(/\n{3,}/g, '\n\n').trim();
+ 
+     if (!markdown) {
+       alert('変換結果が空でした。');
+       return;
+     }
+ 
+     downloadMarkdown(markdown);
+   } catch (e) {
+     console.error(e);
+     alert('変換中にエラーが発生しました: ' + e.message);
+   }
+ })();
+ 
