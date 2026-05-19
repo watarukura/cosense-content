@@ -1,0 +1,102 @@
+2026-05-12 - 2026-05-18
+読んだ記事
+ [AIエージェント時代のDB設計をTursoが書き換えに来ている話 https://zenn.dev/emuni/articles/6eef9f97f564b4]
+ 	Turso、夢があるよな
+ 	どんなアーキテクチャをとってもデータストアが高額になりがちなので
+ [/kawasima/論理削除]
+ 	物理削除できる方が性能要件としてはもちろん良いんだけど、業務要件として論理削除にしているケースはあるし、設計として消極的な判断で論理削除にしてるケースはもっと多いと思う
+ [アップデート Regional NAT GatewayがAWS Transit Gatewayとの連携をサポートしたのでインターネットへのアウトバウンド通信集約をやってみた | DevelopersIO https://dev.classmethod.jp/articles/regional-nat-gateway-transit-gateway-outbound-internet/]
+ 	TGW自体が高額なのであんまり選択肢に上がらないけど、とは言え使える場面はあるはずで、そのときにNAT GWを集約できるのは良さそう
+ [AWS Weekly Roundup: AWS 2026、Amazon Quick、OpenAI とのパートナーシップなど、今後の展望 (2026 年 5 月 4 日) | Amazon Web Services ブログ https://aws.amazon.com/jp/blogs/news/aws-weekly-roundup-whats-next-with-aws-2026-amazon-quick-openai-partnership-and-more-may-4-2026/]
+ 	Bedrock + OpenAIがきたらAzure OpenAI Service(多分、最近名前が変わってるはず)を捨てるんだ...
+ [節約AIコーディング・実践編 – Portablecode.info https://portablecode.info/2026/05/08/low-cost-ai-coding/]
+ 	Jetbrains AI、安いのよな
+ 		月単位でクレジットがリセットされるから、月初に使い切っちゃうと追加課金がいるけど
+ 		serenaを使うとトークン使用量は減る感じ
+ [128GB超メモリMac専用の巨大LLMエンジン「DwarfStar 4」はローカル推論の常識をどう書き換えるのか。284BのDeepSeek V4 FlashをM4 Max 128GB MacBook Proの自作AIに組み込んでみた（CloseBox） | テクノエッジ TechnoEdge https://www.techno-edge.net/article/2026/05/10/5049.html]
+ 	ローカルLLM、そろそろ実用できそう感あるんだよなー
+ [アクセスキー流出時、なぜ無効化だけでは不十分といわれるのか考えてみる - サーバーワークスエンジニアブログ https://blog.serverworks.co.jp/why-is-disactive-of-keys-alone-not-sufficient]
+ 	再有効化してしちゃう恐れがあるから削除しようね、って話か
+ 		それはそう
+ [AIは2つの脆弱性文化を打ち破りつつある https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures]
+ 	90日以内にパッチを作成する、っていうのもOSSでは難しいよな
+ 		非営利団体のマネジメントそのものだし
+ 	[90日間の脆弱性開示ポリシーはもはや意味をなさないという指摘、AIがバグ発見とエクスプロイト開発を爆速に - GIGAZINE https://gigazine.net/news/20260512-disclosure-policy-dead/]
+ [Amazon ElastiCache 向け Valkey 9.0 のお知らせ | Amazon Web Services ブログ https://aws.amazon.com/jp/blogs/news/announcing-valkey-9-0-for-amazon-elasticache/]
+ 	Valkeyでの全文検索、どんなもんだろ
+ 		シングルスレッドだとロックしちゃう気がするけどな...???
+ [いろいろなことについてのブログ: AWS に戻ってきましたが、なぜ辞めたのかを痛烈に思い出しました。 https://fourlightyears.blogspot.com/2026/05/i-returned-to-aws-and-was-reminded-hard.html?m=1]
+ 	AWS IAMは複雑だ、それはそう
+ 		認証認可はすべて複雑なので
+ 		GCloudやAzure，OCIのそれも複雑ですわマジで
+ [ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか https://zenn.dev/torao/articles/20260502-differences-in-engrs-cognitive-strategies]
+ 	長い！
+ 	けど、時間を掛けて読んだ
+ 		AI出力じゃない文章にはその価値があると思うので
+ 	仮説の上に仮説を重ねてる感じはするなー
+ [Kindle Scribe初のカラーモデル登場、Amazon「Kindle Scribe Colorsoft」など新シリーズ国内発売 - エルミタージュ秋葉原 https://www.gdm.or.jp/pressrelease/2026/0513/634295]
+ 	iPad Proが古くなってきたし、買い替え先候補だな
+ 	デジタル白黒お絵かきしてSlackに投げたい、っていう用途でiPad + Goodnotes使ってるんだけど、バッテリーはすぐ切れるし認証が毎回めんどいし...
+ [ダッシュボードのスケジュールメール配信による AWS コストレポートの自動化 | Amazon Web Services ブログ https://aws.amazon.com/jp/blogs/news/automate-aws-cost-reporting-with-scheduled-dashboard-email-delivery/]
+ 	これ、Slack通知にできないかなー
+ [GitHub を離れて Forgejo に移行する理由 |ヨリン・シュライヴァースホフ https://jorijn.com/en/blog/leaving-github-for-forgejo/]
+ 	[Zig 言語リポジトリは Github から Codeberg に移行中です : r/programming https://www.reddit.com/r/programming/comments/1p7up3u/the_zig_language_repository_is_migrating_from/?tl=ja]
+ 		Zigは移行済み
+ 	mitchelも脱GitHubって言ってるしなー
+ 	とはいえ、企業利用ではまだしばらくGitHubだろうなぁ...
+ [AnthropicがAWS上で提供する「Claude Platform on AWS」正式リリース。Claudeの新機能を含むフルセットをAWSで提供 － Publickey https://www.publickey1.jp/blog/26/anthropicawsclaude_platform_on_awsclaudeaws.html]
+ 	BedrockのコストをIAM Principalごとに集計できるようになったんだけど、Claude Platform on AWSだとどうなるのかなー
+ [サイバー犯罪グループがAIを使って2要素認証を回避できるゼロデイ脆弱性を発見していたとGoogleが報告 - GIGAZINE https://gigazine.net/news/20260512-hacker-use-ai-mass-exploitation-google/]
+ 	ゼロデイ多すぎ問題
+ [TanStack公式@tanstack/*にマルウェア混入｜205パッケージに広がるMini Shai-Huludワーム https://ai-heartland.com/security/news-tanstack-mini-shai-hulud-npm-worm/]
+ 	`on.pull_request_target` もう止めたほうがいい説
+ 		依存先が使ってたらその依存止める、みたいなことをチェックするlinterが必要か...???
+ [Chrome DevTools MCP が凄い。人類が「プログラムにやってほしかったこと」が簡単にできる時代がきた！！ - プログラマでありたい https://blog.takuros.net/entry/2026/05/11/080037]
+ 	ブラウザ操作自動化、壊れやすいのが欠点だったけど、これなら、っていう感じはするなー
+ 	セキュリティ面では危ないけど
+ [あなたの興味は信頼性？それとも生産性？ SREとしてのキャリアに悩むみなさまに伝えたい選択肢  - Speaker Deck https://speakerdeck.com/jacopen/anatanoxing-wei-haxin-lai-xing-soretomosheng-chan-xing-sretositenokiyarianinao-muminasamanichuan-etaixuan-ze-zhi]
+ 	必要な知識量が増えすぎてる、のか？
+ 	Platform Engineering、本当に良いものなのか？
+ 	多くても難しくても、必要なら学ぶんだと思うし、それでも普通に足りないから、足りない知識で何とかするしかない
+ [アルカノイド風ブロック崩し / コーディングエージェント / サイバネティクス https://zenn.dev/s_tokutake/articles/d7286592282197]
+ 	>サイバネティクスとkubenetesは語源が一緒なんですね。どちらもギリシャ語の κυβερνήτης（kybernētēs）、つまり「舵取り」「操舵手」に由来するそうです。
+ 	へー
+ [いまITエンジニアの人たちは今後のキャリアについてどう考えているのだろう？…いろんな人の話を聞いてみたい「まじで何ができるんだろう」「別職種への転職はありかも」 - Togetter https://togetter.com/li/2697180]
+ 	別職種でエンジニアリングの知識を活かすのはありだよな、と思いつつ
+ 	別職種には別職種のための知識と経験は必要だろうし、転職ってなったらそう簡単じゃないよな
+ 	一方で、これだけ脆弱性がポンポン出る世の中になってしまったし、セキュアにシステムを構築・運用する知識はAIがあればできるってもんじゃないはず
+ 		OpenAIもサプライ・チェーン攻撃食らってるし
+ 			[Our response to the TanStack npm supply chain attack | OpenAI https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/]
+ [オライリーイベント登壇資料「鉄リサイクル・産廃業界におけるAI技術実応用のカタチ」 - Speaker Deck https://speakerdeck.com/takarasawa_/orairiibentodeng-tan-zi-liao-tie-risaikuruchan-fei-ye-jie-niokeruaiji-shu-shi-ying-yong-nokatati]
+ 	面白かった
+ 	Human In the Loopを組み込んで、業務量を80%減らすことができるとして、残りの20%はAIが判断できない難しい業務になるのよな...
+ [/kawasima/指標をめぐる認知バイアス]
+ 	kawasimaさんのcosense、ずっと読めるよな...
+ [「OSSがあるなら自作するな」は AI時代も正しいか ── Build vs Adopt の新しい判断基準 - Speaker Deck https://speakerdeck.com/kumorn5s/oss-build-vs-adopt]
+ 	自作したツール・ライブラリの面倒を見るのはAIが合っても辛いのよな
+ 	辛さの質と量は変わってるっていうだけ
+ [Amazon Redshiftが、データレイククエリエンジンを統合したAWS GravitonベースのRGインスタンスを発表 | AWSニュースブログ https://aws.amazon.com/jp/blogs/aws/amazon-redshift-introduces-aws-graviton-based-rg-instances-with-an-integrated-data-lake-query-engine/]
+ 	BigQueryがあればいいや、ってことで最近はご無沙汰のRedshiftだけど、Gravitonもきたし、Spectrumの機能が統合されたぽい
+ [10年続けていても“Just for Fun”。 創造性が支えるOSS開発のリアル - Findy Media | IT/Webエンジニアの転職・求人サイトFindy – GitHubからスキル偏差値を算出 https://findy-code.io/media/articles/codesidechat-songmu]
+ 	自分しか使わないツールを作って公開するところからOSSは始まるんだと思うのよな
+ [PostgreSQLで作る非同期ジョブキュー - enechain Tech Blog https://techblog.enechain.com/entry/postgres-job-queue]
+ 	自作ジョブキュー事例、良い
+ [2026年のソフトウェア開発を考える（2026/05版） / Software Engineering Scrum Fest Niigata 2026 Edition - Speaker Deck https://speakerdeck.com/twada/software-engineering-scrum-fest-niigata-2026-edition]
+ 	t-wadaさんのまとめ、今後も更新されていくんだろうな
+ [あなたは人間ですか？と問い続けて25年。「CAPTCHA」がAIに破られても生き残る理由 - レバテックLAB https://levtech.jp/media/detail_859/]
+ 	AIに破られても、多少手間がかかってくれればいいっていうのは面白い
+ 		経済的にペイするかどうかが大事なので
+
+読んだ本
+ 
+
+書いた
+　[Bedrockコストを利用者別に集計する https://zenn.dev/watarukura/articles/20260516-idgbfwcnkzvbmzmlezywoxiej3dcfj]
+　	アプリケーション推論プロファイル使ったり、LiteLLM使ったりしてがんばらないといけなかったのが、だいぶ簡単になってうれしい
+
+その他
+ 
+
+#週報
+<[2026-05-05 - 2026-05-11]
+[2026-05-19 - 2026-05-25]>

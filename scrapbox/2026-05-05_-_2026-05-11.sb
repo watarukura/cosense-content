@@ -1,0 +1,66 @@
+2026-05-05 - 2026-05-11
+読んだ記事
+ [マイクロソフト公式OSS「ghqr」でGitHub設定をベストプラクティス診断してみた | DevelopersIO https://dev.classmethod.jp/articles/ghqr-github-best-practices-audit/]
+ 	結構良い
+ 	OrgやEnterpriseのベストプラクティスはあんまり公開情報ない気がするんだよな
+ 		Repoはまぁまぁあるにしても
+ [Tailscaleやめたい - まいの雑記帳 https://mq1.dev/entry/j7zvrsp48lb]
+ 	自宅のローカルネットワークをいい感じにしようとかあんまり考えないのでTailscaleも特段入れようと思わないのだけど、ネットワーク屋さんの考えてることは知りたい
+ [外部からアクセス可能なhttpsサイトはドメイン設定後「即」攻撃にさらされる件 https://zenn.dev/kusuke/articles/25330f7759eba4]
+ 	CT Log、どうやって見ればいいんだろう？
+ [2033170 - DigiCert: コード署名証明書の誤発行 https://bugzilla.mozilla.org/show_bug.cgi?id=2033170]
+ 	>インシデント概要： 2026年4月2日、攻撃者が顧客チャットチャネルを通じてDigiCertのサポートチームに連絡を取り、顧客のスクリーンショットを装ったZIPファイルを送信しました。このファイルには、悪意のあるペイロードを含む.scr実行ファイルが含まれていました。CrowdStrikeなどのセキュリティ対策により、4回の送信試行は正常にブロックされました。5回目の試行では、サポートアナリストが使用するマシンであるENDPOINT1が侵害されました。
+ 	ひー
+ 		AWSサポートとかでファイルアップロードを専用のS3に対して行うのは、一旦ウィルススキャンとかするためなんだろうな
+ [クラウドをAWSで制したAmazonが、今度は物流業界で同じ手を使い始めた | XenoSpectrum https://xenospectrum.com/amazon-supply-chain-services-aws-logistics/]
+ 	ASCS: Amazon Supply Chain Service
+ 	これ、数年後には日本上陸もあるよな...
+ [Shebang 昔話 https://zenn.dev/kusaremkn/articles/5b2a87852005cd]
+ 	POSIXにはshebangがない、みたいな話は聞いたことがあるなー程度の知識
+ 		面白かった
+ [Amazon CloudWatch RUM にセッションリプレイ機能が追加され、ウェブアプリケーションのユーザー操作を動画のように再生できるようになりました | DevelopersIO https://dev.classmethod.jp/articles/amazon-cloudwatch-rum-session/]
+ 	DatadogのSession Replayお高いから、移行先候補にはなりそう？
+ 		まぁ、仕組み上そんなに安くはならないと思うけど...
+ [長大コンテキストの処理でClaude Opusを超える性能を示す効率設計AIモデル「SubQ」が登場、1200万トークンの入力が可能でTransformerの限界を打ち破る - GIGAZINE https://gigazine.net/news/20260507-subq-1m-preview/]
+ 	>Subquadraticによると、TransformerベースのAIモデルには「入力トークンが増加すると、必要な計算量が2乗に比例して増加する」という問題があるとのこと。
+ 	なるほどなぁ...
+ [Practical Package Security: The Unofficial Guide | Wiz Blog https://www.wiz.io/blog/practical-package-security-the-unofficial-guide]
+ 	ハニートークン、セキュリティの専属部署があればやってみてもいいかもだなー
+ [DirtyFrag: Linuxカーネルのローカル権限昇格脆弱性について現時点で分かっていること | ワルブリックス株式会社 https://www.walbrix.co.jp/article/dirtyfrag-linux-lpe.html]
+ 	Copy Failに続いて類似の権限昇格脆弱性が発覚
+ 	こっちはまだパッチが出てない...
+ [deepsecのご紹介：コードベースの脆弱性を発見するためのセキュリティツール - Vercel https://vercel.com/blog/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base]
+ 	VercelからもセキュリティチェックSKILL
+ [GitネイティブなコラボレーションプラットフォームGitSocialが良さげかも | kawarimidoll.com https://kawarimidoll.com/posts/202605081/]
+ 	[bit-vcs/bit https://github.com/bit-vcs/bit] bitと類似のツールかな
+ 	GitHubの次はこっちになるか、っていうとEnterpriseは多分違うんだよな...
+ [ローカルワークスペースのMarkdownファイルをブラウザで閲覧・編集できる軽量Webアプリを作った https://zenn.dev/karaage0703/articles/78056e4d3e07a2]
+ 	同じようなことをしている
+ 	cosense的な機能も追加してて親近感がある
+ [認知負債 - kawasima https://scrapbox.io/kawasima/%E8%AA%8D%E7%9F%A5%E8%B2%A0%E5%82%B5]
+ 	認知負債と意図負債の分離、なるほどなぁ...
+ 	AIエージェントを利用する以前の開発速度であれば、コードベースの増加速度に人間が追いつかなくなるのは、成功した一部のプロダクトだけだったけど、成功する前にプロダクトが大きくなってしまう、ということはありそうだよな
+ [S3 Files を本番 EKS で運用し、imageビルド時間を 19→4分に改善した https://zenn.dev/shibatch/articles/e0a27373bdfc3c]
+ 	S3 Files事例
+
+読んだ本
+ [マルチクラウドセキュリティの教科書 クラウド横断で実現する堅牢なセキュリティ基盤 電子書籍（大島 悠司 垣見 宥太 金光 高宏 蒲 晃平 工藤 匡浩 小西 陽平 白濱 亮 平田 一樹 矢野 純平 山田 康博 吉江 瞬）｜翔泳社の本 https://www.shoeisha.co.jp/book/detail/9784798190853]
+ 	シングルクラウドでも概念を把握するのが難しいのにマルチクラウドとかマジ無理っすわ...
+ 	特にIAM周りを把握しないといけない
+ 		一番使ってるAWSでも理解はそれほど深くないのに、GCloudはちょっぴり、Azureはさっぱり、OCIは触ったこともない
+
+書いた
+　
+
+その他
+ 久々にらんだむダンジョンをやりたくなって調べている
+ 	[Tapir: ホーム https://qnighy.github.io/tapir/index.ja.html]
+ 		Steamでランタイムを動かせるらしい？
+ 	[SteamDeckで外部のツクール製ゲームがやりたい｜stara https://note.com/stara/n/nd8fc683997d8]
+ 		SteamDeckが公式で買おうと思ったら売り切れ...
+ 	Steam自体をよく知らないのよな
+ 		Linuxベースってことくらい
+
+#週報
+<[2026-04-28 - 2026-05-04]
+[2026-05-12 - 2026-05-18]>
