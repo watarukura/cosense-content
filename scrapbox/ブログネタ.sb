@@ -12,6 +12,7 @@
 　Toranaでの勤務を振り返る
 　GitHubリポジトリ棚卸し手法
 
+
 済み
  amplifyのデプロイ結果をslack通知する
   [Amplify Hostingのマルチアカウント移行 - TORANA TECH BLOG]
@@ -31,3 +32,5 @@
  　[日報をCursorに書いてもらうためにあれこれ収集する https://zenn.dev/watarukura/articles/20260104-rxrb8nh4ia68vlkc5om0sbvapd7dc]
  zensicalを使ってmarkdownファイルからGitHub Pagesを公開するまで
  	[ZensicalでGitHub Pages公開する https://zenn.dev/watarukura/articles/20260131-grvtjamwbsojs3v9ksp5lt2ugrkda]
+　IAM Principalを使ってBedrockコストを分解する
+　	[Bedrockコストを利用者別に集計する https://zenn.dev/watarukura/articles/20260516-idgbfwcnkzvbmzmlezywoxiej3dcfj]
