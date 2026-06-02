@@ -1,0 +1,79 @@
+2026-05-26 - 2026-06-01
+読んだ記事
+ [AWS MCP Server がGAに - Claude Codeから検証: IAMガードレール設計 | フューチャー技術ブログ https://future-architect.github.io/articles/20260525a/]
+ 	クラウドインフラをAIエージェントに直接変更させるのはなー
+ 		参照だけさせて、「最小権限になるようにIAMポリシー書いて」みたいなのには使えそう
+ 		AIエージェント用の権限の最小化と、監査ログの出力が必要よな
+ [/kawasima/ソフトウェアの見積もり]
+ 	「書いてみないとわからないこと」が見積もりと実績の乖離の主因なので、原理的に見積もりはうまくいかない
+ 		「書いてみないとわからないこと」がどのくらいありそうですか？って質問はナンセンスなので
+ 		これはAIエージェントを使った開発でも変わらないだろう
+ [SQS → Lambda → DB / SNS で 「DB は exactly-once、通知は at-least-once」 を成立させる冪等パターン | DevelopersIO https://dev.classmethod.jp/articles/sqs-lambda-db-notification-idempotency/]
+ 	SNS publishして更に後段のジョブがあればsubscribeして、ってできるなー
+ [Claude Code で使える DuckDB Skills を試してみた + AWS運用の活用を考えてみた #opsmethod 登壇資料 | DevelopersIO https://dev.classmethod.jp/articles/opsmethod-2-duckdb-skills/]
+ 	DuckDBでS3出力されたVPCフローログ・WAFブロックログ・etc...へクエリする、みたいな使い方のときに、AIエージェント使えるのは良さそう
+ [サプライチェーン攻撃対策の「実効」を継続検証するGitHub監査基盤を内製した話 https://zenn.dev/smartround_dev/articles/478c195bf914b6]
+ 	自前で監査基盤作るやつ、やっぱ必要だよな...
+ 		GitHub単体の機能では個別のリポジトリの検証には足りないのね
+ [An Update on Composer & Packagist Supply Chain Security https://blog.packagist.com/an-update-on-composer-packagist-supply-chain-security/]
+ 	Packagest、がんばれー
+ 	cooldown等々、近いうちに来てくれそう
+ [「JWT を localStorage に置くな」はなぜ言われるのか、Cookie 回帰までの時系列整理 https://zenn.dev/khale/articles/web-session-jwt-cookie-history]
+ 	BFFのセキュリティ的な意味合いって考えたことなかったなー
+ [t-wada（和田卓人）が語るAI時代のソフトウェアエンジニアの生存戦略 TDDの意味、キャリアの柱を築く思考と技術的審美眼の磨き方 - アンドエンジニア - エンジニアのこと、エンジニアから。 https://tenshoku.mynavi.jp/engineer/guide/articles/t0039]
+ 	Xにも書いたけど、古巣に「シェルスクリプトは一生分書いた」って言ってる人がいた
+ [FDEブームに乗るSaaS企業に待ち受ける「採算の合わない個別開発」の罠 - エンジニアtype | 転職type https://type.jp/et/feature/31067/]
+ 	FDE、ほんとに増えてるのか？
+ 	そもそも、むちゃくちゃ高額のSaaS以外ではPayせんのでは...
+ [AI時代に改めて考える、ドメイン駆動設計 - モデリングが「AIへの共通言語」になる - Speaker Deck https://speakerdeck.com/littlehands/aishi-dai-nigai-metekao-eru-domeinqu-dong-she-ji-moderinguga-aihenogong-tong-yan-yu-ninaru]
+ 	具体例で仕様を書くプラクティス、良さそう
+ [バグ発見は10倍、修正は2週間、真陽性は90.6％──Mythosが突きつける「修正する人間がボトルネック」という現実 【生成AI事件簿】脆弱性検知は10倍速かつAIが見つけた脆弱性はほぼ本物、企業の経営層が直面する3つの課題(1/4) | JBpress (ジェイビープレス) https://jbpress.ismedia.jp/articles/-/95004]
+ 	発見速度も実装速度も10倍にも100倍にもなるだろうけど、レビューして取り込むまでは流石になぁ
+ [人間には普通の契約書に見えるのに「嘘のフォント」でAIだけ別の文章を読まされる「Noroboto」攻撃とは？ - GIGAZINE https://gigazine.net/news/20260525-noroboto/]
+ 	ひでぇなぁ...
+ [PerplexityがBumblebeeをオープンソース化します https://www.perplexity.ai/ja/hub/blog/perplexity-is-open-sourcing-bumblebee]
+ 	Bumblebee、ちょっと更新が遅い感じはするけど、npm lsするのめんどいし動作がマジで高速なので助かる
+ [DuckDB as a Pipeline: Findyデータ基盤におけるDuckDBの活用事例 - Findy Tech Blog https://tech.findy.co.jp/entry/2025/12/24/080000]
+ 	副業先のシステムでDuckDBのBigQuery拡張、3rd partyだから使わなかったんだよな
+ 		parquetで更新データ作ってbqコマンドでload
+ [DevOps を閉じる ―― オブザーバビリティとは何か https://zenn.dev/ntk221/articles/ff6f235208cfcd]
+ 	良い内容だった
+ 	Devが使えるObserverbilityツール、それでなくてもむずいけど必要なんだなー
+ [/kawasima/ソフトウェア開発プロジェクトの設計]
+ 	ウォーターフォールが必要な開発プロジェクトは存在するけど、関わり合いになりたくはないな...
+ 		金でひっぱたいて発注側が責任を取らずに受注側に面倒を押し込むスタイルで開発したい場合は遅延と追加課金があることを想定しながら選べばいい
+ [WPackagistがWP Engineに買収された今の代替 : r/ProWordPress https://www.reddit.com/r/ProWordPress/comments/1rvdefk/alternative_now_that_wpackagist_is_owned_by_wp/?tl=ja]
+ 	全然気づいてなかったけどWPackagist、WP Engineに買われとる...
+ 		2026年3月か
+ 	WP Engine、Automaticと喧嘩してるしなぁ...
+ 		ACFがWPackagistとWP Packagesでダウンロード元変わったりするんじゃないのかコレ...うげぇ
+ [きみは GitClear を知っているか 〜AI ROI をデータドリブンに分析する〜 https://zenn.dev/socialdog/articles/do-you-know-git-clear]
+ 	Findy Teamsがグローバルで覇権取ってくれればいいけど、GitClearはどのくらいシェア取ってるんだろ？
+
+読んだ本
+ [Software Design 2026年6月号 | 技術評論社 https://gihyo.jp/magazine/SD/archive/2026/202606]
+ 	毎号楽しみに読んでるruiさんのコラム、今月は株式投資
+ 		個別株はなぁ...
+
+書いた
+　[x.comの直近1週間分のpostsをclipboardにコピー]
+　	XのAPI呼び出すためにOAuth、みたいなのめんどくて...
+　		GASでやったことはあるんだけど
+　	人が介在すればそんなに面倒でもないのでbookmarkletにした　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+
+その他
+ 
+
+XPosts
+ 2026/5/29 17:38:19 [https://x.com/What_R/status/2060279557345927473]
+  >https://tenshoku.mynavi.jp/engineer/guide/articles/t0039… 
+  >
+  >ハンズラボの元同僚氏、「一生分のシェルスクリプト書いた」ってよく言ってたけど、t-wadaさんは「一生分のXSLT書いた」なんだな
+
+ 2026/5/26 10:48:39 [https://x.com/What_R/status/2059089300206268473]
+  >2026-05-19 - 2026-05-25 - watarukura https://scrapbox.io/watarukura/2026-05-19_-_2026-05-25… 
+  >書きました
+
+#週報
+<[2026-05-19 - 2026-05-25]
+[2026-06-02 - 2026-06-08]>
