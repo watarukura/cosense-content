@@ -1,0 +1,76 @@
+2026-06-16 - 2026-06-22
+読んだ記事
+ [knowledge-catalog/okf/SPEC.md at main · GoogleCloudPlatform/knowledge-catalog https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md]
+ 	OKF、結局ただのテキストファイルでfrontmatterにattribute書こうぜっていうだけなので筋は悪くないと思う
+ [AddyOsmani.com - The Intent Debt https://addyosmani.com/blog/intent-debt/]
+ 	意図の負債(Intent Debt)はAIには返せない、っていう話
+ 	それはそうで、「自分が何を望んでいるか」「自分は本当は何を望んでいるか」「本当に？」ってひたすら考えていくことが必要になりそう
+ [ゲーム事業部設立して、終了したお話 https://zenn.dev/91works/articles/b535a86336cf42]
+ 	ハイパーカジュアルゲーム、広告を打てるくらいは儲かる場合があって夢がある、のかもしれない
+ 		AIでモノは作れるけど、売れるものを作れるかは別っていう話で
+ [Homebrewのドキュメント：ソフトウェアサプライチェーンセキュリティ https://docs.brew.sh/Supply-Chain-Security]
+ 	aqua checksumのテックブログ書いたけど、Homebrewはデフォルトでchecksum見てるのね
+ 		core開発者がすげー大変な思いをしてメンテしてて頭が下がる
+ [runcのコンテナ起動処理を理解する〜CにできてGoにできないこと〜 https://zenn.dev/team_soda/articles/892fa3ee910e38]
+ 	おもしろ
+ 	>Goのプログラムは、runtimeによって最初からマルチスレッドで動いている。
+  > Linuxの仕様上マルチスレッドのプログラムから一部のNamespace（ユーザー名前空間など）をcloneするのが困難。
+  > よって、プロセスを作る(clone)するのをCが行っている。
+ [PRごとに検証環境が立ち上がる仕組みをTerraform × GitHub Actionsで作った話 - エムスリーテックブログ https://www.m3tech.blog/entry/2026/06/16/153849]
+ 	使い捨てtfstate、なるほどなー
+ [エンジニアリング戦略の作り方 / Crafting Engineering Strategy - Speaker Deck https://speakerdeck.com/iwashi86/crafting-engineering-strategy]
+ 	たまたま最近全社向けの対応やってるのでなかなか頭が痛い
+ [AWS Continuum のご紹介: マシンスピードで実現するセキュリティ | Amazon Web Services ブログ https://aws.amazon.com/jp/blogs/news/introducing-aws-continuum-security-at-machine-speed/]
+ [アップデート AWS Security Agent に脅威モデリング機能が追加され、設計ドキュメントやソースコードから STRIDE ベースの脅威分析を自動生成できるようになりました | DevelopersIO https://dev.classmethod.jp/articles/aws-security-agent-threat-modeling/]
+ 	んー、このレポートもらって、対応するかなぁ...???
+ [同じプロンプトを何度も書きたくないので、AIとのやりとりを棚卸しする仕組み作った - LayerX エンジニアブログ https://tech.layerx.co.jp/entry/prompt-log-driven-ai-workflow]
+ 	これはいいなー
+ [japanese-tech-writing/SKILL https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d]
+ 	AIに日本語を生成させるとき、だからドキュメント生成のときにチェック用に使うのがいいかなー
+ [Apple container 1.0 を試してみた ― systemd、名前付きホスト、起動速度を Docker と比較 https://zenn.dev/tokium_dev/articles/202c16adec91d0]
+ 	launchdよくわかんねーのでcron動かすのに使うのはいいかもしれない
+ [【PHP】PHP最大の問題点はこれだ！！ #マーケティング - Qiita https://qiita.com/rana_kualu/items/d1c08a55a373897d38d5]
+ 	PHP、実用のための言語だからキラキラはしてないんだよな...
+ 	キラキラしてる方が流入は多いからマーケティングがんばろうはわからなくもない
+ [筋トレの健康効果、週○分で頭打ち　適正時間は？　米ハーバード大などが14万人を調査：Innovative Tech - ITmedia NEWS https://www.itmedia.co.jp/news/articles/2606/19/news045.html]
+ 	土曜と日曜で60分ずつ、平日はできればウォーキング or HIIT、みたいなスケジュールにしている
+ [「斜めCloseボタン」広告に批判　「閉じ方分からなかった」「悪意を感じる」 - ITmedia NEWS https://www.itmedia.co.jp/news/articles/2606/18/news085.html]
+ 	悪意の煮凝りだ
+ [Apple container で docker compose を動かす https://zenn.dev/7kaji/articles/370a8dd7f678d1]
+ 	Apple containerでUbuntuを動かすのはいいかもしれない
+ [Prismaでの危険なマイグレーションを検出するprisma-strong-migrationsというライブラリを作りました https://zenn.dev/soartec_lab/articles/bfada1c7be2790]
+ 	migrationも、plan / applyでやりたいんだよな
+ 		planで赤いラベルが付く、とかだといいと思う
+ [AI が大量にアウトプットしてくるので認知負荷を下げる Skill を作った https://zenn.dev/hataluck/articles/0752919b305a9f]
+ 	kitaiさんの新作、いいなぁ
+
+読んだ本
+ [Software Design 2026年7月号 | 技術評論社 https://gihyo.jp/magazine/SD/archive/2026/202607]
+ 	セキュリティ・バイ・デザイン特集、役立ちそう
+
+書いた
+　
+
+その他
+ トラックボール出戻りしようかなーと悩み始めたところ
+ 	[絶賛クラファン中、Keychron製トラックボールを奪い取ってレビューしてやったぞ | ギズモード・ジャパン https://www.gizmodo.jp/article/keychron-t1-he-review/]
+ 	[最大4台のデバイスと接続できる親指操作タイプの縦型トラックボール「Kensington ProFit Ergo TB675 Vertical」のワイヤレスモデルが6月30日より日本でも販売開始。 | AAPL Ch. https://applech2.com/archives/20260618-kensington-pro-fit-ergo-tb675-vertical-trackball-wireless.html]
+ 		KeychronかKensingtonか、前に使ってたLogicoolかなー
+ 	Roller mouse、先がなさそうでなぁ
+ 		とはいえ、キーボードから手を離さなくていいやつがいいのよなー
+ 		[Nape Pro | SUPER KOPEK https://superkopek.jp/pages/napepro-news?srsltid=AfmBOoopo8CgZy_Ofa6H_SkAYvDgg0LfSzdaEQhb0uINvdLyejMjcOhh]
+ 			これかなぁ...
+ 			先々まで続いてくれるか？
+ 	Apple Track padでもいい
+			ちょっとだけ置き場所に困るんだけど、素直ではある
+			もうちょっと小さいといいのにな
+				MBPのトラックパッドと同じくらいのサイズでいいんだ
+
+XPosts
+ 2026/6/14 11:44:48 [https://x.com/What_R/status/2065988798060941529]
+  >aqua checksumを試す https://zenn.dev/watarukura/articles/20260614-bfeaqwjdmergnfriddfjhtnb2sf5… 
+  >書きました
+
+#週報
+<[2026-06-09 - 2026-06-15]
+[2026-06-23 - 2026-06-29]>
