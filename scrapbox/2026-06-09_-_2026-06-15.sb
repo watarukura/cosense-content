@@ -1,0 +1,70 @@
+2026-06-09 - 2026-06-15
+読んだ記事
+ [「AIが私のソフトウェアエンジニアとしてのキャリアを侵食しておりどうすればいいか分からない」という投稿が大きな反響を呼ぶ - GIGAZINE https://gigazine.net/news/20260608-llms-eroding-career/]
+ 	10年先どころか5年先も3年先もどうなってるか見通せないほどAIによる変化は早い
+ 		とはいえ、それはIT全般がそうであって、更に加速しただけでもある
+ [Ubuntu、サンドボックス化された開発環境をコマンド一発で構築。新機能「Workshop」リリース － Publickey https://www.publickey1.jp/blog/26/ubuntuworkshop.html]
+ 	Ubuntuのsandbox、LXDベースか
+ [【PHP8.6？】PHPコア開発者によるジェネリクスRFCへの評価と懸念 #rfc - Qiita https://qiita.com/rana_kualu/items/458588a87545bd70f395]
+		そもそもジェネリクスよくわかってないんだけどPHPにもいよいよ来そうなんだな
+	[AI slop コードレビュー - たにしきんぐダム https://tanishiking24.hatenablog.com/entry/2026/06/07/134005]
+		[88: 趣味のOSSメンテナンス今昔 (ryoppippi) https://oss4.fun/episode/88/] でも同じような話が出てたなー
+		キャリアのためにOSSにコントリビュートしたい人は、ある程度名前が知られててスターが多ければ何でもいいんだろうし
+	[ZigがAIを禁止する理由。GitHub離脱、確固たる運営方針。｜直也テック https://note.com/naoya_tech/n/ne7c83d38fc72]
+		いいインタビューだった
+		Zig、学んでみるかな
+	[価格.comをAI駆動で全面刷新する  ー 30年分の技術的負債を返し、次の30年の土台をつくる ー / AI Engineering Summit Tokyo 2026 - Speaker Deck https://speakerdeck.com/tkyowa/kakaku-com-ai-driven-system-renewal-0fc7e978-0e39-4bba-93eb-17cd56ecd1c1]
+		レガシーマイグレーションもやればできる、っていう事例が出てきたのでいよいよ言い訳できない
+	[Cloudflare で実装するハンドルネーム重複判定 | wbsb https://wbsb.dev/articles/56c3b219-813c-4fcc-90dc-4fe457d94f23]
+		おもしろ
+	[100メガショック なぜ Drizzle は npm での更新が途絶えてしまったのか？ https://zenn.dev/sora_kumo/articles/drizzle-orm-npm]
+		こっちもおもしろ
+	[新規事業を牽引する技術選定 〜フルスタックTypeScript開発の実践事例〜 https://zenn.dev/katsumanarisawa/articles/c3dd3e8371d4d7]
+		フロントエンドエンジニアが中心になりすぎないかな...???
+			それが必要なフェーズならそれでいいんだけど
+	[Apple、macOS上にLinuxコンテナを統合する新機能「Container machine」バージョン1.0リリース － Publickey https://www.publickey1.jp/blog/26/applemacoslinuxcontainer_machine10.html]
+		DockerDesktopよりはWSLに近い感じ？
+	[/shokai/正気を疑う技術 - bugのないvibe codingを目指して]
+		これからのテックリード像、こーゆー感じよなぁ
+	[RFC 7807 から RFC 9457 で Web API のエラー表現で変わったこと | フューチャー技術ブログ https://future-architect.github.io/articles/20260611a/]
+		複数のエラーを配列で返せるのはいいよなー
+	[「npm install」だけでコードが実行される時代が終了へ、npmが自動スクリプト実行を標準で停止する予定 - GIGAZINE https://gigazine.net/news/20260611-npm-install-script/]
+		>npm v12では、暗黙的なnode-gyp rebuildも許可なしではブロックされます。
+		これはありがたい
+	[無限キャンバス型IDEのcateが良さげかも | kawarimidoll.com https://kawarimidoll.com/posts/202606112/]
+		無限キャンパスで開発、おもしろ
+	[クラウド間の ID フェデレーションで固定シークレットから解放される | diary.sorah https://diary.sorah.jp/2026/06/12/id-token-federations]
+		ちゃんとOIDC / OAuth2について学ばないとなぁ...
+	[開発者が攻撃対象になった時代に、開発環境とCI/CDについて考えていること https://zenn.dev/catatsuy/articles/e2fc71d810613a]
+		自分でも真面目に考えないとなぁ...
+		https://github.com/cicd-sensor/cicd-sensor の機能、GitHub公式で出してくれマジで...
+	[pnpm v11がリリースされてDockerのCIビルドが落ちた話 https://zenn.dev/kurisho/articles/ci-node26-pnpm11]
+		ハマり対応を公開する行為が尊い
+
+読んだ本
+ 
+
+書いた
+　[aqua checksumを試す https://zenn.dev/watarukura/articles/20260614-bfeaqwjdmergnfriddfjhtnb2sf5]
+　	GitHub ActionsのSHA Pinningが一通りできたので、次に何をすればいいかな、ということで調べているところ
+
+その他
+ 
+
+XPosts
+ 2026/6/13 17:20:05 [https://x.com/What_R/status/2065710785893118280]
+  >cicd-sensor/cicd-sensor: Open-source eBPF runtime security sensor for GitHub Actions and GitLab CI/CD. https://github.com/cicd-sensor/cicd-sensor… 
+  >
+  >eBPFでのgithub runner監視、公式で提供してくれないかなー...
+
+ 2026/6/11 20:21:17 [https://x.com/What_R/status/2065031611851378943]
+  >ガッツ石松さんより先にガッツ星人を知ってたせいでガッツポーズってなんだろうと思っていた小学生でした
+  >ご冥福をお祈りします
+
+ 2026/6/9 13:48:25 [https://x.com/What_R/status/2064207967730430068]
+  >2026-06-02 - 2026-06-08 - watarukura https://scrapbox.io/watarukura/2026-06-02_-_2026-06-08… 
+  >書きました
+
+#週報
+<[2026-06-02 - 2026-06-08]
+[2026-06-16 - 2026-06-22]>
