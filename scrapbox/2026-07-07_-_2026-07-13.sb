@@ -1,0 +1,72 @@
+2026-07-07 - 2026-07-13
+読んだ記事
+ [IntelliJ IDEA が Git ワークツリー に対応したので、並行作業に使ってみた https://zenn.dev/nattosystem_jp/articles/18a20d887b9952]
+ 	AI関係なく便利かも
+ 	ローカルにマージ済みのブランチがいっぱい、ってなりそうではある
+ [🐴 (馬) https://blog.takaumada.com/]
+ 	長い
+ 	けど、面白かった
+ 	面白いだけでは終わらないけど...
+ 	[スマホゲーのKLab、防衛産業に参入　アラブで対ドローン防衛システム導入推進へ　提携先は「非開示」 - ITmedia NEWS https://www.itmedia.co.jp/news/articles/2607/06/news128.html]
+ 		スマホゲー屋さんが防衛産業に参入、つながってる話ではあるんだろうな
+ [APIもDBも東京なのに、全クエリが太平洋横断していた話 https://zenn.dev/avaintelligence/articles/b7d4743a448485]
+ 	おもしろ
+ [GitHubの公開IssueだけでAIに非公開リポジトリの情報を吐き出させる脆弱性「GitLost」が報告される - GIGAZINE https://gigazine.net/news/20260709-gitlost/]
+ 	ほえー
+ [テックブログはじめました & 継続的な循環的複雑度と認知的複雑度の計測をしているという話題 - タイムリープ テックブログ https://techblog.timeleap.co.jp/entry/2026/07/09/093440]
+ 	テストカバレッジもそうだけど、数字を追うと開発がつまらなくなるのよね
+ 	とはいえ、バグが生まれやすい場所が数字で見えるのは大きいし、リファクタリングの優先順位を決めたり、テストを厚くしたりもできるのはいい
+ [BunをRustで書き直す | Bunブログ https://bun.com/blog/bun-in-rust]
+ [『バン・ラスト』のリライト版についての私の考え - アンドリュー・ケリー https://andrewkelley.me/post/my-thoughts-bun-rust-rewrite.html]
+ 	こういうのこそ両論併記していきたい
+ 	実際にRustへ移行したことでバグが減ってバイナリサイズは小さくなったのだろうけど、Zigでもっときれいに書けたのだろうしコンパイル待ち時間は長くなっただろう
+ [不正アクセスによるバンダイチャンネル大量退会についてまとめてみた - piyolog https://piyolog.hatenadiary.jp/entry/2026/07/07/012552]
+ 	暇な若者が将来を棒に振っちゃわないように、セキュリティはしっかりしないとなぁ...
+ [GitHub Actionsの脆弱な構成の検知ツール、任せられる範囲と人が見極めるべきリスク - GMO Flatt Security Blog https://blog.flatt.tech/entry/2026-github-actions-security-part4]
+ 	permissionの最小化をlinterでやりたいんだよなー
+ [「上場」が消え、EXITがM&A前提になった夏 ― IVSで見たスタートアップの現在地｜久松剛 https://comemo.nikkei.com/n/nadbc7cff8628?sub_rt=share_pw]
+ 	元スタートアップ勤務としては身につまされる話だった
+ 	スタートアップに金が回ってほしい、という気持ちはある
+ 	[スタートアップ投資の全過程と障害　「死の谷」で生き残る確率は？ - 日本経済新聞 https://www.nikkei.com/article/DGXZQOUB064XH0W6A100C2000000/]
+ 		入ってからこの辺の知識を学んだので色々カルチャーショックを受けた
+ [“人為的にバズらせる” SNS操る「農場」ビジネスを取材　「テスト」と書かれただけの投稿が6分で100万回表示… 選挙で悪用の懸念も【報道特集】 | TBS NEWS DIG (1ページ) https://newsdig.tbs.co.jp/articles/-/2763724?display=1]
+ 	対策が思いつかない
+ 	数百くらいならどうにでもなりそうだけど...
+ [「VPC内通信もTLSにすべき？」と聞かれて ── そもそもAWS内で盗聴できるのか脅威モデルで確かめた話 #Security - Qiita https://qiita.com/ntaka329/items/de23144fdf7305a2e0c1]
+ 	PCI DSSとかが内部通信もTLSに、ってのがあって対応するなら必要なのよね
+ 	Xでも見たけど、実際にはHTTP/2、3が必要だからTLS、っていうのもある
+ [Cloudflare Workers + better-auth で全リクエストが無応答になる - hanging promise の罠 https://zenn.dev/coji/articles/cloudflare-workers-better-auth-hanging-promise]
+ 	Cloudflare Workers使ったことないけど、おもしろ
+ [AWSの強い権限は使い捨てに ── ZOZOがJITアクセスを全社導入した設計と運用 - ZOZO TECH BLOG https://techblog.zozo.com/entry/just-in-time-access-company-wide-rollout-at-zozo]
+ 	sudoはよくできてるのよな
+ 	前職では人数が少ないしログも取れるからってことで自動承認にしてた
+ 	承認者が大変になるのもアレだし
+
+読んだ本
+ 
+
+書いた
+　
+
+その他
+　Windowsのレジストリをいじっている
+　	Windows11には窓の手がないのよなー
+　		regedit、むちゃくちゃ使いづらい...
+　	[Windows11再セットアップ]
+
+XPosts
+ 2026/7/9 21:32:37 [https://x.com/What_R/status/2075196422895603715]
+  >昔、窓の手ってソフトがあったな、と唐突に思い出した
+  >Windows11マシンのレジストリいじっててめんどくさくなった時に
+  >
+  >ググって見たらWindows7までしか対応してないとのこと
+  >作者の方、お疲れ様でした
+  >その節はお世話になりました
+
+ 2026/7/9 13:12:52 [https://x.com/What_R/status/2075070657998757962]
+  >2026-06-30 - 2026-07-06 - watarukura https://scrapbox.io/watarukura/2026-06-30_-_2026-07-06…
+  >書きました
+
+#週報
+<[2026-06-30 - 2026-07-06]
+[2026-07-14 - 2026-07-20]>
