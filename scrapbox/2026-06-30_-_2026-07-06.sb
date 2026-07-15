@@ -1,0 +1,74 @@
+2026-06-30 - 2026-07-06
+読んだ記事
+ [Claude CodeがSOC業務を全自動でやってくれるってさ - ZOZO TECH BLOG https://techblog.zozo.com/entry/soc-claude-agent]
+ 	GuardDuty/CloudTrailでの検知、対応大変なんだよな...
+ 	AIエージェントでどうにかなるならありがたい
+ [moznion/cccc: A tool/library for measurement of "C"ognitive "C"omplexity and "C"yclomatic "C"omplexity https://github.com/moznion/cccc]
+ 	PHPMD、最近息してるんだっけ...???
+ 		[PHPMD - PHP Mess Detector https://phpmd.org/] 2023年から更新されてなさそう
+ [GitHub Actions ワークフローのステップが並行実行可能になりました | 豆蔵デベロッパーサイト https://developer.mamezou-tech.com/blogs/2026/06/27/github-actions-parallel-steps/]
+ 	matrixと違って同一Runnerで並列処理ができるのね
+ [無料でChrome・Firefoxで訪問したウェブサイトを自動的にローカルに保存しインデックス化＆定期自動取得で最新状態を維持し続ける汎用検索エンジン「Hister」、セルフホスト可能でMCPサーバー化させてAIとの連携やローカルのファイル検索も実現 - GIGAZINE https://gigazine.net/news/20260627-hister/]
+ 	良さそう
+ 		HTMLじゃなくてmarkdownで保存、とかでいいかも？
+ [AWSにおける最小権限のCI/CD：拡張性に優れた4層パターン - DEVコミュニティ https://dev.to/aws-builders/least-privilege-cicd-on-aws-the-4-layer-pattern-that-scales-to-200-pipelines-238o]
+ 	最小権限をコードから検出するんじゃなくて、permissionの履歴から生成するアプローチか、なるほどなぁ
+ [ghtknでGitHub AppのUser Access Tokenを使い、ローカルにシークレットを置かずGitHubと通信する | DevelopersIO https://dev.classmethod.jp/articles/ghtkn-short-lived-github-app-token/]
+ 	ghtkn、よさそう
+ [GitHub Actions 認証情報ごとのリスクから読み解く、権限昇格パターンとその対策 - GMO Flatt Security Blog https://blog.flatt.tech/entry/2026-github-actions-security-part2]
+ 	workflowのpermissionを最小限にするやつもむずいんだよな...
+ [カラーE Ink搭載の「Kindle Scribe Colorsoft」登場！ 「Kindle Colorsoft」との違いは？ - 山口真弘のおすすめ読書タブレット比較 - 窓の杜 https://forest.watch.impress.co.jp/docs/bookwatch/tabletrecom/2120144.html]
+ 	でかいなー
+ 	防水じゃないのか...
+ [サーバサイドTypeScriptを選ぶ前に向き合ってほしいこと - kosui https://kosui.me/posts/2026/06/26/before-choosing-server-side-typescript]
+ 	ファイルアップロード機能の要否、とか結構大きい気はする
+ [/shokai/なぜScrapboxにはstaff featureフラグが無いのか]
+ 	toC + SoEのシステムなら納得のいく理由だなー
+ [サプライチェーンアタックが怖いので、セキュリティツールを作り始めた話 https://udzura.jp/slides/2026/tsunagime-offline-8/]
+ 	eBPF、学びたい
+ [AIに8割書かせたコード、半年運用の答え合わせ。効いた3つと、腐った3つ https://zenn.dev/rapls/articles/7a1bac83df8b21]
+ 	コードの更新時にドキュメントも更新させる、っていうのはAIエージェントにも難しいのかなー？
+ 		試してみたいところ
+ [成長サービスのDB負荷に向き合う、Platform Team と Stream-aligned Teamで取り組む性能改善 - Timee Product Team Blog https://tech.timee.co.jp/entry/2026/07/01/180000]
+ 	いい話
+ [決めない技術選定 - Findy Media | IT/Webエンジニアの転職・求人サイトFindy – GitHubからスキル偏差値を算出 https://findy-code.io/media/articles/event-kawasima-260226]
+ 	やー、人間誰しもバイアスから逃れられないからな...
+ [ターミナルの危険なコマンドを実行前に止めるtirithが良さげかも | kawarimidoll.com https://kawarimidoll.com/posts/202606291/]
+ 	早速いれてみた
+ 
+
+読んだ本
+ [実践 ハイブリッドクラウド・セキュリティアーキテクチャ - O'Reilly Japan https://www.oreilly.co.jp/books/9784814401697/]
+ 	頭からざっとめくった
+ 	どう読んだらいいかわからん本だった...
+
+書いた
+　
+
+その他
+ [Windows11再セットアップ]
+ 	Linuxデスクトップ元年、また諦めた
+
+XPosts
+ 2026/7/4 10:04:26 [https://x.com/What_R/status/2073211298528239998]
+  >個人の感想です
+
+ 2026/7/4 10:03:49 [https://x.com/What_R/status/2073211144320508356]
+  >vscode、ファイルを保存しないといけないのがもう耐えられない
+  >auto saveの設定をがんばらないといけないとか辛くてintelliJ IDEAに戻ってきた
+  >
+  >同じ理由でexcelも駄目
+  >GSheetで開いている
+
+ 2026/7/1 16:34:29 [https://x.com/What_R/status/2072222292969722196]
+  >2026-06-23 - 2026-06-29 - watarukura https://scrapbox.io/watarukura/2026-06-23_-_2026-06-29…
+  >書きました
+
+ 2026/7/1 10:50:39 [https://x.com/What_R/status/2072135766571098609]
+  >TODOリスト、うまくいったことない
+  >ポモドーロテクニックも続かない
+  >inbox zeroだけは続いてるので、自分に向いてるのはこれらしい
+
+#週報
+<[2026-06-23 - 2026-06-29]
+[2026-07-07 - 2026-07-13]>
