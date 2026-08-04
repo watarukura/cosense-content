@@ -1,0 +1,82 @@
+2026-07-21 - 2026-07-27
+読んだ記事
+ [GitHub Release 作成をパッケージリリースのトリガーにするな！ https://zenn.dev/yumemi_inc/articles/github-release-not-a-publish-trigger]
+ 	なるほどなぁ...
+ [E2Eテストをユニットテスト並みの実行時間に — Playwright並列化とGitHub Actionsチューニングの実践 https://zenn.dev/berry_blog/articles/39392e1da7ca71]
+ 	コレはまた大変だわー
+ 	けど、E2Eは欲しいんだよなみんな
+ [え？ワンオペプロジェクトの担当が死んだのでソースコードが消えたって？: わたしが知らないスゴ本は、きっとあなたが読んでいる https://dain.cocolog-nifty.com/myblog/2026/07/post-ae3006.html]
+ 	トラックナンバー1のプロジェクト、既に破綻してるからな...
+ 		一時的にそうなることはあるけど
+ [検索画面のUI設計で、バックエンドエンジニアが早めに口出しすべき3つのこと https://zenn.dev/ncdc/articles/6c8eabde83cf0a]
+ 	RDBでやる場合と全文検索でやる場合で大分違うからな...
+ 		RDBで全文検索、もあるけど、やったことはない
+ 	完全一致で良い箇所は結構あるし、前方一致で良い箇所もそれなりにあるけど、全部じゃないんだよな...
+ [フロントエンドに広がりつつある OpenTelemetry：Browser SDK の現在地 https://zenn.dev/cybozu_frontend/articles/opentelemetry-browser-frontend]
+ 	Datadog RUM/Session Replayがめっちゃ高いんだけど、調査にはむちゃくちゃ有用なのでなー
+ [みんながAIを使う時、セキュリティについてどう考えればいいのか。 - VISASQ Dev Blog https://tech.visasq.com/claude-safe-adoption]
+ 	AIツールの利用判断、いっぱい申請きて大変そうなんだよな
+ 	よくわからない議事録ツールとか、なんで導入したいのかわからんし(Google Meetでいいじゃん？)
+ [生成AI時代にPHPをしっかりする - テテマーチ Tech Blog https://techblog.tetemarche.co.jp/entry/2026/07/09/173611]
+ 	AI関係なく大事な内容
+ [スクラムの「うまくいかない」はなぜ？ 組織や関係性に隠れた課題を探る - Agile Journey https://agilejourney.uzabase.com/entry/2026/07/23/103000]
+ 	いい話だった
+ [コードを読まない時代の死角: 検出から検証へ、脆弱性診断AIエージェントの現在地 / state-of-vulnerability-ai-agents - Speaker Deck https://speakerdeck.com/flatt_security/state-of-vulnerability-ai-agents]
+ 	セキュリティに投資できない場合は祈るしかないんだが、攻撃側はどんどんコストが下がってるからな...
+ [【コミネ公式】KK-926 水冷式身体冷却システム G2 | KOMINE | KOMINE Online Store https://komineshop.shop21.makeshop.jp/shopdetail/000000009487/]
+ 	空調服じゃなくて水冷服か
+ 	バイク乗りが着るらしい
+ [ジャック・ドーシー氏率いるBlock、AI協働プラットフォーム「Buzz」公開　SlackやGitHub依存からの脱却目指し - ITmedia NEWS https://www.itmedia.co.jp/news/articles/2607/22/news058.html]
+ 	うーむー
+ 	SlackとGitHub依存からの脱却、相当むずいよな...
+ 		とはいえ、最近Slackが迷走してる感はあるし、GitHubは障害続きだし...
+ [もしも法律がgitで管理されるとしたら (GitLaw) #憲法 - Qiita https://qiita.com/politician/items/d44057a2f2f0f1eb16eb]
+ 	なるほどなぁ
+ [【AWS】Aurora MySQL v3とAurora MySQL 8.4の差分調査 https://zenn.dev/nttdata_tech/articles/1d5d8ec41fdfa7]
+ 	そろそろ移行準備始めないとなぁ
+ [CloudFront VPC Origin障害をどう切り分けて復旧したか https://zenn.dev/nextbeat/articles/aws-vpc-origin-outage-troubleshooting]
+ 	弊社、サービスいっぱいあるからVPC Originが原因ぽいね、にたどり着くのは早かったのよね
+ 		使ってる新し目のサービスだけ落ちてて、古手のサービスは問題なかった
+ 		全体周知してTAMに連携してサポートケース起票して、あとはサービスごとに判断
+ [XZ Utilsのバックドア事件についての電子書籍『Half a Second』 - YAMDAS現更新履歴 https://yamdas.hatenablog.com/entry/20260721/half-a-second]
+ 	本当にあった怖い話
+ [AI x 開発生産性を取り巻く予算戦略と投資対効果 - Speaker Deck https://speakerdeck.com/i35_267/ai-x-kai-fa-sheng-chan-xing-woqu-rijuan-kuyu-suan-zhan-lue-totou-zi-dui-xiao-guo]
+ 	こーゆーはなしができる人が社内にいるってすごいことだと常々思っている
+ [2026年のソフトウェア開発を考える（2026/07版） / Agentic Software Engineering 2026-07 Findy Edition - Speaker Deck https://speakerdeck.com/twada/agentic-software-engineering-2026-07-findy-edition]
+ 	ボトルネックは人
+ 	次に求められるのは脳への直inputかもしれん
+ [mutalk 2 - 高音質ワイヤレス防音マイク | Shiftall https://ja.shiftall.net/products/mutalk2]
+ 	ちょっと欲しい
+ 	mutalk2 + smart glass、未来の仕事スタイル感がある
+ 	https://x.com/imos/status/2080561784868704426?s=20
+ [ターミナルを自作したら、1日のコミット数が500を超えて、生産性がバグった話 https://zenn.dev/singularity/articles/diy-terminal-500-commits]
+ 	AIフルコミットエンジニア、AIみたいな口調(文体？)になってて所々ひっかかる
+ 	内容は面白かったけど
+
+読んだ本
+ [Software Design 2026年8月号 | 技術評論社 https://gihyo.jp/magazine/SD/archive/2026/202608]
+ 	まだ呼んでる最中だけど
+
+書いた
+　
+
+その他
+　kindle scribe colorsoft
+　	漫画を読むだけなら不満はそんなにない
+　	kindle fireよりちょっとモッサリ程度で、kindle fireもそれなりにモッサリなので
+　	絵を描く機能を使いたいのに呼び出し方法が面倒
+　	Google Driveと接続できない
+　		アカウント情報の同期ができてないっぽい？
+　		amazon.comにアカウントを作ってamazon.co.jpと統合したのが現時点でも悪影響を及ぼしてないかコレ...
+　		storeを開くとamazon.comが開くんだよな
+　		AWSと違ってamazonのサポートはあんまり信用がおけないが、一応投げてみるか...
+　			一旦コミュニティに投げてみたけど、どうかなぁ
+　			https://jp.amazonforum.com/s/question/0D5at00000pYaQMCA0/クラウドとの接続について
+　			数日待って駄目そうならサポートケース起票かなー
+
+XPosts
+
+
+#週報
+<[2026-07-14 - 2026-07-20]
+[2026-07-28 - 2026-08-03]>

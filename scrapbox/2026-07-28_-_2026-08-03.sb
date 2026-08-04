@@ -1,0 +1,87 @@
+2026-07-28 - 2026-08-03
+読んだ記事
+ [turbopuffer - fast search engine built on object storage https://turbopuffer.com/]
+ 	Elasticsearch高いからな...
+ [寄稿：弁護士ドットコムにおける AWS DevOps Agent の活用事例 – インシデント対応の自動化と属人化の解消 | Amazon Web Services ブログ https://aws.amazon.com/jp/blogs/news/bengo4com-devops-agent-case-study/]
+ 	DatadogからWebhookで呼んでるのはおもしろい
+ 		Datadogで完結もできそうなところだけど
+ [【速報】Kimi-K3 を Day0 デプロイ。2.8T モデルは NVIDIA B300 x8 の 1 ノードで動くのか https://zenn.dev/fixstars/articles/kimi-k3-benchmark]
+ 	[GPUサーバー見積もりシミュレーター https://www.nttpc.co.jp/cgi-bin/gpu/simulation/custom/index.cgi]
+ 	GPU 863万円 x8だけで6704万円...
+ 	[Deploying Kimi K3 on Amazon SageMaker HyperPod and Amazon EKS | Artificial Intelligence https://aws.amazon.com/jp/blogs/machine-learning/deploying-kimi-k3-on-amazon-sagemaker-hyperpod-and-amazon-eks/]
+ 	AWS上でも動かせるけど `ml.p6-b300.48xlarge` っていう聞いたこともないインスタンスタイプで動かさないといけない
+ [ニチレイ物流システムが全面復旧、なぜ10日でサイバー攻撃から復旧できたのか？（ビジネス＋IT） - Yahoo!ニュース https://news.yahoo.co.jp/articles/90c92659f66e3d1396dcf757d4ca3db14e137497?page=2]
+ 	ニチレイさん、イミュータブルなバックアップ取ってたのか
+ 		これはエラい
+ [理解を手放さない - Shin x Blog https://blog.shin1x1.com/entry/dont-let-go-of-understanding]
+ 	外部ベンダーに開発を全部まかせてソースコードを読めない環境で運用してたときは、仕様書と発生してる事象から勘で原因を探るしかなかった
+ 		自分でコードを書けるようになってものすごく運用が楽になったので、これを手放したいとは思わないんだよな...
+ [検証：DAZN（ダゾーン）は何クリックで解約できるのか？ | ゲムぼく。 https://gameboku.com/archives/26073016.html]
+ 	ダークパターン...
+ [TiDB WEEKLY 2026/07/31 | Read Uncommitted https://read-uncommitted.com/posts/tidb-weekly/2026-07-31/]
+ 	TiDBは監査ログをS3に出力できる
+ 		Auroraも頼むよ...
+ [スタックされたプルリクエストがパブリックプレビューになりました - GitHub変更履歴 https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/]
+ 	epicブランチを作るより、スタックPRの方が良さそう
+ 	まぁ、なくて済むならその方がいいけど...
+ 		PRにPRを返して「これがマージされたらOKよ」みたいなのはやりやすくなる
+ 		[/shokai/プルリク返し]
+ [Amazon CloudWatch Logs が Application Load Balancer ログのサポートを開始 - AWS https://aws.amazon.com/jp/about-aws/whats-new/2026/07/amazon-cloudwatch-logs/]
+ 	ALBのログをS3にParquetで吐けるのは嬉しい
+ [tokuhirom/mdroll: A terminal Markdown viewer with big headings and real GFM support https://github.com/tokuhirom/mdroll]
+ 	Ghosttyで表示したらバグってるな、と思ってIssue書こうとしたらPRが出てた
+ 		https://github.com/tokuhirom/mdroll/pull/51
+ [査読に AI を使われた体験談 | Chem-Station (ケムステ) https://www.chem-station.com/blog/2026/07/review.html]
+ 	やー、研究者でこれなんだもんな
+ 	とはいえ、論文にもAI Slopが発生してて、学術情報ネットワークが汚染されつつあるのだなー
+ 	学術情報の生産性向上のためにAIが使われるとよいのだけど、ソースコードでも難しいのに論文はさらにむずいよなー
+ [セキュリティ研修【MIXI 26新卒技術研修】 - Speaker Deck https://speakerdeck.com/mixi_engineers/2026_new_grad_training_security]
+ 	ぜんぜん新卒じゃなくても勉強になるのだわ
+ [「若者の大移動」は合理的判断。国勢調査が暴いた、人口減少ニッポンの厳しい現実（TBS CROSS DIG with Bloomberg） - Yahoo!ニュース https://news.yahoo.co.jp/articles/9313416e4074a611db65ef8dac12c2b57f968c73?page=1]
+ 	移動しないと結婚相手が見つけられない
+ 		見つけたとしても帰るかどうかはわからない
+ 	まぁ、それはそうよね
+ [周囲から頼られ、「優秀だ」と評されるソフトウェアエンジニアの6つのタイプ - mtx2s’s blog https://mtx2s.hatenablog.com/entry/2026/07/27/194549]
+ 	社内で名前を売る必要があって生存難しいよなーとなっている
+ 	頼られる以前に、知られていないといけない
+ 	横断支援組織メンバー、長期の生存がむずいい
+ [ChatGPTの回答を変えるという選挙戦術、米中間選挙の候補者が競う「AIへの説得」 【生成AI事件簿】米国で広がるAEO、Wikipedia更新12分で候補者評価が書き換わる新たな現実(1/4) | JBpress (ジェイビープレス) https://jbpress.ismedia.jp/articles/-/96137]
+ 	うへぇ
+ 	これ、日本にも確実に来るよな...
+ [Opus5が思考が浅いように感じる問題への対策 https://zenn.dev/u1/articles/claude5-rules-collapse-and-fix]
+ 	メジャーバージョンが上がるとシステムプロンプトも大きく書き換わる、っていうバージョニングなのかなー
+ [非同期処理版mutex https://zenn.dev/mutex_inc/articles/async_serialization_20260721]
+ 	非同期処理、そもそも難しいので言語機能にちゃんと組み込まれてる言語を使うべき
+ 		PHP + Swooleで懲りました
+
+読んだ本
+ 
+
+書いた
+　
+
+その他
+　kindle scribe colorsoft
+　	電話しか窓口がなくてとりあえずXでDMしてみたが、結局電話になった
+　		XでDMしたらURLが送られてきてフォームから問い合わせをしたら改めて電話にしてくれっていうメールが来て:shit:
+　			電話は日本語で話してくれてありがとうという感じだが、フォームから問い合わせした内容は読めない縛りでもあるのか？
+　		なお、コミュニティからは何も反応がない
+　			kindle scribe、使ってる人がそもそもいない説ある
+　			同じ内容でも新規に問い合わせ作らないと反応してもらえないようだ
+　		チャットボットがマジで:shit:なのだが、まぁアレで解決する問題もあるんだろう多分
+　		何度も同じ説明をしなければいけないし、問い合わせ内容を文章ではなく口頭で伝えるのは無理がある
+　	やはり、amazon.comとamazon.co.jpのアカウント統合の影響があるっぽい
+　	絵を描いていてもペン先と描かれる線の場所に隙間があって気に食わない
+　		iPadに慣れてしまったからか
+　		ペン先も安っぽく感じてくるなど、坊主憎けりゃ袈裟まで悪いわけで、サービスが気に食わないと製品にもケチを付けたくなってくる
+
+XPosts
+ 2026/8/2 13:32:57 [https://x.com/What_R/status/2083773019185688776]
+  >ヤンマガweb、iOSのChromeからログインできないな
+  >ログインボタンが有効にならない
+  >Safariからは普通にいける
+
+
+#週報
+<[2026-07-21 - 2026-07-27]
+[2026-08-04 - 2026-08-10]>
