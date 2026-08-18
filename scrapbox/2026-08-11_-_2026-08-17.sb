@@ -1,0 +1,80 @@
+2026-08-11 - 2026-08-17
+2026-08-04 - 2026-08-10
+読んだ記事
+ [CloudFront VPC Origins障害とトレードオフに向き合うためのアンドパッドの答え - ANDPAD Tech Blog https://tech.andpad.co.jp/entry/2026/08/06/100000]
+ 	対策としては悪くないものの、Private Subnet only && regional NAT GWの構成が選択しづらくなったのが悲しい
+ 		まぁ、regional NAT GWのコストメリットがそれほどない以上、Public Subnetにstandard NAT GWを置く構成の方がいざというときのためにも選択の価値があるな
+ [AWS IAMロールマネージャーがIAMロールの出発点をどのように再考するか | AWSセキュリティブログ https://aws.amazon.com/jp/blogs/security/how-aws-iam-role-manager-rethinks-the-starting-point-for-iam-roles/]
+ 	構築時にIAMロールマネージャーを有効にしておき、一定落ち着いたら無効にする、みたいな運用になるのかな？
+ [これからの20年、このトラックボールと生きていく。唯一無二の『GameBall』 | ギズモード・ジャパン https://www.gizmodo.jp/article/gameball-vhx/]
+ 	これは良さそう
+ [在庫予約方式 https://zenn.dev/catatsuy/scraps/863861097be312]
+ 	面白かった
+ [DynamoDB のベクトル検索を1万件で試してみた #AWS - Qiita https://qiita.com/asahide/items/7828054c74bb187552d3]
+ 	使いどころはわからないけど、社内のFAQ管理ツールにちょっとベクトル検索くっつけたい、とかなら使えるかな？
+ 		スプシとDynamoDBで同期して、みたいなの考えると運用面ではかなりめんどくさいけど...
+ [Secure Enclave で git commit の署名鍵を管理する - mizdra's blog https://www.mizdra.net/entry/2026/08/07/101542]
+ 	むずーい
+ [ランサム被害、主因は脆弱性より「人」　34％がメールで感染、「本物に見えた」で疑わず：この頃、セキュリティ界隈で - ITmedia NEWS https://www.itmedia.co.jp/news/article/2608/10/2000000432/]
+ 	人、なぁ...
+ 	リテラシーの高い人だけを採用する、とか難しいし、リテラシーの高い人が仕事ができるとは必ずしも言えない(相関はありそうだけど)
+ [【PHP8.6】PHP8.6の新機能全部紹介するよ #rfc - Qiita https://qiita.com/rana_kualu/items/a50907007c868b807750]
+ 	パイプライン演算子、流行るのかな...???
+ 	onigrumaが抜けて、ちょっとだけ構築が軽くなるかな
+ [なぜベテランの暗黙知は、文書化しても継承できないのか | DevelopersIO https://dev.classmethod.jp/articles/why-tacit-knowledge-cannot-be-documented/]
+ 	おもしろ
+ 	シニアエンジニアに対して定期的によくわからない質問が届いて、それに答える業務が発生する会社、いいな
+ [AI会議録サービス「tl;dv」で18万件超の会議メタデータにアクセス可能だったと研究者が報告、会社側は「別々の2つの脆弱性」と説明 - GIGAZINE https://gigazine.net/news/20260813-tldv-data-hack/]
+ 	AI議事録サービス、Google Meetじゃ駄目なの？ってひたすら思っているんだけど
+ 	Googleほどセキュアじゃなかろ？
+ [Claude がテキストに電子透かしを入れ始めたので、LLM ウォーターマーキングの仕組みを調べた https://zenn.dev/hellorusk/articles/3328866ca9e922]
+ 	全然知らない領域だった
+ 	極短いテキストでは使えなさそうだけど、それも技術的に解決できるのかな？
+ [SQLite Critical CVEs or LLM Slop? - JFrog Security Research https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/]
+ 	報告する側もされる側もAIエージェントを使ってて、どっちもハルシネーション起こしてるから手が付けられない
+ [オントロジー初心者が、AI エージェントと組み合わせて検証してみた https://zenn.dev/aws_japan/articles/e5a3b798cbc7b5]
+ 	オントロジーってなんやねん、っていう話が実装とともに解説されてちょっとわかってきた
+ 		自社内の人から、形而上学の言葉だと教えてもらった
+ 		セマンティックWebでも使ってた語だけど、借用なのね
+ [Webサービスの終わらせ方 https://zenn.dev/kibe/articles/df74c2e9fe76b6]
+ 	個人開発ではやったことないけど、会社のサービスを終わらせるところはいくつかやった
+ 		最後にドメインが残るんだよな
+ 		メール送信に使ってたドメインだとマジで10年くらい掛ける必要があるんだけど、個人開発だとどんなもんかしらん...
+ [あらゆるサービスの解約情報が募る「解約.com」を作りました https://zenn.dev/bannzai/articles/1eda9a5158b3d9]
+ 	Chrome Extensionなのが賢い
+
+読んだ本
+ [アジャイルチームによる目標づくりガイドブック  OKRを機能させ成果に繋げるためのアプローチ（小田中 育生）｜翔泳社の本 https://www.shoeisha.co.jp/book/detail/9784798184739]
+ 	今半期の目標の締めが近づいているので読んだ
+ 	横断支援組織にいると目標設定が難しい、ってのはあるのよなー
+ 	個人の目標設定には役に立たない本だけど、内容はすげーよかった
+ 	チームで目標を立てること、達成のために取り組むことには価値があると思う
+ 	一方で、査定は個人単位になるのよな
+ 		査定もチーム単位にしていいよ、っていうなら成り立つけど
+ 		その場合、査定という強権の裏書きが足りないように思う
+
+書いた
+　
+
+その他
+　zenncastにお便りを投稿した
+　	普通に翌日読まれてたのでちょっとビビった
+　		人類にはない速度感だ
+　	GFormが問い合わせフォームなのも良い
+　体重が落ちない
+　 筋肉は成長して大きくなるが、脂肪は蓄積されて大きくなる
+　  節制が必要だ。。。
+
+XPosts
+ 2026/8/15 14:55:33 [https://x.com/What_R/status/2088504851529617823]
+  >https://podcasts.apple.com/jp/podcast/zenncast-%E6%8A%80%E8%A1%93%E3%83%88%E3%83%AC%E3%83%B3%E3%83%89%E3%82%92%E8%80%B3%E3%81%A7%E8%81%B4%E3%81%8F/id1743769993?i=1000783375124…
+  >お便りが読まれた
+
+ 2026/8/11 19:44:04 [https://x.com/What_R/status/2087127905835106352]
+  >2026-08-04 - 2026-08-10 - watarukura https://scrapbox.io/watarukura/2026-08-04_-_2026-08-10…
+  >書きました
+
+
+#週報
+<[2026-08-04 - 2026-08-10]
+[2026-08-18 - 2026-08-24]>
