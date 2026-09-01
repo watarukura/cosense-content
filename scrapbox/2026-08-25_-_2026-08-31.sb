@@ -1,0 +1,53 @@
+2026-08-25 - 2026-08-31
+読んだ記事
+ [オーストラリアで起きた全国的な通信障害についてまとめてみた - piyolog https://piyolog.hatenadiary.jp/entry/2026/08/22/033313]
+ 	こえぇ...
+ [優秀なエンジニアが書くDesign Docは何が違うのか? - pospomeのプログラミング日記 https://www.pospome.work/entry/2026/08/24/223309]
+ 	>優秀なエンジニアは代替案、懸念点、未決定事項を書くのが上手い
+ 	Design Doc、実は書いたことがなくて大体アーキテクチャドキュメントを書いてるんだけど、代替案はできるだけ書くようにしている
+ [Ctrl+C でプログラムが止まる仕組みを調べた https://zenn.dev/wakame_atsushi/articles/05a74885eb963d]
+ 	シグナルが飛ぶからよねーくらいの雑な理解だったけど、Linuxカーネルのコードのレベルまで書いてあってすげー
+ [Metaが従業員を大量解雇してAIに置き換えようとした「Project OT」はいかにして頓挫したのか？ - GIGAZINE https://gigazine.net/news/20260827-meta-zuckerberg-replace-staff-ai-imploded/]
+ 	自分がしている仕事を無くすことは社員の仕事ではあるけど、それがAIへの引き継ぎでなされるのにはまだ抵抗があるな...
+ [AWS と DuckLabs: 分析の未来を共に築く | Amazon Web Services ブログ https://aws.amazon.com/jp/blogs/news/aws-and-ducklabs-building-the-future-of-analytics-together/]
+ 	DuckLabs、AWSに買われるとはなー
+ [Slack ワークフローから GitHub Actions を起動する - BASEプロダクトチームブログ https://devblog.thebase.in/entry/2026/08/27/110000]
+ 	SlackワークフローからGitHub Issue、確かに行けるもんな
+ [ローカルLLM向け Mac Studio の選び方｜npaka https://note.com/npaka/n/nc1391a7f24ad]
+ 	ちょうど、今知りたかった情報がまとまっててありがたい
+ [父さん、仕事辞めてAIネイティブな組織で食っていこうと思うんだ - どやの情弱克服ブログ https://hilinker.hatenablog.com/entry/2026/08/26/095546]
+ 	AI自体はすごい発明だけど、AIを使ってすごく売れるものを作った、っていう話がそれほど聞こえてこないんだよな
+ [IAM Policy Autopilot now supports Terraform plan files - AWS https://aws.amazon.com/jp/about-aws/whats-new/2026/08/iam-policy-autopilot-now-supports-terraform-plan-files/]
+ 	最小権限、イケるか？
+ [【告知】2026-09-11（金）にEmbulkユーザーミートアップを開催！ #Embulk - 2026-08-24 - ククログ https://www.clear-code.com/blog/2026/8/24/embulk-user-meetup-2026-09-announce.html]
+ 	Embulk、自分では使ったことないけど数hopsの場所で使ってるんだよなー
+ 	[或るログ研究者 https://zenn.dev/dmikurube/articles/a-logresearch-er] mikurubeさんの最近のblogを読んでも、OSS運営の難しさがわかる
+ [税理士事務所に1ヶ月住み込んで、会計AIを作ってきた話｜佐次本脩真 | Zeimee https://note.com/shuma_sajimoto/n/n3824385dbdf2]
+ 	FDEの前にやることがあって、自社の業務改善が先だと思うのよな
+ [オンコール手当の相場を50社分調べて、1社も見つからなかった話 https://zenn.dev/cscloud_blog/articles/e0ea529d061906]
+ 	なかなか公開されないよね、この手の手当の金額
+ [On-Call Is Now Theatre | Boris Tane https://boristane.com/blog/on-call-is-now-theatre/]
+ 	>なぜなら、2026年には誰もオンコール状態であってはならないからです。
+ 	さて、2026年中に、インシデント対応はAIエージェントのものになるか？
+ [ep213 mozaic.fm v3 release not... - mozaic.fm - Apple Podcast https://podcasts.apple.com/jp/podcast/ep213-mozaic-fm-v3-release-note/id851914495?i=1000784860194]
+ 	mozaic.fm、IPv6 onlyになったので開けなくなってしまった
+ 		j:com、IPv4しか降ってこないのよね
+ 		2024年まではGoogle One VPNっていう手があったんだけど...
+ [自分が "コントロールできる" と思い込んで "引き出しを増やす" - Speaker Deck https://speakerdeck.com/konifar/jibun-ga-kontororu-dekiru-to-omoikon-de-hikidashi-o-fuyasu]
+ 	できるとしたら、って考えると実際にできることが増える、っていうのはあるかもなー
+ 
+
+読んだ本
+ 
+
+書いた
+　
+
+その他
+　
+
+XPosts
+
+#週報
+<[2026-08-18 - 2026-08-24]
+[2026-09-01 - 2026-09-07]>
