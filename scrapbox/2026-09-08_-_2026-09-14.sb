@@ -1,0 +1,97 @@
+2026-09-08 - 2026-09-14
+読んだ記事
+ [やはりKubernetesからは逃れられない - まいの雑記帳 https://mq1.dev/entry/U0w-0MgT8IhM]
+ 	k8sなぁ...
+ 	触る必要が出たら覚えようかなーと思って敬して遠ざけているのよな
+ [Nixは難しくない https://zenn.dev/glmlm/articles/nix-not-difficult-20260831]
+ 	うーん...
+ 	REPLもないしNix言語のsyntaxも分かりづらいし補完も効かないし、AIに書かせてもよくわからないからレビューできないし
+ [セキュリティチェックシートから学ぶ個人情報保護法｜T.Yamahara https://note.com/takashiyamahara/n/nf8c42180d6cb]
+ 	公的機関の書いたガイドライン、量が多いから読むのが大変なんだよな...
+ 	とはいえ、読み方はある、って分かる記事でありがたい
+ [ble.sh―理論物理の研究者がBashだけで書いた、世界で使われるコマンドラインエディタ - レバテックLAB https://levtech.jp/media/detail_923/]
+ 	ほえーすっげー [akinomyoga/ble.sh: Bash Line Editor―a line editor written in pure Bash with syntax highlighting, auto suggestions, vim modes, etc. for Bash interactive sessions. https://github.com/akinomyoga/ble.sh] Bashのはずなのに読めない
+ 	Bash芸人の最高峰か
+ [AIを中立で優秀なファイナンシャルプランナーに仕立て上げる方法 - 若くない何かの悩み https://blog.kuniwak.com/entry/ai-lifeplan]
+ 	ホモサピに相談すると色がついちゃうから、AIに聞きたいってニーズはあるよな
+ 		電話を買うときに家電量販店で買うと無駄アプリが山ほど付いてくるから嫌、みたいな感じ
+ [Amazon Linuxが4年ぶりにメジャーバージョンアップ、「Amazon Linux 2027」パブリックプレビュー。SELinuxがデフォルトで強制モードに － Publickey https://www.publickey1.jp/blog/26/amazon_linux4amazon_linux_2027selinux.html]
+ 	AL2023は2029年6月末までサポートか
+ 	Lambda使ってたりするとALからは逃げられないのよね
+ [深刻化する“サイバー蝗害”―Linuxカーネルソースに群がる貪欲で超非効率な「AIイナゴ」たち | gihyo.jp https://gihyo.jp/article/2026/09/daily-linux-260909]
+ 	AIがgit cloneするようになるまでそうかからないだろうけど、それまでの期間、負荷に耐えてくれっていうのもアレよね
+ [Amazon Bedrock 料金が一定額を超えたら使用不可にする仕組みを作ってみた https://zenn.dev/hatose/articles/ebc0dd996b2cbd]
+ 	使用不可にする必要がなければもっと簡単なんよね
+ 	montley使ってたらまた別なんだけど
+ [アーキテクチャ図を念頭に置いて設計された斬新な自動レイアウトアルゴリズム「TALA」がオープンソース化 | au Webポータル https://article.auone.jp/0fd195ca-8e58-4e98-be9e-c894b98e9e3c]
+ 	配置アルゴリズムを差し替えられるのは面白いな
+ 	mermaid.jsでできればいいのになー
+ [DeNA の大規模環境を MySQL 8.4 に移行する時に考えたこと DeNA インフラ SRE | BLOG - DeNA Engineering https://engineering.dena.com/blog/2026/09/mysql84-migrate-research/]
+ 	本当に「考えたこと」だなー
+ 	まぁ、AWSに既に載ってるならAurora使うだろうし、GCloudならCloudSQLだろ普通に
+ 		Postgresだとまた別
+ 	オンプレのときどうするか
+ 		TiDB自前、よりはTiDB  Cloudでしょ
+ [AutomatticがWordPressの共同開発者であるマット・マレンウェッグCEOを休職処分に - GIGAZINE https://gigazine.net/news/20260910-automattic-ceo-matt-mullenweg-leave-absence/]
+ 	WordPress、グダってるなぁ...
+ [懸垂500回・トップサイドデッド420kg!? 陸自精鋭部隊・池田晃士が語る「15分あればジャイアントセットでオールアウトできる」極意 | FITNESS LOVE(フィットネスラブ) https://www.fitnesslove.net/contestinfo/173533/]
+ 	すげーーーー！！
+ [「ランサムウェア」被害４１社のファイル２０００万件復元…警察庁開発の無料ツール、１００か国超利用 : 読売新聞 https://www.yomiuri.co.jp/national/20260912-GYT1T00002/]
+ 	[https://gyazo.com/dfd91e4e36beb2e68448c53843324a0a https://www.yomiuri.co.jp/media/2026/09/20260912-GYT1I00003-1.jpg?type=large]
+ 	身代金払ったほうが復旧率低いじゃん...
+ [「おっぱい」の話ができるSNSと、できないSNS：インターネットと表現規制（1/2 ページ） - ITmedia NEWS https://www.itmedia.co.jp/news/article/2609/04/2000001118/]
+ 	下ネタOKなSNS、おそらく治安が悪化するからな
+ [ベテランエンジニアのPRレビュー187件を分類してみたら、バグは5件に1件しか指摘されていなかった #初心者 - Qiita https://qiita.com/ktdatascience/items/02b6b45e2ca7d34ad146]
+ 	これはやってみてもいいなぁ
+ 	レビューはデバッグじゃないからなー
+ [「メルカリでのマネロンの闇を教えてもらって恐怖してる」マンガやリモコンなどあまり高くなさそうなものが105万円で出品＆SOLDになってるがこれは何？ - Togetter https://togetter.com/li/2743528]
+ 	フリマアプリとか、「売り手が値付けできる」マーケットプレイスは全部マネロン対策が必要なんだよな...
+ [消えた天才CTO。ーCloudflareの技術を作ったリー・ホロウェイ伝【前編】｜占部雅一　masakazu urabe https://note.com/masakazu_urabe/n/n7815f5b64fab]
+ 	Cloudflareもリー・ホロウェイも詳しく知らなかったので
+ [ドメインモデル貧血症はなぜ生まれるのか — Decision パターンで DDD トリレンマを解く https://zenn.dev/tellernovel_inc/articles/0193eb68cabb6e]
+ 	[ドメインモデルの純粋性 vs. ドメインモデルの完全性（DDDのトリレンマ） · エンタープライズクラフトマンシップ https://enterprisecraftsmanship.com/posts/domain-model-purity-completeness/]
+ 	>アプリケーションのパフォーマンスに大きな悪影響を与えることなく、すべての外部からの読み書き処理を業務プロセスの末端に押し出すことができる場合は、このオプションを選択してください。
+  > そうでなければ、ドメインモデルの完全性よりも純粋性を優先すべきである。
+	[サンキュー、XP https://kdmsnr.com/slides/20260905_xp/]
+		過去、Extremeと呼ばれていたものが普通になった
+		形式ではなく理想を
+	[HTMLをGASを使って社内でサッと共有したい https://zenn.dev/wwwave/articles/d33a08c958e0a2]
+		GASも使いたくないんだよな、できれば
+		GWorkspaceでさっと社内用にHTMLを公開する方法がほしい
+	[Why Uber Engineering Switched from Postgres to MySQL https://www.uber.com/in/en/blog/postgres-to-mysql-migration/]
+		Postgres → MySQL事例、めずらしい
+
+
+読んだ本
+ [ランサムウェア攻撃対策マニュアル | 技術評論社 https://gihyo.jp/book/2026/978-4-297-15834-7]
+ 	最近こわいなーと思っているので情報収集
+
+書いた
+　
+
+その他
+　TechFeed、なおった
+　	反応はなかったけど、まぁよかった
+
+XPosts
+ 2026/9/13 21:40:52 [https://x.com/What_R/status/2099116101494075655]
+  >10kgのダンベルは自宅には要らないけど、2kgのダンベルをウォームアップ用に買うのはいい手かも
+  >ジムのフリーウェイトのスペース、割と埋まってるしなー
+  >ウォームアップ後の方が、当たり前だけど重い負荷が掛けられる気がする
+
+ 2026/9/9 13:26:51 [https://x.com/What_R/status/2097542224909414771]
+  >public subnetもNATインスタンスも、public IPv4のコストも削りたい個人ユースレベルだとお金はかかるのよね
+  >IPv6、そろそろ試してみたいところ
+  >AWSで小規模インフラ構築するとNAT Gatewayのコスト割合が高くて嫌になっちゃうんですが、これどうにかなりませんか？
+
+ 2026/9/8 16:55:25 [https://x.com/What_R/status/2097232325595865494]
+  >2026-09-01 - 2026-09-07 - watarukura https://scrapbox.io/watarukura/2026-09-01_-_2026-09-07…
+  >書きました
+
+ 2026/9/8 9:31:49 [https://x.com/What_R/status/2097120687752380684]
+  >TechFeed、便利に使ってきたんだけどXの公式アカウントあてにバグ報告しても反応がなくて悲しい
+  >サイトの問い合わせフォームからがいいのかなぁ
+
+#週報
+<[2026-09-01 - 2026-09-07]
+[2026-09-15 - 2026-09-21]>
