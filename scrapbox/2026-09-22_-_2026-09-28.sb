@@ -1,0 +1,74 @@
+2026-09-22 - 2026-09-28
+読んだ記事
+ [2026-09-18 gotanda.sre Terraformで複数環境作ったり、複数Stateに分割したりそれとTerragrunt / Terraform multi envs and multi states - Speaker Deck https://speakerdeck.com/masasuzu/terraform-multi-envs-and-multi-states]
+ 	Terragrunt、いざいざとなったらOpenTofuに寄せそうなのであんまりガッツリ使えないんだよな...
+ [jev-lint: コード中の命名やコメントが嘘になってないかを高速に確認 https://zenn.dev/mizchi/articles/jev-lint-intro]
+ 	言語中立なlinterになりそうでおもしろいけど、メンテされなそうだな...
+ 	[jev-test-filter: git diff から関連するテストだけを抽出する https://zenn.dev/mizchi/articles/jev-test-filter-intro]
+ 		Rustみたいに同一ファイルにtestが書ければ簡単なんだけどなーと思ってたら十分に安く判定してくれるならコレでいいじゃんになりそう
+ [textlint を試す https://zenn.dev/kun432/scraps/ea1458ac3aab6d]
+ 	一回設定しちゃうとあんまり見ないからなぁ...
+ 	WEB+DB PRESSルールとか設定したけどもう更新されないだろうし
+ [the senior engineer death spiral • Solving the decision problem https://sunilpai.dev/posts/the-senior-engineer-death-spiral/]
+ 	Working out loudはシニアエンジニアにも大事、ってことじゃないかな
+ 		とはいえ、公にできない対応ってのもあるわけで、timesに書き散らせないのが辛いところではある
+ [C言語のコードをRustの中に書けるライブラリを作った https://zenn.dev/tanakh/articles/c-code-in-rust]
+  >こんなの何に使うんですか？
+	 > 何に使えばいいんでしょうか。面白いアイデアがあれば是非試してみてください。
+	[そのlsは、GNU製ですか。2026年、UbuntuがコマンドをRust製に置き換え終えるまでに起きたこと - インフラ学習サイト「InfraAcademy」 https://engineer-ninaritai.com/ubuntu-rust-coreutils-2026/]
+		遂に来たなー
+	[GitHub wiki はアンチパターンである | michaelheap.com https://michaelheap-com.translate.goog/github-wiki-is-an-antipattern/?_x_tr_sl=en&_x_tr_tl=ja&_x_tr_hl=ja]
+		docsディレクトリとwikiを同期させるaction、とか作ってもいいけど、手軽に更新って感じではなくなっちゃうしなー
+			そういう用途ならGitHub Pagesだろうし
+	[JCOMのインターネット接続サービス障害についてまとめてみた - piyolog https://piyolog.hatenadiary.jp/entry/2026/09/25/145617]
+		影響が出ました
+		DNSサーバを8.8.8.8にきりかえてgotことなき
+	[Amazon CloudWatch Omni が一般提供開始されました！ | DevelopersIO https://dev.classmethod.jp/articles/amazon-cloudwatch-omni-agent-observability/]
+		Datadog使わない環境ならいいかも
+	[EXPLAIN で詰まったときの三つ目の手札、Optimizer Trace の話 - Timee Product Team Blog https://tech.timee.co.jp/entry/2026/09/25/162348]
+		初めて知ったOptimizer Trace
+	[When to choose x86-64 vs aarch64 — PlanetScale https://planetscale.com/blog/when-to-choose-x86-64-vs-aarch64]
+		性能差がありそうだなとは思ってたんだけど
+		AWSで使うならGraviton使うしなー
+	[Aurora MySQLからRedshift/Snowflake/S3へ転送するELTツールを比較した調査メモ https://zenn.dev/ciloholic/articles/72ce6863d9de8b]
+		CDCでS3に同期、できるようになったら革命だな
+			S3 Tablesでもいい
+			1時間遅れでもいい、とかならどうにかする手段はありそうだけど、ニアリアルタイムで、となるとだいぶむずい
+	[javapとJVM仕様を読みながらclassファイルを手書きする https://zenn.dev/chikina/articles/7b636d0f9eda6f]
+		バイナリエディタで手書き、すげぇなぁ
+	[セキュリティは防御側が有利になったのか？ text.Baldanders.info https://text.baldanders.info/remark/2026/09/defense-advantage/]
+		[AIによりセキュリティで「防御側が勝てる時代が来た」のか？ - YAMDAS現更新履歴 https://yamdas.hatenablog.com/entry/20260924/tada-tadashi]
+		来てない...
+	[tfaction v2.0.5でAWS認証が失敗した原因を調べた - Howdunit https://gr1m0h.hatenablog.com/entry/2026/09/25/110000]
+		なるほどYAMLパーザ
+	[自分の修羅場三選は何か - Konifar's ZATSU https://konifar-zatsu.hatenadiary.jp/entry/2026/09/22/121742]
+		Xでもポストしたけど修羅場はまぁまぁあったな...
+	[AI が書く Go コードの品質を劇的に向上させる Linter: “declscope” https://zenn.dev/yumemi_inc/articles/go-declscope-file-scoped-private]
+		Go、もうちょっと書かないとコレの有用性が判断できないな...
+		良さそうには見える
+
+読んだ本
+ 
+
+書いた
+　
+
+その他
+　
+
+XPosts
+ 2026/9/27 19:45:33 [https://x.com/What_R/status/2104160509293728193]
+  >なんだろ
+  >自分のマシンに入れたのはVineだったはず(Windows98とデュアルブート、インストールだけしてほとんど触らず)
+  >大学のマシンはHP-UX→WindowsNTだったからLinux触ってなくて、まともに触ったのは情シス時代のRHELか？(Solarisの方が先だけど)
+  >初めて触ったLinuxはCentOSだった。
+  >皆は何だった？
+
+ 2026/9/27 15:59:54 [https://x.com/What_R/status/2104103722343416115]
+  >ヒゲ脱毛するか悩んだまま数年経ってしまった
+  >今後、ヒゲを伸ばして水戸黄門か関羽を目指すことも無かろうしなぁ、とは思うものの、ワンウェイドアだから慎重に、となって惰性で毎日髭を剃っている
+
+
+#週報
+<[2026-09-15 - 2026-09-21]
+[2026-09-29 - 2026-10-05]>
