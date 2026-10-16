@@ -1,0 +1,46 @@
+2026-10-06 - 2026-10-12
+読んだ記事
+ [  何これ、すごすぎる！！ PhotoshopやIllustratorをオープンソースで再構築、しかもWin、Mac、Linux、Web対応で無料 | コリス https://coliss.com/wp-content/cache/all/articles/build-websites/operation/work/7-adobe-apps-open-sourced.html/index.html]
+ 	AIエージェントに書かせたらクリーンルーム実装か、っていう論争になりそうではある...
+ [AIでコード生成は加速、でも人間の確認が追いつかない問題。t-wadaが示す「レビュー解体」という答え - エンジニアtype | 転職type https://type.jp/et/feature/31834/]
+ 	機能を追加するのは簡単になったかもしれないけど、無停止で安全にdeployすることは今でも簡単ではないわけで
+ [技術ブログはゆるやかに衰退している https://zenn.dev/northward/articles/decline-of-tech-blogs?]
+ 	zenn.devのようなプラットフォームはノイズの比率が上がってしまうので、RSSリーダーを自前開発してる人が増えてるのかな、と思った
+ [AIでの人員削減は現実的ではないと希望で語る人がいる中、外注はゼロにして社内の人間を20人から4人にした経営者の経験談を語る「築き上げてきたものがAIで完全に崩壊」 - Togetter https://togetter.com/li/2753949]
+ 	量子コンピュータの会社の社長さんで、以前から商売が厳しいと言ってたのでAI無関係な部分はありそう
+ [FDE（フォワードデプロイドエンジニアリング）によって開発されたAIエージェントの7割は使われず、FDEの名前で単なるコンサルティングが販売されるようになる危険が高まるとガートナーが予測 － Publickey https://www.publickey1.jp/blog/26/fdeai7fde.html]
+ 	さもありなん
+ [IDCFクラウドへのランサムウェア攻撃についてまとめてみた - piyolog https://piyolog.hatenadiary.jp/entry/2026/10/08/070606]
+ 	クラウドの1リージョンが死ぬケースが少なくとも2例できた
+ 		戦争でデータセンターが消失する
+ 		ハイパーバイザーがランサムウェアに侵害される
+ [bpmn.io で始める AI-Ready な業務フロー管理 | フューチャー技術ブログ https://future-architect.github.io/articles/20261009a/]
+ 	CacooでBPMNっぽいものを書いてたことあるけど、今ならmermaidで書くかな...
+ 	bpmnlintはいいなー
+ [別会社の開発チームに AWS 環境を共有するのって大変だ https://zenn.dev/dress_code/articles/f89590d105ba5f]
+ 	外部パートナー用のAWSアカウントをどちらが用意するか、みたいなとこがわからんなぁ...
+ 		ReadonlyAccess + iam:PassRoleのIAMユーザを作ってAssumeRoleだと駄目なのかしらん
+ [glibc の strlen は文字列範囲外を読むことで高速に計算する https://zenn.dev/peloeil/articles/glibc-strlen-2023]
+ 	Cが読めぬ...うう...
+ [6,000 テーブル超の DMM データ基盤、Embulk やめました https://zenn.dev/dmmdata/articles/embulk-to-dlt-migration]
+ 	弊社、Embulkやめてました
+ [数値で見る AWS が支える Amazon プライムデー 2026 | Amazon Web Services ブログ https://aws.amazon.com/jp/blogs/news/all-the-numbers-amazon-prime-day-2026-powered-by-aws/]
+ 	文字通り桁違いでやべぇ
+
+読んだ本
+ 
+
+書いた
+　
+
+その他
+　
+
+XPosts
+ 2026/10/8 15:14:39 [https://x.com/What_R/status/2108078600302031233]
+  >2026-09-29 - 2026-10-05 - watarukura https://scrapbox.io/watarukura/2026-09-29_-_2026-10-05…
+  >書きました
+
+#週報
+<[2026-09-29 - 2026-10-05]
+[2026-10-13 - 2026-10-19]>
