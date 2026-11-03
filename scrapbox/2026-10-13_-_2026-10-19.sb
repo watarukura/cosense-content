@@ -1,0 +1,64 @@
+2026-10-13 - 2026-10-19
+読んだ記事
+ [GuardDuty RDS 保護に RDS Data Activity Monitoring が増え、クエリの振る舞い検知が可能になりました https://zenn.dev/cscloud_blog/articles/guardduty-rds-data-activity-monitoring]
+ 	これは嬉しい、と思ったけどまたPostgreSQLのみ...
+ [Lambda Web Functions を CloudFront OAC で保護すると、POST / PUT の x-amz-content-sha256 が不要になる | DevelopersIO https://dev.classmethod.jp/articles/shuntaka-lambda-web-functions-cloudfront-oac/]
+ [Lambda Web FunctionsでNext.jsを動かしてみる | DevelopersIO https://dev.classmethod.jp/articles/nextjs-on-lambda-web-functions/]
+ 	急にでてきたLambda Web Functions、結構使いどころがありそう
+ [明治、プロテイン飲料を価格改定 「ザバス」など22品対象 - モデルプレス https://mdpr.jp/gourmet/detail/4858598]
+ 	ホエイプロテイン値上げの影響がついに自分にも及んだ
+ 	豆乳も飲んでいます
+ [AnthropicがGit代替のバージョン管理システム「Scion」を開発し社内移行済み、AIでコードが爆増してGitの限界に達したので耐えられるシステムを開発 - GIGAZINE https://gigazine.net/news/20261014-anthropic-scion-version-control-system/]
+ 	[Anthropicにおけるソースコード管理の再設計 \ Anthropic https://www.anthropic.com/engineering/redesigning-source-control]
+ 	Gitがボトルネックになる、はよくわからんなぁ...
+ 	GitHubが、というならわかるけど
+ 	[エージェント規模の開発のためのGitインフラストラクチャの構築 - GitHubブログ https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/]
+ 		GitHubはAzureの機能を使ってがんばっている...
+ [E2Eテストを爆速にする: オンメモリPostgreSQLのpgmem | フューチャー技術ブログ https://future-architect.github.io/articles/20261015a/]
+ 	tempfsでいいんじゃないの？って思ったけど言及されてる
+ [SQLite 本体にベクトル検索拡張 vec1 がやってきた https://zenn.dev/mattn/articles/6e9996319ac099]
+ 	これは何かの役に立ちそう
+ 	とはいえ、日本語 + ベクトル検索はむずそう...
+ [GitHub Actions workflow lockfiles in public preview - GitHub Changelog https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview/]
+ 	[GitHub Actions の依存関係の自動更新 - Renovate Docs https://docs.renovatebot.com/modules/manager/github-actions/]
+ 	[GitHub Actions の lockfiles を試す https://zenn.dev/shunsuke_suzuki/scraps/f3aacea7584784]
+ 	SHAピンニング強制されててもlockfiles作ってあればworkflowは動く
+ 	renovateはlockfileのschemaバージョンが一世代古くないと動かないっぽい...(2026-10-16時点の動作確認)
+ [AIエージェントによるウェブサイトへの攻撃の注意喚起 - WAF Tech Blog ｜ クラウド型 WAFサービス Scutum 【スキュータム】 https://www.scutum.jp/information/waf_tech_blog/2026/10/waf-blog-085.html]
+ 	本職のWAF屋さん、AIエージェントからの攻撃アクセスパターンを見つけて遮断する
+ 		まぁ、パターンもすぐに変わるだろうからな...
+ 	[WAFを89％すり抜ける事例も──AIが休みなく仕掛けるWeb攻撃、予防策はあるか：「見えないWeb攻撃」──情報漏えい対策の盲点（1/4 ページ） - ITmedia NEWS https://www.itmedia.co.jp/news/article/2608/03/2000000287/]
+ 		WAFは100%止められるわけじゃないから、試行錯誤されると弱いよな...
+ 			で、試行錯誤するのが人じゃなくなる
+ [第281回　MySQL 26.7で変わったAUTO_INCREMENTのカウンター保存 | gihyo.jp https://gihyo.jp/article/2026/10/mysql-rcn0281]
+ 	AUTO_INCREMENTで抜け番が増えそう
+ 		MAX(id)+1 よりは大分マシ
+ [生成AIは運用の切り札か、劇薬か 〜 AIOps時代に求められる“賢い使い分け” / 20260219-itmedia-ai-operation - Speaker Deck https://speakerdeck.com/opelab/20260219-itmedia-ai-operation]
+ 	運用は辛いよ、生成AIがあっても
+ [何もできないC言語が好き。『猫でもわかるプログラミング』を30年運営する医師に迫る - レバテックLAB https://levtech.jp/media/detail_941/]
+ 	粂井さん、お医者さんだったのか
+ [テスト： MySQL のこの10日間（2026-09-28〜10-08） - sakaikの日々雑感～(T)編 https://sakaik.hateblo.jp/entry/20261008/mysql_news_trial]
+ 	[dbtrail/dbtrail: Zero-ETL analytical replica for MySQL, RDS and Aurora. Reads the binlog like a replica, keeps Parquet in your bucket, opens in DuckDB. Time travel and row-level undo included. https://github.com/dbtrail/dbtrail]
+ 		知らないツールだけど、自前で作ろうかなと思ってたから知れて嬉しい
+ 		常時起動のcompute resourceが必要だからまぁまぁめんどいかなー
+ [Margaret Hamilton, computing pioneer who led software development for the Apollo program, dies at 90 | MIT News | Massachusetts Institute of Technology https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007]
+ 	偉大なる先達。RIP
+
+
+読んだ本
+ 
+
+書いた
+　
+
+その他
+　zensicalにblogテーマがきたっぽい
+　	https://github.com/zensical/zensical/releases/tag/v0.0.65
+　	ちょっと試したいなー
+
+XPosts
+
+
+#週報
+<[2026-10-06 - 2026-10-12]
+[2026-10-20 - 2026-10-26]>
